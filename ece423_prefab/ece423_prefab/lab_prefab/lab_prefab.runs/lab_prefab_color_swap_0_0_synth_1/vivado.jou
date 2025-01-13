@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jan 13 13:51:19 2025
+# Process ID: 552
+# Current directory: C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/lab_prefab_color_swap_0_0_synth_1
+# Command line: vivado.exe -log lab_prefab_color_swap_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab_prefab_color_swap_0_0.tcl
+# Log file: C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/lab_prefab_color_swap_0_0_synth_1/lab_prefab_color_swap_0_0.vds
+# Journal file: C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/lab_prefab_color_swap_0_0_synth_1\vivado.jou
+# Running On: ECE-MCU13, OS: Windows, CPU Frequency: 3504 MHz, CPU Physical cores: 2, Host memory: 17066 MB
+#-----------------------------------------------------------
+source lab_prefab_color_swap_0_0.tcl -notrace
