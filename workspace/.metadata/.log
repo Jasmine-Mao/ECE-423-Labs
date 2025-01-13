@@ -9392,3 +9392,9 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-9: Launch
 
 !ENTRY com.xilinx.sdk.utils 0 0 2025-01-13 14:43:52.153
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-9: Launching Debugger_ece423_lab1-jan13correct
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-01-13 15:08:48.013
+!MESSAGE XSCT Command: [disconnect tcfchan#5], Thread: Thread-299
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-01-13 15:08:48.029
+!MESSAGE XSCT command with result: [disconnect tcfchan#5], Result: [null, ]. Thread: Thread-299
