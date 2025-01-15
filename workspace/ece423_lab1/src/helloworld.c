@@ -49,10 +49,11 @@
 #include "platform.h"
 #include "xil_printf.h"
 #include "decoder/mjpeg423_decoder.h"
-#include "fat_fs/ff.h"
+#include "ff.h"
 
 static FATFS fatfs;
 static FIL fil;
+
 
 
 int main()
@@ -65,14 +66,18 @@ int main()
     status = f_mount(&fatfs, "3:/", 1);
     printf("Mount STATUS : %d\n", status);
 
+
+
+
+
     status = f_open(&fil, "3:/v1_1730.mpg", FA_READ);
     printf("open STATUS : %d\n", status);
 
-    uint32_t num_frames = 0;
-    uint32_t NumBytesRead = 0;
-    f_read(&fil, (void*)&num_frames, sizeof(uint32_t), (UINT *)&NumBytesRead);
+    //uint32_t num_frames = 0;
+    //uint32_t NumBytesRead = 0;
+    //f_read(&fil, (void*)&num_frames, sizeof(uint32_t), (UINT *)&NumBytesRead);
 
-    printf("Testing frames %d & bytes read %d\n",num_frames, NumBytesRead);
+    //printf("Testing frames %d & bytes read %d\n",num_frames, NumBytesRead);
     print("Hello World\n\r");
     print("Successfully ran Hello World application");
     cleanup_platform();

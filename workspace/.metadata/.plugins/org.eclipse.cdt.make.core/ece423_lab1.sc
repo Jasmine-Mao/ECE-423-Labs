@@ -1276,6 +1276,8 @@
             <includePath path="#undef __ARM_FEATURE_COMPLEX" removed="true"/>
             <includePath path="c:\software\xilinx\vitis\2022.1\gnu\aarch32\nt\gcc-arm-none-eabi\x86_64-oesdk-mingw32\usr\bin\arm-xilinx-eabi\../../lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/11.2.0/include-fixed"/>
             <includePath path="C:\Software\Xilinx\Vitis\2022.1\gnu\aarch32\nt\gcc-arm-none-eabi\bin\\..\aarch32-xilinx-eabi/usr/include"/>
+            <includePath path="#undef __thumb2__" removed="true"/>
+            <includePath path="#undef __thumb__" removed="true"/>
             <includePath path="#undef __ARM_ARCH" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_CMSE" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_MVE" removed="true"/>
