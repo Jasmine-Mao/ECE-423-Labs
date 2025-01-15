@@ -1,179 +1,9 @@
-15:49:49 **** Build of configuration Release for project ece423_lab1 ****
+16:02:20 **** Incremental Build of configuration Release for project ece423_lab1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/ece423_vid_ctl/ece423_vid_ctl.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/ece423_vid_ctl/ece423_vid_ctl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/ece423_vid_ctl/ece423_vid_ctl.d" -MT"src/ece423_vid_ctl/ece423_vid_ctl.o" -o "src/ece423_vid_ctl/ece423_vid_ctl.o" "../src/ece423_vid_ctl/ece423_vid_ctl.c"
-'Finished building: ../src/ece423_vid_ctl/ece423_vid_ctl.c'
-' '
-'Building file: ../src/decoder/idct.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/decoder/idct.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/decoder/idct.d" -MT"src/decoder/idct.o" -o "src/decoder/idct.o" "../src/decoder/idct.c"
-../src/decoder/idct.c:31:24: warning: argument 1 of type 'pdct_block_t' {aka 'short int (*)[8]'} declared as a pointer [-Warray-parameter=]
-   31 | void idct(pdct_block_t DCAC, pcolor_block_t block)
-      |           ~~~~~~~~~~~~~^~~~
-In file included from ../src/decoder/idct.c:10:
-../src/decoder/mjpeg423_decoder.h:16:23: note: previously declared as an array 'int16_t[8][8]' {aka 'short int[8][8]'}
-   16 | void idct(dct_block_t DCAC, color_block_t block);
-      |           ~~~~~~~~~~~~^~~~
-../src/decoder/idct.c:31:45: warning: argument 2 of type 'pcolor_block_t' {aka 'unsigned char (*)[8]'} declared as a pointer [-Warray-parameter=]
-   31 | void idct(pdct_block_t DCAC, pcolor_block_t block)
-      |                              ~~~~~~~~~~~~~~~^~~~~
-In file included from ../src/decoder/idct.c:10:
-../src/decoder/mjpeg423_decoder.h:16:43: note: previously declared as an array 'uint8_t[8][8]' {aka 'unsigned char[8][8]'}
-   16 | void idct(dct_block_t DCAC, color_block_t block);
-      |                             ~~~~~~~~~~~~~~^~~~~
-'Finished building: ../src/decoder/idct.c'
-' '
-'Building file: ../src/decoder/lossless_decode.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/decoder/lossless_decode.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/decoder/lossless_decode.d" -MT"src/decoder/lossless_decode.o" -o "src/decoder/lossless_decode.o" "../src/decoder/lossless_decode.c"
-'Finished building: ../src/decoder/lossless_decode.c'
-' '
-'Building file: ../src/decoder/mjpeg423_decoder.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/decoder/mjpeg423_decoder.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/decoder/mjpeg423_decoder.d" -MT"src/decoder/mjpeg423_decoder.o" -o "src/decoder/mjpeg423_decoder.o" "../src/decoder/mjpeg423_decoder.c"
-In file included from ../src/decoder/mjpeg423_decoder.c:14:
-../src/decoder/mjpeg423_decoder.c: In function 'mjpeg423_decode':
-../src/decoder/mjpeg423_decoder.c:34:21: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   34 |     DEBUG_PRINT_ARG("Decoder start. Num frames #%u\n", num_frames)
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~
-      |                                                        |
-      |                                                        uint32_t {aka long unsigned int}
-../src/decoder/../common/util.h:21:45: note: in definition of macro 'DEBUG_PRINT_ARG'
-   21 |     #define DEBUG_PRINT_ARG(str,arg) printf(str,arg);
-      |                                             ^~~
-../src/decoder/mjpeg423_decoder.c:34:50: note: format string is defined here
-   34 |     DEBUG_PRINT_ARG("Decoder start. Num frames #%u\n", num_frames)
-      |                                                 ~^
-      |                                                  |
-      |                                                  unsigned int
-      |                                                 %lu
-In file included from ../src/decoder/mjpeg423_decoder.c:14:
-../src/decoder/mjpeg423_decoder.c:36:21: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   36 |     DEBUG_PRINT_ARG("Width %u\n", w_size)
-      |                     ^~~~~~~~~~~~  ~~~~~~
-      |                                   |
-      |                                   uint32_t {aka long unsigned int}
-../src/decoder/../common/util.h:21:45: note: in definition of macro 'DEBUG_PRINT_ARG'
-   21 |     #define DEBUG_PRINT_ARG(str,arg) printf(str,arg);
-      |                                             ^~~
-../src/decoder/mjpeg423_decoder.c:36:29: note: format string is defined here
-   36 |     DEBUG_PRINT_ARG("Width %u\n", w_size)
-      |                            ~^
-      |                             |
-      |                             unsigned int
-      |                            %lu
-In file included from ../src/decoder/mjpeg423_decoder.c:14:
-../src/decoder/mjpeg423_decoder.c:38:21: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   38 |     DEBUG_PRINT_ARG("Height %u\n", h_size)
-      |                     ^~~~~~~~~~~~~  ~~~~~~
-      |                                    |
-      |                                    uint32_t {aka long unsigned int}
-../src/decoder/../common/util.h:21:45: note: in definition of macro 'DEBUG_PRINT_ARG'
-   21 |     #define DEBUG_PRINT_ARG(str,arg) printf(str,arg);
-      |                                             ^~~
-../src/decoder/mjpeg423_decoder.c:38:30: note: format string is defined here
-   38 |     DEBUG_PRINT_ARG("Height %u\n", h_size)
-      |                             ~^
-      |                              |
-      |                              unsigned int
-      |                             %lu
-In file included from ../src/decoder/mjpeg423_decoder.c:14:
-../src/decoder/mjpeg423_decoder.c:40:21: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   40 |     DEBUG_PRINT_ARG("Num i frames %u\n", num_iframes)
-      |                     ^~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~
-      |                                          |
-      |                                          uint32_t {aka long unsigned int}
-../src/decoder/../common/util.h:21:45: note: in definition of macro 'DEBUG_PRINT_ARG'
-   21 |     #define DEBUG_PRINT_ARG(str,arg) printf(str,arg);
-      |                                             ^~~
-../src/decoder/mjpeg423_decoder.c:40:36: note: format string is defined here
-   40 |     DEBUG_PRINT_ARG("Num i frames %u\n", num_iframes)
-      |                                   ~^
-      |                                    |
-      |                                    unsigned int
-      |                                   %lu
-In file included from ../src/decoder/mjpeg423_decoder.c:14:
-../src/decoder/mjpeg423_decoder.c:80:25: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   80 |         DEBUG_PRINT_ARG("I frame index %u, ", trailer[count].frame_index)
-      |                         ^~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                             |
-      |                                                             uint32_t {aka long unsigned int}
-../src/decoder/../common/util.h:21:45: note: in definition of macro 'DEBUG_PRINT_ARG'
-   21 |     #define DEBUG_PRINT_ARG(str,arg) printf(str,arg);
-      |                                             ^~~
-../src/decoder/mjpeg423_decoder.c:80:41: note: format string is defined here
-   80 |         DEBUG_PRINT_ARG("I frame index %u, ", trailer[count].frame_index)
-      |                                        ~^
-      |                                         |
-      |                                         unsigned int
-      |                                        %lu
-In file included from ../src/decoder/mjpeg423_decoder.c:14:
-../src/decoder/mjpeg423_decoder.c:81:25: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   81 |         DEBUG_PRINT_ARG("position %u\n", trailer[count].frame_position)
-      |                         ^~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                        |
-      |                                                        uint32_t {aka long unsigned int}
-../src/decoder/../common/util.h:21:45: note: in definition of macro 'DEBUG_PRINT_ARG'
-   21 |     #define DEBUG_PRINT_ARG(str,arg) printf(str,arg);
-      |                                             ^~~
-../src/decoder/mjpeg423_decoder.c:81:36: note: format string is defined here
-   81 |         DEBUG_PRINT_ARG("position %u\n", trailer[count].frame_position)
-      |                                   ~^
-      |                                    |
-      |                                    unsigned int
-      |                                   %lu
-In file included from ../src/decoder/mjpeg423_decoder.c:14:
-../src/decoder/mjpeg423_decoder.c:93:25: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   93 |         DEBUG_PRINT_ARG("Frame_size %u\n",frame_size)
-      |                         ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~
-      |                                           |
-      |                                           uint32_t {aka long unsigned int}
-../src/decoder/../common/util.h:21:45: note: in definition of macro 'DEBUG_PRINT_ARG'
-   21 |     #define DEBUG_PRINT_ARG(str,arg) printf(str,arg);
-      |                                             ^~~
-../src/decoder/mjpeg423_decoder.c:93:38: note: format string is defined here
-   93 |         DEBUG_PRINT_ARG("Frame_size %u\n",frame_size)
-      |                                     ~^
-      |                                      |
-      |                                      unsigned int
-      |                                     %lu
-In file included from ../src/decoder/mjpeg423_decoder.c:14:
-../src/decoder/mjpeg423_decoder.c:95:25: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   95 |         DEBUG_PRINT_ARG("Frame_type %u\n",frame_type)
-      |                         ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~
-      |                                           |
-      |                                           uint32_t {aka long unsigned int}
-../src/decoder/../common/util.h:21:45: note: in definition of macro 'DEBUG_PRINT_ARG'
-   21 |     #define DEBUG_PRINT_ARG(str,arg) printf(str,arg);
-      |                                             ^~~
-../src/decoder/mjpeg423_decoder.c:95:38: note: format string is defined here
-   95 |         DEBUG_PRINT_ARG("Frame_type %u\n",frame_type)
-      |                                     ~^
-      |                                      |
-      |                                      unsigned int
-      |                                     %lu
-'Finished building: ../src/decoder/mjpeg423_decoder.c'
-' '
-'Building file: ../src/decoder/ycbcr_to_rgb.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/decoder/ycbcr_to_rgb.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/decoder/ycbcr_to_rgb.d" -MT"src/decoder/ycbcr_to_rgb.o" -o "src/decoder/ycbcr_to_rgb.o" "../src/decoder/ycbcr_to_rgb.c"
-'Finished building: ../src/decoder/ycbcr_to_rgb.c'
-' '
-'Building file: ../src/common/tables.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/common/tables.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/common/tables.d" -MT"src/common/tables.o" -o "src/common/tables.o" "../src/common/tables.c"
-'Finished building: ../src/common/tables.c'
-' '
-'Building file: ../src/common/util.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/common/util.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/common/util.d" -MT"src/common/util.o" -o "src/common/util.o" "../src/common/util.c"
-'Finished building: ../src/common/util.c'
-' '
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
@@ -197,21 +27,20 @@ In file included from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_w
 C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
    49 | #  define TRUE          1U
       | 
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:81:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   81 |     printf("Testing frames %d & bytes read %d\n",num_frames, NumBytesRead);
+      |                            ~^                    ~~~~~~~~~~
+      |                             |                    |
+      |                             int                  uint32_t {aka long unsigned int}
+      |                            %ld
+../src/helloworld.c:81:45: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   81 |     printf("Testing frames %d & bytes read %d\n",num_frames, NumBytesRead);
+      |                                            ~^                ~~~~~~~~~~~~
+      |                                             |                |
+      |                                             int              uint32_t {aka long unsigned int}
+      |                                            %ld
 'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building file: ../src/timer_gpio.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/timer_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/timer_gpio.d" -MT"src/timer_gpio.o" -o "src/timer_gpio.o" "../src/timer_gpio.c"
-../src/timer_gpio.c: In function 'setup_gpiops':
-../src/timer_gpio.c:192:13: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
-  192 |         int Status;
-      |             ^~~~~~
-'Finished building: ../src/timer_gpio.c'
 ' '
 'Building target: ece423_lab1.elf'
 'Invoking: ARM v7 gcc linker'
@@ -221,9 +50,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size ece423_lab1.elf  |tee "ece423_lab1.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 101220	   3912	419440384	419545516	1901c1ac	ece423_lab1.elf
+ 101312	   3912	419440384	419545608	1901c208	ece423_lab1.elf
 'Finished building: ece423_lab1.elf.size'
 ' '
 
-15:49:52 Build Finished (took 3s.421ms)
+16:02:22 Build Finished (took 1s.94ms)
 
