@@ -1,4 +1,4 @@
-14:29:20 **** Build of configuration Release for project ece423_lab1 ****
+14:55:52 **** Incremental Build of configuration Release for project ece423_lab1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -7,24 +7,52 @@ make --no-print-directory main-build
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/decoder/mjpeg423_decoder.h:12,
+                 from ../src/helloworld.c:51:
+../src/decoder/../common/mjpeg423_types.h:16: warning: "FALSE" redefined
+   16 | #define FALSE (0)
+      | 
+In file included from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_printf.h:15,
+                 from ../src/helloworld.c:50:
+C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
+   53 | #  define FALSE         0U
+      | 
+In file included from ../src/decoder/mjpeg423_decoder.h:12,
+                 from ../src/helloworld.c:51:
+../src/decoder/../common/mjpeg423_types.h:17: warning: "TRUE" redefined
+   17 | #define TRUE !FALSE
+      | 
+In file included from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_printf.h:15,
+                 from ../src/helloworld.c:50:
+C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
+   49 | #  define TRUE          1U
+      | 
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:75:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   75 |     printf("Testing frames %d & bytes read %d\n",num_frames, NumBytesRead);
+      |                            ~^                    ~~~~~~~~~~
+      |                             |                    |
+      |                             int                  uint32_t {aka long unsigned int}
+      |                            %ld
+../src/helloworld.c:75:45: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   75 |     printf("Testing frames %d & bytes read %d\n",num_frames, NumBytesRead);
+      |                                            ~^                ~~~~~~~~~~~~
+      |                                             |                |
+      |                                             int              uint32_t {aka long unsigned int}
+      |                                            %ld
 'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
 ' '
 'Building target: ece423_lab1.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "ece423_lab1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "ece423_lab1.elf"  ./src/fat_fs/ff.o ./src/fat_fs/ffsystem.o ./src/fat_fs/ffunicode.o  ./src/ece423_vid_ctl/ece423_vid_ctl.o  ./src/decoder/idct.o ./src/decoder/lossless_decode.o ./src/decoder/mjpeg423_decoder.o ./src/decoder/ycbcr_to_rgb.o  ./src/common/tables.o ./src/common/util.o  ./src/helloworld.o ./src/platform.o ./src/timer_gpio.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ece423_lab1.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size ece423_lab1.elf  |tee "ece423_lab1.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18993	   1144	  22568	  42705	   a6d1	ece423_lab1.elf
+  98308	   3892	419440288	419542488	1901b5d8	ece423_lab1.elf
 'Finished building: ece423_lab1.elf.size'
 ' '
 
-14:29:21 Build Finished (took 1s.55ms)
+14:55:53 Build Finished (took 1s.125ms)
 

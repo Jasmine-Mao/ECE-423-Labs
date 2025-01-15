@@ -121,7 +121,7 @@ void mjpeg423_decode(const char* filename_in, const char* filenamebase_out)
         filename_out[pos+1] = (char)(frame_index/100%10) + '0';
         filename_out[pos+2] = (char)(frame_index/10%10) + '0';
         filename_out[pos+3] = (char)(frame_index%10) + '0';
-        encode_bmp(rgbblock, w_size, h_size, filename_out);
+        //encode_bmp(rgbblock, w_size, h_size, filename_out);
         
     } //end frame iteration
     

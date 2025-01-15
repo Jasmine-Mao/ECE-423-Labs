@@ -22,3 +22,19 @@ platform generate -quick
 platform generate
 platform clean
 platform generate
+platform clean
+platform generate
+platform active {lab_prefab_wrapper}
+bsp reload
+bsp setlib -name xilffs -ver 4.7
+bsp config enable_multi_partition "true"
+bsp config num_logical_vol "10"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_ps7_cortexa9_0 
+bsp write
+platform clean
+platform generate
+platform clean
+platform generate
