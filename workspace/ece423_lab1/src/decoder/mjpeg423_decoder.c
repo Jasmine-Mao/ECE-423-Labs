@@ -13,18 +13,27 @@
 #include "mjpeg423_decoder.h"
 #include "../common/util.h"
 #include "ff.h"
+#include "../ece423_vid_ctl/ece423_vid_ctl.h"
+
+static FATFS fatfs;
+static FIL fil;
 
 //declaration. Function implemented in libnsbmp
 //void encode_bmp(rgb_pixel_t* rgbblock, uint32_t w_size, uint32_t h_size, const char* filename);
 
 //main decoder function
 //void mjpeg423_decode(const char* filename_in, const char* filenamebase_out)
-void mjpeg423_decode(const char* filename_in)
+void mjpeg423_decode()
 {
     //header and payload info
     uint32_t num_frames, w_size, h_size, num_iframes, payload_size;
     uint32_t Ysize, Cbsize, frame_size, frame_type;
     
+    uint32_t vdma_status;
+
+    vdma_status = vdma_init(1280, 720, 2);
+    printf("Starting VDMA: %d",vdma_status);
+
     //file streams
 //    FILE* file_in;
 //    if((file_in = fopen(filename_in, "r")) == NULL) error_and_exit("cannot open input file");
@@ -32,9 +41,14 @@ void mjpeg423_decode(const char* filename_in)
 //    strcpy(filename_out, filenamebase_out);
 
     FRESULT status;
-    FIL fil;
+
+    status = f_mount(&fatfs, "3:/", 1);
+    printf("Mount STATUS : %d\n", status);
+
+
+    //FIL fil;
     status = f_open(&fil, "3:/v1_1730.mpg", FA_READ); //change to filename_in
-    unit32 num_bytes_read;
+    uint32_t num_bytes_read;
     printf("open STATUS : %d\n", status);
     //add filename out stuff if needed later
     //^ the above needs to be adjusted to open the SD card file
@@ -90,6 +104,7 @@ void mjpeg423_decode(const char* filename_in)
     
     //main data structures. See lab manual for explanation
     rgb_pixel_t* rgbblock;
+    // rgbblock = buff_next(); this is probably wrong
     if((rgbblock = malloc(w_size*h_size*sizeof(rgb_pixel_t)))==NULL) error_and_exit("cannot allocate rgbblock");
     color_block_t* Yblock;
     if((Yblock = malloc(hYb_size * wYb_size * 64))==NULL) error_and_exit("cannot allocate Yblock");
@@ -139,11 +154,15 @@ void mjpeg423_decode(const char* filename_in)
     }
     
     //read and decode frames
+    rgb_pixel_t* rgbblock_temp;
+    uint32_t* vdma_reg_status;
+
     for(int frame_index = 0; frame_index < num_frames; frame_index ++){
         DEBUG_PRINT_ARG("\nFrame #%u\n",frame_index)
         
 		//get next buffer
 		// buffer_var = buff_next();
+		rgbblock_temp = buff_next();
 
         //read frame payload
 //        if(fread(&frame_size, sizeof(uint32_t), 1, file_in) != 1) error_and_exit("cannot read input file");
@@ -176,23 +195,30 @@ void mjpeg423_decode(const char* filename_in)
         	printf("COULD NOT READ YBITSTREAM");
         	return;
         }
+
+
         //set the Cb and Cr bitstreams to point to the right location
         Cbbitstream = Ybitstream + Ysize;
         Crbitstream = Cbbitstream + Cbsize;
         
+        print("DID I GET HERE\n");
         //lossless decoding
         lossless_decode(hYb_size*wYb_size, Ybitstream, YDCAC, Yquant, frame_type);
         lossless_decode(hCb_size*wCb_size, Cbbitstream, CbDCAC, Cquant, frame_type);
         lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
         
+        print("DID I GET HERE 2\n");
+
         //fdct
         for(int b = 0; b < hYb_size*wYb_size; b++) idct(YDCAC[b], Yblock[b]);
         for(int b = 0; b < hCb_size*wCb_size; b++) idct(CbDCAC[b], Cbblock[b]);
         for(int b = 0; b < hCb_size*wCb_size; b++) idct(CrDCAC[b], Crblock[b]);
         
+
+
         //ybcbr to rgb conversion
         for(int b = 0; b < hCb_size*wCb_size; b++) 
-            ycbcr_to_rgb(b/wCb_size*8, b%wCb_size*8, w_size, Yblock[b], Cbblock[b], Crblock[b], rgbblock);
+            ycbcr_to_rgb(b/wCb_size*8, b%wCb_size*8, w_size, Yblock[b], Cbblock[b], Crblock[b], rgbblock_temp);
         
 //        //open and write bmp file
 //        long pos = strlen(filename_out) - 8;      //this assumes the namebase is in the format name0000.bmp
@@ -203,16 +229,21 @@ void mjpeg423_decode(const char* filename_in)
 //        //encode_bmp(rgbblock, w_size, h_size, filename_out);
         // VDMA stuff
 
-        buff_reg();
-        vdma_out();
+        printf("About to pop a buffer\n");
+        vdma_reg_status = buff_reg();
+        printf("buff reg address: %d\n",buff_reg);
+        vdma_status = vdma_out();
+        printf("Output status: %d\n",vdma_status);
         
     } //end frame iteration
     
     DEBUG_PRINT("\nDecoder done.\n\n\n")
     
+    print("Reached the end of the code");
     //close down
     //fclose(file_in);
-    f_close(&fil);
+    //f_close(&fil);
+    vdma_close();
     free(rgbblock); 
     free(Yblock);
     free(Cbblock);

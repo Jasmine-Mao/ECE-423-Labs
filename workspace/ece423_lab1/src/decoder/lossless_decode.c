@@ -67,7 +67,7 @@ void lossless_decode(int num_blocks, void* bitstream, dct_block_t* DCACq, dct_bl
     //Note that bitcount <= 7, so there are at least 24 valid bits.
     //This is sufficient since the max length of any component
     //is 4 + 4 + 11 = 19 bits.
-    int bitcount = 0;
+    int bitcount = 0;  //since only 24 bits are valid, we should change this from 0
     
     //shift in the first 32 bits
     update_buffer(&bitbuffer, &bitstream, &bitcount, 32);

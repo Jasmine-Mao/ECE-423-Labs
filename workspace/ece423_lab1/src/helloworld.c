@@ -52,8 +52,8 @@
 #include "ff.h"
 #include "ece423_vid_ctl/ece423_vid_ctl.h"
 
-static FATFS fatfs;
-static FIL fil;
+//static FATFS fatfs;
+//static FIL fil;
 
 
 
@@ -61,39 +61,40 @@ int main()
 {
     init_platform();
 
-    vdma_init(1280, 720, 2);// initialize display & allocate buffer memory (num buffs last parameter)
-    rgb_pixel_t* rgbblock;
+    //vdma_init(1280, 720, 2);// initialize display & allocate buffer memory (num buffs last parameter)
+    //rgb_pixel_t* rgbblock;
 
     //rgbblock = buff_next(); //get next buffer to put data into
     //buff_reg(); //mark buffer ready to be displayed
     //vdma_out(); //display buffer
     //vdma_close(); //free the frame buffer memory
 
-    FRESULT status;
-    printf("STARTING\n");
-
-    status = f_mount(&fatfs, "3:/", 1);
-    printf("Mount STATUS : %d\n", status);
+//    FRESULT status;
+//    printf("STARTING\n");
+//
+//    status = f_mount(&fatfs, "3:/", 1);
+//    printf("Mount STATUS : %d\n", status);
 
     //open file
     //
 
 
-    mjpeg423_decode("3:/v1_1730.mpg"); //fix later
+    //mjpeg423_decode("3:/v1_1730.mpg"); //fix later
+    mjpeg423_decode();
 
 
 
 
 
-    status = f_open(&fil, "3:/v1_1730.mpg", FA_READ);
-    printf("open STATUS : %d\n", status);
-
-    uint32_t num_frames = 0;
-    uint32_t NumBytesRead = 0;
-    f_read(&fil, (void*)&num_frames, sizeof(uint32_t), (UINT *)&NumBytesRead);
+//    status = f_open(&fil, "3:/v1_1730.mpg", FA_READ);
+//    printf("open STATUS : %d\n", status);
+//
+//    uint32_t num_frames = 0;
+//    uint32_t NumBytesRead = 0;
+//    f_read(&fil, (void*)&num_frames, sizeof(uint32_t), (UINT *)&NumBytesRead);
     //f_read(&fil, (void*)&num_frames, 10, (UINT *)&NumBytesRead);
 
-    printf("Testing frames %d & bytes read %d\n",num_frames, NumBytesRead);
+    //printf("Testing frames %d & bytes read %d\n",num_frames, NumBytesRead);
     print("Hello World\n\r");
     print("Successfully ran Hello World application");
     cleanup_platform();
