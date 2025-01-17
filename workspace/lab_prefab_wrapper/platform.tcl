@@ -49,3 +49,7 @@ platform generate
 platform clean
 platform generate
 platform generate -domains standalone_ps7_cortexa9_0,zynq_fsbl 
+platform generate
+platform active {lab_prefab_wrapper}
+bsp reload
+platform generate -domains 

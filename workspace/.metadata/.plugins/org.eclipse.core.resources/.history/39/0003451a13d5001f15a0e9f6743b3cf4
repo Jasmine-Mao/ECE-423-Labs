@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "../common/mjpeg423_types.h"
+#include "mjpeg423_decoder.h"
+#include "../common/util.h"
+#include "ff.h"
+#include "../ece423_vid_ctl/ece423_vid_ctl.h"
+#include "video_control.h"
+
+void load_video()
+{
+
+}

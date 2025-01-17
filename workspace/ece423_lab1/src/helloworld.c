@@ -51,15 +51,92 @@
 #include "decoder/mjpeg423_decoder.h"
 #include "ff.h"
 #include "ece423_vid_ctl/ece423_vid_ctl.h"
+#include "xparameters.h"
+#include "xil_types.h"
+#include "timer_gpio.h"
 
-//static FATFS fatfs;
-//static FIL fil;
+#define TIMER_1S 325000000
+#define TIMER_FPS 1
 
+volatile int8_t button_input;
+volatile int8_t timer_input;
+
+void GpioHandler(void *CallBackRef, u32 Bank, u32 Status)
+{
+	button_input = read_pin();
+}
+
+void TimerHandler(void*){
+	timer_input = 1;
+}
+
+
+static FATFS fatfs;
+static FIL fil;
+uint32_t current_frame  = 0;
 
 
 int main()
 {
     init_platform();
+
+    uint32_t vdma_status;
+    vdma_status = vdma_init(1280, 720, 2);
+
+    button_input = -1;
+    timer_input = 0;
+
+    timer_gpio_init(TimerHandler, GpioHandler);
+
+    timer_start(TIMER_1S/TIMER_FPS);
+
+    FRESULT status;
+    //SD card mount
+    status = f_mount(&fatfs, "3:/", 1);
+
+    //load video, first frame, and be paused
+    load_video("3:/v1_300.mpg");	// initializes video so its ready to play
+    display_next_frame(&current_frame);	// decodes and displays
+    BOOL not_paused = FALSE;
+
+    while (1){
+    	if(button_input != -1){
+    		printf("Button Pressed: %d\n\r", button_input);
+    		switch(button_input)
+    		{
+    			case 0:
+    				//
+    				cycle_button();
+    				break;
+    			case 1:
+    				//
+    				pause_button(&not_paused);
+    				break;
+    			case 2:
+    				//
+    				forward_button();
+    				break;
+    			case 3:
+    				//
+    				backward_button();
+    				break;
+    			default:
+    				//oops
+
+    		}
+    		button_input = -1;
+    	}
+    	if(timer_input == 1 && not_paused){ //wants to show next frame
+    		display_next_frame();
+//    		current_frame++;
+
+    		timer_input = 0;
+    		print("Timer Triggered! \n\r");
+    	}
+    	load_frames_fcn(frame_number)
+    }
+
+
 
     //vdma_init(1280, 720, 2);// initialize display & allocate buffer memory (num buffs last parameter)
     //rgb_pixel_t* rgbblock;
@@ -80,7 +157,7 @@ int main()
 
 
     //mjpeg423_decode("3:/v1_1730.mpg"); //fix later
-    mjpeg423_decode();
+    //mjpeg423_decode();
 
 
 

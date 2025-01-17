@@ -104,3 +104,34 @@ timestamp=[2025-01-16 17:02:28], mode=BUILD, duration=0:00:01.132, duration_ms=1
 timestamp=[2025-01-16 17:13:14], mode=BUILD, duration=0:00:01.322, duration_ms=1322, data={name=ece423_lab1, configuration=Release, clean_build=false}
 timestamp=[2025-01-16 17:18:06], mode=BUILD, duration=0:00:01.125, duration_ms=1125, data={name=ece423_lab1, configuration=Release, clean_build=false}
 timestamp=[2025-01-16 17:21:57], mode=BUILD, duration=0:00:02.780, duration_ms=2780, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 12:50:30], mode=WORKBENCH_START, duration=0:00:09.198, duration_ms=9198, data={}
+timestamp=[2025-01-17 12:50:31], mode=WORKBENCH_UI_INIT, duration=0:00:01.358, duration_ms=1358, data={editors_count=12, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,ece423_lab1,ece423_lab1_system,lab_prefab_wrapper}
+timestamp=[2025-01-17 12:50:34], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.110, duration_ms=110, data={}
+timestamp=[2025-01-17 13:01:43], mode=PLATFORM_GENERATION, duration=0:00:17.818, duration_ms=17818, data={name=lab_prefab_wrapper}
+timestamp=[2025-01-17 13:01:48], mode=BUILD, duration=0:00:02.187, duration_ms=2187, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:03:03], mode=BUILD, duration=0:00:02.625, duration_ms=2625, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:03:44], mode=BUILD, duration=0:00:03.546, duration_ms=3546, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-17 13:04:40], mode=BUILD, duration=0:00:00.453, duration_ms=453, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:04:49], mode=BUILD, duration=0:00:00.422, duration_ms=422, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:07:16], mode=BUILD, duration=0:00:01.015, duration_ms=1015, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:19:52], mode=BUILD, duration=0:00:01.015, duration_ms=1015, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:24:38], mode=BUILD, duration=0:00:01.141, duration_ms=1141, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:26:54], mode=BUILD, duration=0:00:01.219, duration_ms=1219, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:28:22], mode=BUILD, duration=0:00:01.359, duration_ms=1359, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:40:52], mode=BUILD, duration=0:00:01.078, duration_ms=1078, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:41:37], mode=BUILD, duration=0:00:01.109, duration_ms=1109, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:42:45], mode=BUILD, duration=0:00:01.015, duration_ms=1015, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 13:44:30], mode=BUILD, duration=0:00:01.015, duration_ms=1015, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 14:02:36], mode=BUILD, duration=0:00:01.078, duration_ms=1078, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 14:05:04], mode=BUILD, duration=0:00:01.078, duration_ms=1078, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 14:07:08], mode=BUILD, duration=0:00:01.328, duration_ms=1328, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-17 14:07:41], mode=BUILD, duration=0:00:01.047, duration_ms=1047, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-17 14:16:17], mode=BUILD, duration=0:00:01.016, duration_ms=1016, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-17 14:19:10], mode=BUILD, duration=0:00:01.484, duration_ms=1484, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 14:24:45], mode=PLATFORM_GENERATION, duration=0:00:02.716, duration_ms=2716, data={name=lab_prefab_wrapper}
+timestamp=[2025-01-17 14:24:46], mode=BUILD, duration=0:00:01.218, duration_ms=1218, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-01-17 14:36:39], mode=BUILD, duration=0:00:01.140, duration_ms=1140, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 14:43:12], mode=BUILD, duration=0:00:01.171, duration_ms=1171, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 14:55:50], mode=BUILD, duration=0:00:01.110, duration_ms=1110, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 14:56:05], mode=BUILD, duration=0:00:01.015, duration_ms=1015, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-01-17 15:08:54], mode=BUILD, duration=0:00:01.031, duration_ms=1031, data={name=ece423_lab1, configuration=Release, clean_build=false}

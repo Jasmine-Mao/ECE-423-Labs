@@ -1,0 +1,10 @@
+#ifndef video_control_h
+#define video_control_h
+
+#include "../common/mjpeg423_types.h"
+
+void load_video(const TCHAR* file_name);
+
+
+
+#endif
