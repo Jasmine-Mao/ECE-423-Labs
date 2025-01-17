@@ -55,7 +55,9 @@ typedef struct {
     uint8_t blue;
     uint8_t green;
     uint8_t red;
-    uint8_t alpha; //does this need removed alpha
+    // uint8_t alpha; //does this need removed alpha
+    // i think this needs to be removed
+    // changing the struct size isn't something we need to handle (checked already)
 } rgb_pixel_t;
 
 //tables

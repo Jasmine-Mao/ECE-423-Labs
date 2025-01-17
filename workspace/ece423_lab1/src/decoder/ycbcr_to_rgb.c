@@ -56,7 +56,7 @@ void ycbcr_to_rgb(int h, int w, uint32_t w_size, pcolor_block_t Y, pcolor_block_
         index = (h+y) * w_size + w;
         for(int x = 0; x < 8; x++){
             rgb_pixel_t pixel;
-            pixel.alpha = 0;
+            // pixel.alpha = 0;
             pixel.red = Cr[y][x];
             pixel.green = Y[y][x];
             pixel.blue = Cb[y][x];

@@ -41,48 +41,32 @@ void mjpeg423_decode()
 //    strcpy(filename_out, filenamebase_out);
 
     FRESULT status;
+    // NOTE: FRESULT stores an integer return value for all the FATfs functions
 
+    // mount(connect) tp the third partition in the SD card
     status = f_mount(&fatfs, "3:/", 1);
     printf("Mount STATUS : %d\n", status);
 
-
-    //FIL fil;
-    status = f_open(&fil, "3:/v1_1730.mpg", FA_READ); //change to filename_in
+    status = f_open(&fil, "3:/v1_1730.mpg", FA_READ); //change to filename_in to generalize later on
     uint32_t num_bytes_read;
     printf("open STATUS : %d\n", status);
     //add filename out stuff if needed later
-    //^ the above needs to be adjusted to open the SD card file
     
     //read header
-    if(f_read(&fil, &num_frames, sizeof(uint32_t), &num_bytes_read) != 0){
-    	printf("FAILED TO READ NUMBER OF FRAMES");
-    	return;
-    }
+    if(f_read(&fil, &num_frames, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUMBER OF FRAMES");
     DEBUG_PRINT_ARG("Decoder start. Num frames #%u\n", num_frames)
 
-    if(f_read(&fil, &w_size, sizeof(uint32_t), &num_bytes_read) != 0){
-    	printf("FAILED TO READ WIDTH");
-    	return;
-    }
+    if(f_read(&fil, &w_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ WIDTH");
     DEBUG_PRINT_ARG("Width %u\n", w_size)
 
-    if(f_read(&fil, &h_size, sizeof(uint32_t), &num_bytes_read) != 0){
-    	printf("FAILED TO READ HEIGHT");
-    	return;
-    }
+    if(f_read(&fil, &h_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ HEIGHT");
     DEBUG_PRINT_ARG("Height %u\n", h_size)
 
-    if(f_read(&fil, &num_iframes, sizeof(uint32_t), &num_bytes_read) != 0){
-		printf("FAILED TO READ NUM I-FRAMES");
-		return;
-    }
+    if(f_read(&fil, &num_iframes, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUM I-FRAMES");
     DEBUG_PRINT_ARG("Num i frames %u\n", num_iframes)
 
-    if(f_read(&fil, &payload_size, sizeof(uint32_t), &num_bytes_read) != 0){
-		printf("FAILED TO READ PAYLOAD SIZE");
-		return;
-    }
-   DEBUG_PRINT_ARG("Payload size %u\n", num_iframes)
+    if(f_read(&fil, &payload_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit()"FAILED TO READ PAYLOAD SIZE");
+    DEBUG_PRINT_ARG("Payload size %u\n", num_iframes)
 
 //    if(fread(&num_frames, sizeof(uint32_t), 1, file_in) != 1) error_and_exit("cannot read input file");
 //    DEBUG_PRINT_ARG("Decoder start. Num frames #%u\n", num_frames)
@@ -129,29 +113,19 @@ void mjpeg423_decode()
     //read trailer. Note: the trailer information is not used in the sample decoder app
     //set file to beginning of trailer
     //if(fseek(file_in, 5 * sizeof(uint32_t) + payload_size, SEEK_SET) != 0) error_and_exit("cannot seek into file");
-    if(f_lseek(&fil, 5 * sizeof(uint32_t) + payload_size) != 0)
-    	print("ERROR GETTING TO TRAILER");
+    if(f_lseek(&fil, 5 * sizeof(uint32_t) + payload_size) != 0) error_and_exit("ERROR GETTING TO TRAILER");
     for(int count = 0; count < num_iframes; count++){
-    	if(f_read(&fil, &(trailer[count].frame_index), sizeof(uint32_t), &num_bytes_read) != 0){
-    		print("FAILED TO GET FRAME INDEX");
-    		return;
-    	}
+    	if(f_read(&fil, &(trailer[count].frame_index), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO GET FRAME INDEX");
 //        if(fread(&(trailer[count].frame_index), sizeof(uint32_t), 1, file_in) != 1) error_and_exit("cannot read input file");
 
-    	if(f_read(&fil, &(trailer[count].frame_position), sizeof(uint32_t), &num_bytes_read) != 0){
-    		print("FAILED TO GET FRAME POSITION");
-    		return;
-    	}
+    	if(f_read(&fil, &(trailer[count].frame_position), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit ("FAILED TO GET FRAME POSITION");
 //        if(fread(&(trailer[count].frame_position), sizeof(uint32_t), 1, file_in) != 1) error_and_exit("cannot read input file");
         DEBUG_PRINT_ARG("I frame index %u, ", trailer[count].frame_index)
         DEBUG_PRINT_ARG("position %u\n", trailer[count].frame_position)
     }
     //set it back to beginning of payload
 //    if(fseek(file_in,5 * sizeof(uint32_t),SEEK_SET) != 0) error_and_exit("cannot seek into file");
-    if(f_lseek(&fil, 5 * sizeof(uint32_t)) != 0){
-    	print("COULD NOT SEEK BACK TO BEGINNING");
-    	return;
-    }
+    if(f_lseek(&fil, 5 * sizeof(uint32_t)) != 0) error_and_exit("COULD NOT SEEK BACK TO BEGINNING");
     
     //read and decode frames
     rgb_pixel_t* rgbblock_temp;
@@ -161,41 +135,24 @@ void mjpeg423_decode()
         DEBUG_PRINT_ARG("\nFrame #%u\n",frame_index)
         
 		//get next buffer
-		// buffer_var = buff_next();
 		rgbblock_temp = buff_next();
 
         //read frame payload
 //        if(fread(&frame_size, sizeof(uint32_t), 1, file_in) != 1) error_and_exit("cannot read input file");
-        if(f_read(&fil, &frame_size, sizeof(uint32_t), &num_bytes_read) != 0){
-        	printf("COULD NOT GET FRAME SIZE");
-        	return;
-        }
+        if(f_read(&fil, &frame_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT GET FRAME SIZE");
         DEBUG_PRINT_ARG("Frame_size %u\n",frame_size)
 
 //        if(fread(&frame_type, sizeof(uint32_t), 1, file_in) != 1) error_and_exit("cannot read input file");
-        if(f_read(&fil, &frame_type, sizeof(uint32_t), &num_bytes_read) != 0){
-        	printf("COULD NOT GET FRAME TYPE");
-        	return;
-        }
+        if(f_read(&fil, &frame_type, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT GET FRAME TYPE");
         DEBUG_PRINT_ARG("Frame_type %u\n",frame_type)
 
 //        if(fread(&Ysize, sizeof(uint32_t), 1, file_in) != 1) error_and_exit("cannot read input file");
-        if(f_read(&fil, &Ysize, sizeof(uint32_t), &num_bytes_read) != 0){
-        	printf("COULD NOT READ Y SIZE");
-        	return;
-        }
+        if(f_read(&fil, &Ysize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ Y SIZE");
 
 //        if(fread(&Cbsize, sizeof(uint32_t), 1, file_in) != 1) error_and_exit("cannot read input file");
-        if(f_read(&fil, &Cbsize, sizeof(uint32_t), &num_bytes_read) != 0){
-        	printf("COULD NOT READ CB SIZE");
-        	return;
-        }
+        if(f_read(&fil, &Cbsize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ CB SIZE");
 //        if(fread(Ybitstream, 1, frame_size - 4 * sizeof(uint32_t), file_in) != (frame_size - 4 * sizeof(uint32_t))) error_and_exit("cannot read input file");
-        if(f_read(&fil, Ybitstream, sizeof(uint32_t), &num_bytes_read) != 0){
-        	printf("COULD NOT READ YBITSTREAM");
-        	return;
-        }
-
+        if(f_read(&fil, Ybitstream, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ YBITSTREAM");
 
         //set the Cb and Cr bitstreams to point to the right location
         Cbbitstream = Ybitstream + Ysize;
@@ -217,9 +174,11 @@ void mjpeg423_decode()
 
 
         //ybcbr to rgb conversion
-        for(int b = 0; b < hCb_size*wCb_size; b++) 
+        for(int b = 0; b < hCb_size*wCb_size; b++)
             ycbcr_to_rgb(b/wCb_size*8, b%wCb_size*8, w_size, Yblock[b], Cbblock[b], Crblock[b], rgbblock_temp);
-        
+        // could the problem be here? rather than lossless decode?
+        // might need to changhe the buffer size as mentioned in task 1 subpoint 5
+
 //        //open and write bmp file
 //        long pos = strlen(filename_out) - 8;      //this assumes the namebase is in the format name0000.bmp
 //        filename_out[pos] = (char)(frame_index/1000) + '0';
