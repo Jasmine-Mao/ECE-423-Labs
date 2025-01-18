@@ -1,0 +1,176 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "../common/mjpeg423_types.h"
+#include "../decoder/mjpeg423_decoder.h"
+#include "../common/util.h"
+#include "ff.h"
+#include "../ece423_vid_ctl/ece423_vid_ctl.h"
+#include "video_control.h"
+
+//extern FATFS fatfs;
+//extern FIL fil;
+
+// Function that loads every time we load in a new video
+// Returns a video information struct which contains all the metadata (header and trailer) of the video
+// that a decode function would need to decode each frame
+
+// The metadata is freed when we cycle the video
+video_info_t load_video(const TCHAR* file_name)
+{
+	video_info_t video_info;
+
+    //open file
+	FRESULT status = f_open(&fil, file_name, FA_READ);
+    uint32_t num_bytes_read;
+
+    //read header
+    if(f_read(&fil, &video_info.num_frames, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUMBER OF FRAMES");
+    if(f_read(&fil, &video_info.w_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ WIDTH");
+    if(f_read(&fil, &video_info.h_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ HEIGHT");
+    if(f_read(&fil, &video_info.num_iframes, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUM I-FRAMES");
+    if(f_read(&fil, &video_info.payload_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ PAYLOAD SIZE");
+
+    //read trailer
+    video_info.hCb_size = video_info.h_size/8;           //number of chrominance blocks
+    video_info.wCb_size = video_info.w_size/8;
+    video_info.hYb_size = video_info.h_size/8;           //number of luminance blocks. Same as chrominance in the sample app
+    video_info.wYb_size = video_info.w_size/8;
+
+    //trailer structure
+    video_info.trailer = malloc(sizeof(iframe_trailer_t)*video_info.num_iframes);
+
+    //main data structures. See lab manual for explanation
+    //gb_pixel_t* rgbblock;
+    // rgbblock = buff_next(); this is probably wrong
+    //if((rgbblock = malloc(w_size*h_size*sizeof(rgb_pixel_t)))==NULL) error_and_exit("cannot allocate rgbblock");
+    //color_block_t* Yblock;
+    if((video_info.Yblock = malloc(video_info.hYb_size * video_info.wYb_size * 64))==NULL) error_and_exit("cannot allocate Yblock");
+    if((video_info.Cbblock = malloc(video_info.hCb_size * video_info.wCb_size * 64))==NULL) error_and_exit("cannot allocate Cbblock");
+    if((video_info.Crblock = malloc(video_info.hCb_size * video_info.wCb_size * 64))==NULL) error_and_exit("cannot allocate Crblock");;
+    if((video_info.YDCAC = malloc(video_info.hYb_size * video_info.wYb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate YDCAC");
+    if((video_info.CbDCAC = malloc(video_info.hCb_size * video_info.wCb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate CbDCAC");
+    if((video_info.CrDCAC = malloc(video_info.hCb_size * video_info.wCb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate CrDCAC");
+    //Ybitstream is assigned a size sufficient to hold all bistreams
+    //the bitstream is then read from the file into Ybitstream
+    //the remaining pointers simply point to the beginning of the Cb and Cr streams within Ybitstream
+
+    if((video_info.Ybitstream = malloc(video_info.hYb_size * video_info.wYb_size * 64 * sizeof(DCTELEM) + 2 * video_info.hCb_size * video_info.wCb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate bitstream");
+
+    //read trailer. Note: the trailer information is not used in the sample decoder app
+    //set file to beginning of trailer
+    //if(fseek(file_in, 5 * sizeof(uint32_t) + payload_size, SEEK_SET) != 0) error_and_exit("cannot seek into file");
+    if(f_lseek(&fil, 5 * sizeof(uint32_t) + video_info.payload_size) != 0) error_and_exit("ERROR GETTING TO TRAILER");
+    for(int count = 0; count < video_info.num_iframes; count++){
+    	if(f_read(&fil, &(video_info.trailer[count].frame_index), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO GET FRAME INDEX");
+    	if(f_read(&fil, &(video_info.trailer[count].frame_position), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit ("FAILED TO GET FRAME POSITION");
+    }
+    //set it back to beginning of payload
+    if(f_lseek(&fil, 5 * sizeof(uint32_t)) != 0) error_and_exit("COULD NOT SEEK BACK TO BEGINNING");
+    // return the metadata of the video
+    return video_info;
+}
+
+void display_next_frame(uint32_t* frame_index, video_info_t video_info){
+	// basically just runs decoder
+	mjpeg423_decode(*frame_index, video_info);
+	++(*frame_index);
+    // increments the frame index (assuming that it will run normally and not have a slip forwards/back)
+}
+
+void pause_button(BOOL* paused_ptr){
+	// when pressed, this should suspend the
+	printf("Pause button pressed!\n");
+	*paused_ptr = !(*paused_ptr);
+}
+
+char* cycle_button(uint32_t* frame_index, video_info_t prev_video_into){
+	// this function parses through the directory to get the next file with a .mpg extension
+	// it returns the name of th file
+
+	*frame_index = 0;
+}
+
+void forward_button(){
+
+}
+
+void backward_button(){
+
+}
+
+FRESULT f_findnext (
+	DIR* dp,		/* Pointer to the open directory object */
+	FILINFO* fno	/* Pointer to the file information structure */
+)
+{
+	FRESULT res = FR_DISK_ERR;
+
+
+	for (;;) {
+		res = f_readdir(dp, fno);		/* Get a directory item */
+		if (res != FR_OK || !fno || !fno->fname[0]) break;	/* Terminate if any error or end of directory */
+		if (pattern_matching(dp->pat, fno->fname, 0, 0)) break;		/* Test for the file name */
+#if FF_USE_LFN && FF_USE_FIND == 2
+		if (pattern_matching(dp->pat, fno->altname, 0, 0)) break;	/* Test for alternative name if exist */
+#endif
+	}
+	return res;
+}
+
+static int pattern_matching (	/* 0:not matched, 1:matched */
+	const TCHAR* pat,	/* Matching pattern */
+	const TCHAR* nam,	/* String to be tested */
+	int skip,			/* Number of pre-skip chars (number of ?s) */
+	int inf				/* Infinite search (* specified) */
+)
+{
+	const TCHAR *pp, *np;
+	DWORD pc, nc;
+	int nm, nx;
+
+
+	while (skip--) {				/* Pre-skip name chars */
+		if (!get_achar(&nam)) return 0;	/* Branch mismatched if less name chars */
+	}
+	if (*pat == 0 && inf) return 1;	/* (short circuit) */
+
+	do {
+		pp = pat; np = nam;			/* Top of pattern and name to match */
+		for (;;) {
+			if (*pp == '?' || *pp == '*') {	/* Wildcard? */
+				nm = nx = 0;
+				do {				/* Analyze the wildcard block */
+					if (*pp++ == '?') nm++; else nx = 1;
+				} while (*pp == '?' || *pp == '*');
+				if (pattern_matching(pp, np, nm, nx)) return 1;	/* Test new branch (recurs up to number of wildcard blocks in the pattern) */
+				nc = *np; break;	/* Branch mismatched */
+			}
+			pc = get_achar(&pp);	/* Get a pattern char */
+			nc = get_achar(&np);	/* Get a name char */
+			if (pc != nc) break;	/* Branch mismatched? */
+			if (pc == 0) return 1;	/* Branch matched? (matched at end of both strings) */
+		}
+		get_achar(&nam);			/* nam++ */
+	} while (inf && nc);			/* Retry until end of name if infinite search is specified */
+
+	return 0;
+}
+
+FRESULT f_findfirst (
+	DIR* dp,				/* Pointer to the blank directory object */
+	FILINFO* fno,			/* Pointer to the file information structure */
+	const TCHAR* path,		/* Pointer to the directory to open */
+	const TCHAR* pattern	/* Pointer to the matching pattern */
+)
+{
+	FRESULT res = FR_DISK_ERR;
+
+
+	dp->pat = pattern;		/* Save pointer to pattern string */
+	res = f_opendir(dp, path);		/* Open the target directory */
+	if (res == FR_OK) {
+		res = f_findnext(dp, fno);	/* Find the first item */
+	}
+	return res;
+}

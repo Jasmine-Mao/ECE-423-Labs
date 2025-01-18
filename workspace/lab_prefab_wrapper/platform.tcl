@@ -54,3 +54,14 @@ platform active {lab_prefab_wrapper}
 bsp reload
 platform generate -domains 
 platform generate
+platform clean
+platform generate
+platform generate -domains zynq_fsbl 
+platform clean
+platform generate
+platform generate -domains zynq_fsbl 
+platform generate -domains zynq_fsbl 
+platform clean
+platform generate
+platform clean
+platform generate

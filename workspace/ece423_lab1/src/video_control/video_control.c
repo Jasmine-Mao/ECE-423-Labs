@@ -16,12 +16,19 @@
 // that a decode function would need to decode each frame
 
 // The metadata is freed when we cycle the video
-video_info_t load_video(const TCHAR* file_name)
+
+//DIR directory;	// directory object for opening the SD card
+//FILINFO fno;
+
+video_info_t load_video(char* file_name)
 {
 	video_info_t video_info;
-
+	printf("About to load video %s \n", file_name);
+	char buffer[30] = "3:/";
+	strcat(buffer, file_name);
     //open file
-	FRESULT status = f_open(&fil, file_name, FA_READ);
+	FRESULT status = f_open(&fil, buffer, FA_READ);
+	if(status != FR_OK) error_and_exit("COULDN'T LOAD VIDEO");
     uint32_t num_bytes_read;
 
     //read header
@@ -41,10 +48,6 @@ video_info_t load_video(const TCHAR* file_name)
     video_info.trailer = malloc(sizeof(iframe_trailer_t)*video_info.num_iframes);
 
     //main data structures. See lab manual for explanation
-    //gb_pixel_t* rgbblock;
-    // rgbblock = buff_next(); this is probably wrong
-    //if((rgbblock = malloc(w_size*h_size*sizeof(rgb_pixel_t)))==NULL) error_and_exit("cannot allocate rgbblock");
-    //color_block_t* Yblock;
     if((video_info.Yblock = malloc(video_info.hYb_size * video_info.wYb_size * 64))==NULL) error_and_exit("cannot allocate Yblock");
     if((video_info.Cbblock = malloc(video_info.hCb_size * video_info.wCb_size * 64))==NULL) error_and_exit("cannot allocate Cbblock");
     if((video_info.Crblock = malloc(video_info.hCb_size * video_info.wCb_size * 64))==NULL) error_and_exit("cannot allocate Crblock");;
@@ -84,7 +87,27 @@ void pause_button(BOOL* paused_ptr){
 	*paused_ptr = !(*paused_ptr);
 }
 
-void cycle_button(){
+void cycle_button(uint32_t* frame_index, video_info_t* prev_video_info){
+	//delete all the malloced data
+	//f_close(&fil);
+//	vdma_close();
+//	vdma_init(1280, 720, 2);
+	free(prev_video_info->Yblock);
+	free(prev_video_info->Cbblock);
+	free(prev_video_info->Crblock);
+	free(prev_video_info->YDCAC);
+	free(prev_video_info->CbDCAC);
+	free(prev_video_info->CrDCAC);
+	free(prev_video_info->Ybitstream);
+	free(prev_video_info->trailer);
+
+	//find the next video and load it in
+	char* next_video = find_next_video();
+	printf("Next video: %s", next_video);
+	*prev_video_info = load_video(next_video);
+
+	//reset the frame index and load in the first frame
+	*frame_index = 0;
 
 }
 
@@ -95,3 +118,56 @@ void forward_button(){
 void backward_button(){
 
 }
+
+BOOL valid_video_name(char* filename){
+//	printf("%s\n", filename);
+//	printf("%c\n",filename[0]);
+//	printf("%c\n",*filename);
+//	if((char)filename[0] == "V"){
+//		printf("1\n");
+//	}
+//	if((char)*filename == "V"){
+//		printf("2\n");
+//	}
+//	int length = strlen(filename);
+//	printf("%s\n", (char*)filename[0]);
+//	if(((char*)filename[0] == "V")){
+//		if((strstr(&filename, ".MPG") != NULL))
+//			return TRUE;
+//	}
+	if((strstr(filename,"V1")==filename) && (strstr(filename, ".MPG") != NULL))
+	{
+		return TRUE;
+	}
+//	if((strstr(filename, ".MPG") != NULL))
+//		return TRUE;
+	return FALSE;
+}
+
+char* find_next_video(){
+	FRESULT status;
+	//status = f_opendir(&directory, "3:/");
+	if(directory.dptr == 0){
+		status = f_opendir(&directory, "3:/");
+	}
+	for(;;){
+		// read the first item in the directory
+		status = f_readdir(&directory, &fno);
+		printf("%s\n", fno.fname);
+		// if we are at the end of the directory
+		if(fno.fname == NULL){
+			status = f_rewinddir(&directory);
+		}
+		// if it meets the qualifications to be a video, return the fno.fname
+		else if(valid_video_name(fno.fname)){
+			printf("%s\n", fno.fname);
+			printf("%s\n", fno.fname);
+			//char* next_video = fno.fname;
+			//printf("%s/n", *next_video);
+			// close the directory
+//				f_closedir(&directory);
+			return fno.fname;
+		}
+	}
+}
+

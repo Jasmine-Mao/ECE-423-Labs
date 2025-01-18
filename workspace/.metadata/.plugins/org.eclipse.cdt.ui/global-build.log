@@ -1,6 +1,6 @@
 Nothing to build in platform 'lab_prefab_wrapper'
 
-12:29:30 **** Incremental Build of configuration Release for project ece423_lab1 ****
+17:54:44 **** Incremental Build of configuration Release for project ece423_lab1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -30,8 +30,8 @@ C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_pref
    49 | #  define TRUE          1U
       | 
 ../src/video_control/video_control.c: In function 'load_video':
-../src/video_control/video_control.c:28:63: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   28 |     if(f_read(&fil, &video_info.num_frames, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUMBER OF FRAMES");
+../src/video_control/video_control.c:35:63: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |     if(f_read(&fil, &video_info.num_frames, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUMBER OF FRAMES");
       |                                                               ^~~~~~~~~~~~~~~
       |                                                               |
       |                                                               uint32_t * {aka long unsigned int *}
@@ -40,8 +40,8 @@ In file included from ../src/video_control/../common/mjpeg423_types.h:14,
 C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
   275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
       |                                                ~~~~~~^~
-../src/video_control/video_control.c:29:59: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   29 |     if(f_read(&fil, &video_info.w_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ WIDTH");
+../src/video_control/video_control.c:36:59: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
+   36 |     if(f_read(&fil, &video_info.w_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ WIDTH");
       |                                                           ^~~~~~~~~~~~~~~
       |                                                           |
       |                                                           uint32_t * {aka long unsigned int *}
@@ -50,8 +50,8 @@ In file included from ../src/video_control/../common/mjpeg423_types.h:14,
 C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
   275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
       |                                                ~~~~~~^~
-../src/video_control/video_control.c:30:59: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   30 |     if(f_read(&fil, &video_info.h_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ HEIGHT");
+../src/video_control/video_control.c:37:59: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
+   37 |     if(f_read(&fil, &video_info.h_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ HEIGHT");
       |                                                           ^~~~~~~~~~~~~~~
       |                                                           |
       |                                                           uint32_t * {aka long unsigned int *}
@@ -60,8 +60,8 @@ In file included from ../src/video_control/../common/mjpeg423_types.h:14,
 C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
   275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
       |                                                ~~~~~~^~
-../src/video_control/video_control.c:31:64: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   31 |     if(f_read(&fil, &video_info.num_iframes, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUM I-FRAMES");
+../src/video_control/video_control.c:38:64: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
+   38 |     if(f_read(&fil, &video_info.num_iframes, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUM I-FRAMES");
       |                                                                ^~~~~~~~~~~~~~~
       |                                                                |
       |                                                                uint32_t * {aka long unsigned int *}
@@ -70,8 +70,8 @@ In file included from ../src/video_control/../common/mjpeg423_types.h:14,
 C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
   275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
       |                                                ~~~~~~^~
-../src/video_control/video_control.c:32:65: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   32 |     if(f_read(&fil, &video_info.payload_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ PAYLOAD SIZE");
+../src/video_control/video_control.c:39:65: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
+   39 |     if(f_read(&fil, &video_info.payload_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ PAYLOAD SIZE");
       |                                                                 ^~~~~~~~~~~~~~~
       |                                                                 |
       |                                                                 uint32_t * {aka long unsigned int *}
@@ -80,8 +80,8 @@ In file included from ../src/video_control/../common/mjpeg423_types.h:14,
 C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
   275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
       |                                                ~~~~~~^~
-../src/video_control/video_control.c:65:85: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   65 |         if(f_read(&fil, &(video_info.trailer[count].frame_index), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO GET FRAME INDEX");
+../src/video_control/video_control.c:68:85: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
+   68 |         if(f_read(&fil, &(video_info.trailer[count].frame_index), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO GET FRAME INDEX");
       |                                                                                     ^~~~~~~~~~~~~~~
       |                                                                                     |
       |                                                                                     uint32_t * {aka long unsigned int *}
@@ -90,8 +90,8 @@ In file included from ../src/video_control/../common/mjpeg423_types.h:14,
 C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
   275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
       |                                                ~~~~~~^~
-../src/video_control/video_control.c:66:88: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   66 |         if(f_read(&fil, &(video_info.trailer[count].frame_position), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit ("FAILED TO GET FRAME POSITION");
+../src/video_control/video_control.c:69:88: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
+   69 |         if(f_read(&fil, &(video_info.trailer[count].frame_position), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit ("FAILED TO GET FRAME POSITION");
       |                                                                                        ^~~~~~~~~~~~~~~
       |                                                                                        |
       |                                                                                        uint32_t * {aka long unsigned int *}
@@ -100,8 +100,9 @@ In file included from ../src/video_control/../common/mjpeg423_types.h:14,
 C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
   275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
       |                                                ~~~~~~^~
-../src/video_control/video_control.c:24:17: warning: unused variable 'status' [-Wunused-variable]
-   24 |         FRESULT status = f_open(&fil, file_name, FA_READ);
+../src/video_control/video_control.c: In function 'find_next_video':
+../src/video_control/video_control.c:148:17: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  148 |         FRESULT status;
       |                 ^~~~~~
 'Finished building: ../src/video_control/video_control.c'
 ' '
@@ -113,6 +114,6 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size ece423_lab1.elf  |tee "ece423_lab1.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  99824	   3912	419440448	419544184	1901bc78	ece423_lab1.elf
+ 102056	   3912	419440512	419546480	1901c570	ece423_lab1.elf
 'Finished building: ece423_lab1.elf.size'
 ' '

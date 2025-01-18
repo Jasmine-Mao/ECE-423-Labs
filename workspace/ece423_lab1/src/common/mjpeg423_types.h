@@ -68,5 +68,7 @@ extern int zigzag_table[64];
 
 extern FATFS fatfs;
 extern FIL fil;
+extern DIR directory;
+extern FILINFO fno;
 
 #endif

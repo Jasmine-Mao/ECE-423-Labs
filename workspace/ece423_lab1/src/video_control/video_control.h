@@ -30,11 +30,13 @@ typedef struct {
     uint8_t* Crbitstream;
 } video_info_t;
 
-video_info_t load_video(const char* file_name);
+video_info_t load_video(TCHAR* file_name);
 void display_next_frame(uint32_t* frame_index, video_info_t video_info);
 void pause_button(BOOL* paused_ptr);
-void cycle_button();
+void cycle_button(uint32_t* frame_index, video_info_t* prev_video_info);
 void forward_button();
 void backward_button();
+
+TCHAR* find_next_video();
 
 #endif

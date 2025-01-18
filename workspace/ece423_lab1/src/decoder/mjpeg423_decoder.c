@@ -27,6 +27,7 @@ void mjpeg423_decode(uint32_t frame_index, video_info_t video)
 {
     // initialize stuff
     rgb_pixel_t* rgbblock;
+    if((rgbblock = malloc(video.w_size*video.h_size*sizeof(rgb_pixel_t)))==NULL) error_and_exit("cannot allocate rgbblock");
     uint32_t* vdma_reg_status;
     uint32_t num_bytes_read;
 
@@ -63,13 +64,11 @@ void mjpeg423_decode(uint32_t frame_index, video_info_t video)
     vdma_reg_status = buff_reg();
     vdma_out();
     DEBUG_PRINT("\nDecoder done.\n\n\n")
-    
-    print("Reached the end of the code");
     //close down
     //fclose(file_in);
     //f_close(&fil);
-    //vdma_close();
-    // free(rgbblock); 
+//    vdma_close();
+    free(rgbblock);
     // free(Yblock);
     // free(Cbblock);
     // free(Crblock);
