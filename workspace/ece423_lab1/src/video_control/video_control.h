@@ -2,13 +2,7 @@
 #define video_control_h
 
 #include "../common/mjpeg423_types.h"
-
-video_info_t load_video(const TCHAR* file_name);
-void display_next_frame(uint32_t* frame_index, video_info_t video_info);
-void pause_button(BOOL* not_paused_ptr);
-void cycle_button();
-void forward_button();
-void backward_button();
+#include <stdio.h>
 
 typedef struct {
     uint32_t num_frames;
@@ -35,5 +29,12 @@ typedef struct {
     uint8_t* Cbbitstream;
     uint8_t* Crbitstream;
 } video_info_t;
+
+video_info_t load_video(const char* file_name);
+void display_next_frame(uint32_t* frame_index, video_info_t video_info);
+void pause_button(BOOL* paused_ptr);
+void cycle_button();
+void forward_button();
+void backward_button();
 
 #endif

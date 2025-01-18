@@ -58,7 +58,7 @@
 #include "video_control/video_control.h"
 
 #define TIMER_1S 325000000
-#define TIMER_FPS 1
+#define TIMER_FPS 10
 
 volatile int8_t button_input;
 volatile int8_t timer_input;
@@ -73,8 +73,8 @@ void TimerHandler(void*){
 }
 
 
-static FATFS fatfs;
-static FIL fil;
+FATFS fatfs;
+FIL fil;
 uint32_t current_frame  = 0;
 
 
@@ -91,16 +91,16 @@ int main()
 
     timer_gpio_init(TimerHandler, GpioHandler);
     timer_start(TIMER_1S/TIMER_FPS);
-
+    printf("finished initializations \nT");
     //SD card mount
 	FRESULT status;
     status = f_mount(&fatfs, "3:/", 1);
-
+    printf("mounted SD card with status %d \n", status);
     //load video, first frame, and be in the paused state
-    video_info_t = video_playing load_video("3:/v1_300.mpg");	// initializes video so its ready to play
-    display_next_frame(&current_frame);	// decodes and displays
+    video_info_t current_video = load_video("3:/v1_300.mpg");	// initializes video so its ready to play
+    display_next_frame(&current_frame, current_video);	// decodes and displays
     BOOL paused = TRUE;
-	// changed the aboce from not_paused to paused for simplicity
+	// changed the above from not_paused to paused for simplicity
 	
 	// poll for different interrupts
     while (1){
@@ -134,13 +134,13 @@ int main()
     		button_input = -1;
     	}
     	if(timer_input == 1 && !paused){ //wants to show next frame
-    		display_next_frame();
+    		display_next_frame(&current_frame, current_video);
 //    		current_frame++;
 
     		timer_input = 0;
     		print("Timer Triggered! \n\r");
     	}
-    	load_frames_fcn(frame_number)
+//    	load_frames_fcn(frame_number)
     }
 
 

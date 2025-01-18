@@ -15,8 +15,8 @@
 #include "ff.h"
 #include "../ece423_vid_ctl/ece423_vid_ctl.h"
 
-extern static FATFS fatfs;
-extern static FIL fil;
+//extern FATFS fatfs;
+//extern  FIL fil;
 
 //declaration. Function implemented in libnsbmp
 //void encode_bmp(rgb_pixel_t* rgbblock, uint32_t w_size, uint32_t h_size, const char* filename);
@@ -28,6 +28,7 @@ void mjpeg423_decode(uint32_t frame_index, video_info_t video)
     // initialize stuff
     rgb_pixel_t* rgbblock;
     uint32_t* vdma_reg_status;
+    uint32_t num_bytes_read;
 
     rgbblock = buff_next();
 
@@ -38,7 +39,7 @@ void mjpeg423_decode(uint32_t frame_index, video_info_t video)
 
     if(f_read(&fil, &video.Ysize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ Y SIZE");
     if(f_read(&fil, &video.Cbsize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ CB SIZE");
-    if(f_read(&fil, video.Ybitstream, (frame_size - 4 * sizeof(uint32_t)), &num_bytes_read) != 0) error_and_exit("COULD NOT READ YBITSTREAM");
+    if(f_read(&fil, video.Ybitstream, (video.frame_size - 4 * sizeof(uint32_t)), &num_bytes_read) != 0) error_and_exit("COULD NOT READ YBITSTREAM");
 
     video.Cbbitstream = video.Ybitstream + video.Ysize;
     video.Crbitstream = video.Cbbitstream + video.Cbsize;
@@ -60,7 +61,7 @@ void mjpeg423_decode(uint32_t frame_index, video_info_t video)
 
 
     vdma_reg_status = buff_reg();
-    vdma_status = vdma_out();    
+    vdma_out();
     DEBUG_PRINT("\nDecoder done.\n\n\n")
     
     print("Reached the end of the code");

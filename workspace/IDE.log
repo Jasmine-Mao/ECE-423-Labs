@@ -2676,3 +2676,105 @@ con
 ----------------End of Script----------------
 
 15:09:13 INFO  : Launch script is exported to file 'C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\ece423_lab1_system\_ide\scripts\debugger_ece423_lab1-jan13correct.tcl'
+11:31:33 DEBUG : Logs will be stored at 'C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/IDE.log'.
+11:31:34 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\j54mao\ECE423\ECE-423-Labs\workspace\temp_xsdb_launch_script.tcl
+11:31:40 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+11:31:40 INFO  : Platform repository initialization has completed.
+11:31:40 INFO  : Registering command handlers for Vitis TCF services
+11:31:43 INFO  : XSCT server has started successfully.
+11:31:43 INFO  : plnx-install-location is set to ''
+11:31:48 INFO  : Successfully done setting XSCT server connection channel  
+11:31:48 INFO  : Successfully done query RDI_DATADIR 
+11:31:48 INFO  : Successfully done setting workspace for the tool. 
+11:36:07 INFO  : Build configuration of 'ece423_lab1_system' is updated to 'Debug'
+11:36:07 INFO  : Build configuration of system project is automatically updated to 'Debug'.
+11:36:47 INFO  : Result from executing command 'getProjects': lab_prefab_wrapper
+11:36:47 INFO  : Result from executing command 'getPlatforms': 
+11:36:47 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:37:38 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:38:39 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:38:59 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:39:35 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:40:18 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:40:51 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:41:07 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:41:32 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:42:22 INFO  : Build configuration of 'ece423_lab1_system' is updated to 'Release'
+11:42:22 INFO  : Build configuration of system project is automatically updated to 'Release'.
+11:42:22 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:42:44 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:42:58 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:43:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:43:28 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+11:43:28 INFO  : 'jtag frequency' command is executed.
+11:43:29 INFO  : Context for 'APU' is selected.
+11:43:29 INFO  : System reset is completed.
+11:43:32 INFO  : 'after 3000' command is executed.
+11:43:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+11:43:33 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/impl_1/lab_prefab_wrapper.bit": permission denied
+11:43:33 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/impl_1/lab_prefab_wrapper.bit": permission denied
+11:43:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+11:43:33 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/impl_1/lab_prefab_wrapper.bit": permission denied
+11:44:04 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:44:39 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:44:50 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:44:53 INFO  : Build configuration of 'ece423_lab1_system' is updated to 'Debug'
+11:44:53 INFO  : Build configuration of system project is automatically updated to 'Debug'.
+11:44:53 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:45:36 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:47:43 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:47:56 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:48:27 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:48:57 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:53:06 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:54:10 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:57:05 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:58:58 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+11:59:58 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+12:01:50 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+12:01:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:01:54 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+12:01:54 INFO  : 'jtag frequency' command is executed.
+12:01:54 INFO  : Context for 'APU' is selected.
+12:01:54 INFO  : System reset is completed.
+12:01:57 INFO  : 'after 3000' command is executed.
+12:01:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+12:01:57 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/impl_1/lab_prefab_wrapper.bit": permission denied
+12:01:57 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/impl_1/lab_prefab_wrapper.bit": permission denied
+12:01:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+12:01:57 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/impl_1/lab_prefab_wrapper.bit": permission denied
+12:03:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:03:26 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+12:03:26 INFO  : 'jtag frequency' command is executed.
+12:03:26 INFO  : Context for 'APU' is selected.
+12:03:26 INFO  : System reset is completed.
+12:03:29 INFO  : 'after 3000' command is executed.
+12:03:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+12:03:29 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/impl_1/lab_prefab_wrapper.bit": permission denied
+12:03:29 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/impl_1/lab_prefab_wrapper.bit": permission denied
+12:03:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+12:03:29 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/impl_1/lab_prefab_wrapper.bit": permission denied

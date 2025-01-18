@@ -10,6 +10,7 @@
 #define mjpeg423app_mjpeg423_decoder_h
 
 #include "../common/mjpeg423_types.h"
+#include "../video_control/video_control.h"
 
 void mjpeg423_decode(uint32_t frame_index, video_info_t video);
 void ycbcr_to_rgb(int h, int w, uint32_t w_size, pcolor_block_t Y, pcolor_block_t Cb, pcolor_block_t Cr, rgb_pixel_t* rgbblock);

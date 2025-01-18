@@ -11,6 +11,7 @@
 
 #include <stdlib.h>
 #include <stdint.h>
+#include "ff.h"
 
 typedef int BOOL;
 #define FALSE (0)
@@ -64,5 +65,8 @@ typedef struct {
 extern dct_block_t Yquant;
 extern dct_block_t Cquant;
 extern int zigzag_table[64];
+
+extern FATFS fatfs;
+extern FIL fil;
 
 #endif

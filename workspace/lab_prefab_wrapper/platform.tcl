@@ -53,3 +53,4 @@ platform generate
 platform active {lab_prefab_wrapper}
 bsp reload
 platform generate -domains 
+platform generate
