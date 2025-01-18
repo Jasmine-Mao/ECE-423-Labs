@@ -4,8 +4,11 @@
 #include "../common/mjpeg423_types.h"
 
 video_info_t load_video(const TCHAR* file_name);
-void display_next_frame(uint32_t* frame_index);
+void display_next_frame(uint32_t* frame_index, video_info_t video_info);
 void pause_button(BOOL* not_paused_ptr);
+void cycle_button();
+void forward_button();
+void backward_button();
 
 typedef struct {
     uint32_t num_frames;

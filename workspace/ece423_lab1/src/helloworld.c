@@ -54,6 +54,8 @@
 #include "xparameters.h"
 #include "xil_types.h"
 #include "timer_gpio.h"
+#include "common/mjpeg423_types.h"
+#include "video_control/video_control.h"
 
 #define TIMER_1S 325000000
 #define TIMER_FPS 1
@@ -78,6 +80,7 @@ uint32_t current_frame  = 0;
 
 int main()
 {
+	// initializing everything
     init_platform();
 
     uint32_t vdma_status;
@@ -87,46 +90,50 @@ int main()
     timer_input = 0;
 
     timer_gpio_init(TimerHandler, GpioHandler);
-
     timer_start(TIMER_1S/TIMER_FPS);
 
-    FRESULT status;
     //SD card mount
+	FRESULT status;
     status = f_mount(&fatfs, "3:/", 1);
 
-    //load video, first frame, and be paused
-    load_video("3:/v1_300.mpg");	// initializes video so its ready to play
+    //load video, first frame, and be in the paused state
+    video_info_t = video_playing load_video("3:/v1_300.mpg");	// initializes video so its ready to play
     display_next_frame(&current_frame);	// decodes and displays
-    BOOL not_paused = FALSE;
-
+    BOOL paused = TRUE;
+	// changed the aboce from not_paused to paused for simplicity
+	
+	// poll for different interrupts
     while (1){
     	if(button_input != -1){
+			// TODO: debounce the buttons
     		printf("Button Pressed: %d\n\r", button_input);
     		switch(button_input)
     		{
     			case 0:
-    				//
+    				// cycle through videos in the directory
+					// upon cycle. we free the previous video metadata (which will alway have been loaded)
+					// navigate through the directory to find the next file with a .mpg extension
     				cycle_button();
     				break;
     			case 1:
-    				//
-    				pause_button(&not_paused);
+    				// pause/play the current video
+    				pause_button(&paused);
     				break;
     			case 2:
-    				//
+    				// skip forward 5 seconds (120 frames)
     				forward_button();
     				break;
     			case 3:
-    				//
+    				// skip backwards 5 seconds (120 frames)
     				backward_button();
     				break;
     			default:
     				//oops
-
+					// should never get here
     		}
     		button_input = -1;
     	}
-    	if(timer_input == 1 && not_paused){ //wants to show next frame
+    	if(timer_input == 1 && !paused){ //wants to show next frame
     		display_next_frame();
 //    		current_frame++;
 
