@@ -1,120 +1,58 @@
-17:54:44 **** Incremental Build of configuration Release for project ece423_lab1 ****
+13:15:37 **** Incremental Build of configuration Debug for project ece423_lab1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/video_control/video_control.c'
+'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/video_control/video_control.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/video_control/video_control.d" -MT"src/video_control/video_control.o" -o "src/video_control/video_control.o" "../src/video_control/video_control.c"
-In file included from ../src/video_control/video_control.c:4:
-../src/video_control/../common/mjpeg423_types.h:17: warning: "FALSE" redefined
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/decoder/mjpeg423_decoder.h:12,
+                 from ../src/helloworld.c:51:
+../src/decoder/../common/mjpeg423_types.h:17: warning: "FALSE" redefined
    17 | #define FALSE (0)
       | 
-In file included from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:29,
-                 from ../src/video_control/../common/mjpeg423_types.h:14,
-                 from ../src/video_control/video_control.c:4:
-C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
+In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_printf.h:15,
+                 from ../src/helloworld.c:50:
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
    53 | #  define FALSE         0U
       | 
-In file included from ../src/video_control/video_control.c:4:
-../src/video_control/../common/mjpeg423_types.h:18: warning: "TRUE" redefined
+In file included from ../src/decoder/mjpeg423_decoder.h:12,
+                 from ../src/helloworld.c:51:
+../src/decoder/../common/mjpeg423_types.h:18: warning: "TRUE" redefined
    18 | #define TRUE !FALSE
       | 
-In file included from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:29,
-                 from ../src/video_control/../common/mjpeg423_types.h:14,
-                 from ../src/video_control/video_control.c:4:
-C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
+In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_printf.h:15,
+                 from ../src/helloworld.c:50:
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
    49 | #  define TRUE          1U
       | 
-../src/video_control/video_control.c: In function 'load_video':
-../src/video_control/video_control.c:35:63: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   35 |     if(f_read(&fil, &video_info.num_frames, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUMBER OF FRAMES");
-      |                                                               ^~~~~~~~~~~~~~~
-      |                                                               |
-      |                                                               uint32_t * {aka long unsigned int *}
-In file included from ../src/video_control/../common/mjpeg423_types.h:14,
-                 from ../src/video_control/video_control.c:4:
-C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
-  275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
-      |                                                ~~~~~~^~
-../src/video_control/video_control.c:36:59: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   36 |     if(f_read(&fil, &video_info.w_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ WIDTH");
-      |                                                           ^~~~~~~~~~~~~~~
-      |                                                           |
-      |                                                           uint32_t * {aka long unsigned int *}
-In file included from ../src/video_control/../common/mjpeg423_types.h:14,
-                 from ../src/video_control/video_control.c:4:
-C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
-  275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
-      |                                                ~~~~~~^~
-../src/video_control/video_control.c:37:59: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   37 |     if(f_read(&fil, &video_info.h_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ HEIGHT");
-      |                                                           ^~~~~~~~~~~~~~~
-      |                                                           |
-      |                                                           uint32_t * {aka long unsigned int *}
-In file included from ../src/video_control/../common/mjpeg423_types.h:14,
-                 from ../src/video_control/video_control.c:4:
-C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
-  275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
-      |                                                ~~~~~~^~
-../src/video_control/video_control.c:38:64: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   38 |     if(f_read(&fil, &video_info.num_iframes, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUM I-FRAMES");
-      |                                                                ^~~~~~~~~~~~~~~
-      |                                                                |
-      |                                                                uint32_t * {aka long unsigned int *}
-In file included from ../src/video_control/../common/mjpeg423_types.h:14,
-                 from ../src/video_control/video_control.c:4:
-C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
-  275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
-      |                                                ~~~~~~^~
-../src/video_control/video_control.c:39:65: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   39 |     if(f_read(&fil, &video_info.payload_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ PAYLOAD SIZE");
-      |                                                                 ^~~~~~~~~~~~~~~
-      |                                                                 |
-      |                                                                 uint32_t * {aka long unsigned int *}
-In file included from ../src/video_control/../common/mjpeg423_types.h:14,
-                 from ../src/video_control/video_control.c:4:
-C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
-  275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
-      |                                                ~~~~~~^~
-../src/video_control/video_control.c:68:85: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   68 |         if(f_read(&fil, &(video_info.trailer[count].frame_index), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO GET FRAME INDEX");
-      |                                                                                     ^~~~~~~~~~~~~~~
-      |                                                                                     |
-      |                                                                                     uint32_t * {aka long unsigned int *}
-In file included from ../src/video_control/../common/mjpeg423_types.h:14,
-                 from ../src/video_control/video_control.c:4:
-C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
-  275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
-      |                                                ~~~~~~^~
-../src/video_control/video_control.c:69:88: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
-   69 |         if(f_read(&fil, &(video_info.trailer[count].frame_position), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit ("FAILED TO GET FRAME POSITION");
-      |                                                                                        ^~~~~~~~~~~~~~~
-      |                                                                                        |
-      |                                                                                        uint32_t * {aka long unsigned int *}
-In file included from ../src/video_control/../common/mjpeg423_types.h:14,
-                 from ../src/video_control/video_control.c:4:
-C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
-  275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);                       /* Read data from the file */
-      |                                                ~~~~~~^~
-../src/video_control/video_control.c: In function 'find_next_video':
-../src/video_control/video_control.c:148:17: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  148 |         FRESULT status;
-      |                 ^~~~~~
-'Finished building: ../src/video_control/video_control.c'
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:93:35: warning: passing argument 2 of 'timer_gpio_init' from incompatible pointer type [-Wincompatible-pointer-types]
+   93 |     timer_gpio_init(TimerHandler, GpioHandler);
+      |                                   ^~~~~~~~~~~
+      |                                   |
+      |                                   void (*)(void *, u32,  u32) {aka void (*)(void *, long unsigned int,  long unsigned int)}
+In file included from ../src/helloworld.c:57:
+../src/timer_gpio.h:4:59: note: expected 'void (*)(void *)' but argument is of type 'void (*)(void *, u32,  u32)' {aka 'void (*)(void *, long unsigned int,  long unsigned int)'}
+    4 | int timer_gpio_init(void (*fun_timer)(void* data), void (*fun_gpio)(void* data));
+      |                                                    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:87:14: warning: variable 'vdma_status' set but not used [-Wunused-but-set-variable]
+   87 |     uint32_t vdma_status;
+      |              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
 ' '
 'Building target: ece423_lab1.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "ece423_lab1.elf"  ./src/video_control/video_control.o  ./src/ece423_vid_ctl/ece423_vid_ctl.o  ./src/decoder/idct.o ./src/decoder/lossless_decode.o ./src/decoder/mjpeg423_decoder.o ./src/decoder/ycbcr_to_rgb.o  ./src/common/tables.o ./src/common/util.o  ./src/helloworld.o ./src/platform.o ./src/timer_gpio.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "ece423_lab1.elf"  ./src/video_control/video_control.o  ./src/ece423_vid_ctl/ece423_vid_ctl.o  ./src/decoder/idct.o ./src/decoder/lossless_decode.o ./src/decoder/mjpeg423_decoder.o ./src/decoder/ycbcr_to_rgb.o  ./src/common/tables.o ./src/common/util.o  ./src/helloworld.o ./src/platform.o ./src/timer_gpio.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ece423_lab1.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size ece423_lab1.elf  |tee "ece423_lab1.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 102056	   3912	419440512	419546480	1901c570	ece423_lab1.elf
+ 107660	   3912	419440480	419552052	1901db34	ece423_lab1.elf
 'Finished building: ece423_lab1.elf.size'
 ' '
 
-17:54:48 Build Finished (took 4s.731ms)
+13:15:38 Build Finished (took 1s.186ms)
 

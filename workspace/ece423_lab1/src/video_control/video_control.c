@@ -87,7 +87,7 @@ void pause_button(BOOL* paused_ptr){
 	*paused_ptr = !(*paused_ptr);
 }
 
-void cycle_button(uint32_t* frame_index, video_info_t* prev_video_info){
+video_info_t* cycle_button(uint32_t* frame_index, video_info_t* prev_video_info){
 	//delete all the malloced data
 	//f_close(&fil);
 //	vdma_close();
@@ -100,14 +100,21 @@ void cycle_button(uint32_t* frame_index, video_info_t* prev_video_info){
 	free(prev_video_info->CrDCAC);
 	free(prev_video_info->Ybitstream);
 	free(prev_video_info->trailer);
+	free(prev_video_info);
+
+	video_info_t* new_video_info = malloc(sizeof(video_info_t));
+
+
 
 	//find the next video and load it in
 	char* next_video = find_next_video();
 	printf("Next video: %s", next_video);
-	*prev_video_info = load_video(next_video);
+	//*new_video_info = load_video(next_video);
+	*new_video_info = load_video("v1_1730.mpg");
 
 	//reset the frame index and load in the first frame
 	*frame_index = 0;
+	return new_video_info;
 
 }
 

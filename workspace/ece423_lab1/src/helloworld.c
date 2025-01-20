@@ -113,8 +113,9 @@ int main()
     // open directory
     // find the first .mpg file that's in the directory (should be the 300 frame one)
 
-    video_info_t current_video = load_video("v1_1730.mpg");	// initializes video so its ready to play
-    display_next_frame(&current_frame, current_video);	// decodes and displays
+    video_info_t* current_video = malloc(sizeof(video_info_t));
+    *current_video = load_video("v1_1730.mpg");	// initializes video so its ready to play
+    display_next_frame(&current_frame, *current_video);	// decodes and displays
     BOOL paused = TRUE;
 	
 	// poll for different interrupts
@@ -131,8 +132,10 @@ int main()
 //    				char* next_video = cycle_button(&current_frame, &current_video);
 //    				// finds the next video in the directory, returns the file name and we load it in
 //    				current_video = load_video(next_video);
-    				cycle_button(&current_frame, &current_video);
-    				display_next_frame(&current_frame, current_video);
+    				current_video = cycle_button(&current_frame, current_video);
+    				current_video->Ysize = 2682;
+
+    				display_next_frame(&current_frame, *current_video);
     				paused = TRUE;
     				break;
     			case 1:
@@ -154,7 +157,7 @@ int main()
     		button_input = -1;
     	}
     	if(timer_input == 1 && !paused){ //wants to show next frame
-    		display_next_frame(&current_frame, current_video);
+    		display_next_frame(&current_frame, *current_video);
 //    		current_frame++;
 
     		timer_input = 0;
