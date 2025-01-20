@@ -60,6 +60,7 @@
 
 #define TIMER_1S 325000000
 #define TIMER_FPS 10
+// maybe change this back to 1 instead of 10
 
 volatile int8_t button_input;
 volatile int8_t timer_input;
@@ -145,6 +146,8 @@ int main()
     			case 2:
     				// skip forward 5 seconds (120 frames)
     				forward_button();
+					// pass in the current frame number
+					// pass in the video infomration
     				break;
     			case 3:
     				// skip backwards 5 seconds (120 frames)
@@ -159,7 +162,8 @@ int main()
     	if(timer_input == 1 && !paused){ //wants to show next frame
     		display_next_frame(&current_frame, *current_video);
 //    		current_frame++;
-
+			// of the displayed frame is the last frame, transition to a paused state.
+			// this might need to be added to the display_frame function
     		timer_input = 0;
     		print("Timer Triggered! \n\r");
     	}

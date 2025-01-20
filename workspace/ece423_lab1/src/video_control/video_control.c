@@ -178,3 +178,35 @@ char* find_next_video(){
 	}
 }
 
+int forward_button(uint32_t* current_frame, video_info_t video_info){
+	// first, check to see if we can even go forward
+	if((video_info.num_frames - 1 - *current_frame) <= 120){
+		// if the current frame we are on is 5 seconds or less away 
+		return *current_frame = video_info.num_frames - 1;
+		// since we are near the end of the video, skip to the end
+	}
+	// we get here if there are more than 120 frames that can be skipped ahead
+	int count = 0;
+	while(video_info.trailer[count].frame_index < (*current_frame + 120)){
+		// while the frame index (of each Iframe) is less than the desired frame position, keep incrementing
+		// the count. this continues until we're incremented past the desired frame index
+		count++:
+	}
+	// once we get here, we have skipped ahead enough
+	return *current_frame = video_info.trailer[count].frame_index;
+	// modify the current frame index to the frame index of the 120 frame forward Iframe
+}
+
+int backward_button(uint32_t* current_frame, video_info_t video_info){
+	if(current_frame < 120){
+		// of the current frame is less than 120 frames, we just skip to the beginning of the video
+		return *current_frame = 0;
+	}
+	// we get here if there are enough frames to go back 5 seconds
+	int count = video_info.num_iframes;
+	while(video_into.trailer[count].frame_index > (*current_frame - 120)){
+		count--;
+	}
+	// once we get here, we have skipped back enough frames and can return a new frame index
+	return *current_frame = video_into.trailer[count].frame_index;
+}
