@@ -80,6 +80,8 @@ DIR directory;	// directory object for opening the SD card
 FILINFO fno;
 uint32_t current_frame  = 0;
 
+video_info_t current_video;
+
 int main()
 {
 	// initializing everything
@@ -100,9 +102,9 @@ int main()
     status = f_mount(&fatfs, "3:/", 1);
     printf("mounted SD card with status %d \n", status);
 
-    video_info_t* current_video = malloc(sizeof(video_info_t));
-    *current_video = load_video("v1_1730.mpg");	// initializes video so its ready to play
-    display_next_frame(&current_frame, *current_video);	// decodes and displays
+//    video_info_t* current_video = malloc(sizeof(video_info_t));
+    load_video("v1_1730.mpg");	// initializes video so its ready to play
+    display_next_frame(&current_frame);	// decodes and displays
     BOOL paused = TRUE;
 	
 	// poll for different interrupts
@@ -120,10 +122,10 @@ int main()
 					// display the first frame of the video
 					// transition to a paused state
 
-    				current_video = cycle_button(&current_frame, current_video);
-    				current_video->Ysize = 2682;
+    				cycle_button(&current_frame);
+    				//current_video->Ysize = 2682;
 
-    				display_next_frame(&current_frame, *current_video);
+    				display_next_frame(&current_frame);
     				paused = TRUE;
     				break;
     			case 1:
@@ -132,13 +134,13 @@ int main()
     				break;
     			case 2:
     				// skip forward 5 seconds (120 frames)
-    				current_frame = forward_button(current_frame, current_video);
-					printf("Skipped forward to frame %d\n", current_frame);
+    				//current_frame = forward_button(current_frame, current_video);
+					//printf("Skipped forward to frame %d\n", current_frame);
     				break;
     			case 3:
     				// skip backwards 5 seconds (120 frames)
-					current_frame = backward_button(current_frame, current_video);
-					printf("Skipped backward to frame %d\n", skip_backward);
+					//current_frame = backward_button(current_frame, current_video);
+					//printf("Skipped backward to frame %d\n", skip_backward);
     				break;
     			default:
     				//oops
@@ -147,7 +149,7 @@ int main()
     		button_input = -1;
     	}
     	if(timer_input == 1 && !paused){ //wants to show next frame
-    		display_next_frame(&current_frame, *current_video);
+    		display_next_frame(&current_frame);
 //    		current_frame++;
 			// of the displayed frame is the last frame, transition to a paused state.
 			// this might need to be added to the display_frame function

@@ -20,9 +20,9 @@
 //DIR directory;	// directory object for opening the SD card
 //FILINFO fno;
 
-video_info_t load_video(char* file_name)
+void load_video(char* file_name)
 {
-	video_info_t video_info;
+//	video_info_t video_info;
 	printf("About to load video %s \n", file_name);
 	char buffer[30] = "3:/";
 	strcat(buffer, file_name);
@@ -32,51 +32,51 @@ video_info_t load_video(char* file_name)
     uint32_t num_bytes_read;
 
     //read header
-    if(f_read(&fil, &video_info.num_frames, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUMBER OF FRAMES");
-    if(f_read(&fil, &video_info.w_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ WIDTH");
-    if(f_read(&fil, &video_info.h_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ HEIGHT");
-    if(f_read(&fil, &video_info.num_iframes, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUM I-FRAMES");
-    if(f_read(&fil, &video_info.payload_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ PAYLOAD SIZE");
+    if(f_read(&fil, &current_video.num_frames, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUMBER OF FRAMES");
+    if(f_read(&fil, &current_video.w_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ WIDTH");
+    if(f_read(&fil, &current_video.h_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ HEIGHT");
+    if(f_read(&fil, &current_video.num_iframes, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ NUM I-FRAMES");
+    if(f_read(&fil, &current_video.payload_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO READ PAYLOAD SIZE");
 
     //read trailer
-    video_info.hCb_size = video_info.h_size/8;           //number of chrominance blocks
-    video_info.wCb_size = video_info.w_size/8;
-    video_info.hYb_size = video_info.h_size/8;           //number of luminance blocks. Same as chrominance in the sample app
-    video_info.wYb_size = video_info.w_size/8;
+    current_video.hCb_size = current_video.h_size/8;           //number of chrominance blocks
+    current_video.wCb_size = current_video.w_size/8;
+    current_video.hYb_size = current_video.h_size/8;           //number of luminance blocks. Same as chrominance in the sample app
+    current_video.wYb_size = current_video.w_size/8;
 
     //trailer structure
-    video_info.trailer = malloc(sizeof(iframe_trailer_t)*video_info.num_iframes);
+    current_video.trailer = malloc(sizeof(iframe_trailer_t)*current_video.num_iframes);
 
     //main data structures. See lab manual for explanation
-    if((video_info.Yblock = malloc(video_info.hYb_size * video_info.wYb_size * 64))==NULL) error_and_exit("cannot allocate Yblock");
-    if((video_info.Cbblock = malloc(video_info.hCb_size * video_info.wCb_size * 64))==NULL) error_and_exit("cannot allocate Cbblock");
-    if((video_info.Crblock = malloc(video_info.hCb_size * video_info.wCb_size * 64))==NULL) error_and_exit("cannot allocate Crblock");;
-    if((video_info.YDCAC = malloc(video_info.hYb_size * video_info.wYb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate YDCAC");
-    if((video_info.CbDCAC = malloc(video_info.hCb_size * video_info.wCb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate CbDCAC");
-    if((video_info.CrDCAC = malloc(video_info.hCb_size * video_info.wCb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate CrDCAC");
+    if((current_video.Yblock = malloc(current_video.hYb_size * current_video.wYb_size * 64))==NULL) error_and_exit("cannot allocate Yblock");
+    if((current_video.Cbblock = malloc(current_video.hCb_size * current_video.wCb_size * 64))==NULL) error_and_exit("cannot allocate Cbblock");
+    if((current_video.Crblock = malloc(current_video.hCb_size * current_video.wCb_size * 64))==NULL) error_and_exit("cannot allocate Crblock");;
+    if((current_video.YDCAC = malloc(current_video.hYb_size * current_video.wYb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate YDCAC");
+    if((current_video.CbDCAC = malloc(current_video.hCb_size * current_video.wCb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate CbDCAC");
+    if((current_video.CrDCAC = malloc(current_video.hCb_size * current_video.wCb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate CrDCAC");
     //Ybitstream is assigned a size sufficient to hold all bistreams
     //the bitstream is then read from the file into Ybitstream
     //the remaining pointers simply point to the beginning of the Cb and Cr streams within Ybitstream
 
-    if((video_info.Ybitstream = malloc(video_info.hYb_size * video_info.wYb_size * 64 * sizeof(DCTELEM) + 2 * video_info.hCb_size * video_info.wCb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate bitstream");
+    if((current_video.Ybitstream = malloc(current_video.hYb_size * current_video.wYb_size * 64 * sizeof(DCTELEM) + 2 * current_video.hCb_size * current_video.wCb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate bitstream");
 
     //read trailer. Note: the trailer information is not used in the sample decoder app
     //set file to beginning of trailer
     //if(fseek(file_in, 5 * sizeof(uint32_t) + payload_size, SEEK_SET) != 0) error_and_exit("cannot seek into file");
-    if(f_lseek(&fil, 5 * sizeof(uint32_t) + video_info.payload_size) != 0) error_and_exit("ERROR GETTING TO TRAILER");
-    for(int count = 0; count < video_info.num_iframes; count++){
-    	if(f_read(&fil, &(video_info.trailer[count].frame_index), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO GET FRAME INDEX");
-    	if(f_read(&fil, &(video_info.trailer[count].frame_position), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit ("FAILED TO GET FRAME POSITION");
+    if(f_lseek(&fil, 5 * sizeof(uint32_t) + current_video.payload_size) != 0) error_and_exit("ERROR GETTING TO TRAILER");
+    for(int count = 0; count < current_video.num_iframes; count++){
+    	if(f_read(&fil, &(current_video.trailer[count].frame_index), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO GET FRAME INDEX");
+    	if(f_read(&fil, &(current_video.trailer[count].frame_position), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit ("FAILED TO GET FRAME POSITION");
     }
     //set it back to beginning of payload
     if(f_lseek(&fil, 5 * sizeof(uint32_t)) != 0) error_and_exit("COULD NOT SEEK BACK TO BEGINNING");
     // return the metadata of the video
-    return video_info;
+    return;
 }
 
-void display_next_frame(uint32_t* frame_index, video_info_t video_info){
+void display_next_frame(uint32_t* frame_index){
 	// basically just runs decoder
-	mjpeg423_decode(*frame_index, video_info);
+	mjpeg423_decode(*frame_index);
 	++(*frame_index);
     // increments the frame index (assuming that it will run normally and not have a slip forwards/back)
 }
@@ -87,44 +87,34 @@ void pause_button(BOOL* paused_ptr){
 	*paused_ptr = !(*paused_ptr);
 }
 
-video_info_t* cycle_button(uint32_t* frame_index, video_info_t* prev_video_info){
+void cycle_button(uint32_t* frame_index){
 	//delete all the malloced data
 	//f_close(&fil);
 //	vdma_close();
 //	vdma_init(1280, 720, 2);
-	free(prev_video_info->Yblock);
-	free(prev_video_info->Cbblock);
-	free(prev_video_info->Crblock);
-	free(prev_video_info->YDCAC);
-	free(prev_video_info->CbDCAC);
-	free(prev_video_info->CrDCAC);
-	free(prev_video_info->Ybitstream);
-	free(prev_video_info->trailer);
-	free(prev_video_info);
-
-	video_info_t* new_video_info = malloc(sizeof(video_info_t));
-
+	free(current_video.Yblock);
+	free(current_video.Cbblock);
+	free(current_video.Crblock);
+	free(current_video.YDCAC);
+	free(current_video.CbDCAC);
+	free(current_video.CrDCAC);
+	free(current_video.Ybitstream);
+	free(current_video.trailer);
 
 
 	//find the next video and load it in
 	char* next_video = find_next_video();
 	printf("Next video: %s", next_video);
 	//*new_video_info = load_video(next_video);
-	*new_video_info = load_video("v1_1730.mpg");
+	load_video("v1_1730.mpg");
 
 	//reset the frame index and load in the first frame
 	*frame_index = 0;
-	return new_video_info;
+	return;
 
 }
 
-void forward_button(){
 
-}
-
-void backward_button(){
-
-}
 
 BOOL valid_video_name(char* filename){
 //	printf("%s\n", filename);
@@ -178,35 +168,35 @@ char* find_next_video(){
 	}
 }
 
-int forward_button(uint32_t current_frame, video_info_t video_info){
-	// first, check to see if we can even go forward
-	if((video_info.num_frames - 1 - *current_frame) <= 120){
-		// if the current frame we are on is 5 seconds or less away 
-		return video_info.num_frames - 1;
-		// since we are near the end of the video, skip to the end
-	}
-	// we get here if there are more than 120 frames that can be skipped ahead
-	int count = 0;
-	while(video_info.trailer[count].frame_index < (*current_frame + 120)){
-		// while the frame index (of each Iframe) is less than the desired frame position, keep incrementing
-		// the count. this continues until we're incremented past the desired frame index
-		count++:
-	}
-	// once we get here, we have skipped ahead enough
-	return video_info.trailer[count].frame_index;
-	// modify the current frame index to the frame index of the 120 frame forward Iframe
-}
-
-int backward_button(uint32_t current_frame, video_info_t video_info){
-	if(current_frame < 120){
-		// of the current frame is less than 120 frames, we just skip to the beginning of the video
-		return 0;
-	}
-	// we get here if there are enough frames to go back 5 seconds
-	int count = video_info.num_iframes;
-	while(video_into.trailer[count].frame_index > (*current_frame - 120)){
-		count--;
-	}
-	// once we get here, we have skipped back enough frames and can return a new frame index
-	return video_into.trailer[count].frame_index;
-}
+//int forward_button(uint32_t current_frame, video_info_t video_info){
+//	// first, check to see if we can even go forward
+//	if((video_info.num_frames - 1 - *current_frame) <= 120){
+//		// if the current frame we are on is 5 seconds or less away
+//		return video_info.num_frames - 1;
+//		// since we are near the end of the video, skip to the end
+//	}
+//	// we get here if there are more than 120 frames that can be skipped ahead
+//	int count = 0;
+//	while(video_info.trailer[count].frame_index < (*current_frame + 120)){
+//		// while the frame index (of each Iframe) is less than the desired frame position, keep incrementing
+//		// the count. this continues until we're incremented past the desired frame index
+//		count++:
+//	}
+//	// once we get here, we have skipped ahead enough
+//	return video_info.trailer[count].frame_index;
+//	// modify the current frame index to the frame index of the 120 frame forward Iframe
+//}
+//
+//int backward_button(uint32_t current_frame, video_info_t video_info){
+//	if(current_frame < 120){
+//		// of the current frame is less than 120 frames, we just skip to the beginning of the video
+//		return 0;
+//	}
+//	// we get here if there are enough frames to go back 5 seconds
+//	int count = video_info.num_iframes;
+//	while(video_into.trailer[count].frame_index > (*current_frame - 120)){
+//		count--;
+//	}
+//	// once we get here, we have skipped back enough frames and can return a new frame index
+//	return video_into.trailer[count].frame_index;
+//}

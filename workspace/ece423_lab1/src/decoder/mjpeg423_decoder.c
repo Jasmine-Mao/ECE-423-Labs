@@ -23,42 +23,42 @@
 
 //main decoder function
 //void mjpeg423_decode(const char* filename_in, const char* filenamebase_out)
-void mjpeg423_decode(uint32_t frame_index, video_info_t video)
+void mjpeg423_decode(uint32_t frame_index)
 {
     // initialize stuff
     rgb_pixel_t* rgbblock;
-    if((rgbblock = malloc(video.w_size*video.h_size*sizeof(rgb_pixel_t)))==NULL) error_and_exit("cannot allocate rgbblock");
+    if((rgbblock = malloc(current_video.w_size*current_video.h_size*sizeof(rgb_pixel_t)))==NULL) error_and_exit("cannot allocate rgbblock");
     uint32_t* vdma_reg_status;
     uint32_t num_bytes_read;
 
     rgbblock = buff_next();
 
     //read frame payload
-    if(f_read(&fil, &video.frame_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT GET FRAME SIZE");
+    if(f_read(&fil, &current_video.frame_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT GET FRAME SIZE");
 
-    if(f_read(&fil, &video.frame_type, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT GET FRAME TYPE");
+    if(f_read(&fil, &current_video.frame_type, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT GET FRAME TYPE");
 
-    if(f_read(&fil, &video.Ysize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ Y SIZE");
-    if(f_read(&fil, &video.Cbsize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ CB SIZE");
-    if(f_read(&fil, video.Ybitstream, (video.frame_size - 4 * sizeof(uint32_t)), &num_bytes_read) != 0) error_and_exit("COULD NOT READ YBITSTREAM");
+    if(f_read(&fil, &current_video.Ysize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ Y SIZE");
+    if(f_read(&fil, &current_video.Cbsize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ CB SIZE");
+    if(f_read(&fil, current_video.Ybitstream, (current_video.frame_size - 4 * sizeof(uint32_t)), &num_bytes_read) != 0) error_and_exit("COULD NOT READ YBITSTREAM");
 
-    video.Cbbitstream = video.Ybitstream + video.Ysize;
-    video.Crbitstream = video.Cbbitstream + video.Cbsize;
+    current_video.Cbbitstream = current_video.Ybitstream + current_video.Ysize;
+    current_video.Crbitstream = current_video.Cbbitstream + current_video.Cbsize;
 
-    lossless_decode(video.hYb_size*video.wYb_size, video.Ybitstream, video.YDCAC, Yquant, video.frame_type);
-    lossless_decode(video.hCb_size*video.wCb_size, video.Cbbitstream, video.CbDCAC, Cquant, video.frame_type);
-    lossless_decode(video.hCb_size*video.wCb_size, video.Crbitstream, video.CrDCAC, Cquant, video.frame_type);
+    lossless_decode(current_video.hYb_size*current_video.wYb_size, current_video.Ybitstream, current_video.YDCAC, Yquant, current_video.frame_type);
+    lossless_decode(current_video.hCb_size*current_video.wCb_size, current_video.Cbbitstream, current_video.CbDCAC, Cquant, current_video.frame_type);
+    lossless_decode(current_video.hCb_size*current_video.wCb_size, current_video.Crbitstream, current_video.CrDCAC, Cquant, current_video.frame_type);
     
     //fdct
-    for(int b = 0; b < video.hYb_size*video.wYb_size; b++) idct(video.YDCAC[b], video.Yblock[b]);
-    for(int b = 0; b < video.hCb_size*video.wCb_size; b++) idct(video.CbDCAC[b], video.Cbblock[b]);
-    for(int b = 0; b < video.hCb_size*video.wCb_size; b++) idct(video.CrDCAC[b], video.Crblock[b]);
+    for(int b = 0; b < current_video.hYb_size*current_video.wYb_size; b++) idct(current_video.YDCAC[b], current_video.Yblock[b]);
+    for(int b = 0; b < current_video.hCb_size*current_video.wCb_size; b++) idct(current_video.CbDCAC[b], current_video.Cbblock[b]);
+    for(int b = 0; b < current_video.hCb_size*current_video.wCb_size; b++) idct(current_video.CrDCAC[b], current_video.Crblock[b]);
     
 
 
     //ybcbr to rgb conversion
-    for(int b = 0; b < video.hCb_size*video.wCb_size; b++)
-        ycbcr_to_rgb(b/video.wCb_size*8, b%video.wCb_size*8, video.w_size, video.Yblock[b], video.Cbblock[b], video.Crblock[b], rgbblock);
+    for(int b = 0; b < current_video.hCb_size*current_video.wCb_size; b++)
+        ycbcr_to_rgb(b/current_video.wCb_size*8, b%current_video.wCb_size*8, current_video.w_size, current_video.Yblock[b], current_video.Cbblock[b], current_video.Crblock[b], rgbblock);
 
 
     vdma_reg_status = buff_reg();
