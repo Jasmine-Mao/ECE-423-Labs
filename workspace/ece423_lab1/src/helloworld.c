@@ -100,20 +100,6 @@ int main()
     status = f_mount(&fatfs, "3:/", 1);
     printf("mounted SD card with status %d \n", status);
 
-    // open directory
-    // f_opendir(&directory, "3:/");
-//
-//    status = f_findfirst(&directory, &fno, "3:/", "*.mpg");
-//    printf("opened SD card and found the first file with status %d\n", status);
-//    printf(fno.fname);
-
-//    status = f_findnext(&directory, &fno);
-
-    //load video, first frame, and be in the paused state
-    //PSEUDO CODE //
-    // open directory
-    // find the first .mpg file that's in the directory (should be the 300 frame one)
-
     video_info_t* current_video = malloc(sizeof(video_info_t));
     *current_video = load_video("v1_1730.mpg");	// initializes video so its ready to play
     display_next_frame(&current_frame, *current_video);	// decodes and displays
@@ -127,12 +113,13 @@ int main()
     		switch(button_input)
     		{
     			case 0:
-    				// cycle through videos in the directory
-					// upon cycle. we free the previous video metadata (which will alway have been loaded)
-					// navigate through the directory to find the next file with a .mpg extension
-//    				char* next_video = cycle_button(&current_frame, &current_video);
-//    				// finds the next video in the directory, returns the file name and we load it in
-//    				current_video = load_video(next_video);
+					// free the current video information
+					// create a new video_info_t object to store the next video found
+					// find the next video
+					// load in the next video
+					// display the first frame of the video
+					// transition to a paused state
+
     				current_video = cycle_button(&current_frame, current_video);
     				current_video->Ysize = 2682;
 
@@ -145,13 +132,13 @@ int main()
     				break;
     			case 2:
     				// skip forward 5 seconds (120 frames)
-    				forward_button();
-					// pass in the current frame number
-					// pass in the video infomration
+    				current_frame = forward_button(current_frame, current_video);
+					printf("Skipped forward to frame %d\n", current_frame);
     				break;
     			case 3:
     				// skip backwards 5 seconds (120 frames)
-    				backward_button();
+					current_frame = backward_button(current_frame, current_video);
+					printf("Skipped backward to frame %d\n", skip_backward);
     				break;
     			default:
     				//oops

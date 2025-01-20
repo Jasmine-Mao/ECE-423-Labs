@@ -34,8 +34,8 @@ video_info_t load_video(TCHAR* file_name);
 void display_next_frame(uint32_t* frame_index, video_info_t video_info);
 void pause_button(BOOL* paused_ptr);
 video_info_t* cycle_button(uint32_t* frame_index, video_info_t* prev_video_info);
-int forward_button(uint32_t* current_frame, video_info_t video_info);
-int backward_button(uint32_t* current_frame, video_info_t video_info);
+int forward_button(uint32_t current_frame, video_info_t video_info);
+int backward_button(uint32_t current_frame, video_info_t video_info);
 
 char* find_next_video();
 
