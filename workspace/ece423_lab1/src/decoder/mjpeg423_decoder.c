@@ -23,43 +23,38 @@
 
 //main decoder function
 //void mjpeg423_decode(const char* filename_in, const char* filenamebase_out)
-void mjpeg423_decode(uint32_t frame_index, video_info_t video)
+void mjpeg423_decode(uint32_t frame_index)
 {
     // initialize stuff
-    rgb_pixel_t* rgbblock;
-    if((rgbblock = malloc(video.w_size*video.h_size*sizeof(rgb_pixel_t)))==NULL) error_and_exit("cannot allocate rgbblock");
     uint32_t* vdma_reg_status;
     uint32_t num_bytes_read;
 
     rgbblock = buff_next();
 
     //read frame payload
-    if(f_read(&fil, &video.frame_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT GET FRAME SIZE");
+    if(f_read(&fil, &frame_size, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT GET FRAME SIZE");
 
-    if(f_read(&fil, &video.frame_type, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT GET FRAME TYPE");
+    if(f_read(&fil, &frame_type, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT GET FRAME TYPE");
 
-    if(f_read(&fil, &video.Ysize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ Y SIZE");
-    if(f_read(&fil, &video.Cbsize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ CB SIZE");
-    if(f_read(&fil, video.Ybitstream, (video.frame_size - 4 * sizeof(uint32_t)), &num_bytes_read) != 0) error_and_exit("COULD NOT READ YBITSTREAM");
+    if(f_read(&fil, &Ysize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ Y SIZE");
+    if(f_read(&fil, &Cbsize, sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("COULD NOT READ CB SIZE");
+    if(f_read(&fil, Ybitstream, (frame_size - 4 * sizeof(uint32_t)), &num_bytes_read) != 0) error_and_exit("COULD NOT READ YBITSTREAM");
 
-    video.Cbbitstream = video.Ybitstream + video.Ysize;
-    video.Crbitstream = video.Cbbitstream + video.Cbsize;
+    Cbbitstream = Ybitstream + Ysize;
+    Crbitstream = Cbbitstream + Cbsize;
 
-    lossless_decode(video.hYb_size*video.wYb_size, video.Ybitstream, video.YDCAC, Yquant, video.frame_type);
-    lossless_decode(video.hCb_size*video.wCb_size, video.Cbbitstream, video.CbDCAC, Cquant, video.frame_type);
-    lossless_decode(video.hCb_size*video.wCb_size, video.Crbitstream, video.CrDCAC, Cquant, video.frame_type);
+    lossless_decode(hYb_size*wYb_size, Ybitstream, YDCAC, Yquant, frame_type);
+    lossless_decode(hCb_size*wCb_size, Cbbitstream, CbDCAC, Cquant, frame_type);
+    lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
     
     //fdct
-    for(int b = 0; b < video.hYb_size*video.wYb_size; b++) idct(video.YDCAC[b], video.Yblock[b]);
-    for(int b = 0; b < video.hCb_size*video.wCb_size; b++) idct(video.CbDCAC[b], video.Cbblock[b]);
-    for(int b = 0; b < video.hCb_size*video.wCb_size; b++) idct(video.CrDCAC[b], video.Crblock[b]);
-    
-
+    for(int b = 0; b < hYb_size*wYb_size; b++) idct(YDCAC[b], Yblock[b]);
+    for(int b = 0; b < hCb_size*wCb_size; b++) idct(CbDCAC[b], Cbblock[b]);
+    for(int b = 0; b < hCb_size*wCb_size; b++) idct(CrDCAC[b], Crblock[b]);
 
     //ybcbr to rgb conversion
-    for(int b = 0; b < video.hCb_size*video.wCb_size; b++)
-        ycbcr_to_rgb(b/video.wCb_size*8, b%video.wCb_size*8, video.w_size, video.Yblock[b], video.Cbblock[b], video.Crblock[b], rgbblock);
-
+    for(int b = 0; b < hCb_size*wCb_size; b++)
+        ycbcr_to_rgb(b/wCb_size*8, b%wCb_size*8, w_size, Yblock[b], Cbblock[b], Crblock[b], rgbblock);
 
     vdma_reg_status = buff_reg();
     vdma_out();
@@ -68,7 +63,7 @@ void mjpeg423_decode(uint32_t frame_index, video_info_t video)
     //fclose(file_in);
     //f_close(&fil);
 //    vdma_close();
-    free(rgbblock);
+    //free(rgbblock);
     // free(Yblock);
     // free(Cbblock);
     // free(Crblock);

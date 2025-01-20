@@ -61,7 +61,6 @@
 #define TIMER_1S 325000000
 #define TIMER_FPS 10
 // maybe change this back to 1 instead of 10
-
 volatile int8_t button_input;
 volatile int8_t timer_input;
 
@@ -79,6 +78,26 @@ FIL fil;
 DIR directory;	// directory object for opening the SD card
 FILINFO fno;
 uint32_t current_frame  = 0;
+
+uint32_t num_frames, w_size, h_size, num_iframes, payload_size;
+uint32_t Ysize, Cbsize, frame_size, frame_type;
+
+int hCb_size, wCb_size, hYb_size, wYb_size;
+
+iframe_trailer_t* trailer;
+
+color_block_t* Yblock;
+color_block_t* Cbblock;
+color_block_t* Crblock;
+
+dct_block_t* YDCAC;
+dct_block_t* CbDCAC;
+dct_block_t* CrDCAC;
+
+uint8_t* Ybitstream, Cbbitstream, Crbitstream;
+
+rgb_pixel_t* rgbblock;
+// taken from decoder
 
 int main()
 {
@@ -100,9 +119,13 @@ int main()
     status = f_mount(&fatfs, "3:/", 1);
     printf("mounted SD card with status %d \n", status);
 
-    video_info_t* current_video = malloc(sizeof(video_info_t));
-    *current_video = load_video("v1_1730.mpg");	// initializes video so its ready to play
-    display_next_frame(&current_frame, *current_video);	// decodes and displays
+    // load in first video
+    //video_info_t* current_video = malloc(sizeof(video_info_t));
+    // need to change this to get the first video in the SD card
+
+    load_video("v1_1730.mpg");
+    //*current_video = load_video("v1_1730.mpg");	// initializes video so its ready to play
+    display_next_frame(&current_frame);	// decodes and displays
     BOOL paused = TRUE;
 	
 	// poll for different interrupts
@@ -120,10 +143,11 @@ int main()
 					// display the first frame of the video
 					// transition to a paused state
 
-    				current_video = cycle_button(&current_frame, current_video);
-    				current_video->Ysize = 2682;
-
-    				display_next_frame(&current_frame, *current_video);
+    				// run cycle button to free the previously malloced information, find the next video, and load in the new video's information
+    				cycle_button(&current_frame);
+    				//current_video->Ysize = 2682;
+    				display_next_frame(&current_frame);
+    				//^ this can probably be moved into cycle button just to keep main simple and clean
     				paused = TRUE;
     				break;
     			case 1:
@@ -132,13 +156,13 @@ int main()
     				break;
     			case 2:
     				// skip forward 5 seconds (120 frames)
-    				current_frame = forward_button(current_frame, current_video);
+    				current_frame = forward_button(current_frame);
 					printf("Skipped forward to frame %d\n", current_frame);
     				break;
     			case 3:
     				// skip backwards 5 seconds (120 frames)
-					current_frame = backward_button(current_frame, current_video);
-					printf("Skipped backward to frame %d\n", skip_backward);
+					current_frame = backward_button(current_frame);
+					printf("Skipped backward to frame %d\n", current_frame);
     				break;
     			default:
     				//oops
@@ -147,7 +171,7 @@ int main()
     		button_input = -1;
     	}
     	if(timer_input == 1 && !paused){ //wants to show next frame
-    		display_next_frame(&current_frame, *current_video);
+    		display_next_frame(&current_frame);
 //    		current_frame++;
 			// of the displayed frame is the last frame, transition to a paused state.
 			// this might need to be added to the display_frame function

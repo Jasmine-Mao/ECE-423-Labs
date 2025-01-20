@@ -1,0 +1,28 @@
+#ifndef video_control_h
+#define video_control_h
+
+#include "../common/mjpeg423_types.h"
+#include <stdio.h>
+
+// VARIABLE DECLARATIONS //
+
+extern uint32_t num_frames, w_size, h_size, num_iframes, payload_size;
+extern uint32_t Ysize, Cbsize, frame_size, frame_type;
+extern int hCb_size, wCb_size, hYb_size, wYb_size;
+extern iframe_trailer_t* trailer;
+extern color_block_t* Yblock, Cbblock, Crblock;
+extern dct_block_t* YDCAC, CbDCAC, CrDCAC;
+extern uint8_t* Ybitstream, Cbbitstream, Crbitstream;
+extern rgb_pixel_t* rgbblock;
+
+// FUNCTIONS //
+void load_video(TCHAR* file_name);
+void display_next_frame(uint32_t* frame_index, video_info_t video_info);
+void pause_button(BOOL* paused_ptr);
+video_info_t* cycle_button(uint32_t* frame_index, video_info_t* prev_video_info);
+int forward_button(uint32_t current_frame, video_info_t video_info);
+int backward_button(uint32_t current_frame, video_info_t video_info);
+
+char* find_next_video();
+
+#endif

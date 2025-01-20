@@ -4,38 +4,31 @@
 #include "../common/mjpeg423_types.h"
 #include <stdio.h>
 
-typedef struct {
-    uint32_t num_frames;
-    uint32_t w_size;
-    uint32_t h_size;
-    uint32_t num_iframes;
-    uint32_t payload_size;
-    uint32_t Ysize;
-    uint32_t Cbsize;
-    uint32_t frame_size;
-    uint32_t frame_type;
-    int hCb_size;
-    int wCb_size;
-    int hYb_size;
-    int wYb_size;
-    iframe_trailer_t* trailer;
-    color_block_t* Yblock;
-    color_block_t* Cbblock;
-    color_block_t* Crblock;
-    dct_block_t* YDCAC;
-    dct_block_t* CbDCAC;
-    dct_block_t* CrDCAC;
-    uint8_t* Ybitstream;
-    uint8_t* Cbbitstream;
-    uint8_t* Crbitstream;
-} video_info_t;
+// VARIABLE DECLARATIONS //
 
-video_info_t load_video(TCHAR* file_name);
-void display_next_frame(uint32_t* frame_index, video_info_t video_info);
+extern uint32_t num_frames, w_size, h_size, num_iframes, payload_size;
+extern uint32_t Ysize, Cbsize, frame_size, frame_type;
+extern int hCb_size, wCb_size, hYb_size, wYb_size;
+
+extern iframe_trailer_t* trailer;
+
+extern color_block_t* Yblock;
+extern color_block_t* Cbblock;
+extern color_block_t* Crblock;
+
+extern dct_block_t* YDCAC;
+extern dct_block_t* CbDCAC;
+extern dct_block_t* CrDCAC;
+extern uint8_t* Ybitstream, Cbbitstream, Crbitstream;
+extern rgb_pixel_t* rgbblock;
+
+// FUNCTIONS //
+void load_video(TCHAR* file_name);
+void display_next_frame(uint32_t* frame_index);
 void pause_button(BOOL* paused_ptr);
-video_info_t* cycle_button(uint32_t* frame_index, video_info_t* prev_video_info);
-int forward_button(uint32_t current_frame, video_info_t video_info);
-int backward_button(uint32_t current_frame, video_info_t video_info);
+void cycle_button(uint32_t* frame_index);
+int forward_button(uint32_t current_frame);
+int backward_button(uint32_t current_frame);
 
 char* find_next_video();
 
