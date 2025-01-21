@@ -1,9 +1,167 @@
 Nothing to build in platform 'lab_prefab_wrapper'
 
-17:48:53 **** Incremental Build of configuration Release for project ece423_lab1 ****
+11:48:53 **** Incremental Build of configuration Release for project ece423_lab1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/decoder/idct.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/decoder/idct.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/decoder/idct.d" -MT"src/decoder/idct.o" -o "src/decoder/idct.o" "../src/decoder/idct.c"
+../src/decoder/idct.c:31:24: warning: argument 1 of type 'pdct_block_t' {aka 'short int (*)[8]'} declared as a pointer [-Warray-parameter=]
+   31 | void idct(pdct_block_t DCAC, pcolor_block_t block)
+      |           ~~~~~~~~~~~~~^~~~
+In file included from ../src/decoder/idct.c:10:
+../src/decoder/mjpeg423_decoder.h:38:23: note: previously declared as an array 'int16_t[8][8]' {aka 'short int[8][8]'}
+   38 | void idct(dct_block_t DCAC, color_block_t block);
+      |           ~~~~~~~~~~~~^~~~
+../src/decoder/idct.c:31:45: warning: argument 2 of type 'pcolor_block_t' {aka 'unsigned char (*)[8]'} declared as a pointer [-Warray-parameter=]
+   31 | void idct(pdct_block_t DCAC, pcolor_block_t block)
+      |                              ~~~~~~~~~~~~~~~^~~~~
+In file included from ../src/decoder/idct.c:10:
+../src/decoder/mjpeg423_decoder.h:38:43: note: previously declared as an array 'uint8_t[8][8]' {aka 'unsigned char[8][8]'}
+   38 | void idct(dct_block_t DCAC, color_block_t block);
+      |                             ~~~~~~~~~~~~~~^~~~~
+'Finished building: ../src/decoder/idct.c'
+' '
+'Building file: ../src/decoder/lossless_decode.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/decoder/lossless_decode.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/decoder/lossless_decode.d" -MT"src/decoder/lossless_decode.o" -o "src/decoder/lossless_decode.o" "../src/decoder/lossless_decode.c"
+'Finished building: ../src/decoder/lossless_decode.c'
+' '
+'Building file: ../src/decoder/mjpeg423_decoder.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/decoder/mjpeg423_decoder.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/decoder/mjpeg423_decoder.d" -MT"src/decoder/mjpeg423_decoder.o" -o "src/decoder/mjpeg423_decoder.o" "../src/decoder/mjpeg423_decoder.c"
+../src/decoder/mjpeg423_decoder.c: In function 'mjpeg423_decode_to_vdma_single_frame':
+../src/decoder/mjpeg423_decoder.c:291:16: warning: unused variable 'time_us' [-Wunused-variable]
+  291 |         double time_us = 0;
+      |                ^~~~~~~
+../src/decoder/mjpeg423_decoder.c: In function 'mjpeg423_decode_to_vdma_free_current_file':
+../src/decoder/mjpeg423_decoder.c:435:35: warning: overflow in conversion from 'double' to 'int' changes value from '1.7976931348623157e+308' to '2147483647' [-Woverflow]
+  435 |         memset(sdReadTime.min_us, DBL_MAX, 2*sizeof(double));
+      |                                   ^~~~~~~
+../src/decoder/mjpeg423_decoder.c:436:30: warning: overflow in conversion from 'double' to 'int' changes value from '1.7976931348623157e+308' to '2147483647' [-Woverflow]
+  436 |         memset(yTime.min_us, DBL_MAX, 2*sizeof(double));
+      |                              ^~~~~~~
+../src/decoder/mjpeg423_decoder.c:437:31: warning: overflow in conversion from 'double' to 'int' changes value from '1.7976931348623157e+308' to '2147483647' [-Woverflow]
+  437 |         memset(crTime.min_us, DBL_MAX, 2*sizeof(double));
+      |                               ^~~~~~~
+../src/decoder/mjpeg423_decoder.c:438:31: warning: overflow in conversion from 'double' to 'int' changes value from '1.7976931348623157e+308' to '2147483647' [-Woverflow]
+  438 |         memset(cbTime.min_us, DBL_MAX, 2*sizeof(double));
+      |                               ^~~~~~~
+../src/decoder/mjpeg423_decoder.c:445:31: warning: overflow in conversion from 'double' to 'int' changes value from '1.7976931348623157e+308' to '2147483647' [-Woverflow]
+  445 |         memset(frameSize.min, DBL_MAX, 2*sizeof(double));
+      |                               ^~~~~~~
+../src/decoder/mjpeg423_decoder.c: In function 'forward_button':
+../src/decoder/mjpeg423_decoder.c:462:48: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  462 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count].frame_index);
+      |                                               ~^                   ~~~~~~~~~~~
+      |                                                |                   |
+      |                                                int                 uint32_t {aka long unsigned int}
+      |                                               %ld
+../src/decoder/mjpeg423_decoder.c:462:63: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  462 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count].frame_index);
+      |                                                              ~^                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                               |                              |
+      |                                                               int                            uint32_t {aka long unsigned int}
+      |                                                              %ld
+../src/decoder/mjpeg423_decoder.c: In function 'backward_button':
+../src/decoder/mjpeg423_decoder.c:482:48: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  482 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count].frame_index);
+      |                                               ~^                   ~~~~~~~~~~~
+      |                                                |                   |
+      |                                                int                 uint32_t {aka long unsigned int}
+      |                                               %ld
+../src/decoder/mjpeg423_decoder.c:482:63: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  482 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count].frame_index);
+      |                                                              ~^                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                               |                              |
+      |                                                               int                            uint32_t {aka long unsigned int}
+      |                                                              %ld
+'Finished building: ../src/decoder/mjpeg423_decoder.c'
+' '
+'Building file: ../src/decoder/ycbcr_to_rgb.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/decoder/ycbcr_to_rgb.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/decoder/ycbcr_to_rgb.d" -MT"src/decoder/ycbcr_to_rgb.o" -o "src/decoder/ycbcr_to_rgb.o" "../src/decoder/ycbcr_to_rgb.c"
+'Finished building: ../src/decoder/ycbcr_to_rgb.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/common/util.h:12,
+                 from ../src/main.c:57:
+../src/common/mjpeg423_types.h:16: warning: "FALSE" redefined
+   16 | #define FALSE (0)
+      | 
+In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_printf.h:15,
+                 from ../src/main.c:50:
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
+   53 | #  define FALSE         0U
+      | 
+In file included from ../src/common/util.h:12,
+                 from ../src/main.c:57:
+../src/common/mjpeg423_types.h:17: warning: "TRUE" redefined
+   17 | #define TRUE !FALSE
+      | 
+In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_printf.h:15,
+                 from ../src/main.c:50:
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
+   49 | #  define TRUE          1U
+      | 
+../src/main.c: In function 'scan_files':
+../src/main.c:90:43: warning: passing argument 1 of 'snprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+   90 |                         snprintf(file_name[i], sizeof(file_name[i]), "%s/%s", "3:/", fno.fname);
+      |                                  ~~~~~~~~~^~~
+      |                                           |
+      |                                           char **
+In file included from ../src/main.c:48:
+c:\software\xilinx\vitis\2022.1\gnu\aarch32\nt\gcc-arm-none-eabi\aarch32-xilinx-eabi\usr\include\stdio.h:266:19: note: expected 'char * restrict' but argument is of type 'char **'
+  266 | int     snprintf (char *__restrict, size_t, const char *__restrict, ...)
+      |                   ^
+../src/main.c:91:34: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char **' [-Wformat=]
+   91 |                         printf("%s\n", file_name[i]);
+      |                                 ~^     ~~~~~~~~~~~~
+      |                                  |              |
+      |                                  char *         char **
+../src/main.c: In function 'main':
+../src/main.c:123:35: warning: passing argument 2 of 'timer_gpio_init' from incompatible pointer type [-Wincompatible-pointer-types]
+  123 |     timer_gpio_init(TimerHandler, GpioHandler);
+      |                                   ^~~~~~~~~~~
+      |                                   |
+      |                                   void (*)(void *, u32,  u32) {aka void (*)(void *, long unsigned int,  long unsigned int)}
+In file included from ../src/main.c:54:
+../src/timer_gpio.h:4:59: note: expected 'void (*)(void *)' but argument is of type 'void (*)(void *, u32,  u32)' {aka 'void (*)(void *, long unsigned int,  long unsigned int)'}
+    4 | int timer_gpio_init(void (*fun_timer)(void* data), void (*fun_gpio)(void* data));
+      |                                                    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:125:48: warning: passing argument 1 of 'mjpeg423_decode_to_vdma_init_file' from incompatible pointer type [-Wincompatible-pointer-types]
+  125 |     mjpeg423_decode_to_vdma_init_file(file_name[file_num]);
+      |                                       ~~~~~~~~~^~~~~~~~~~
+      |                                                |
+      |                                                char **
+In file included from ../src/main.c:58:
+../src/decoder/mjpeg423_decoder.h:28:52: note: expected 'const char *' but argument is of type 'char **'
+   28 | void mjpeg423_decode_to_vdma_init_file(const char* filename_in);
+      |                                        ~~~~~~~~~~~~^~~~~~~~~~~
+../src/main.c:159:64: warning: passing argument 1 of 'mjpeg423_decode_to_vdma_init_file' from incompatible pointer type [-Wincompatible-pointer-types]
+  159 |                     mjpeg423_decode_to_vdma_init_file(file_name[file_num]);
+      |                                                       ~~~~~~~~~^~~~~~~~~~
+      |                                                                |
+      |                                                                char **
+In file included from ../src/main.c:58:
+../src/decoder/mjpeg423_decoder.h:28:52: note: expected 'const char *' but argument is of type 'char **'
+   28 | void mjpeg423_decode_to_vdma_init_file(const char* filename_in);
+      |                                        ~~~~~~~~~~~~^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ece423_lab1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "ece423_lab1.elf"  ./src/ece423_vid_ctl/ece423_vid_ctl.o  ./src/decoder/idct.o ./src/decoder/lossless_decode.o ./src/decoder/mjpeg423_decoder.o ./src/decoder/ycbcr_to_rgb.o  ./src/common/tables.o ./src/common/util.o  ./src/main.o ./src/platform.o ./src/timer_gpio.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ece423_lab1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size ece423_lab1.elf  |tee "ece423_lab1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115780	   3912	419441088	419560780	1901fd4c	ece423_lab1.elf
+'Finished building: ece423_lab1.elf.size'
+' '

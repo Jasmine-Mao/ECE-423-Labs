@@ -10,6 +10,11 @@
 #include <stdlib.h>
 #include "util.h"
 
+void error_and_exit_error_code(const char* str, const uint32_t error_code){
+    printf("Error: %s (code: %u)\n", str, error_code);
+    exit(-1);
+}
+
 void error_and_exit(const char* str){
     printf("Error: %s\n", str);
     exit(-1);

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 10 resources" deleteContents="false" description="Delete 10 resources" element1="/ece423_lab1/src/common" element10="/ece423_lab1/src/timer_gpio.h" element2="/ece423_lab1/src/decoder" element3="/ece423_lab1/src/ece423_vid_ctl" element4="/ece423_lab1/src/video_control" element5="/ece423_lab1/src/main.c" element6="/ece423_lab1/src/platform_config.h" element7="/ece423_lab1/src/platform.c" element8="/ece423_lab1/src/platform.h" element9="/ece423_lab1/src/timer_gpio.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="10" stamp="1737475092183"/>
+</session>

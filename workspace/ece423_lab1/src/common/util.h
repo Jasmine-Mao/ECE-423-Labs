@@ -39,6 +39,7 @@ Undefining DEBUG_JPEG disables the debugging prints. */
 //#define NULL_COLORCONV
 
 //forward declarations for debug functions
+void error_and_exit_error_code(const char* str, const uint32_t error_code);
 void error_and_exit(const char* str);
 void print_block(pcolor_block_t b);
 void print_dct(pdct_block_t b);
