@@ -1,0 +1,529 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.01.21 17:49:49 =~=~=~=~=~=~=~=~=~=~=~=
+3://V1_621.MPG
+3://V1_300.MPG
+3://V1_1730.MPG
+Decoding 3://V1_621.MPG to VDMA
+Decoder start. Num frames #621
+Width 1280
+Height 720
+Num i frames 230
+Payload Size 113133240
+I frame index 0, position 20
+I frame index 6, position 1220732
+I frame index 7, position 1434028
+I frame index 8, position 1636348
+I frame index 9, position 1837012
+I frame index 10, position 2033216
+I frame index 11, position 2235160
+I frame index 12, position 2434720
+I frame index 16, position 3200168
+I frame index 17, position 3404824
+I frame index 18, position 3603160
+I frame index 19, position 3795068
+I frame index 20, position 3976652
+I frame index 21, position 4159032
+I frame index 22, position 4335496
+I frame index 44, position 8008388
+I frame index 45, position 8200888
+I frame index 46, position 8392500
+I frame index 47, position 8588120
+I frame index 57, position 10379140
+I frame index 76, position 13659376
+I frame index 77, position 13853664
+I frame index 78, position 14045168
+I frame index 79, position 14232228
+I frame index 80, position 14420024
+I frame index 94, position 16839088
+I frame index 95, position 17023036
+I frame index 96, position 17209296
+I frame index 97, position 17394808
+I frame index 98, position 17581364
+I frame index 122, position 21741316
+I frame index 123, position 21927800
+I frame index 124, position 22113024
+I frame index 125, position 22294636
+I frame index 130, position 23177932
+I frame index 131, position 23357288
+I frame index 132, position 23537592
+I frame index 137, position 24385476
+I frame index 138, position 24558608
+I frame index 139, position 24719768
+I frame index 140, position 24874972
+I frame index 141, position 25029720
+I frame index 142, position 25187952
+I frame index 143, position 25345344
+I frame index 144, position 25507308
+I frame index 145, position 25670380
+I frame index 146, position 25833116
+I frame index 147, position 25997980
+I frame index 148, position 26162332
+I frame index 149, position 26323736
+I frame index 150, position 26484872
+I frame index 151, position 26643896
+I frame index 152, position 26803636
+I frame index 153, position 26962916
+I frame index 154, position 27123328
+I frame index 155, position 27286752
+I frame index 161, position 28200660
+I frame index 162, position 28372864
+I frame index 163, position 28533360
+I frame index 164, position 28678772
+I frame index 165, position 28830548
+I frame index 166, position 28985004
+I frame index 167, position 29145032
+I frame index 168, position 29308172
+I frame index 169, position 29475612
+I frame index 170, position 29646508
+I frame index 171, position 29820692
+I frame index 172, position 29994248
+I frame index 173, position 30168216
+I frame index 174, position 30339476
+I frame index 175, position 30512196
+I frame index 176, position 30686368
+I frame index 177, position 30864740
+I frame index 178, position 31048396
+I frame index 179, position 31237076
+I frame index 180, position 31429516
+I frame index 181, position 31622244
+I frame index 185, position 32413828
+I frame index 186, position 32615300
+I frame index 187, position 32817120
+I frame index 188, position 33020200
+I frame index 189, position 33222596
+I frame index 190, position 33428064
+I frame index 191, position 33625664
+I frame index 192, position 33822444
+I frame index 193, position 34020008
+I frame index 194, position 34222224
+I frame index 195, position 34423144
+I frame index 210, position 37222096
+I frame index 211, position 37422048
+I frame index 212, position 37618852
+I frame index 213, position 37805688
+I frame index 214, position 37988588
+I frame index 215, position 38169248
+I frame index 216, position 38349900
+I frame index 217, position 38531312
+I frame index 218, position 38713776
+I frame index 219, position 38903548
+I frame index 220, position 39093200
+I frame index 226, position 40256756
+I frame index 229, position 40848360
+I frame index 231, position 41240880
+I frame index 255, position 45441456
+I frame index 278, position 49598900
+I frame index 286, position 51150380
+I frame index 287, position 51367412
+I frame index 288, position 51575688
+I frame index 289, position 51778344
+I frame index 290, position 51975504
+I frame index 291, position 52174888
+I frame index 292, position 52370860
+I frame index 293, position 52563992
+I frame index 294, position 52761720
+I frame index 295, position 52962528
+I frame index 310, position 55782792
+I frame index 311, position 55988656
+I frame index 312, position 56194804
+I frame index 313, position 56399912
+I frame index 314, position 56609528
+I frame index 318, position 57414616
+I frame index 319, position 57622848
+I frame index 320, position 57823996
+I frame index 321, position 58015356
+I frame index 322, position 58191956
+I frame index 323, position 58373420
+I frame index 324, position 58538172
+I frame index 325, position 58703768
+I frame index 326, position 58874464
+I frame index 327, position 59058484
+I frame index 328, position 59250496
+I frame index 329, position 59453460
+I frame index 331, position 59861248
+I frame index 334, position 60473004
+I frame index 335, position 60683124
+I frame index 339, position 61527800
+I frame index 340, position 61737544
+I frame index 341, position 61945288
+I frame index 342, position 62153572
+I frame index 343, position 62361760
+I frame index 349, position 63599444
+I frame index 350, position 63804560
+I frame index 351, position 64006632
+I frame index 352, position 64195984
+I frame index 353, position 64384140
+I frame index 354, position 64568868
+I frame index 355, position 64753840
+I frame index 356, position 64942204
+I frame index 357, position 65130812
+I frame index 359, position 65506264
+I frame index 360, position 65698528
+I frame index 361, position 65886152
+I frame index 362, position 66071056
+I frame index 363, position 66254036
+I frame index 364, position 66439692
+I frame index 365, position 66625224
+I frame index 367, position 66999632
+I frame index 372, position 67930608
+I frame index 373, position 68120436
+I frame index 374, position 68310380
+I frame index 375, position 68493128
+I frame index 376, position 68676944
+I frame index 377, position 68857568
+I frame index 395, position 72042636
+I frame index 396, position 72242268
+I frame index 397, position 72443448
+I frame index 398, position 72644208
+I frame index 402, position 73438464
+I frame index 404, position 73829244
+I frame index 405, position 74024060
+I frame index 406, position 74215796
+I frame index 407, position 74405376
+I frame index 408, position 74596712
+I frame index 409, position 74784576
+I frame index 410, position 74975008
+I frame index 411, position 75162456
+I frame index 417, position 76303520
+I frame index 418, position 76500024
+I frame index 419, position 76689728
+I frame index 420, position 76879444
+I frame index 430, position 78651880
+I frame index 431, position 78851428
+I frame index 432, position 79046532
+I frame index 433, position 79242364
+I frame index 434, position 79439112
+I frame index 435, position 79640072
+I frame index 445, position 81569240
+I frame index 446, position 81777648
+I frame index 447, position 81987008
+I frame index 448, position 82192872
+I frame index 452, position 82990468
+I frame index 453, position 83195720
+I frame index 454, position 83398632
+I frame index 455, position 83603236
+I frame index 456, position 83803148
+I frame index 457, position 84005180
+I frame index 462, position 84902704
+I frame index 463, position 85104392
+I frame index 464, position 85298268
+I frame index 465, position 85494680
+I frame index 489, position 89310332
+I frame index 513, position 93213224
+I frame index 532, position 96492388
+I frame index 533, position 96689444
+I frame index 534, position 96879008
+I frame index 535, position 97068576
+I frame index 536, position 97257148
+I frame index 537, position 97446592
+I frame index 538, position 97633204
+I frame index 558, position 101112080
+I frame index 568, position 102923808
+I frame index 569, position 103124564
+I frame index 570, position 103322472
+I frame index 575, position 104200676
+I frame index 576, position 104400552
+I frame index 577, position 104601244
+I frame index 579, position 105004884
+I frame index 586, position 106351744
+I frame index 587, position 106559312
+I frame index 588, position 106763528
+I frame index 607, position 110275092
+I frame index 608, position 110475480
+I frame index 609, position 110670776
+I frame index 610, position 110867720
+I frame index 611, position 111065012
+I frame index 612, position 111264520
+I frame index 614, position 111661904
+I frame index 615, position 111866088
+I frame index 616, position 112072768
+I frame index 617, position 112281280
+I frame index 618, position 112492648
+0 , 0, 8802978
+button 0 has been pressed!
+Freed memory for file
+Decoding 3://V1_300.MPG to VDMA
+Decoder start. Num frames #300
+Width 1280
+Height 720
+Num i frames 14
+Payload Size 34450564
+I frame index 0, position 20
+I frame index 24, position 2076120
+I frame index 48, position 4023560
+I frame index 72, position 5862672
+I frame index 96, position 8093644
+I frame index 120, position 9755444
+I frame index 144, position 11398072
+I frame index 145, position 11511756
+I frame index 169, position 15102336
+I frame index 193, position 18698764
+I frame index 217, position 22319468
+I frame index 241, position 25797044
+I frame index 265, position 29267460
+I frame index 289, position 32758964
+0 , 0, 8858307
+button 0 has been pressed!
+Freed memory for file
+Decoding 3://V1_1730.MPG to VDMA
+Decoder start. Num frames #1730
+Width 1280
+Height 720
+Num i frames 88
+Payload Size 189818808
+I frame index 0, position 20
+I frame index 24, position 1997540
+I frame index 48, position 4073640
+I frame index 72, position 6021080
+I frame index 96, position 7860192
+I frame index 120, position 10091164
+I frame index 144, position 11752964
+I frame index 168, position 13395592
+I frame index 169, position 13509276
+I frame index 193, position 17099856
+I frame index 217, position 20696284
+I frame index 241, position 24316988
+I frame index 265, position 27794564
+I frame index 289, position 31264980
+I frame index 313, position 34756484
+I frame index 337, position 38366208
+I frame index 361, position 42008904
+I frame index 385, position 45534680
+I frame index 409, position 48786300
+I frame index 433, position 52165964
+I frame index 457, position 55602752
+I frame index 481, position 59039512
+I frame index 505, position 62405140
+I frame index 529, position 65644280
+I frame index 553, position 68748796
+I frame index 577, position 71712144
+I frame index 601, position 74492900
+I frame index 625, position 77132744
+I frame index 649, position 79572844
+I frame index 673, position 81909144
+I frame index 697, position 84751532
+I frame index 721, position 87719548
+I frame index 745, position 90416600
+I frame index 761, position 91835528
+I frame index 785, position 95363840
+I frame index 809, position 100052212
+I frame index 833, position 103781028
+I frame index 857, position 106034356
+I frame index 881, position 108165732
+I frame index 905, position 110401332
+I frame index 929, position 112796224
+I frame index 953, position 115285024
+I frame index 962, position 116227356
+I frame index 986, position 117849404
+I frame index 1010, position 119656680
+I frame index 1034, position 121583372
+I frame index 1058, position 123294976
+I frame index 1072, position 124326612
+I frame index 1096, position 126287812
+I frame index 1120, position 128202848
+I frame index 1144, position 130284920
+I frame index 1147, position 130550528
+I frame index 1171, position 132411504
+I frame index 1195, position 134461808
+I frame index 1219, position 136771844
+I frame index 1243, position 138949592
+I frame index 1267, position 141117684
+I frame index 1282, position 142726808
+I frame index 1306, position 144422796
+I frame index 1327, position 145916564
+I frame index 1351, position 147652336
+I frame index 1375, position 149399000
+I frame index 1379, position 149767592
+I frame index 1403, position 151903040
+I frame index 1427, position 154463340
+I frame index 1429, position 154673332
+I frame index 1453, position 158055396
+I frame index 1474, position 161979228
+I frame index 1482, position 163533952
+I frame index 1484, position 163918804
+I frame index 1508, position 168197848
+I frame index 1532, position 171702948
+I frame index 1535, position 172090508
+I frame index 1547, position 173573544
+I frame index 1548, position 173704244
+I frame index 1552, position 174228840
+I frame index 1553, position 174361012
+I frame index 1554, position 174493504
+I frame index 1555, position 174626144
+I frame index 1556, position 174759340
+I frame index 1557, position 174892164
+I frame index 1581, position 177807168
+I frame index 1605, position 180303100
+I frame index 1629, position 182210724
+I frame index 1653, position 183905688
+I frame index 1677, position 185610180
+I frame index 1701, position 187490328
+I frame index 1725, position 189405692
+0 , 0, 8861307
+button 1 has been pressed!
+Video Play
+1 , 1, 8798935
+2 , 1, 8792314
+3 , 1, 8799706
+4 , 1, 8796616
+5 , 1, 8799516
+6 , 1, 8803846
+7 , 1, 8793344
+8 , 1, 8793362
+9 , 1, 8793487
+10 , 1, 8798161
+11 , 1, 8794320
+12 , 1, 8796661
+13 , 1, 8800148
+14 , 1, 8800175
+15 , 1, 8793174
+16 , 1, 8793522
+17 , 1, 8791076
+18 , 1, 8798319
+19 , 1, 8795985
+20 , 1, 8801006
+21 , 1, 8789812
+22 , 1, 8794585
+23 , 1, 8795634
+24 , 0, 8863107
+25 , 1, 8790151
+26 , 1, 8796844
+27 , 1, 8791501
+28 , 1, 8796303
+29 , 1, 8791577
+30 , 1, 8792978
+31 , 1, 8797407
+32 , 1, 8801946
+33 , 1, 8795534
+34 , 1, 8800322
+35 , 1, 8796177
+36 , 1, 8800780
+37 , 1, 8802372
+38 , 1, 8784133
+39 , 1, 8792616
+40 , 1, 8796353
+41 , 1, 8795041
+42 , 1, 8795860
+43 , 1, 8785873
+44 , 1, 8787023
+45 , 1, 8792740
+46 , 1, 8787853
+47 , 1, 8797002
+48 , 0, 8853014
+49 , 1, 8795234
+50 , 1, 8798170
+51 , 1, 8798090
+52 , 1, 8793610
+53 , 1, 8807853
+54 , 1, 8800417
+55 , 1, 8798395
+56 , 1, 8795283
+57 , 1, 8794416
+58 , 1, 8790354
+59 , 1, 8787345
+60 , 1, 8793507
+61 , 1, 8795371
+62 , 1, 8799153
+63 , 1, 8800646
+64 , 1, 8797603
+65 , 1, 8804398
+66 , 1, 8794618
+67 , 1, 8790794
+68 , 1, 8792232
+69 , 1, 8798706
+70 , 1, 8794326
+71 , 1, 8793365
+72 , 0, 8863533
+73 , 1, 8802912
+74 , 1, 8799348
+75 , 1, 8793681
+76 , 1, 8798192
+77 , 1, 8790816
+78 , 1, 8793877
+79 , 1, 8797452
+80 , 1, 8797856
+81 , 1, 8792711
+82 , 1, 8797170
+83 , 1, 8798592
+84 , 1, 8798963
+85 , 1, 8798872
+86 , 1, 8803770
+87 , 1, 8797967
+88 , 1, 8798362
+89 , 1, 8800352
+90 , 1, 8802768
+91 , 1, 8800110
+92 , 1, 8801277
+93 , 1, 8801892
+94 , 1, 8799681
+95 , 1, 8801203
+96 , 0, 8860435
+97 , 1, 8791469
+98 , 1, 8800108
+99 , 1, 8802656
+100 , 1, 8789164
+101 , 1, 8792301
+102 , 1, 8792876
+103 , 1, 8797016
+104 , 1, 8795459
+105 , 1, 8791721
+106 , 1, 8797393
+107 , 1, 8802665
+108 , 1, 8800591
+109 , 1, 8797274
+110 , 1, 8797142
+111 , 1, 8804798
+112 , 1, 8800825
+113 , 1, 8794412
+114 , 1, 8789277
+115 , 1, 8799483
+116 , 1, 8804824
+117 , 1, 8803788
+118 , 1, 8809857
+119 , 1, 8793112
+120 , 0, 8864452
+121 , 1, 8802642
+122 , 1, 8795776
+123 , 1, 8795824
+124 , 1, 8798984
+125 , 1, 8806162
+126 , 1, 8790209
+127 , 1, 8797933
+128 , 1, 8801613
+129 , 1, 8799149
+130 , 1, 8798670
+131 , 1, 8812155
+132 , 1, 8800748
+133 , 1, 8792864
+134 , 1, 8794491
+135 , 1, 8795892
+136 , 1, 8791287
+137 , 1, 8796708
+138 , 1, 8794808
+139 , 1, 8799996
+140 , 1, 8796589
+141 , 1, 8796089
+142 , 1, 8792504
+143 , 1, 8796584
+144 , 0, 8860819
+145 , 1, 8793183
+146 , 1, 8796865
+147 , 1, 8800293
+148 , 1, 8802288
+149 , 1, 8799764
+150 , 1, 8799286
+151 , 1, 8796948
+152 , 1, 8808014
+153 , 1, 8800378
+154 , 1, 8799475
+155 , 1, 8799998
+156 , 1, 8793108
+157 , 1, 8794277
+158 , 1, 8802063
+159 , 1, 8801303
+160 , 1, 8794841
+161 , 1, 8794973
+162 , 1, 8796246
+163 , 1, 8803687
+164 , 1, 8793701
+165 , 1, 8799315
+1

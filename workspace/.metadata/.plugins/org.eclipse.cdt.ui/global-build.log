@@ -1,9 +1,78 @@
 Nothing to build in platform 'lab_prefab_wrapper'
 
-17:48:53 **** Incremental Build of configuration Release for project ece423_lab1 ****
+17:55:17 **** Incremental Build of configuration Release for project ece423_lab1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/decoder/mjpeg423_decoder.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/decoder/mjpeg423_decoder.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/decoder/mjpeg423_decoder.d" -MT"src/decoder/mjpeg423_decoder.o" -o "src/decoder/mjpeg423_decoder.o" "../src/decoder/mjpeg423_decoder.c"
+../src/decoder/mjpeg423_decoder.c: In function 'decode_single_frame':
+../src/decoder/mjpeg423_decoder.c:367:18: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  367 |         printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
+      |                 ~^               ~~~~~~~~~~~
+      |                  |               |
+      |                  int             uint32_t {aka long unsigned int}
+      |                 %ld
+../src/decoder/mjpeg423_decoder.c:367:23: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  367 |         printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
+      |                      ~^                      ~~~~~~~~~~
+      |                       |                      |
+      |                       int                    uint32_t {aka long unsigned int}
+      |                      %ld
+../src/decoder/mjpeg423_decoder.c:298:16: warning: unused variable 'time_us' [-Wunused-variable]
+  298 |         double time_us = 0;
+      |                ^~~~~~~
+../src/decoder/mjpeg423_decoder.c: In function 'forward_button':
+../src/decoder/mjpeg423_decoder.c:477:40: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  477 |                 printf("Current frame %d is too close to the end, pausing video\n",frame_index);
+      |                                       ~^                                           ~~~~~~~~~~~
+      |                                        |                                           |
+      |                                        int                                         uint32_t {aka long unsigned int}
+      |                                       %ld
+../src/decoder/mjpeg423_decoder.c:486:48: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  486 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count + 1].frame_index);
+      |                                               ~^                   ~~~~~~~~~~~
+      |                                                |                   |
+      |                                                int                 uint32_t {aka long unsigned int}
+      |                                               %ld
+../src/decoder/mjpeg423_decoder.c:486:63: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  486 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count + 1].frame_index);
+      |                                                              ~^                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                               |                                  |
+      |                                                               int                                uint32_t {aka long unsigned int}
+      |                                                              %ld
+../src/decoder/mjpeg423_decoder.c: In function 'backward_button':
+../src/decoder/mjpeg423_decoder.c:502:40: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  502 |                 printf("Current frame %d is too close to beginning, setting to frame 0\n",frame_index);
+      |                                       ~^                                                  ~~~~~~~~~~~
+      |                                        |                                                  |
+      |                                        int                                                uint32_t {aka long unsigned int}
+      |                                       %ld
+../src/decoder/mjpeg423_decoder.c:511:48: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  511 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count-1].frame_index);
+      |                                               ~^                   ~~~~~~~~~~~
+      |                                                |                   |
+      |                                                int                 uint32_t {aka long unsigned int}
+      |                                               %ld
+../src/decoder/mjpeg423_decoder.c:511:63: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  511 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count-1].frame_index);
+      |                                                              ~^                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                               |                                |
+      |                                                               int                              uint32_t {aka long unsigned int}
+      |                                                              %ld
+'Finished building: ../src/decoder/mjpeg423_decoder.c'
+' '
+'Building target: ece423_lab1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/sw/lab_prefab_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "ece423_lab1.elf"  ./src/ece423_vid_ctl/ece423_vid_ctl.o  ./src/decoder/idct.o ./src/decoder/lossless_decode.o ./src/decoder/mjpeg423_decoder.o ./src/decoder/ycbcr_to_rgb.o  ./src/common/tables.o ./src/common/util.o  ./src/main.o ./src/platform.o ./src/timer_gpio.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ece423_lab1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size ece423_lab1.elf  |tee "ece423_lab1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115340	   3912	419441088	419560340	1901fb94	ece423_lab1.elf
+'Finished building: ece423_lab1.elf.size'
+' '

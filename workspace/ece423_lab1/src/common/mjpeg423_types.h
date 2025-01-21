@@ -11,7 +11,6 @@
 
 #include <stdlib.h>
 #include <stdint.h>
-#include "ff.h"
 
 typedef int BOOL;
 #define FALSE (0)
@@ -56,19 +55,11 @@ typedef struct {
     uint8_t blue;
     uint8_t green;
     uint8_t red;
-    // uint8_t alpha; //does this need removed alpha
-    // i think this needs to be removed
-    // changing the struct size isn't something we need to handle (checked already)
 } rgb_pixel_t;
 
 //tables
 extern dct_block_t Yquant;
 extern dct_block_t Cquant;
 extern int zigzag_table[64];
-
-extern FATFS fatfs;
-extern FIL fil;
-extern DIR directory;
-extern FILINFO fno;
 
 #endif
