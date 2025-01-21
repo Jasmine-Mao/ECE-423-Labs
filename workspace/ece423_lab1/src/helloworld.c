@@ -134,7 +134,7 @@ int main()
     				break;
     			case 2:
     				// skip forward 5 seconds (120 frames)
-    				//current_frame = forward_button(current_frame, current_video);
+    				forward_button(&current_frame);
 					//printf("Skipped forward to frame %d\n", current_frame);
     				break;
     			case 3:

@@ -67,6 +67,8 @@ void load_video(char* file_name)
     for(int count = 0; count < current_video.num_iframes; count++){
     	if(f_read(&fil, &(current_video.trailer[count].frame_index), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit("FAILED TO GET FRAME INDEX");
     	if(f_read(&fil, &(current_video.trailer[count].frame_position), sizeof(uint32_t), &num_bytes_read) != 0) error_and_exit ("FAILED TO GET FRAME POSITION");
+        DEBUG_PRINT_ARG("I frame index %u, ", current_video.trailer[count].frame_index)
+        DEBUG_PRINT_ARG("position %u\n", current_video.trailer[count].frame_position)
     }
     //set it back to beginning of payload
     if(f_lseek(&fil, 5 * sizeof(uint32_t)) != 0) error_and_exit("COULD NOT SEEK BACK TO BEGINNING");
@@ -168,7 +170,17 @@ char* find_next_video(){
 	}
 }
 
-//int forward_button(uint32_t current_frame, video_info_t video_info){
+void forward_button(uint32_t* current_frame){
+	//find the index you want to go to
+	//go to the index
+	//display frame
+	if(f_lseek(&fil, 5 * sizeof(uint32_t)) != 0) error_and_exit("COULD NOT SEEK BACK TO BEGINNING");
+
+	display_next_frame(&current_frame);
+
+
+
+
 //	// first, check to see if we can even go forward
 //	if((video_info.num_frames - 1 - *current_frame) <= 120){
 //		// if the current frame we are on is 5 seconds or less away
@@ -185,9 +197,9 @@ char* find_next_video(){
 //	// once we get here, we have skipped ahead enough
 //	return video_info.trailer[count].frame_index;
 //	// modify the current frame index to the frame index of the 120 frame forward Iframe
-//}
-//
-//int backward_button(uint32_t current_frame, video_info_t video_info){
+}
+
+void backward_button(uint32_t* current_frame){
 //	if(current_frame < 120){
 //		// of the current frame is less than 120 frames, we just skip to the beginning of the video
 //		return 0;
@@ -199,4 +211,4 @@ char* find_next_video(){
 //	}
 //	// once we get here, we have skipped back enough frames and can return a new frame index
 //	return video_into.trailer[count].frame_index;
-//}
+}
