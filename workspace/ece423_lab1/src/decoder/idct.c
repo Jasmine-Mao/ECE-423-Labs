@@ -30,15 +30,29 @@
 
 void idct(pdct_block_t DCAC, pcolor_block_t block)
 {
+	//uint32_t total_memory = 0;
+
     int32_t tmp0, tmp1, tmp2, tmp3;
     int32_t tmp10, tmp11, tmp12, tmp13;
     int32_t z1, z2, z3, z4, z5;
     int32_t temp;
+    //total_memory += 14*sizeof(int32_t);
+
     DCTELEM* inptr;
+    //total_memory += sizeof(DCTELEM*);
+
     int32_t * wsptr;
+    //total_memory += sizeof(int32_t*);
+
     uint8_t* outptr;
+    //total_memory += sizeof(int8_t*);
+
     int ctr;
+    //total_memory += sizeof(int);
+
     int32_t workspace[DCTSIZE*DCTSIZE];	/* buffers data between passes */
+    //total_memory += sizeof(int32_t);
+    //printf("%d\n", total_memory);
     SHIFT_TEMPS
     
     /* Pass 1: process columns from input, store into work array. */

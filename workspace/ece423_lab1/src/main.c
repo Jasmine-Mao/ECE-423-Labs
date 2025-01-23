@@ -144,7 +144,7 @@ int main()
 
     // Only uncomment when demonstrating no periodic timer.
 
-    if(1)
+    if(0)
     {
 		XTime_GetTime(&start);
 		decode_entire_video(file_name[1]);

@@ -1,0 +1,10 @@
+Lossless for Y = 14412 (this is when including all the index variables created in the for loop, i think we need to assume that it can get recycled)
+Lossless for Cb = 14412
+Lossless for Cr = 14412
+
+Lossless for Y (actual) = 20
+Lossless for Cb (actual) = 20
+Lossless for Cr (actual) = 20
+
+idct = 76
+ycbcr to rgb = 43

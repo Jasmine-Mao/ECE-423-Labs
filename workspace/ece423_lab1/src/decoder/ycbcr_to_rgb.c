@@ -23,7 +23,23 @@
 //result can overflow due to imprecisions added in the quantizaton)
 void ycbcr_to_rgb(int h, int w, uint32_t w_size, pcolor_block_t Y, pcolor_block_t Cb, pcolor_block_t Cr, rgb_pixel_t* rgbblock)
 {
+	//uint32_t total_memory = 0;
+
     int index;
+//    total_memory += sizeof(int);	// for index
+//    total_memory += sizeof(int);	// for int variable y
+//    total_memory += sizeof(int32_t);	// Cbb
+//    total_memory += sizeof(int32_t);	// Crr
+//    total_memory += sizeof(int32_t);	// Cr1402
+//    total_memory += sizeof(int32_t);	// Cr071414
+//    total_memory += sizeof(int32_t);	// Cb034414
+//    total_memory += sizeof(int32_t);	// Cb1722
+//    total_memory += sizeof(int32_t);	// YY
+//    total_memory += sizeof(int32_t);	// temp
+//    total_memory += sizeof(rgb_pixel_t);	// pixel
+//    printf("%d\n", total_memory);
+
+
     for (int y = 0; y < 8; y++){
         index = (h+y) * w_size + w;
         for(int x = 0; x < 8; x++){

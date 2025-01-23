@@ -107,6 +107,7 @@ void decode_entire_video(const char* filename_in)
     //read trailer: set file to beginning of trailer
     f_status = f_lseek(&file_in, 5 * sizeof(uint32_t) + payload_size);
     if(f_status != FR_OK) error_and_exit_error_code("cannot seek into file", (uint32_t)f_status);
+
     for(int count = 0; count < num_iframes; count++){
         f_status = f_read(&file_in, (void*)&(trailer[count].frame_index), sizeof(uint32_t), (UINT*)&num_bytes_read);
         if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
@@ -229,22 +230,6 @@ void load_video(const char* filename_in) //HM
     if((CbDCAC = malloc(hCb_size * wCb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate CbDCAC");
     if((CrDCAC = malloc(hCb_size * wCb_size * 64 * sizeof(DCTELEM)))==NULL) error_and_exit("cannot allocate CrDCAC");
 
-
-    //y_memory = hYb_size * wYb_size * 64;
-
-//    //Get memory sizes for file
-//	yMemSum = hYb_size * wYb_size * 64 * sizeof(DCTELEM); //YDCAC
-//	cbMemSum = hCb_size * wCb_size * 64 * sizeof(DCTELEM); //CbDCAC
-//	crMemSum = hCb_size * wCb_size * 64 * sizeof(DCTELEM); //CrDCAC
-//    idctMemSum = hCb_size * wCb_size * 64; //Yblock
-//    rgbBlockMemSum = w_size*h_size*sizeof(rgb_pixel_t); //RGBBlock
-//
-//	DEBUG_PRINT_ARG("---- Y Mem Size ---- %lu \n",  yMemSum)
-//	DEBUG_PRINT_ARG("---- Cb Mem Size ---- %lu \n", cbMemSum)
-//	DEBUG_PRINT_ARG("---- Cr Mem Size ---- %lu \n", crMemSum)
-//	DEBUG_PRINT_ARG("---- IDCT Mem Size ---- %lu \n", idctMemSum)
-//	DEBUG_PRINT_ARG("---- RBG Mem Size ---- %lu \n", rgbBlockMemSum)
-
     //Ybitstream is assigned a size sufficient to hold all bistreams
     //the bitstream is then read from the file into Ybitstream
     //the remaining pointers simply point to the beginning of the Cb and Cr streams within Ybitstream
@@ -269,36 +254,21 @@ void load_video(const char* filename_in) //HM
 
 uint8_t decode_single_frame()
 {
-	//start timer here
 	//XTime_GetTime(&start);  // Capture time before the function call
 
-	rgbblock = buff_next();
+	rgbblock = buff_next();	// this gets malloced
 	if (rgbblock == NULL) return 1; // overflowing buffer
 	if (frame_index >= num_frames) return 1; // reached end of video
-    //DEBUG_PRINT_ARG("Frame_index %d\n",frame_index)
-
 
     //read frame payload
 	f_status = f_read(&file_in, (void*)&frame_size, sizeof(uint32_t), (UINT*)&num_bytes_read);
-//	if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
-//    DEBUG_PRINT_ARG("Frame_size %lu\n",frame_size)
-
 	f_status = f_read(&file_in, (void*)&frame_type, sizeof(uint32_t), (UINT*)&num_bytes_read);
-//	if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
-//    DEBUG_PRINT_ARG("Frame_type %lu\n",frame_type)
-
 	f_status = f_read(&file_in, (void*)&Ysize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-//	if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
 	f_status = f_read(&file_in, (void*)&Cbsize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-//	if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
 	f_status = f_read(&file_in, (void*)Ybitstream, frame_size - 4 * sizeof(uint32_t), (UINT*)&num_bytes_read);
-//	if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
-
     //set the Cb and Cr bitstreams to point to the right location
     Cbbitstream = Ybitstream + Ysize;
     Crbitstream = Cbbitstream + Cbsize;
-
-    //lossless decoding
 
     //XTime_GetTime(&start);
     lossless_decode(hYb_size*wYb_size, Ybitstream, YDCAC, Yquant, frame_type);
@@ -332,34 +302,40 @@ uint8_t decode_single_frame()
     //XTime_GetTime(&end);
 	//printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
 
-
-	// Record memory stats
-//	frameSize.max[frame_type] = MAX(frameSize.max[frame_type], frame_size);
-//	frameSize.min[frame_type] = MIN(frameSize.min[frame_type], frame_size);
-//	frameSize.sum[frame_type] += frame_size;
-
-
 //    XTime_GetTime(&start);
     buff_reg();
 //    XTime_GetTime(&end);
 //	printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
 
-
-
-
-
-    // Increment frame_index
+    ///MEMORY STUFF////////////////////////////////////
+//    uint32_t total_memory = 0;
+//    // stuff from load memory
+//    total_memory += sizeof(uint32_t)*9;							//header information, some frame information
+//	total_memory += sizeof(iframe_trailer_t)*num_iframes;		//trailer
+//
+//	//ybistream -> this should be the one that's changing
+//
+//	total_memory += frame_size - 4 * sizeof(uint32_t);			//reading ybitstream
+//	// malloced stuff
+//    total_memory += w_size*h_size*sizeof(rgb_pixel_t);			//rbgblock
+//    total_memory += hYb_size * wYb_size * 64;					//Yblock
+//    total_memory += hCb_size * wCb_size * 64;					//Cbblock
+//    total_memory += hCb_size * wCb_size * 64;					//Crblock
+//    total_memory += hYb_size * wYb_size * 64 * sizeof(DCTELEM);	//YDCAC
+//    total_memory += hCb_size * wCb_size * 64 * sizeof(DCTELEM); //CbDCAC
+//    total_memory += hCb_size * wCb_size * 64 * sizeof(DCTELEM); //CrDCAC
+//    total_memory += hYb_size * wYb_size * 64 * sizeof(DCTELEM) + 2 * hCb_size * wCb_size * 64 * sizeof(DCTELEM); //Ybitstream
+    // END MEMORY STUFF////////////////////////////////
 
 	//XTime_GetTime(&end);    // Capture time after the function call
 	//printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
-    //end timer
-    //printout
-
     if(vdma_out() == 0)
     {
     	printf("VDMA failed");
     }
     frame_index++;
+    printf("%d, %d\n", frame_type, total_memory);
+
     return 0;
 }
 

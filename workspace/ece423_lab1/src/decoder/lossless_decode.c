@@ -59,8 +59,11 @@ huff_input_t input_AC(uint32_t bitbuffer);
 ******************************** */
 void lossless_decode(int num_blocks, void* bitstream, dct_block_t* DCACq, dct_block_t quant, BOOL P)
 {
+//	uint32_t //total_memory = 0;
+
     //bitbuffer
     uint32_t bitbuffer = 0;
+    //total_memory += sizeof(uint32_t);
     //bit position in the bitbuffer.
     //I.e., if bitcount = 3, then we need to shift in 3 bits.
     //(that is, 32-3 = 29 bits are valid)
@@ -68,18 +71,24 @@ void lossless_decode(int num_blocks, void* bitstream, dct_block_t* DCACq, dct_bl
     //This is sufficient since the max length of any component
     //is 4 + 4 + 11 = 19 bits.
     int bitcount = 0;
-    
+    //total_memory += sizeof(int);
     //shift in the first 32 bits
     update_buffer(&bitbuffer, &bitstream, &bitcount, 32);
     
     huff_input_t ib;
+    //total_memory += sizeof(huff_input_t);
+
     //Used for I frame DC differential encoding
     DCTELEM cur = 0;
+    //total_memory += sizeof(DCTELEM);
+    //total_memory += sizeof(DCTELEM*);
+	//total_memory += sizeof(uint8_t);
+    //total_memory += sizeof(uint8_t);
+
     
     for(int count = 0; count < num_blocks; count ++){
         //pe is used to write the DCT coefficients in zig-zag order
         DCTELEM* pe = (DCTELEM*)(DCACq[count]);
-        
         //decode DC coefficients
         ib = input_DC(bitbuffer);
         update_buffer(&bitbuffer, &bitstream, &bitcount, ib.bits);
@@ -146,6 +155,7 @@ void lossless_decode(int num_blocks, void* bitstream, dct_block_t* DCACq, dct_bl
             }
         }
     }
+//    printf("%d\n", total_memory);
 }
 
 //update buffer
