@@ -7,3 +7,5 @@ source lab_prefab.tcl
 C:\Users\j54mao\ECE423\ECE-423-Labs\ece423_prefab\ece423_prefab\lab_prefab\lab_prefab.runs\impl_1
 
 baud rate 115200
+
+https://xilinx.github.io/embeddedsw.github.io/axidma/doc/html/api/group___a_x_i_d_m_a.html
