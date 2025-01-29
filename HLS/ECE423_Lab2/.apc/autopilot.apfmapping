@@ -8,9 +8,9 @@
     <originFiles name="tables.c" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\import_files\import_files\tables.c"/>
     <originFiles name="util.c" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\import_files\import_files\util.c"/>
     <originFiles name="util.h" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\import_files\import_files\util.h"/>
+    <originFiles name="2D_idct.h" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\import_files\import_files\2D_idct.h"/>
   </source>
   <testbench>
-    <originFiles name="idct_2d_tb_1.txt" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\Testbenches\idct_2d_tb_1.txt"/>
-    <originFiles name="idct_2d_tb_2.txt" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\Testbenches\idct_2d_tb_2.txt"/>
+    <originFiles name="idct_tb_1.cpp" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\Testbenches\idct_tb_1.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

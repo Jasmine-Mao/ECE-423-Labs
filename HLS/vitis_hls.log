@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'C:/Software/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'hmcculla' on host 'ece-mcu21' (Windows NT_amd64 version 6.2) on Wed Jan 29 15:31:55 -0500 2025
+INFO: [HLS 200-10] For user 'hmcculla' on host 'ece-mcu21' (Windows NT_amd64 version 6.2) on Wed Jan 29 16:25:00 -0500 2025
 INFO: [HLS 200-10] In directory 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS'
 Sourcing Tcl script 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: source C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim.tcl
@@ -8,6 +8,8 @@ INFO: [HLS 200-10] Opening project 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/EC
 INFO: [HLS 200-1510] Running: set_top idct 
 INFO: [HLS 200-1510] Running: add_files 2D_idct.cc 
 WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/2D_idct.h 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/2D_idct.h' to the project
 INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/dct_math.h 
 INFO: [HLS 200-10] Adding design file '../import_files/import_files/dct_math.h' to the project
 INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/mjpeg423_types.h 
@@ -18,10 +20,8 @@ INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/util.c
 INFO: [HLS 200-10] Adding design file '../import_files/import_files/util.c' to the project
 INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/util.h 
 INFO: [HLS 200-10] Adding design file '../import_files/import_files/util.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb ../Testbenches/idct_2d_tb_1.txt 
-INFO: [HLS 200-10] Adding test bench file '../Testbenches/idct_2d_tb_1.txt' to the project
-INFO: [HLS 200-1510] Running: add_files -tb ../Testbenches/idct_2d_tb_2.txt 
-INFO: [HLS 200-10] Adding test bench file '../Testbenches/idct_2d_tb_2.txt' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../Testbenches/idct_tb_1.cpp 
+INFO: [HLS 200-10] Adding test bench file '../Testbenches/idct_tb_1.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -31,31 +31,19 @@ INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
 INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-   Compiling(apcc) ../../../../../import_files/import_files/util.c in debug mode
-INFO: [HLS 200-10] Running 'C:/Software/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'hmcculla' on host 'ece-mcu21' (Windows NT_amd64 version 6.2) on Wed Jan 29 15:32:00 -0500 2025
-INFO: [HLS 200-10] In directory 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is apcc_db
-INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 6.983 seconds; peak allocated memory: 0.680 MB.
-   Compiling(apcc) ../../../../../import_files/import_files/tables.c in debug mode
-INFO: [HLS 200-10] Running 'C:/Software/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'hmcculla' on host 'ece-mcu21' (Windows NT_amd64 version 6.2) on Wed Jan 29 15:32:09 -0500 2025
-INFO: [HLS 200-10] In directory 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is apcc_db
-INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 4.267 seconds; peak allocated memory: 0.855 MB.
    Generating csim.exe
 Makefile.rules:392: recipe for target 'csim.exe' failed
-ERROR: [SIM 211-102] C simulation failed, no 'main' function.
+obj/idct_tb_1.o: In function `test_0(int&)':
+C:\Users\hmcculla\ECE432\ECE-423-Labs\HLS\ECE423_Lab2\solution1\csim\build/../../../../../Testbenches/idct_tb_1.cpp:27: undefined reference to `idct(short (*) [8], unsigned char (*) [8])'
+collect2.exe: error: ld returned 1 exit status
+make: *** [csim.exe] Error 1
 ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 18.581 seconds; current allocated memory: 296.613 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.753 seconds; current allocated memory: 408.570 MB.
 5
     while executing
 "source C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim.tcl"
@@ -67,4 +55,4 @@ INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2 seconds. CPU s
     (procedure "hls_proc" line 16)
     invoked from within
 "hls_proc [info nameofexecutable] $argv"
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 20.167 seconds; peak allocated memory: 1.099 GB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 2.14 seconds; peak allocated memory: 1.099 GB.

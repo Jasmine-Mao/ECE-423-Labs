@@ -2,6 +2,7 @@
 #include "dct_math.h"
 #include "util.h"
 #include <xaxidma.h>
+#include "2D_idct.h"
 
 XAxiDma *InstancePtr;
 XAxiDma AxiDma;

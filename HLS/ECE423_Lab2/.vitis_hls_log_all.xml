@@ -3,6 +3,16 @@
   <errorLogs>
     <logs>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:25:02.155-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:21:19.140-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:20:26.282-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:17:33.914-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:16:40.496-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:15:35.495-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:13:39.162-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:13:08.455-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:12:11.183-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:11:21.003-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T15:32:15.238-0500"/>
         <logs message="ERROR: [SIM 211-102] C simulation failed, no 'main' function." projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T15:32:15.214-0500"/>
       </csimLog>
@@ -11,6 +21,16 @@
   <warningLogs>
     <logs>
       <csimLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'" projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:25:00.453-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'" projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:21:16.308-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'" projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:20:24.177-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'" projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:17:31.611-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'" projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:16:38.671-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'" projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:15:33.598-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'" projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:13:37.356-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'" projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:13:06.958-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'" projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:12:09.660-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'" projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T16:11:19.386-0500" type="Warning"/>
         <logs message="WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'" projectName="ECE423_Lab2" solutionName="solution1" date="2025-01-29T15:31:55.562-0500" type="Warning"/>
       </csimLog>
     </logs>

@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../import_files/import_files/util.c ../../../../../import_files/import_files/tables.c
+HLS_SOURCES = ../../../../../Testbenches/idct_tb_1.cpp ../../../../../import_files/import_files/util.c ../../../../../import_files/import_files/tables.c
 
 override TARGET := csim.exe
 
@@ -71,6 +71,12 @@ all: $(TARGET)
 
 
 AUTOCC := cmd //c apcc.bat  
+
+$(ObjDir)/idct_tb_1.o: ../../../../../Testbenches/idct_tb_1.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../Testbenches/idct_tb_1.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/idct_tb_1.d
 
 $(ObjDir)/util.o: ../../../../../import_files/import_files/util.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../../../import_files/import_files/util.c in $(BuildMode) mode" $(AVE_DIR_DLOG)

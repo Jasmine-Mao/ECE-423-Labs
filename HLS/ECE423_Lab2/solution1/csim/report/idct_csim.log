@@ -1,21 +1,10 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling(apcc) ../../../../../import_files/import_files/util.c in debug mode
-INFO: [HLS 200-10] Running 'C:/Software/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'hmcculla' on host 'ece-mcu21' (Windows NT_amd64 version 6.2) on Wed Jan 29 15:32:00 -0500 2025
-INFO: [HLS 200-10] In directory 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is apcc_db
-INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 6.983 seconds; peak allocated memory: 0.680 MB.
-   Compiling(apcc) ../../../../../import_files/import_files/tables.c in debug mode
-INFO: [HLS 200-10] Running 'C:/Software/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'hmcculla' on host 'ece-mcu21' (Windows NT_amd64 version 6.2) on Wed Jan 29 15:32:09 -0500 2025
-INFO: [HLS 200-10] In directory 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is apcc_db
-INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 4.267 seconds; peak allocated memory: 0.855 MB.
    Generating csim.exe
 Makefile.rules:392: recipe for target 'csim.exe' failed
-ERR: [SIM 102] C simulation failed, no 'main' function.
+obj/idct_tb_1.o: In function `test_0(int&)':
+C:\Users\hmcculla\ECE432\ECE-423-Labs\HLS\ECE423_Lab2\solution1\csim\build/../../../../../Testbenches/idct_tb_1.cpp:27: undefined reference to `idct(short (*) [8], unsigned char (*) [8])'
+collect2.exe: error: ld returned 1 exit status
+make: *** [csim.exe] Error 1
 ERR: [SIM 100] CSim file generation failed: compilation error(s).
 INFO: [SIM 3] *************** CSIM finish ***************
