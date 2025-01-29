@@ -47,11 +47,6 @@
 			<location>C:/Users/hmcculla/ECE432/ECE-423-Labs/import_files/import_files/2D_idct.cc</location>
 		</link>
 		<link>
-			<name>source/2D_idct.h</name>
-			<type>1</type>
-			<location>C:/Users/hmcculla/ECE432/ECE-423-Labs/import_files/import_files/2D_idct.h</location>
-		</link>
-		<link>
 			<name>source/dct_math.h</name>
 			<type>1</type>
 			<location>C:/Users/hmcculla/ECE432/ECE-423-Labs/import_files/import_files/dct_math.h</location>

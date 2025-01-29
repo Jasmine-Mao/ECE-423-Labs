@@ -11,7 +11,6 @@
         <file name="../import_files/import_files/tables.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="../import_files/import_files/mjpeg423_types.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="../import_files/import_files/dct_math.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
-        <file name="../import_files/import_files/2D_idct.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="2D_idct.cc" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">

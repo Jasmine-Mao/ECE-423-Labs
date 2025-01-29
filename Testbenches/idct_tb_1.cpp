@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include "../import_files/import_files/dct_math.h"
 #include "../import_files/import_files/util.h"
-#include "../import_files/import_files/2D_idct.h"
+#include "../import_files/import_files/2D_idct.cc"
+
 //added what was in the idct file
 //created a new header file with the function definition so we can call the function
 

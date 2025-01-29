@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include "dct_math.h"
 #include "util.h"
-#include <xaxidma.h>
-#include "2D_idct.h"
-
-XAxiDma *InstancePtr;
-XAxiDma AxiDma;
+//XAxiDma *InstancePtr;
+//XAxiDma AxiDma;
 
 /*
 * This implementation is based on an algorithm described in
@@ -32,9 +29,9 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
 	#pragma HLS ARRAY_RESHAPE variable=blockout_temp type=block factor=8 dim=2
 
 	//copy data
-	Row_in_copy: for(int r = 0; r < DCTSIZE; r++)
+	DCAC_row_copy: for(int r = 0; r < DCTSIZE; r++)
 	{
-		Col_in_copy: for(int c = 0; c < DCTSIZE; c++)
+		DCAC_col_copy: for(int c = 0; c < DCTSIZE; c++)
 		{
 			#pragma HLS_PIPELINE
 				DCAC_temp[r][c] = DCAC[r][c];
@@ -189,9 +186,9 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
     }
 	//copy data
     //do we need to resize the for loops??
-	Row_in_copy: for(int r = 0; r < DCTSIZE; r++)
+	Blockout_row_copy: for(int r = 0; r < DCTSIZE; r++)
 	{
-		Col_in_copy: for(int c = 0; c < DCTSIZE; c++)
+		Blockout_col_copy: for(int c = 0; c < DCTSIZE; c++)
 		{
 			#pragma HLS_PIPELINE
 				blockout[r][c] = blockout_temp[r][c];

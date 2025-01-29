@@ -6,7 +6,6 @@
 open_project ECE423_Lab2
 set_top idct
 add_files 2D_idct.cc
-add_files ../import_files/import_files/2D_idct.h
 add_files ../import_files/import_files/dct_math.h
 add_files ../import_files/import_files/mjpeg423_types.h
 add_files ../import_files/import_files/tables.c

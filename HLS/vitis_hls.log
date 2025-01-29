@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'C:/Software/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'hmcculla' on host 'ece-mcu21' (Windows NT_amd64 version 6.2) on Wed Jan 29 16:25:00 -0500 2025
+INFO: [HLS 200-10] For user 'hmcculla' on host 'ece-mcu21' (Windows NT_amd64 version 6.2) on Wed Jan 29 16:38:19 -0500 2025
 INFO: [HLS 200-10] In directory 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS'
 Sourcing Tcl script 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: source C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim.tcl
@@ -8,8 +8,6 @@ INFO: [HLS 200-10] Opening project 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/EC
 INFO: [HLS 200-1510] Running: set_top idct 
 INFO: [HLS 200-1510] Running: add_files 2D_idct.cc 
 WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'
-INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/2D_idct.h 
-INFO: [HLS 200-10] Adding design file '../import_files/import_files/2D_idct.h' to the project
 INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/dct_math.h 
 INFO: [HLS 200-10] Adding design file '../import_files/import_files/dct_math.h' to the project
 INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/mjpeg423_types.h 
@@ -35,24 +33,9 @@ INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25
 INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../Testbenches/idct_tb_1.cpp in debug mode
    Generating csim.exe
-Makefile.rules:392: recipe for target 'csim.exe' failed
-obj/idct_tb_1.o: In function `test_0(int&)':
-C:\Users\hmcculla\ECE432\ECE-423-Labs\HLS\ECE423_Lab2\solution1\csim\build/../../../../../Testbenches/idct_tb_1.cpp:27: undefined reference to `idct(short (*) [8], unsigned char (*) [8])'
-collect2.exe: error: ld returned 1 exit status
-make: *** [csim.exe] Error 1
-ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.753 seconds; current allocated memory: 408.570 MB.
-5
-    while executing
-"source C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim.tcl"
-    invoked from within
-"hls::main C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$newargs"
-    (procedure "hls_proc" line 16)
-    invoked from within
-"hls_proc [info nameofexecutable] $argv"
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 2.14 seconds; peak allocated memory: 1.099 GB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.648 seconds; current allocated memory: 399.918 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 12.007 seconds; peak allocated memory: 1.099 GB.

@@ -1,10 +1,6 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../Testbenches/idct_tb_1.cpp in debug mode
    Generating csim.exe
-Makefile.rules:392: recipe for target 'csim.exe' failed
-obj/idct_tb_1.o: In function `test_0(int&)':
-C:\Users\hmcculla\ECE432\ECE-423-Labs\HLS\ECE423_Lab2\solution1\csim\build/../../../../../Testbenches/idct_tb_1.cpp:27: undefined reference to `idct(short (*) [8], unsigned char (*) [8])'
-collect2.exe: error: ld returned 1 exit status
-make: *** [csim.exe] Error 1
-ERR: [SIM 100] CSim file generation failed: compilation error(s).
+INFO: [SIM 1] CSim file generation done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************
