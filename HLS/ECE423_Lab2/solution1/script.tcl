@@ -5,14 +5,14 @@
 ############################################################
 open_project ECE423_Lab2
 set_top idct
-add_files ../../../Downloads/import_files/import_files/2D_idct.cc
-add_files ../../../Downloads/import_files/import_files/dct_math.h
-add_files ../../../Downloads/import_files/import_files/mjpeg423_types.h
-add_files ../../../Downloads/import_files/import_files/tables.c
-add_files ../../../Downloads/import_files/import_files/util.c
-add_files ../../../Downloads/import_files/import_files/util.h
-add_files -tb ../../../Downloads/idct_2d_tb_1.txt
-add_files -tb ../../../Downloads/idct_2d_tb_2.txt
+add_files 2D_idct.cc
+add_files ../import_files/import_files/dct_math.h
+add_files ../import_files/import_files/mjpeg423_types.h
+add_files ../import_files/import_files/tables.c
+add_files ../import_files/import_files/util.c
+add_files ../import_files/import_files/util.h
+add_files -tb ../Testbenches/idct_2d_tb_1.txt
+add_files -tb ../Testbenches/idct_2d_tb_2.txt
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020clg400-1}
 create_clock -period 10 -name default

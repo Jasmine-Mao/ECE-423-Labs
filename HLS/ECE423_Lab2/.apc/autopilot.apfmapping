@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="2D_idct.cc" path="C:\Users\j54mao\Downloads\import_files\import_files\2D_idct.cc"/>
-    <originFiles name="dct_math.h" path="C:\Users\j54mao\Downloads\import_files\import_files\dct_math.h"/>
-    <originFiles name="mjpeg423_types.h" path="C:\Users\j54mao\Downloads\import_files\import_files\mjpeg423_types.h"/>
-    <originFiles name="tables.c" path="C:\Users\j54mao\Downloads\import_files\import_files\tables.c"/>
-    <originFiles name="util.c" path="C:\Users\j54mao\Downloads\import_files\import_files\util.c"/>
-    <originFiles name="util.h" path="C:\Users\j54mao\Downloads\import_files\import_files\util.h"/>
+    <originFiles name="2D_idct.cc" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\HLS\2D_idct.cc"/>
+    <originFiles name="2D_idct.cc" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\import_files\import_files\2D_idct.cc"/>
+    <originFiles name="dct_math.h" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\import_files\import_files\dct_math.h"/>
+    <originFiles name="mjpeg423_types.h" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\import_files\import_files\mjpeg423_types.h"/>
+    <originFiles name="tables.c" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\import_files\import_files\tables.c"/>
+    <originFiles name="util.c" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\import_files\import_files\util.c"/>
+    <originFiles name="util.h" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\import_files\import_files\util.h"/>
   </source>
   <testbench>
-    <originFiles name="idct_2d_tb_1.txt" path="C:\Users\j54mao\Downloads\idct_2d_tb_1.txt"/>
-    <originFiles name="idct_2d_tb_2.txt" path="C:\Users\j54mao\Downloads\idct_2d_tb_2.txt"/>
+    <originFiles name="idct_2d_tb_1.txt" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\Testbenches\idct_2d_tb_1.txt"/>
+    <originFiles name="idct_2d_tb_2.txt" path="C:\Users\hmcculla\ECE432\ECE-423-Labs\Testbenches\idct_2d_tb_2.txt"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
