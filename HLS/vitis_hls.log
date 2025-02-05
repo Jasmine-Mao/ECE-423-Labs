@@ -1,33 +1,33 @@
 INFO: [HLS 200-10] Running 'C:/Software/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'hmcculla' on host 'ece-mcu21' (Windows NT_amd64 version 6.2) on Wed Jan 29 16:38:19 -0500 2025
-INFO: [HLS 200-10] In directory 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS'
-Sourcing Tcl script 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim.tcl'
-INFO: [HLS 200-1510] Running: source C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim.tcl
+INFO: [HLS 200-10] For user 'j54mao' on host 'ece-mcu2' (Windows NT_amd64 version 6.2) on Wed Feb 05 15:14:45 -0500 2025
+INFO: [HLS 200-10] In directory 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS'
+Sourcing Tcl script 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csim.tcl
 INFO: [HLS 200-1510] Running: open_project ECE423_Lab2 
-INFO: [HLS 200-10] Opening project 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2'.
+INFO: [HLS 200-10] Opening project 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2'.
 INFO: [HLS 200-1510] Running: set_top idct 
-INFO: [HLS 200-1510] Running: add_files 2D_idct.cc 
-WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'
-INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/dct_math.h 
-INFO: [HLS 200-10] Adding design file '../import_files/import_files/dct_math.h' to the project
-INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/mjpeg423_types.h 
-INFO: [HLS 200-10] Adding design file '../import_files/import_files/mjpeg423_types.h' to the project
-INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/tables.c 
-INFO: [HLS 200-10] Adding design file '../import_files/import_files/tables.c' to the project
-INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/util.c 
-INFO: [HLS 200-10] Adding design file '../import_files/import_files/util.c' to the project
 INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/util.h 
 INFO: [HLS 200-10] Adding design file '../import_files/import_files/util.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb ../Testbenches/idct_tb_1.cpp 
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/util.c 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/util.c' to the project
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/tables.c 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/tables.c' to the project
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/mjpeg423_types.h 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/mjpeg423_types.h' to the project
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/dct_math.h 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/dct_math.h' to the project
+INFO: [HLS 200-1510] Running: add_files 2D_idct.cc 
+WARNING: [HLS 200-40] Cannot find design file '2D_idct.cc'
+INFO: [HLS 200-1510] Running: add_files -tb ../Testbenches/idct_tb_1.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file '../Testbenches/idct_tb_1.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
-INFO: [HLS 200-10] Opening solution 'C:/Users/hmcculla/ECE432/ECE-423-Labs/HLS/ECE423_Lab2/solution1'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
-INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
 INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
@@ -37,5 +37,5 @@ INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
    Generating csim.exe
 INFO: [SIM 211-1] CSim file generation done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.648 seconds; current allocated memory: 399.918 MB.
-INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 12.007 seconds; peak allocated memory: 1.099 GB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.506 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 6.199 seconds; peak allocated memory: 1.377 GB.

@@ -21,11 +21,21 @@ int test_0(int &error_count){
 				sample_DCAC[i][k] = 100;
 			}
 			else sample_DCAC[i][k] = 0;
+			cout << sample_DCAC[i][k] << " ";
 		}
+		cout << endl;
 	}
 
 	//calculate the hw result
 	idct(sample_DCAC, sample_blockout);
+	// looks like pass 1 works, issues are in pass 2
+
+	for(int i = 0; i < DCTSIZE; i++){
+		for(int k = 0; k < DCTSIZE; k++){
+			cout << sample_blockout[i][k] << " ";
+		}
+		cout << endl;
+		}
 
 	//check to see if they match
 	for(int i = 0; i < DCTSIZE; i++){
@@ -60,4 +70,5 @@ int main(int argc, char **argv){
 	int error_count = 0;
 	//increments every time a part of the calculation is wrong
 	test_0(error_count);
+	cout << error_count << endl;
 }
