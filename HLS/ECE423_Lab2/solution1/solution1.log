@@ -722,3 +722,1151 @@ INFO: [SIM 211-1] CSim file generation done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
 INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.506 seconds; current allocated memory: 0.000 MB.
 INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 6.199 seconds; peak allocated memory: 1.377 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.879 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.096 seconds; peak allocated memory: 1.383 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.957 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.182 seconds; peak allocated memory: 1.384 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.153 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.3 seconds; peak allocated memory: 1.382 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.283 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.23 seconds; peak allocated memory: 1.385 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.729 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 4.742 seconds; peak allocated memory: 1.384 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.191 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.234 seconds; peak allocated memory: 1.383 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.518 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.256 seconds; peak allocated memory: 1.374 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.535 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 4.559 seconds; peak allocated memory: 1.383 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.201 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.282 seconds; peak allocated memory: 1.383 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.15 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.167 seconds; peak allocated memory: 1.383 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.225 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.986 seconds; peak allocated memory: 1.375 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.197 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.242 seconds; peak allocated memory: 1.384 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.294 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.989 seconds; peak allocated memory: 1.376 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.248 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.865 seconds; peak allocated memory: 1.380 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.189 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.958 seconds; peak allocated memory: 1.377 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.359 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.488 seconds; peak allocated memory: 1.382 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.532 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 4.466 seconds; peak allocated memory: 1.383 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.504 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 4.512 seconds; peak allocated memory: 1.384 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.162 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.08 seconds; peak allocated memory: 1.384 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.907 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 4.874 seconds; peak allocated memory: 1.384 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.891 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.08 seconds; peak allocated memory: 1.383 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.167 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.25 seconds; peak allocated memory: 1.381 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.528 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 4.553 seconds; peak allocated memory: 1.384 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.874 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.39 seconds; peak allocated memory: 1.381 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.862 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 4.776 seconds; peak allocated memory: 1.384 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.226 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.86 seconds; peak allocated memory: 1.381 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.489 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 4.63 seconds; peak allocated memory: 1.385 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.507 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 4.495 seconds; peak allocated memory: 1.383 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.275 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.199 seconds; peak allocated memory: 1.385 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.328 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 5.773 seconds; peak allocated memory: 1.381 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.396 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 6.396 seconds; peak allocated memory: 1.380 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.481 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 4.551 seconds; peak allocated memory: 1.382 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.518 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 4.324 seconds; peak allocated memory: 1.387 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Cannot find source file 2D_idct.cc; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 1.384 GB.
+INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/tables.c' ... 
+INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/util.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.54 seconds; current allocated memory: 1.384 GB.
+ERROR: [HLS 214-157] Top function not found: there is no function named 'idct'
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.364 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 10.411 seconds; peak allocated memory: 1.384 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Cannot find source file 2D_idct.cc; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.033 seconds; current allocated memory: 1.383 GB.
+INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/util.c' ... 
+INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/tables.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.633 seconds; current allocated memory: 1.383 GB.
+ERROR: [HLS 214-157] Top function not found: there is no function named 'idct'
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.916 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 9.24 seconds; peak allocated memory: 1.383 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/util.c' ... 
+INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/tables.c' ... 
+INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/2D_idct.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (../import_files/import_files/2D_idct.cpp:26:9)
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file ../import_files/import_files/2D_idct.cpp
+WARNING: [HLS 207-1017] unknown pragma ignored (../import_files/import_files/2D_idct.cpp:42:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (../import_files/import_files/2D_idct.cpp:114:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (../import_files/import_files/2D_idct.cpp:185:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (../import_files/import_files/2D_idct.cpp:195:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.754 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_130_3' (../import_files/import_files/2D_idct.cpp:130:23) in function 'idct' partially with a factor of 2 (../import_files/import_files/2D_idct.cpp:19:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_59_2' (../import_files/import_files/2D_idct.cpp:59:22) in function 'idct' partially with a factor of 2 (../import_files/import_files/2D_idct.cpp:19:0)
+INFO: [HLS 214-248] Applying array_reshape to 'DCAC_temp': Block reshaping with factor 2 on dimension 2. (../import_files/import_files/2D_idct.cpp:30:10)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'DCAC' (../import_files/import_files/2D_idct.cpp:19:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'blockout' (../import_files/import_files/2D_idct.cpp:19:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.195 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.014 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.147 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] ../import_files/import_files/2D_idct.cpp:43: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 1.387 GB.
+INFO: [XFORM 203-510] Pipelining loop 'DCAC_col_copy' (../import_files/import_files/2D_idct.cpp:40) in function 'idct' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_59_2' (../import_files/import_files/2D_idct.cpp:59) in function 'idct' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_130_3' (../import_files/import_files/2D_idct.cpp:130) in function 'idct' automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_38_1_proc' (../import_files/import_files/2D_idct.cpp:40) to a process function for dataflow in function 'idct'.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_59_2_proc' (../import_files/import_files/2D_idct.cpp:59) to a process function for dataflow in function 'idct'.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_130_3_proc' (../import_files/import_files/2D_idct.cpp:130) to a process function for dataflow in function 'idct'.
+INFO: [XFORM 203-712] Applying dataflow to function 'idct' (../import_files/import_files/2D_idct.cpp:18), detected/extracted 3 process function(s): 
+	 'Loop_VITIS_LOOP_38_1_proc1'
+	 'Loop_VITIS_LOOP_59_2_proc'
+	 'Loop_VITIS_LOOP_130_3_proc2'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.391 seconds; current allocated memory: 1.387 GB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_38_1' (../import_files/import_files/2D_idct.cpp:40:26) in function 'Loop_VITIS_LOOP_38_1_proc1'.
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:115:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:116:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:117:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:118:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:119:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:120:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:121:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:122:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'DCAC_temp' (../import_files/import_files/2D_idct.cpp:43:18)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'idct' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_38_1_proc1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_1_DCAC_col_copy'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_38_1_DCAC_col_copy'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.308 seconds; current allocated memory: 1.387 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_59_2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z4_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z3_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z2_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp0_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp3_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z1_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln94_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln68_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln67_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln66_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z4_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z3_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z2_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp0_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp3_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z1_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln94) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln68) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln67) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln66) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_59_2'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('workspace_addr_4_write_ln119', ../import_files/import_files/2D_idct.cpp:119) of variable 'trunc_ln5', ../import_files/import_files/2D_idct.cpp:119 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('workspace_addr_12_write_ln119', ../import_files/import_files/2D_idct.cpp:119) of variable 'trunc_ln119_1', ../import_files/import_files/2D_idct.cpp:119 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('workspace_addr_15_write_ln122', ../import_files/import_files/2D_idct.cpp:122) of variable 'trunc_ln122_1', ../import_files/import_files/2D_idct.cpp:122 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('workspace_addr_15_write_ln122', ../import_files/import_files/2D_idct.cpp:122) of variable 'trunc_ln122_1', ../import_files/import_files/2D_idct.cpp:122 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
+WARNING: [HLS 200-885] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to schedule 'load' operation ('DCAC_temp_load_3', ../import_files/import_files/2D_idct.cpp:71) on array 'DCAC_temp' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'DCAC_temp'.
+WARNING: [HLS 200-885] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to schedule 'load' operation ('DCAC_temp_load_6', ../import_files/import_files/2D_idct.cpp:87) on array 'DCAC_temp' due to limited memory ports (II = 9). Please consider using a memory core with more ports or partitioning the array 'DCAC_temp'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 10, Depth = 20, loop 'VITIS_LOOP_59_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.261 seconds; current allocated memory: 1.387 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.428 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_130_3_proc2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp3_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z4_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp0_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z3_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z2_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z1_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln163_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln140_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln139_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln138_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp3_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z4_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp0_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z3_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z2_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z1_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln163) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln140) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln139) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln138) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_130_3'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between axis write operation ('blockout_write_ln197', ../import_files/import_files/2D_idct.cpp:197) on port 'blockout' (../import_files/import_files/2D_idct.cpp:197) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between axis write operation ('blockout_write_ln198', ../import_files/import_files/2D_idct.cpp:198) on port 'blockout' (../import_files/import_files/2D_idct.cpp:198) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between axis write operation ('blockout_write_ln199', ../import_files/import_files/2D_idct.cpp:199) on port 'blockout' (../import_files/import_files/2D_idct.cpp:199) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between axis write operation ('blockout_write_ln200', ../import_files/import_files/2D_idct.cpp:200) on port 'blockout' (../import_files/import_files/2D_idct.cpp:200) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between axis write operation ('blockout_write_ln199', ../import_files/import_files/2D_idct.cpp:199) on port 'blockout' (../import_files/import_files/2D_idct.cpp:199) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between axis write operation ('blockout_write_ln203', ../import_files/import_files/2D_idct.cpp:203) on port 'blockout' (../import_files/import_files/2D_idct.cpp:203) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 16, Depth = 26, loop 'VITIS_LOOP_130_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.34 seconds; current allocated memory: 1.387 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.508 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'idct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.549 seconds; current allocated memory: 1.387 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.266 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_38_1_proc1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_38_1_proc1' pipeline 'VITIS_LOOP_38_1_DCAC_col_copy' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_38_1_proc1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.608 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_59_2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_59_2_proc' pipeline 'VITIS_LOOP_59_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_16s_16s_13ns_31_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_16s_16s_14s_31_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_16s_16s_16s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_17s_17s_14ns_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_12ns_31s_31_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_13ns_30ns_30_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_14ns_31s_31_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15ns_32s_32_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15s_31s_31_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_17s_13s_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_17s_15s_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_59_2_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.49 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_130_3_proc2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_130_3_proc2' pipeline 'VITIS_LOOP_130_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_21s_21s_13ns_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_21s_21s_14s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_21s_21s_16s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_22s_22s_14ns_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_12ns_32ns_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_13ns_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_14ns_32ns_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_15ns_32ns_32_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_15s_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_22s_13s_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_22s_15s_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_130_3_proc2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.588 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'idct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'idct/DCAC' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'idct/blockout' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'idct' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] RTL data type mismatch (logic vs. lv) for signal 'DCAC_temp_i_we0'.
+WARNING: [RTGEN 206-101] RTL data type mismatch (logic vs. lv) for signal 'DCAC_temp_t_we0'.
+WARNING: [HLS 200-656] Deadlocks can occur since process Loop_VITIS_LOOP_38_1_proc1 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+INFO: [HLS 200-633] Setting ap_ctrl_none interface for idct
+INFO: [RTGEN 206-100] Finished creating RTL model for 'idct'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.926 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-740] Implementing PIPO idct_DCAC_temp_RAM_AUTO_1R1W_memcore using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'idct_DCAC_temp_RAM_AUTO_1R1W_memcore_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-740] Implementing PIPO idct_workspace_RAM_AUTO_1R1W_memcore using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'idct_workspace_RAM_AUTO_1R1W_memcore_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.569 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.667 seconds; current allocated memory: 1.387 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for idct.
+INFO: [VLOG 209-307] Generating Verilog RTL for idct.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 128.56 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 11 seconds. CPU system time: 2 seconds. Elapsed time: 22.871 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 16 seconds. Total CPU system time: 4 seconds. Total elapsed time: 26.753 seconds; peak allocated memory: 1.387 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/util.c' ... 
+INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/tables.c' ... 
+INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/2D_idct.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (../import_files/import_files/2D_idct.cpp:26:9)
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file ../import_files/import_files/2D_idct.cpp
+WARNING: [HLS 207-1017] unknown pragma ignored (../import_files/import_files/2D_idct.cpp:42:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.589 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_130_3' (../import_files/import_files/2D_idct.cpp:130:23) in function 'idct' partially with a factor of 2 (../import_files/import_files/2D_idct.cpp:19:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_59_2' (../import_files/import_files/2D_idct.cpp:59:22) in function 'idct' partially with a factor of 2 (../import_files/import_files/2D_idct.cpp:19:0)
+INFO: [HLS 214-248] Applying array_reshape to 'DCAC_temp': Block reshaping with factor 2 on dimension 2. (../import_files/import_files/2D_idct.cpp:30:10)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'DCAC' (../import_files/import_files/2D_idct.cpp:19:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'blockout' (../import_files/import_files/2D_idct.cpp:19:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.129 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.015 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] ../import_files/import_files/2D_idct.cpp:43: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 1.382 GB.
+INFO: [XFORM 203-510] Pipelining loop 'DCAC_col_copy' (../import_files/import_files/2D_idct.cpp:40) in function 'idct' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_59_2' (../import_files/import_files/2D_idct.cpp:59) in function 'idct' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_130_3' (../import_files/import_files/2D_idct.cpp:130) in function 'idct' automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_38_1_proc' (../import_files/import_files/2D_idct.cpp:40) to a process function for dataflow in function 'idct'.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_59_2_proc' (../import_files/import_files/2D_idct.cpp:59) to a process function for dataflow in function 'idct'.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_130_3_proc' (../import_files/import_files/2D_idct.cpp:130) to a process function for dataflow in function 'idct'.
+INFO: [XFORM 203-712] Applying dataflow to function 'idct' (../import_files/import_files/2D_idct.cpp:18), detected/extracted 3 process function(s): 
+	 'Loop_VITIS_LOOP_38_1_proc1'
+	 'Loop_VITIS_LOOP_59_2_proc'
+	 'Loop_VITIS_LOOP_130_3_proc2'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.329 seconds; current allocated memory: 1.382 GB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_38_1' (../import_files/import_files/2D_idct.cpp:40:26) in function 'Loop_VITIS_LOOP_38_1_proc1'.
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:115:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:116:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:117:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:118:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:119:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:120:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:121:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:122:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'DCAC_temp' (../import_files/import_files/2D_idct.cpp:43:18)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.355 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'idct' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_38_1_proc1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_1_DCAC_col_copy'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_38_1_DCAC_col_copy'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.261 seconds; current allocated memory: 1.382 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_59_2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z4_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z3_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z2_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp0_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp3_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z1_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln94_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln68_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln67_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln66_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z4_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z3_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z2_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp0_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp3_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z1_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln94) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln68) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln67) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln66) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_59_2'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('workspace_addr_4_write_ln119', ../import_files/import_files/2D_idct.cpp:119) of variable 'trunc_ln5', ../import_files/import_files/2D_idct.cpp:119 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('workspace_addr_12_write_ln119', ../import_files/import_files/2D_idct.cpp:119) of variable 'trunc_ln119_1', ../import_files/import_files/2D_idct.cpp:119 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('workspace_addr_15_write_ln122', ../import_files/import_files/2D_idct.cpp:122) of variable 'trunc_ln122_1', ../import_files/import_files/2D_idct.cpp:122 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('workspace_addr_15_write_ln122', ../import_files/import_files/2D_idct.cpp:122) of variable 'trunc_ln122_1', ../import_files/import_files/2D_idct.cpp:122 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
+WARNING: [HLS 200-885] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to schedule 'load' operation ('DCAC_temp_load_3', ../import_files/import_files/2D_idct.cpp:71) on array 'DCAC_temp' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'DCAC_temp'.
+WARNING: [HLS 200-885] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to schedule 'load' operation ('DCAC_temp_load_6', ../import_files/import_files/2D_idct.cpp:87) on array 'DCAC_temp' due to limited memory ports (II = 9). Please consider using a memory core with more ports or partitioning the array 'DCAC_temp'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 10, Depth = 20, loop 'VITIS_LOOP_59_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.375 seconds; current allocated memory: 1.382 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.375 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_130_3_proc2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp3_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z4_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp0_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z3_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z2_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z1_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln163_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln140_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln139_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln138_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp3_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z4_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp0_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z3_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z2_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=z1_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln163) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln140) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln139) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln138) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_130_3'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between axis write operation ('blockout_write_ln197', ../import_files/import_files/2D_idct.cpp:197) on port 'blockout' (../import_files/import_files/2D_idct.cpp:197) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between axis write operation ('blockout_write_ln198', ../import_files/import_files/2D_idct.cpp:198) on port 'blockout' (../import_files/import_files/2D_idct.cpp:198) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between axis write operation ('blockout_write_ln199', ../import_files/import_files/2D_idct.cpp:199) on port 'blockout' (../import_files/import_files/2D_idct.cpp:199) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between axis write operation ('blockout_write_ln200', ../import_files/import_files/2D_idct.cpp:200) on port 'blockout' (../import_files/import_files/2D_idct.cpp:200) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between axis write operation ('blockout_write_ln199', ../import_files/import_files/2D_idct.cpp:199) on port 'blockout' (../import_files/import_files/2D_idct.cpp:199) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between axis write operation ('blockout_write_ln203', ../import_files/import_files/2D_idct.cpp:203) on port 'blockout' (../import_files/import_files/2D_idct.cpp:203) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 16, Depth = 26, loop 'VITIS_LOOP_130_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.306 seconds; current allocated memory: 1.382 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.626 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'idct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.545 seconds; current allocated memory: 1.382 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.266 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_38_1_proc1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_38_1_proc1' pipeline 'VITIS_LOOP_38_1_DCAC_col_copy' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_38_1_proc1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.574 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_59_2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_59_2_proc' pipeline 'VITIS_LOOP_59_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_16s_16s_13ns_31_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_16s_16s_14s_31_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_16s_16s_16s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_17s_17s_14ns_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_12ns_31s_31_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_13ns_30ns_30_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_14ns_31s_31_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15ns_32s_32_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15s_31s_31_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_17s_13s_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_17s_15s_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_59_2_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.476 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_130_3_proc2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_130_3_proc2' pipeline 'VITIS_LOOP_130_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_21s_21s_13ns_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_21s_21s_14s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_21s_21s_16s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_22s_22s_14ns_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_12ns_32ns_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_13ns_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_14ns_32ns_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_15ns_32ns_32_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_15s_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_22s_13s_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_22s_15s_32s_32_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_130_3_proc2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.495 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'idct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'idct/DCAC' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'idct/blockout' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'idct' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] RTL data type mismatch (logic vs. lv) for signal 'DCAC_temp_i_we0'.
+WARNING: [RTGEN 206-101] RTL data type mismatch (logic vs. lv) for signal 'DCAC_temp_t_we0'.
+WARNING: [HLS 200-656] Deadlocks can occur since process Loop_VITIS_LOOP_38_1_proc1 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+INFO: [HLS 200-633] Setting ap_ctrl_none interface for idct
+INFO: [RTGEN 206-100] Finished creating RTL model for 'idct'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.855 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-740] Implementing PIPO idct_DCAC_temp_RAM_AUTO_1R1W_memcore using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'idct_DCAC_temp_RAM_AUTO_1R1W_memcore_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-740] Implementing PIPO idct_workspace_RAM_AUTO_1R1W_memcore using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'idct_workspace_RAM_AUTO_1R1W_memcore_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.026 seconds; current allocated memory: 1.382 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.623 seconds; current allocated memory: 1.382 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for idct.
+INFO: [VLOG 209-307] Generating Verilog RTL for idct.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 128.56 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 11 seconds. CPU system time: 2 seconds. Elapsed time: 21.765 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 16 seconds. Total CPU system time: 4 seconds. Total elapsed time: 25.933 seconds; peak allocated memory: 1.382 GB.

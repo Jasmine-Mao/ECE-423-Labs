@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1738798754997">
+  <ports id="1" name="DCAC" type="PortType" originalName="DCAC" coreId="29" bitwidth="16">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="blockout" type="PortType" originalName="blockout" coreId="1953391988" bitwidth="8" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="23" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="24" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="27" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="28" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="31" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="32" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@ports.1"/>
+  <edges id="115" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="116" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="117" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="118" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="87" RegionName="idct">
+    <basic_blocks id="17" name="idct" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="DCAC_temp" lineNumber="30" originalName="DCAC_temp" fileName="../import_files/import_files/2D_idct.cpp" fileDirectory=".." rtlName="DCAC_temp_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="82" contextFuncName="idct" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../import_files/import_files/2D_idct.cpp" linenumber="30" fileDirectory="C:\Users\j54mao\ECE423\ECE-423-Labs\HLS" functionName="idct"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="workspace" lineNumber="51" originalName="workspace" fileName="../import_files/import_files/2D_idct.cpp" fileDirectory=".." rtlName="workspace_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="82" contextFuncName="idct" bitwidth="21" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../import_files/import_files/2D_idct.cpp" linenumber="51" fileDirectory="C:\Users\j54mao\ECE423\ECE-423-Labs\HLS" functionName="idct"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="_ln0" rtlName="Loop_VITIS_LOOP_38_1_proc1_U0" coreId="1792" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <dataInputObjs>DCAC</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Loop_VITIS_LOOP_38_1_proc1</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="_ln0" rtlName="Loop_VITIS_LOOP_59_2_proc_U0" coreId="699" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Loop_VITIS_LOOP_59_2_proc</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln0" rtlName="Loop_VITIS_LOOP_130_3_proc2_U0" coreId="0" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>blockout</dataOutputObjs>
+        <constName>Loop_VITIS_LOOP_130_3_proc2</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln206" lineNumber="206" fileName="../import_files/import_files/2D_idct.cpp" fileDirectory=".." coreId="2072" contextFuncName="idct" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../import_files/import_files/2D_idct.cpp" linenumber="206" fileDirectory="C:\Users\j54mao\ECE423\ECE-423-Labs\HLS" functionName="idct"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="../import_files/import_files/2D_idct.cpp">
+        <validLinenumbers>30</validLinenumbers>
+        <validLinenumbers>51</validLinenumbers>
+        <validLinenumbers>206</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <expressionNodes realName="DCAC_temp_alloca_fu_38">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="workspace_alloca_fu_42">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_Loop_VITIS_LOOP_130_3_proc2_fu_59">
+    <nodeIds>15</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Loop_VITIS_LOOP_59_2_proc_fu_53">
+    <nodeIds>14</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Loop_VITIS_LOOP_38_1_proc1_fu_46">
+    <nodeIds>13</nodeIds>
+  </moduleNodes>
+  <ioPorts name="DCAC">
+    <contents name="call">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="blockout">
+    <contents name="call">
+      <nodeIds>15</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="13" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="13" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="14" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="14" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="15" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="15" stage="1" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="idct" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="194" mMaxLatency="194" mIsDfPipe="true">
+      <basicBlocks>17</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.2/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.0/@sink.0/@inst">
+        <processe_list name="Loop_VITIS_LOOP_38_1_proc1_U0" ssdmobj_id="13">
+          <pins>
+            <port name="DCAC" type="SIOType" top_port_object_id="" top_port_object_id_reference="_31" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_38_1_proc1_U0" ssdmobj_id="13" object_id="_36"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Loop_VITIS_LOOP_59_2_proc_U0" ssdmobj_id="14"/>
+        <processe_list name="Loop_VITIS_LOOP_130_3_proc2_U0" ssdmobj_id="15">
+          <pins>
+            <port name="blockout" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_32" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_130_3_proc2_U0" ssdmobj_id="15" object_id="_41"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="DCAC_temp" ssdmobj_id="10">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_38_1_proc1_U0" ssdmobj_id="13" object_id="_36"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_59_2_proc_U0" ssdmobj_id="14" object_id="_47"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="workspace" ssdmobj_id="12">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_59_2_proc_U0" ssdmobj_id="14" object_id="_47"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_130_3_proc2_U0" ssdmobj_id="15" object_id="_41"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

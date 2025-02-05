@@ -1,0 +1,10 @@
+<pragmas>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="26" pragmaType="dataflow" parentfunction="idct" disable_start_propagation="0"/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="131" pragmaType="unroll" parentfunction="idct" factor="2" skip_exit_check="0"/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="62" pragmaType="unroll" parentfunction="idct" factor="2" skip_exit_check="0"/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="20" pragmaType="interface" parentfunction="idct" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="23" pragmaType="interface" parentfunction="idct" mode="axis" port="DCAC" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="24" pragmaType="interface" parentfunction="idct" mode="axis" port="blockout" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="34" pragmaType="array_reshape" parentfunction="idct" dim="2" factor="2" mode="block" variable=""/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="35" pragmaType="array_reshape" parentfunction="idct" dim="2" factor="4" mode="block" variable=""/>
+</pragmas>

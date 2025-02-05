@@ -47,6 +47,11 @@
 			<location>C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>source/2D_idct.cpp</name>
+			<type>1</type>
+			<location>C:/Users/j54mao/ECE423/ECE-423-Labs/import_files/import_files/2D_idct.cpp</location>
+		</link>
+		<link>
 			<name>source/dct_math.h</name>
 			<type>1</type>
 			<location>C:/Users/j54mao/ECE423/ECE-423-Labs/import_files/import_files/dct_math.h</location>

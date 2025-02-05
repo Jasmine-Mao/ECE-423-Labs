@@ -1,0 +1,50 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "idct",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "C:\/Users\/j54mao\/ECE423\/ECE-423-Labs\/HLS\/ECE423_Lab2\/solution1\/csynth.tcl",
+          "sourceLine": "20",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "idct"
+              }]
+          }
+        },
+        {
+          "functionName": "idct",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "C:\/Users\/j54mao\/ECE423\/ECE-423-Labs\/HLS\/ECE423_Lab2\/solution1\/csynth.tcl",
+          "sourceLine": "20",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "idct"
+              }]
+          }
+        },
+        {
+          "functionName": "idct",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "C:\/Users\/j54mao\/ECE423\/ECE-423-Labs\/HLS\/ECE423_Lab2\/solution1\/csynth.tcl",
+          "sourceLine": "20",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "idct"
+              }]
+          }
+        }
+      ]
+    }]}

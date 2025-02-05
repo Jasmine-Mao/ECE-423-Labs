@@ -5,12 +5,12 @@
 ############################################################
 open_project ECE423_Lab2
 set_top idct
-add_files ../import_files/import_files/util.h
-add_files ../import_files/import_files/util.c
-add_files ../import_files/import_files/tables.c
-add_files ../import_files/import_files/mjpeg423_types.h
+add_files ../import_files/import_files/2D_idct.cpp
 add_files ../import_files/import_files/dct_math.h
-add_files 2D_idct.cc
+add_files ../import_files/import_files/mjpeg423_types.h
+add_files ../import_files/import_files/tables.c
+add_files ../import_files/import_files/util.c
+add_files ../import_files/import_files/util.h
 add_files -tb ../Testbenches/idct_tb_1.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
