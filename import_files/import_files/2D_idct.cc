@@ -19,21 +19,29 @@
 
 void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
 {
-#pragma HLS interface ap_ctrl_none port=return
+    #pragma HLS interface ap_ctrl_none port=return
+
+    //declare streaming interfaces
+    #pragma HLS INTERFACE axis register both port=DCAC
+    #pragma HLS INTERFACE axis register both port=blockout
+
+    #pragma HLS DATAFLOW //allows for pipelining??
+
+
 	//temporary variables
 	int16_t DCAC_temp[DCTSIZE][DCTSIZE]; //do we need to change to size 32 bit??
 	uint8_t blockout_temp[DCTSIZE][DCTSIZE];
 
+    //array reshaping to set up 32 bit interface for streaming
+	#pragma HLS ARRAY_RESHAPE variable=DCAC_temp type=block factor=2 dim=2 //presume factor of 2 bc 2*16 =32
+	#pragma HLS ARRAY_RESHAPE variable=blockout_temp type=block factor=8 dim=2 //presume factor of 4 bc 4*8 = 32
 
-	#pragma HLS ARRAY_RESHAPE variable=DCAC_temp type=block factor=8 dim=2
-	#pragma HLS ARRAY_RESHAPE variable=blockout_temp type=block factor=8 dim=2
-
-	//copy data
+	//copy data to temporary to avoid unnecessary reads
 	DCAC_row_copy: for(int r = 0; r < DCTSIZE; r++)
 	{
 		DCAC_col_copy: for(int c = 0; c < DCTSIZE; c++)
 		{
-			#pragma HLS_PIPELINE
+			#pragma HLS_PIPELINE //pipeline the loop
 				DCAC_temp[r][c] = DCAC[r][c];
 		}
 	}
@@ -55,15 +63,17 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
         /* Even part: reverse the even part of the forward DCT. */
         /* The rotator is sqrt(2)*c(-6). */
 
-        z2 = DCAC[2][col];
-        z3 = DCAC[6][col];
+        #pragma HLS UNROLL factor=2 //loop unrolling bc single for loop with not much dependencies
+
+        z2 = DCAC_temp[2][col];
+        z3 = DCAC_temp[6][col];
 
         z1 	 = MULTIPLY(z2 + z3, FIX_0_541196100);
         tmp2 = z1 + MULTIPLY(z3, - FIX_1_847759065);
         tmp3 = z1 + MULTIPLY(z2, FIX_0_765366865);
 
-        z2 = DCAC[0][col];
-        z3 = DCAC[4][col];
+        z2 = DCAC_temp[0][col];
+        z3 = DCAC_temp[4][col];
 
         tmp0 = (z2 + z3) << CONST_BITS;
         tmp1 = (z2 - z3) << CONST_BITS;
@@ -77,10 +87,10 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
          * transpose is its inverse.  i0..i3 are y7,y5,y3,y1 respectively.
          */
 
-        tmp0 = DCAC[7][col];
-        tmp1 = DCAC[5][col];
-        tmp2 = DCAC[3][col];
-        tmp3 = DCAC[1][col];
+        tmp0 = DCAC_temp[7][col];
+        tmp1 = DCAC_temp[5][col];
+        tmp2 = DCAC_temp[3][col];
+        tmp3 = DCAC_temp[1][col];
 
         z1 = tmp0 + tmp3;
         z2 = tmp1 + tmp2;
@@ -125,6 +135,8 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
 
         /* Even part: reverse the even part of the forward DCT. */
         /* The rotator is sqrt(2)*c(-6). */
+
+        #pragma HLS UNROLL factor=2 //loop unrolling bc single for loop with not much dependencies
 
         z2 = (int32_t) workspace[row*DCTSIZE+2];
         z3 = (int32_t) workspace[row*DCTSIZE+6];
@@ -184,6 +196,7 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
         blockout_temp[row][6] = NORMALIZE(DESCALE(tmp11 - tmp2, CONST_BITS+PASS1_BITS+3));
         blockout_temp[row][7] = NORMALIZE(DESCALE(tmp10 - tmp3, CONST_BITS+PASS1_BITS+3));
     }
+
 	//copy data
     //do we need to resize the for loops??
 	Blockout_row_copy: for(int r = 0; r < DCTSIZE; r++)
