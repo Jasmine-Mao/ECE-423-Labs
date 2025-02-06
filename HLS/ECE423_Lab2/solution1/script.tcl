@@ -6,6 +6,7 @@
 open_project ECE423_Lab2
 set_top idct
 add_files ../import_files/import_files/2D_idct.cpp
+add_files ../import_files/import_files/2D_idct.h
 add_files ../import_files/import_files/dct_math.h
 add_files ../import_files/import_files/mjpeg423_types.h
 add_files ../import_files/import_files/tables.c
@@ -16,8 +17,8 @@ open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default
 set_clock_uncertainty 1.25
-#source "./ECE423_Lab2/solution1/directives.tcl"
-csim_design
+source "./ECE423_Lab2/solution1/directives.tcl"
+csim_design -clean -setup
 csynth_design
-cosim_design
+cosim_design -wave_debug -trace_level all
 export_design -format ip_catalog

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'idct'
 ================================================================
-* Date:           Wed Feb  5 18:39:09 2025
+* Date:           Wed Feb  5 21:12:09 2025
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        ECE423_Lab2
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  7.779 ns|     1.25 ns|
+    |ap_clk  |  10.00 ns|  8.374 ns|     1.25 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
     |   min   |   max   |    min   |    max   | min | max |   Type   |
     +---------+---------+----------+----------+-----+-----+----------+
-    |      194|      194|  1.940 us|  1.940 us|   76|   76|  dataflow|
+    |      152|      152|  1.520 us|  1.520 us|   86|   86|  dataflow|
     +---------+---------+----------+----------+-----+-----+----------+
 
     + Detail: 
@@ -65,10 +65,10 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 8
+* Number of FSM states : 6
 * Pipeline : 0
 * Dataflow Pipeline: 1
-  DF-Pipeline-0: Size = 8, States = { 1 2 3 4 5 6 7 8 }
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
 
 * FSM state transitions: 
 1 --> 2 
@@ -76,44 +76,35 @@ IsGatedGlobalClock: 0
 3 --> 4 
 4 --> 5 
 5 --> 6 
-6 --> 7 
-7 --> 8 
-8 --> 
+6 --> 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%DCAC_temp = alloca i64 1" [../import_files/import_files/2D_idct.cpp:30]   --->   Operation 9 'alloca' 'DCAC_temp' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%workspace = alloca i64 1" [../import_files/import_files/2D_idct.cpp:51]   --->   Operation 10 'alloca' 'workspace' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%DCAC_temp = alloca i64 1" [../import_files/import_files/2D_idct.cpp:31]   --->   Operation 7 'alloca' 'DCAC_temp' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 11 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_38_1_proc1, i16 %DCAC, i32 %DCAC_temp"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_39_1_proc1, i16 %DCAC, i32 %DCAC_temp"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 12 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_38_1_proc1, i16 %DCAC, i32 %DCAC_temp"   --->   Operation 12 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 9 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_39_1_proc1, i16 %DCAC, i32 %DCAC_temp"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 13 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_59_2_proc, i32 %DCAC_temp, i21 %workspace"   --->   Operation 13 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Block_idct_for.cond.i.exit_proc2, i32 %DCAC_temp, i8 %blockout"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 0.00>
-ST_5 : Operation 14 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_59_2_proc, i32 %DCAC_temp, i21 %workspace"   --->   Operation 14 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 11 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Block_idct_for.cond.i.exit_proc2, i32 %DCAC_temp, i8 %blockout"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 15 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_130_3_proc2, i21 %workspace, i8 %blockout"   --->   Operation 15 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-
-State 7 <SV = 6> <Delay = 0.00>
-ST_7 : Operation 16 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_130_3_proc2, i21 %workspace, i8 %blockout"   --->   Operation 16 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-
-State 8 <SV = 7> <Delay = 0.00>
-ST_8 : Operation 17 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln26 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty" [../import_files/import_files/2D_idct.cpp:26]   --->   Operation 17 'specdataflowpipeline' 'specdataflowpipeline_ln26' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 18 [1/1] (0.00ns)   --->   "%spectopmodule_ln18 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [../import_files/import_files/2D_idct.cpp:18]   --->   Operation 18 'spectopmodule' 'spectopmodule_ln18' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln18 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0" [../import_files/import_files/2D_idct.cpp:18]   --->   Operation 19 'specinterface' 'specinterface_ln18' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %DCAC, void @empty_0, i32 1, i32 1, void @empty_1, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 21 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %DCAC"   --->   Operation 21 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %blockout, void @empty_0, i32 1, i32 1, void @empty_1, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 23 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %blockout"   --->   Operation 23 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 24 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i32 %DCAC_temp"   --->   Operation 24 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 25 [1/1] (0.00ns)   --->   "%ret_ln206 = ret" [../import_files/import_files/2D_idct.cpp:206]   --->   Operation 25 'ret' 'ret_ln206' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 12 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln27 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty" [../import_files/import_files/2D_idct.cpp:27]   --->   Operation 12 'specdataflowpipeline' 'specdataflowpipeline_ln27' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 13 [1/1] (0.00ns)   --->   "%spectopmodule_ln19 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [../import_files/import_files/2D_idct.cpp:19]   --->   Operation 13 'spectopmodule' 'spectopmodule_ln19' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln19 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0" [../import_files/import_files/2D_idct.cpp:19]   --->   Operation 14 'specinterface' 'specinterface_ln19' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %DCAC, void @empty_0, i32 1, i32 1, void @empty_1, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %DCAC"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %blockout, void @empty_0, i32 1, i32 1, void @empty_1, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %blockout"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 19 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i32 %DCAC_temp"   --->   Operation 19 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 20 [1/1] (0.00ns)   --->   "%ret_ln209 = ret" [../import_files/import_files/2D_idct.cpp:209]   --->   Operation 20 'ret' 'ret_ln209' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -139,12 +130,6 @@ The critical path consists of the following:
  <State 6>: 0ns
 The critical path consists of the following:
 
- <State 7>: 0ns
-The critical path consists of the following:
-
- <State 8>: 0ns
-The critical path consists of the following:
-
 
 ============================================================
 + Verbose Summary: Binding
@@ -160,8 +145,6 @@ N/A
 	State 4
 	State 5
 	State 6
-	State 7
-	State 8
 
 
 ============================================================

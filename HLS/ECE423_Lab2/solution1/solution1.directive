@@ -5,16 +5,6 @@
                 <option name="name" value="idct"/>
             </pragma>
         </directive>
-        <directive functionName="idct" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="idct"/>
-            </pragma>
-        </directive>
-        <directive functionName="idct" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="idct"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

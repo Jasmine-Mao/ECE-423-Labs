@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'idct'" level="0">
-<item name = "Date">Wed Feb  5 18:39:13 2025
+<item name = "Date">Wed Feb  5 21:12:21 2025
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">ECE423_Lab2</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.779 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 8.374 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -24,16 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">194, 194, 1.940 us, 1.940 us, 76, 76, dataflow</column>
+<column name="">152, 152, 1.520 us, 1.520 us, 86, 86, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="Loop_VITIS_LOOP_38_1_proc1_U0">Loop_VITIS_LOOP_38_1_proc1, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
-<column name="Loop_VITIS_LOOP_59_2_proc_U0">Loop_VITIS_LOOP_59_2_proc, 51, 51, 0.510 us, 0.510 us, 51, 51, no</column>
-<column name="Loop_VITIS_LOOP_130_3_proc2_U0">Loop_VITIS_LOOP_130_3_proc2, 75, 75, 0.750 us, 0.750 us, 75, 75, no</column>
+<column name="Loop_VITIS_LOOP_39_1_proc1_U0">Loop_VITIS_LOOP_39_1_proc1, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
+<column name="Block_idct_for_cond_i_exit_proc2_U0">Block_idct_for_cond_i_exit_proc2, 85, 85, 0.850 us, 0.850 us, 85, 85, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -52,21 +51,20 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, -, -, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 48, 2859, 6608, -</column>
-<column name="Memory">8, -, 0, 0, 0</column>
+<column name="Instance">-, 192, 7058, 16119, -</column>
+<column name="Memory">4, -, 0, 0, 0</column>
 <column name="Multiplexer">-, -, -, -, -</column>
 <column name="Register">-, -, -, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">2, 21, 2, 12, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, 87, 6, 30, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="Loop_VITIS_LOOP_130_3_proc2_U0">Loop_VITIS_LOOP_130_3_proc2, 0, 24, 1507, 2526, 0</column>
-<column name="Loop_VITIS_LOOP_38_1_proc1_U0">Loop_VITIS_LOOP_38_1_proc1, 0, 0, 39, 277, 0</column>
-<column name="Loop_VITIS_LOOP_59_2_proc_U0">Loop_VITIS_LOOP_59_2_proc, 0, 24, 1313, 3805, 0</column>
+<column name="Block_idct_for_cond_i_exit_proc2_U0">Block_idct_for_cond_i_exit_proc2, 0, 192, 7019, 15842, 0</column>
+<column name="Loop_VITIS_LOOP_39_1_proc1_U0">Loop_VITIS_LOOP_39_1_proc1, 0, 0, 39, 277, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -76,7 +74,6 @@
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
 <column name="DCAC_temp_U">DCAC_temp_RAM_AUTO_1R1W, 4, 0, 0, 0, 32, 32, 1, 1024</column>
-<column name="workspace_U">workspace_RAM_AUTO_1R1W, 4, 0, 0, 0, 64, 21, 1, 1344</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">

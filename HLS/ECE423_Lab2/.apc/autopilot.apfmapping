@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="util.h" path="C:\Users\j54mao\ECE423\ECE-423-Labs\import_files\import_files\util.h"/>
-    <originFiles name="util.c" path="C:\Users\j54mao\ECE423\ECE-423-Labs\import_files\import_files\util.c"/>
-    <originFiles name="tables.c" path="C:\Users\j54mao\ECE423\ECE-423-Labs\import_files\import_files\tables.c"/>
-    <originFiles name="mjpeg423_types.h" path="C:\Users\j54mao\ECE423\ECE-423-Labs\import_files\import_files\mjpeg423_types.h"/>
-    <originFiles name="dct_math.h" path="C:\Users\j54mao\ECE423\ECE-423-Labs\import_files\import_files\dct_math.h"/>
+    <originFiles name="util.h" path="C:\Users\hmcculla\ECE423\ECE-423-Labs\import_files\import_files\util.h"/>
+    <originFiles name="util.c" path="C:\Users\hmcculla\ECE423\ECE-423-Labs\import_files\import_files\util.c"/>
+    <originFiles name="tables.c" path="C:\Users\hmcculla\ECE423\ECE-423-Labs\import_files\import_files\tables.c"/>
+    <originFiles name="mjpeg423_types.h" path="C:\Users\hmcculla\ECE423\ECE-423-Labs\import_files\import_files\mjpeg423_types.h"/>
+    <originFiles name="dct_math.h" path="C:\Users\hmcculla\ECE423\ECE-423-Labs\import_files\import_files\dct_math.h"/>
+    <originFiles name="2D_idct.cpp" path="C:\Users\hmcculla\ECE423\ECE-423-Labs\import_files\import_files\2D_idct.cpp"/>
+    <originFiles name="2D_idct.h" path="C:\Users\hmcculla\ECE423\ECE-423-Labs\import_files\import_files\2D_idct.h"/>
   </source>
   <testbench>
-    <originFiles name="idct_tb_1.cpp" path="C:\Users\j54mao\ECE423\ECE-423-Labs\Testbenches\idct_tb_1.cpp"/>
+    <originFiles name="idct_tb_1.cpp" path="C:\Users\hmcculla\ECE423\ECE-423-Labs\Testbenches\idct_tb_1.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

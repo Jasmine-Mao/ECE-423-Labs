@@ -5,7 +5,7 @@
 // ==============================================================
 `timescale 1 ns / 1 ps
 
-module idct_am_addmul_21s_21s_13ns_32_4_1_DSP48_13(
+module idct_am_addmul_21s_21s_13ns_32_4_1_DSP48_26(
     input clk,
     input rst,
     input ce,
@@ -69,7 +69,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-idct_am_addmul_21s_21s_13ns_32_4_1_DSP48_13 idct_am_addmul_21s_21s_13ns_32_4_1_DSP48_13_U(
+idct_am_addmul_21s_21s_13ns_32_4_1_DSP48_26 idct_am_addmul_21s_21s_13ns_32_4_1_DSP48_26_U(
     .clk( clk ),
     .rst( reset ),
     .ce( ce ),

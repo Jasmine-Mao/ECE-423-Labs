@@ -1,13 +1,15 @@
 INFO: [HLS 200-10] Running 'C:/Software/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'j54mao' on host 'ece-mcu2' (Windows NT_amd64 version 6.2) on Wed Feb 05 18:38:53 -0500 2025
-INFO: [HLS 200-10] In directory 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS'
-Sourcing Tcl script 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csynth.tcl'
-INFO: [HLS 200-1510] Running: source C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csynth.tcl
+INFO: [HLS 200-10] For user 'hmcculla' on host 'ece-mcu2' (Windows NT_amd64 version 6.2) on Wed Feb 05 21:16:08 -0500 2025
+INFO: [HLS 200-10] In directory 'C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS'
+Sourcing Tcl script 'C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/cosim.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/cosim.tcl
 INFO: [HLS 200-1510] Running: open_project ECE423_Lab2 
-INFO: [HLS 200-10] Opening project 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2'.
+INFO: [HLS 200-10] Opening project 'C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2'.
 INFO: [HLS 200-1510] Running: set_top idct 
 INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/2D_idct.cpp 
 INFO: [HLS 200-10] Adding design file '../import_files/import_files/2D_idct.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/2D_idct.h 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/2D_idct.h' to the project
 INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/dct_math.h 
 INFO: [HLS 200-10] Adding design file '../import_files/import_files/dct_math.h' to the project
 INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/mjpeg423_types.h 
@@ -21,7 +23,7 @@ INFO: [HLS 200-10] Adding design file '../import_files/import_files/util.h' to t
 INFO: [HLS 200-1510] Running: add_files -tb ../Testbenches/idct_tb_1.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file '../Testbenches/idct_tb_1.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
-INFO: [HLS 200-10] Opening solution 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
@@ -30,246 +32,293 @@ Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
-INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/util.c' ... 
-INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/tables.c' ... 
-INFO: [HLS 200-10] Analyzing design file '../import_files/import_files/2D_idct.cpp' ... 
-WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (../import_files/import_files/2D_idct.cpp:26:9)
-Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-114.html
-WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file ../import_files/import_files/2D_idct.cpp
-Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-471.html
-WARNING: [HLS 207-1017] unknown pragma ignored (../import_files/import_files/2D_idct.cpp:42:9)
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.589 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_130_3' (../import_files/import_files/2D_idct.cpp:130:23) in function 'idct' partially with a factor of 2 (../import_files/import_files/2D_idct.cpp:19:0)
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_59_2' (../import_files/import_files/2D_idct.cpp:59:22) in function 'idct' partially with a factor of 2 (../import_files/import_files/2D_idct.cpp:19:0)
-INFO: [HLS 214-248] Applying array_reshape to 'DCAC_temp': Block reshaping with factor 2 on dimension 2. (../import_files/import_files/2D_idct.cpp:30:10)
-WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'DCAC' (../import_files/import_files/2D_idct.cpp:19:0)
-Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-142.html
-WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'blockout' (../import_files/import_files/2D_idct.cpp:19:0)
-Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-142.html
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.129 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.015 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-10] Checking synthesizability ...
-WARNING: [SYNCHK 200-23] ../import_files/import_files/2D_idct.cpp:43: variable-indexed range selection may cause suboptimal QoR.
-INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 1.382 GB.
-INFO: [XFORM 203-510] Pipelining loop 'DCAC_col_copy' (../import_files/import_files/2D_idct.cpp:40) in function 'idct' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_59_2' (../import_files/import_files/2D_idct.cpp:59) in function 'idct' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_130_3' (../import_files/import_files/2D_idct.cpp:130) in function 'idct' automatically.
-INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_38_1_proc' (../import_files/import_files/2D_idct.cpp:40) to a process function for dataflow in function 'idct'.
-INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_59_2_proc' (../import_files/import_files/2D_idct.cpp:59) to a process function for dataflow in function 'idct'.
-INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_130_3_proc' (../import_files/import_files/2D_idct.cpp:130) to a process function for dataflow in function 'idct'.
-INFO: [XFORM 203-712] Applying dataflow to function 'idct' (../import_files/import_files/2D_idct.cpp:18), detected/extracted 3 process function(s): 
-	 'Loop_VITIS_LOOP_38_1_proc1'
-	 'Loop_VITIS_LOOP_59_2_proc'
-	 'Loop_VITIS_LOOP_130_3_proc2'.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.329 seconds; current allocated memory: 1.382 GB.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_38_1' (../import_files/import_files/2D_idct.cpp:40:26) in function 'Loop_VITIS_LOOP_38_1_proc1'.
-INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:115:24)
-INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:116:24)
-INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:117:24)
-INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:118:24)
-INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:119:24)
-INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:120:24)
-INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:121:24)
-INFO: [HLS 200-472] Inferring partial write operation for 'workspace' (../import_files/import_files/2D_idct.cpp:122:24)
-INFO: [HLS 200-472] Inferring partial write operation for 'DCAC_temp' (../import_files/import_files/2D_idct.cpp:43:18)
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.355 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'idct' ...
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_38_1_proc1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_1_DCAC_col_copy'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_38_1_DCAC_col_copy'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.261 seconds; current allocated memory: 1.382 GB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_59_2_proc' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=tmp1_6) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z4_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp2_6) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z3_6) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z2_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp0_6) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp3_6) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z1_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln94_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln68_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln67_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln66_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp1_2) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z4_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp2_2) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z3_2) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z2_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp0_2) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp3_2) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z1_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln94) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln68) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln67) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln66) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_59_2'.
-WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('workspace_addr_4_write_ln119', ../import_files/import_files/2D_idct.cpp:119) of variable 'trunc_ln5', ../import_files/import_files/2D_idct.cpp:119 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
-Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('workspace_addr_12_write_ln119', ../import_files/import_files/2D_idct.cpp:119) of variable 'trunc_ln119_1', ../import_files/import_files/2D_idct.cpp:119 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
-Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('workspace_addr_15_write_ln122', ../import_files/import_files/2D_idct.cpp:122) of variable 'trunc_ln122_1', ../import_files/import_files/2D_idct.cpp:122 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
-Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('workspace_addr_15_write_ln122', ../import_files/import_files/2D_idct.cpp:122) of variable 'trunc_ln122_1', ../import_files/import_files/2D_idct.cpp:122 on array 'workspace' and 'store' operation ('workspace_addr_write_ln115', ../import_files/import_files/2D_idct.cpp:115) of variable 'trunc_ln1', ../import_files/import_files/2D_idct.cpp:115 on array 'workspace'.
-Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-885] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to schedule 'load' operation ('DCAC_temp_load_3', ../import_files/import_files/2D_idct.cpp:71) on array 'DCAC_temp' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'DCAC_temp'.
-Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'Loop_VITIS_LOOP_59_2_proc' (loop 'VITIS_LOOP_59_2'): Unable to schedule 'load' operation ('DCAC_temp_load_6', ../import_files/import_files/2D_idct.cpp:87) on array 'DCAC_temp' due to limited memory ports (II = 9). Please consider using a memory core with more ports or partitioning the array 'DCAC_temp'.
-Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 10, Depth = 20, loop 'VITIS_LOOP_59_2'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.375 seconds; current allocated memory: 1.382 GB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.375 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_130_3_proc2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=tmp1_13) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp3_13) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z4_9) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp0_13) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp2_13) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z3_13) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z2_9) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z1_9) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln163_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln140_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln139_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln138_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp1_9) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp3_9) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z4_6) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp0_9) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=tmp2_9) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z3_9) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z2_6) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=z1_6) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln163) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln140) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln139) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln138) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_130_3'.
-WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between axis write operation ('blockout_write_ln197', ../import_files/import_files/2D_idct.cpp:197) on port 'blockout' (../import_files/import_files/2D_idct.cpp:197) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
-Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between axis write operation ('blockout_write_ln198', ../import_files/import_files/2D_idct.cpp:198) on port 'blockout' (../import_files/import_files/2D_idct.cpp:198) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
-Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between axis write operation ('blockout_write_ln199', ../import_files/import_files/2D_idct.cpp:199) on port 'blockout' (../import_files/import_files/2D_idct.cpp:199) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
-Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between axis write operation ('blockout_write_ln200', ../import_files/import_files/2D_idct.cpp:200) on port 'blockout' (../import_files/import_files/2D_idct.cpp:200) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
-Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between axis write operation ('blockout_write_ln199', ../import_files/import_files/2D_idct.cpp:199) on port 'blockout' (../import_files/import_files/2D_idct.cpp:199) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
-Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_130_3_proc2' (loop 'VITIS_LOOP_130_3'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between axis write operation ('blockout_write_ln203', ../import_files/import_files/2D_idct.cpp:203) on port 'blockout' (../import_files/import_files/2D_idct.cpp:203) and axis write operation ('blockout_write_ln196', ../import_files/import_files/2D_idct.cpp:196) on port 'blockout' (../import_files/import_files/2D_idct.cpp:196).
-Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 16, Depth = 26, loop 'VITIS_LOOP_130_3'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.306 seconds; current allocated memory: 1.382 GB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.626 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'idct' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.545 seconds; current allocated memory: 1.382 GB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.266 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_38_1_proc1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_38_1_proc1' pipeline 'VITIS_LOOP_38_1_DCAC_col_copy' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_38_1_proc1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.574 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_59_2_proc' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_59_2_proc' pipeline 'VITIS_LOOP_59_2' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'am_addmul_16s_16s_13ns_31_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'am_addmul_16s_16s_14s_31_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'am_addmul_16s_16s_16s_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'am_addmul_17s_17s_14ns_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_12ns_31s_31_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_13ns_30ns_30_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_14ns_31s_31_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15ns_32s_32_4_1': 4 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15s_31s_31_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_17s_13s_32s_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_17s_15s_32s_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_59_2_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.476 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_130_3_proc2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_130_3_proc2' pipeline 'VITIS_LOOP_130_3' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'am_addmul_21s_21s_13ns_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'am_addmul_21s_21s_14s_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'am_addmul_21s_21s_16s_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'am_addmul_22s_22s_14ns_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_12ns_32ns_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_13ns_32s_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_14ns_32ns_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_15ns_32ns_32_4_1': 4 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_21s_15s_32s_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_22s_13s_32s_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_22s_15s_32s_32_4_1': 2 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_130_3_proc2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.495 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'idct' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
-INFO: [RTGEN 206-500] Setting interface mode on port 'idct/DCAC' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'idct/blockout' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on function 'idct' to 'ap_ctrl_none'.
-WARNING: [RTGEN 206-101] RTL data type mismatch (logic vs. lv) for signal 'DCAC_temp_i_we0'.
-WARNING: [RTGEN 206-101] RTL data type mismatch (logic vs. lv) for signal 'DCAC_temp_t_we0'.
-WARNING: [HLS 200-656] Deadlocks can occur since process Loop_VITIS_LOOP_38_1_proc1 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
-Resolution: For help on HLS 200-656 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-656.html
-INFO: [HLS 200-633] Setting ap_ctrl_none interface for idct
-INFO: [RTGEN 206-100] Finished creating RTL model for 'idct'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.855 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-740] Implementing PIPO idct_DCAC_temp_RAM_AUTO_1R1W_memcore using a separate memory for each block
-INFO: [RTMG 210-278] Implementing memory 'idct_DCAC_temp_RAM_AUTO_1R1W_memcore_ram (RAM)' using auto RAMs.
-INFO: [HLS 200-740] Implementing PIPO idct_workspace_RAM_AUTO_1R1W_memcore using a separate memory for each block
-INFO: [RTMG 210-278] Implementing memory 'idct_workspace_RAM_AUTO_1R1W_memcore_ram (RAM)' using auto RAMs.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.026 seconds; current allocated memory: 1.382 GB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.623 seconds; current allocated memory: 1.382 GB.
-INFO: [VHDL 208-304] Generating VHDL RTL for idct.
-INFO: [VLOG 209-307] Generating Verilog RTL for idct.
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 128.56 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 11 seconds. CPU system time: 2 seconds. Elapsed time: 21.765 seconds; current allocated memory: 0.000 MB.
-INFO: [HLS 200-112] Total CPU user time: 16 seconds. Total CPU system time: 4 seconds. Total elapsed time: 25.933 seconds; peak allocated memory: 1.382 GB.
+INFO: [HLS 200-1510] Running: source ./ECE423_Lab2/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name idct idct 
+INFO: [HLS 200-1510] Running: cosim_design -wave_debug -trace_level all 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Software/Xilinx/Vitis_HLS/2022.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling idct_tb_1.cpp_pre.cpp.tb.cpp
+   Compiling apatb_idct.cpp
+   Compiling 2D_idct.cpp_pre.cpp.tb.cpp
+   Compiling util.c_pre.c.tb.c
+   Compiling tables.c_pre.c.tb.c
+   Compiling apatb_idct_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Running test 1...
+Error Count: 0
+Running test 2...
+Error Count: 0
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+C:\Users\hmcculla\ECE423\ECE-423-Labs\HLS\ECE423_Lab2\solution1\sim\verilog>set PATH= 
+
+C:\Users\hmcculla\ECE423\ECE-423-Labs\HLS\ECE423_Lab2\solution1\sim\verilog>call C:/Software/Xilinx/Vivado/2022.1/bin/xelab xil_defaultlib.apatb_idct_top glbl -Oenable_linking_all_libraries  -prj idct.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_20 -L floating_point_v7_1_14 --lib "ieee_proposed=./ieee_proposed" -s idct -debug wave 
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Software/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_idct_top glbl -Oenable_linking_all_libraries -prj idct.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_20 -L floating_point_v7_1_14 --lib ieee_proposed=./ieee_proposed -s idct -debug wave 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_axi_s_blockout.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_blockout
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_axi_s_DCAC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_DCAC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+WARNING: [VRFC 10-3824] variable 'block_delay' must explicitly be declared as automatic or static [C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v:34]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_idct_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_16s_16s_13ns_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_13ns_30_4_1_DSP48_11
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_13ns_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_16s_16s_13ns_31_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_13ns_31_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_13ns_31_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_16s_16s_14s_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_14s_30_4_1_DSP48_14
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_14s_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_16s_16s_14s_31_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_14s_31_4_1_DSP48_5
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_14s_31_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_16s_16s_16s_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_16s_30_4_1_DSP48_12
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_16s_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_16s_16s_16s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_16s_32_4_1_DSP48_3
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_16s_16s_16s_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_17s_17s_14ns_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_17s_17s_14ns_30_4_1_DSP48_13
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_17s_17s_14ns_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_17s_17s_14ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_17s_17s_14ns_32_4_1_DSP48_4
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_17s_17s_14ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_21s_21s_13ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_21s_21s_13ns_32_4_1_DSP48_26
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_21s_21s_13ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_21s_21s_14s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_21s_21s_14s_32_4_1_DSP48_21
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_21s_21s_14s_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_21s_21s_16s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_21s_21s_16s_32_4_1_DSP48_19
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_21s_21s_16s_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_am_addmul_22s_22s_14ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_22s_22s_14ns_32_4_1_DSP48_20
+INFO: [VRFC 10-311] analyzing module idct_am_addmul_22s_22s_14ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_Block_idct_for_cond_i_exit_proc2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_Block_idct_for_cond_i_exit_proc2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_DCAC_temp_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_DCAC_temp_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_DCAC_temp_RAM_AUTO_1R1W_memcore.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_DCAC_temp_RAM_AUTO_1R1W_memcore
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_flow_control_loop_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_flow_control_loop_pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_Loop_VITIS_LOOP_39_1_proc1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_Loop_VITIS_LOOP_39_1_proc1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_16s_12ns_30s_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_12ns_30s_30_4_1_DSP48_22
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_12ns_30s_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_16s_12ns_31s_31_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_12ns_31s_31_4_1_DSP48_6
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_12ns_31s_31_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_16s_13ns_30ns_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_13ns_30ns_30_4_1_DSP48_2
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_13ns_30ns_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_16s_13ns_30s_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_13ns_30s_30_4_1_DSP48_16
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_13ns_30s_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_16s_14ns_30ns_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_14ns_30ns_30_4_1_DSP48_25
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_14ns_30ns_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_16s_14ns_31s_31_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_14ns_31s_31_4_1_DSP48_7
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_14ns_31s_31_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_16s_15ns_30ns_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_15ns_30ns_30_4_1_DSP48_23
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_15ns_30ns_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_16s_15ns_30s_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_15ns_30s_30_4_1_DSP48_24
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_15ns_30s_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_16s_15ns_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_15ns_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_16s_15s_30s_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_15s_30s_30_4_1_DSP48_15
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_15s_30s_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_16s_15s_31s_31_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_15s_31s_31_4_1_DSP48_1
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_16s_15s_31s_31_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_17s_13s_30s_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_17s_13s_30s_30_4_1_DSP48_18
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_17s_13s_30s_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_17s_13s_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_17s_13s_32s_32_4_1_DSP48_9
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_17s_13s_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_17s_15s_30s_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_17s_15s_30s_30_4_1_DSP48_17
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_17s_15s_30s_30_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_17s_15s_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_17s_15s_32s_32_4_1_DSP48_8
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_17s_15s_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_21s_12ns_32ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_21s_12ns_32ns_32_4_1_DSP48_31
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_21s_12ns_32ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_21s_13ns_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_21s_13ns_32s_32_4_1_DSP48_30
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_21s_13ns_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_21s_14ns_32ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_21s_14ns_32ns_32_4_1_DSP48_33
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_21s_14ns_32ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_21s_15ns_32ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_21s_15ns_32ns_32_4_1_DSP48_32
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_21s_15ns_32ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_21s_15s_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_21s_15s_32s_32_4_1_DSP48_29
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_21s_15s_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_22s_13s_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_22s_13s_32s_32_4_1_DSP48_28
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_22s_13s_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_mac_muladd_22s_15s_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_22s_15s_32s_32_4_1_DSP48_27
+INFO: [VRFC 10-311] analyzing module idct_mac_muladd_22s_15s_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/idct_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module idct_regslice_both
+INFO: [VRFC 10-311] analyzing module idct_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'axis_block_info' remains unconnected for this instance [C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v:24]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v:49]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v:57]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.idct_DCAC_temp_RAM_AUTO_1R1W_mem...
+Compiling module xil_defaultlib.idct_DCAC_temp_RAM_AUTO_1R1W_def...
+Compiling module xil_defaultlib.idct_flow_control_loop_pipe
+Compiling module xil_defaultlib.idct_regslice_both(DataWidth=16)
+Compiling module xil_defaultlib.idct_Loop_VITIS_LOOP_39_1_proc1
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_13ns_31_4...
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_13ns_31_4...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_15s_31s_31_4...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_15s_31s_31_4...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_13ns_30ns_30...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_13ns_30ns_30...
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_16s_32_4_...
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_16s_32_4_...
+Compiling module xil_defaultlib.idct_am_addmul_17s_17s_14ns_32_4...
+Compiling module xil_defaultlib.idct_am_addmul_17s_17s_14ns_32_4...
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_14s_31_4_...
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_14s_31_4_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_12ns_31s_31_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_12ns_31s_31_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_14ns_31s_31_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_14ns_31s_31_...
+Compiling module xil_defaultlib.idct_mac_muladd_17s_15s_32s_32_4...
+Compiling module xil_defaultlib.idct_mac_muladd_17s_15s_32s_32_4...
+Compiling module xil_defaultlib.idct_mac_muladd_17s_13s_32s_32_4...
+Compiling module xil_defaultlib.idct_mac_muladd_17s_13s_32s_32_4...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_15ns_32s_32_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_15ns_32s_32_...
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_13ns_30_4...
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_13ns_30_4...
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_16s_30_4_...
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_16s_30_4_...
+Compiling module xil_defaultlib.idct_am_addmul_17s_17s_14ns_30_4...
+Compiling module xil_defaultlib.idct_am_addmul_17s_17s_14ns_30_4...
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_14s_30_4_...
+Compiling module xil_defaultlib.idct_am_addmul_16s_16s_14s_30_4_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_15s_30s_30_4...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_15s_30s_30_4...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_13ns_30s_30_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_13ns_30s_30_...
+Compiling module xil_defaultlib.idct_mac_muladd_17s_15s_30s_30_4...
+Compiling module xil_defaultlib.idct_mac_muladd_17s_15s_30s_30_4...
+Compiling module xil_defaultlib.idct_mac_muladd_17s_13s_30s_30_4...
+Compiling module xil_defaultlib.idct_mac_muladd_17s_13s_30s_30_4...
+Compiling module xil_defaultlib.idct_am_addmul_21s_21s_16s_32_4_...
+Compiling module xil_defaultlib.idct_am_addmul_21s_21s_16s_32_4_...
+Compiling module xil_defaultlib.idct_am_addmul_22s_22s_14ns_32_4...
+Compiling module xil_defaultlib.idct_am_addmul_22s_22s_14ns_32_4...
+Compiling module xil_defaultlib.idct_am_addmul_21s_21s_14s_32_4_...
+Compiling module xil_defaultlib.idct_am_addmul_21s_21s_14s_32_4_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_12ns_30s_30_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_12ns_30s_30_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_15ns_30ns_30...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_15ns_30ns_30...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_15ns_30s_30_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_15ns_30s_30_...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_14ns_30ns_30...
+Compiling module xil_defaultlib.idct_mac_muladd_16s_14ns_30ns_30...
+Compiling module xil_defaultlib.idct_am_addmul_21s_21s_13ns_32_4...
+Compiling module xil_defaultlib.idct_am_addmul_21s_21s_13ns_32_4...
+Compiling module xil_defaultlib.idct_mac_muladd_22s_15s_32s_32_4...
+Compiling module xil_defaultlib.idct_mac_muladd_22s_15s_32s_32_4...
+Compiling module xil_defaultlib.idct_mac_muladd_22s_13s_32s_32_4...
+Compiling module xil_defaultlib.idct_mac_muladd_22s_13s_32s_32_4...
+Compiling module xil_defaultlib.idct_mac_muladd_21s_15s_32s_32_4...
+Compiling module xil_defaultlib.idct_mac_muladd_21s_15s_32s_32_4...
+Compiling module xil_defaultlib.idct_mac_muladd_21s_13ns_32s_32_...
+Compiling module xil_defaultlib.idct_mac_muladd_21s_13ns_32s_32_...
+Compiling module xil_defaultlib.idct_mac_muladd_21s_12ns_32ns_32...
+Compiling module xil_defaultlib.idct_mac_muladd_21s_12ns_32ns_32...
+Compiling module xil_defaultlib.idct_mac_muladd_21s_15ns_32ns_32...
+Compiling module xil_defaultlib.idct_mac_muladd_21s_15ns_32ns_32...
+Compiling module xil_defaultlib.idct_mac_muladd_21s_14ns_32ns_32...
+Compiling module xil_defaultlib.idct_mac_muladd_21s_14ns_32ns_32...
+Compiling module xil_defaultlib.idct_regslice_both(DataWidth=8)
+Compiling module xil_defaultlib.idct_Block_idct_for_cond_i_exit_...
+Compiling module xil_defaultlib.idct
+Compiling module xil_defaultlib.fifo(DEPTH=64,WIDTH=16)
+Compiling module xil_defaultlib.AESL_axi_s_DCAC
+Compiling module xil_defaultlib.fifo(DEPTH=64)
+Compiling module xil_defaultlib.AESL_axi_s_blockout
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.df_process_intf
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_idct_top
+Compiling module work.glbl
+Built simulation snapshot idct
+
+****** xsim v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+start_gui
+INFO: [Common 17-206] Exiting xsim at Wed Feb  5 21:20:46 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+Running test 1...
+Error Count: 0
+Running test 2...
+Error Count: 0
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 276.728 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 280.703 seconds; peak allocated memory: 1.387 GB.

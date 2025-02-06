@@ -34,7 +34,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>29</coreId>
+              <coreId>1031040613</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -70,7 +70,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1953391988</coreId>
+              <coreId>1031040613</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -85,7 +85,7 @@
         </item>
       </ports>
       <nodes class_id="8" tracking_level="0" version="0">
-        <count>6</count>
+        <count>4</count>
         <item_version>0</item_version>
         <item class_id="9" tracking_level="1" version="0" object_id="_3">
           <Value>
@@ -95,14 +95,14 @@
               <name>DCAC_temp</name>
               <fileName>../import_files/import_files/2D_idct.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>30</lineNumber>
+              <lineNumber>31</lineNumber>
               <contextFuncName>idct</contextFuncName>
               <contextNormFuncName>idct</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>C:\Users\j54mao\ECE423\ECE-423-Labs\HLS</first>
+                  <first>C:\Users\hmcculla\ECE423\ECE-423-Labs\HLS</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -111,7 +111,7 @@
                         <first>../import_files/import_files/2D_idct.cpp</first>
                         <second>idct</second>
                       </first>
-                      <second>30</second>
+                      <second>31</second>
                     </item>
                   </second>
                 </item>
@@ -132,7 +132,7 @@
           <oprand_edges>
             <count>1</count>
             <item_version>0</item_version>
-            <item>19</item>
+            <item>17</item>
           </oprand_edges>
           <opcode>alloca</opcode>
           <m_Display>0</m_Display>
@@ -148,49 +148,37 @@
             <Obj>
               <type>0</type>
               <id>12</id>
-              <name>workspace</name>
-              <fileName>../import_files/import_files/2D_idct.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>51</lineNumber>
-              <contextFuncName>idct</contextFuncName>
-              <contextNormFuncName>idct</contextNormFuncName>
+              <name>_ln0</name>
+              <fileName/>
+              <fileDirectory/>
+              <lineNumber>0</lineNumber>
+              <contextFuncName/>
+              <contextNormFuncName/>
               <inlineStackInfo>
-                <count>1</count>
+                <count>0</count>
                 <item_version>0</item_version>
-                <item>
-                  <first>C:\Users\j54mao\ECE423\ECE-423-Labs\HLS</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>../import_files/import_files/2D_idct.cpp</first>
-                        <second>idct</second>
-                      </first>
-                      <second>51</second>
-                    </item>
-                  </second>
-                </item>
               </inlineStackInfo>
-              <originalName>workspace</originalName>
-              <rtlName>workspace_U</rtlName>
-              <control>auto</control>
-              <opType>ram_t2p</opType>
-              <implIndex>auto</implIndex>
-              <coreName>RAM</coreName>
-              <isStorage>1</isStorage>
-              <storageDepth>64</storageDepth>
-              <coreId>82</coreId>
-              <rtlModuleName>idct_workspace_RAM_AUTO_1R1W</rtlModuleName>
+              <originalName/>
+              <rtlName>Loop_VITIS_LOOP_39_1_proc1_U0</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>4294967295</coreId>
+              <rtlModuleName/>
             </Obj>
-            <bitwidth>21</bitwidth>
+            <bitwidth>0</bitwidth>
           </Value>
           <oprand_edges>
-            <count>1</count>
+            <count>3</count>
             <item_version>0</item_version>
+            <item>19</item>
             <item>20</item>
+            <item>21</item>
           </oprand_edges>
-          <opcode>alloca</opcode>
+          <opcode>call</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
@@ -215,24 +203,26 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Loop_VITIS_LOOP_38_1_proc1_U0</rtlName>
+              <rtlName>Block_idct_for_cond_i_exit_proc2_U0</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1792</coreId>
+              <coreId>2281913664</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
           <oprand_edges>
-            <count>3</count>
+            <count>5</count>
             <item_version>0</item_version>
-            <item>22</item>
             <item>23</item>
             <item>24</item>
+            <item>25</item>
+            <item>108</item>
+            <item>109</item>
           </oprand_edges>
           <opcode>call</opcode>
           <m_Display>0</m_Display>
@@ -248,109 +238,17 @@
             <Obj>
               <type>0</type>
               <id>14</id>
-              <name>_ln0</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <contextNormFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>Loop_VITIS_LOOP_59_2_proc_U0</rtlName>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>699</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>5</count>
-            <item_version>0</item_version>
-            <item>26</item>
-            <item>27</item>
-            <item>28</item>
-            <item>116</item>
-            <item>117</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>4</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_7">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>15</id>
-              <name>_ln0</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <contextNormFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>Loop_VITIS_LOOP_130_3_proc2_U0</rtlName>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>5</count>
-            <item_version>0</item_version>
-            <item>30</item>
-            <item>31</item>
-            <item>32</item>
-            <item>115</item>
-            <item>118</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>5</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_8">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>16</id>
-              <name>_ln206</name>
+              <name>_ln209</name>
               <fileName>../import_files/import_files/2D_idct.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>206</lineNumber>
+              <lineNumber>209</lineNumber>
               <contextFuncName>idct</contextFuncName>
               <contextNormFuncName>idct</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\j54mao\ECE423\ECE-423-Labs\HLS</first>
+                  <first>C:\Users\hmcculla\ECE423\ECE-423-Labs\HLS</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -359,7 +257,7 @@
                         <first>../import_files/import_files/2D_idct.cpp</first>
                         <second>idct</second>
                       </first>
-                      <second>206</second>
+                      <second>209</second>
                     </item>
                   </second>
                 </item>
@@ -372,7 +270,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2072</coreId>
+              <coreId>2280545872</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -387,18 +285,18 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.00</m_delay>
-          <m_topoIndex>6</m_topoIndex>
+          <m_topoIndex>4</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
       </nodes>
       <consts class_id="15" tracking_level="0" version="0">
-        <count>4</count>
+        <count>3</count>
         <item_version>0</item_version>
-        <item class_id="16" tracking_level="1" version="0" object_id="_9">
+        <item class_id="16" tracking_level="1" version="0" object_id="_7">
           <Value>
             <Obj>
               <type>2</type>
-              <id>18</id>
+              <id>16</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -417,7 +315,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>540947232</coreId>
+              <coreId>1043472445</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -425,12 +323,12 @@
           <const_type>0</const_type>
           <content>1</content>
         </item>
-        <item class_id_reference="16" object_id="_10">
+        <item class_id_reference="16" object_id="_8">
           <Value>
             <Obj>
               <type>2</type>
-              <id>21</id>
-              <name>Loop_VITIS_LOOP_38_1_proc1</name>
+              <id>18</id>
+              <name>Loop_VITIS_LOOP_39_1_proc1</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -448,20 +346,20 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1031040613</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:Loop_VITIS_LOOP_38_1_proc1&gt;</content>
+          <content>&lt;constant:Loop_VITIS_LOOP_39_1_proc1&gt;</content>
         </item>
-        <item class_id_reference="16" object_id="_11">
+        <item class_id_reference="16" object_id="_9">
           <Value>
             <Obj>
               <type>2</type>
-              <id>25</id>
-              <name>Loop_VITIS_LOOP_59_2_proc</name>
+              <id>22</id>
+              <name>Block_idct_for_cond_i_exit_proc2</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -479,53 +377,22 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1734439795</coreId>
+              <coreId>544437362</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:Loop_VITIS_LOOP_59_2_proc&gt;</content>
-        </item>
-        <item class_id_reference="16" object_id="_12">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>29</id>
-              <name>Loop_VITIS_LOOP_130_3_proc2</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <contextNormFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <const_type>6</const_type>
-          <content>&lt;constant:Loop_VITIS_LOOP_130_3_proc2&gt;</content>
+          <content>&lt;constant:Block_idct_for.cond.i.exit_proc2&gt;</content>
         </item>
       </consts>
       <blocks class_id="17" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="18" tracking_level="1" version="0" object_id="_13">
+        <item class_id="18" tracking_level="1" version="0" object_id="_10">
           <Obj>
             <type>3</type>
-            <id>17</id>
+            <id>15</id>
             <name>idct</name>
             <fileName/>
             <fileDirectory/>
@@ -544,127 +411,83 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>0</coreId>
+            <coreId>1295780106</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
-            <count>6</count>
+            <count>4</count>
             <item_version>0</item_version>
             <item>10</item>
             <item>12</item>
             <item>13</item>
             <item>14</item>
-            <item>15</item>
-            <item>16</item>
           </node_objs>
         </item>
       </blocks>
       <edges class_id="19" tracking_level="0" version="0">
-        <count>15</count>
+        <count>9</count>
         <item_version>0</item_version>
-        <item class_id="20" tracking_level="1" version="0" object_id="_14">
-          <id>19</id>
+        <item class_id="20" tracking_level="1" version="0" object_id="_11">
+          <id>17</id>
           <edge_type>1</edge_type>
-          <source_obj>18</source_obj>
+          <source_obj>16</source_obj>
           <sink_obj>10</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_15">
-          <id>20</id>
+        <item class_id_reference="20" object_id="_12">
+          <id>19</id>
           <edge_type>1</edge_type>
           <source_obj>18</source_obj>
           <sink_obj>12</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_16">
-          <id>22</id>
-          <edge_type>1</edge_type>
-          <source_obj>21</source_obj>
-          <sink_obj>13</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_17">
-          <id>23</id>
+        <item class_id_reference="20" object_id="_13">
+          <id>20</id>
           <edge_type>1</edge_type>
           <source_obj>1</source_obj>
+          <sink_obj>12</sink_obj>
+          <is_back_edge>0</is_back_edge>
+        </item>
+        <item class_id_reference="20" object_id="_14">
+          <id>21</id>
+          <edge_type>1</edge_type>
+          <source_obj>10</source_obj>
+          <sink_obj>12</sink_obj>
+          <is_back_edge>0</is_back_edge>
+        </item>
+        <item class_id_reference="20" object_id="_15">
+          <id>23</id>
+          <edge_type>1</edge_type>
+          <source_obj>22</source_obj>
           <sink_obj>13</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_18">
+        <item class_id_reference="20" object_id="_16">
           <id>24</id>
           <edge_type>1</edge_type>
           <source_obj>10</source_obj>
           <sink_obj>13</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_19">
-          <id>26</id>
-          <edge_type>1</edge_type>
-          <source_obj>25</source_obj>
-          <sink_obj>14</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_20">
-          <id>27</id>
-          <edge_type>1</edge_type>
-          <source_obj>10</source_obj>
-          <sink_obj>14</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_21">
-          <id>28</id>
-          <edge_type>1</edge_type>
-          <source_obj>12</source_obj>
-          <sink_obj>14</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_22">
-          <id>30</id>
-          <edge_type>1</edge_type>
-          <source_obj>29</source_obj>
-          <sink_obj>15</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_23">
-          <id>31</id>
-          <edge_type>1</edge_type>
-          <source_obj>12</source_obj>
-          <sink_obj>15</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_24">
-          <id>32</id>
+        <item class_id_reference="20" object_id="_17">
+          <id>25</id>
           <edge_type>1</edge_type>
           <source_obj>2</source_obj>
-          <sink_obj>15</sink_obj>
+          <sink_obj>13</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_25">
-          <id>115</id>
+        <item class_id_reference="20" object_id="_18">
+          <id>108</id>
           <edge_type>4</edge_type>
-          <source_obj>14</source_obj>
-          <sink_obj>15</sink_obj>
+          <source_obj>12</source_obj>
+          <sink_obj>13</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_26">
-          <id>116</id>
+        <item class_id_reference="20" object_id="_19">
+          <id>109</id>
           <edge_type>4</edge_type>
-          <source_obj>13</source_obj>
-          <sink_obj>14</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_27">
-          <id>117</id>
-          <edge_type>4</edge_type>
-          <source_obj>13</source_obj>
-          <sink_obj>14</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_28">
-          <id>118</id>
-          <edge_type>4</edge_type>
-          <source_obj>14</source_obj>
-          <sink_obj>15</sink_obj>
+          <source_obj>12</source_obj>
+          <sink_obj>13</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
       </edges>
@@ -672,7 +495,7 @@
     <cdfg_regions class_id="21" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="22" tracking_level="1" version="0" object_id="_29">
+      <item class_id="22" tracking_level="1" version="0" object_id="_20">
         <mId>1</mId>
         <mTag>idct</mTag>
         <mNormTag>idct</mNormTag>
@@ -684,20 +507,20 @@
         <basic_blocks>
           <count>1</count>
           <item_version>0</item_version>
-          <item>17</item>
+          <item>15</item>
         </basic_blocks>
         <mII>-1</mII>
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>194</mMinLatency>
-        <mMaxLatency>194</mMaxLatency>
+        <mMinLatency>152</mMinLatency>
+        <mMaxLatency>152</mMaxLatency>
         <mIsDfPipe>1</mIsDfPipe>
-        <mDfPipe class_id="23" tracking_level="1" version="0" object_id="_30">
+        <mDfPipe class_id="23" tracking_level="1" version="0" object_id="_21">
           <port_list class_id="24" tracking_level="0" version="0">
             <count>2</count>
             <item_version>0</item_version>
-            <item class_id="25" tracking_level="1" version="0" object_id="_31">
+            <item class_id="25" tracking_level="1" version="0" object_id="_22">
               <name>DCAC</name>
               <dir>0</dir>
               <type>3</type>
@@ -705,7 +528,7 @@
               <top_port class_id="-1"/>
               <chan class_id="-1"/>
             </item>
-            <item class_id_reference="25" object_id="_32">
+            <item class_id_reference="25" object_id="_23">
               <name>blockout</name>
               <dir>1</dir>
               <type>3</type>
@@ -715,28 +538,28 @@
             </item>
           </port_list>
           <process_list class_id="27" tracking_level="0" version="0">
-            <count>3</count>
+            <count>2</count>
             <item_version>0</item_version>
-            <item class_id="28" tracking_level="1" version="0" object_id="_33">
+            <item class_id="28" tracking_level="1" version="0" object_id="_24">
               <type>0</type>
-              <name>Loop_VITIS_LOOP_38_1_proc1_U0</name>
-              <ssdmobj_id>13</ssdmobj_id>
+              <name>Loop_VITIS_LOOP_39_1_proc1_U0</name>
+              <ssdmobj_id>12</ssdmobj_id>
               <pins class_id="29" tracking_level="0" version="0">
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id="30" tracking_level="1" version="0" object_id="_34">
-                  <port class_id_reference="25" object_id="_35">
+                <item class_id="30" tracking_level="1" version="0" object_id="_25">
+                  <port class_id_reference="25" object_id="_26">
                     <name>DCAC</name>
                     <dir>0</dir>
                     <type>3</type>
                     <need_hs>0</need_hs>
-                    <top_port class_id_reference="25" object_id_reference="_31"/>
+                    <top_port class_id_reference="25" object_id_reference="_22"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id="31" tracking_level="1" version="0" object_id="_36">
+                  <inst class_id="31" tracking_level="1" version="0" object_id="_27">
                     <type>0</type>
-                    <name>Loop_VITIS_LOOP_38_1_proc1_U0</name>
-                    <ssdmobj_id>13</ssdmobj_id>
+                    <name>Loop_VITIS_LOOP_39_1_proc1_U0</name>
+                    <ssdmobj_id>12</ssdmobj_id>
                   </inst>
                 </item>
               </pins>
@@ -744,38 +567,26 @@
               <in_sink_join>0</in_sink_join>
               <flag_in_gui>0</flag_in_gui>
             </item>
-            <item class_id_reference="28" object_id="_37">
+            <item class_id_reference="28" object_id="_28">
               <type>0</type>
-              <name>Loop_VITIS_LOOP_59_2_proc_U0</name>
-              <ssdmobj_id>14</ssdmobj_id>
-              <pins>
-                <count>0</count>
-                <item_version>0</item_version>
-              </pins>
-              <in_source_fork>0</in_source_fork>
-              <in_sink_join>0</in_sink_join>
-              <flag_in_gui>0</flag_in_gui>
-            </item>
-            <item class_id_reference="28" object_id="_38">
-              <type>0</type>
-              <name>Loop_VITIS_LOOP_130_3_proc2_U0</name>
-              <ssdmobj_id>15</ssdmobj_id>
+              <name>Block_idct_for_cond_i_exit_proc2_U0</name>
+              <ssdmobj_id>13</ssdmobj_id>
               <pins>
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_39">
-                  <port class_id_reference="25" object_id="_40">
+                <item class_id_reference="30" object_id="_29">
+                  <port class_id_reference="25" object_id="_30">
                     <name>blockout</name>
                     <dir>1</dir>
                     <type>3</type>
                     <need_hs>0</need_hs>
-                    <top_port class_id_reference="25" object_id_reference="_32"/>
+                    <top_port class_id_reference="25" object_id_reference="_23"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id_reference="31" object_id="_41">
+                  <inst class_id_reference="31" object_id="_31">
                     <type>0</type>
-                    <name>Loop_VITIS_LOOP_130_3_proc2_U0</name>
-                    <ssdmobj_id>15</ssdmobj_id>
+                    <name>Block_idct_for_cond_i_exit_proc2_U0</name>
+                    <ssdmobj_id>13</ssdmobj_id>
                   </inst>
                 </item>
               </pins>
@@ -785,9 +596,9 @@
             </item>
           </process_list>
           <channel_list class_id="32" tracking_level="0" version="0">
-            <count>2</count>
+            <count>1</count>
             <item_version>0</item_version>
-            <item class_id="26" tracking_level="1" version="0" object_id="_42">
+            <item class_id="26" tracking_level="1" version="0" object_id="_32">
               <type>1</type>
               <name>DCAC_temp</name>
               <ssdmobj_id>10</ssdmobj_id>
@@ -799,8 +610,8 @@
               <source_list>
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_43">
-                  <port class_id_reference="25" object_id="_44">
+                <item class_id_reference="30" object_id="_33">
+                  <port class_id_reference="25" object_id="_34">
                     <name>in</name>
                     <dir>0</dir>
                     <type>3</type>
@@ -808,14 +619,14 @@
                     <top_port class_id="-1"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id_reference="31" object_id_reference="_36"/>
+                  <inst class_id_reference="31" object_id_reference="_27"/>
                 </item>
               </source_list>
               <sink_list>
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_45">
-                  <port class_id_reference="25" object_id="_46">
+                <item class_id_reference="30" object_id="_35">
+                  <port class_id_reference="25" object_id="_36">
                     <name>out</name>
                     <dir>1</dir>
                     <type>3</type>
@@ -823,51 +634,7 @@
                     <top_port class_id="-1"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id_reference="31" object_id="_47">
-                    <type>0</type>
-                    <name>Loop_VITIS_LOOP_59_2_proc_U0</name>
-                    <ssdmobj_id>14</ssdmobj_id>
-                  </inst>
-                </item>
-              </sink_list>
-            </item>
-            <item class_id_reference="26" object_id="_48">
-              <type>1</type>
-              <name>workspace</name>
-              <ssdmobj_id>12</ssdmobj_id>
-              <ctype>1</ctype>
-              <depth>0</depth>
-              <bitwidth>0</bitwidth>
-              <suggested_type>0</suggested_type>
-              <suggested_depth>2</suggested_depth>
-              <source_list>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_49">
-                  <port class_id_reference="25" object_id="_50">
-                    <name>in</name>
-                    <dir>0</dir>
-                    <type>3</type>
-                    <need_hs>0</need_hs>
-                    <top_port class_id="-1"/>
-                    <chan class_id="-1"/>
-                  </port>
-                  <inst class_id_reference="31" object_id_reference="_47"/>
-                </item>
-              </source_list>
-              <sink_list>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_51">
-                  <port class_id_reference="25" object_id="_52">
-                    <name>out</name>
-                    <dir>1</dir>
-                    <type>3</type>
-                    <need_hs>0</need_hs>
-                    <top_port class_id="-1"/>
-                    <chan class_id="-1"/>
-                  </port>
-                  <inst class_id_reference="31" object_id_reference="_41"/>
+                  <inst class_id_reference="31" object_id_reference="_31"/>
                 </item>
               </sink_list>
             </item>
@@ -879,146 +646,117 @@
         </mDfPipe>
       </item>
     </cdfg_regions>
-    <fsm class_id="34" tracking_level="1" version="0" object_id="_53">
+    <fsm class_id="34" tracking_level="1" version="0" object_id="_37">
       <states class_id="35" tracking_level="0" version="0">
-        <count>8</count>
+        <count>6</count>
         <item_version>0</item_version>
-        <item class_id="36" tracking_level="1" version="0" object_id="_54">
+        <item class_id="36" tracking_level="1" version="0" object_id="_38">
           <id>1</id>
           <operations class_id="37" tracking_level="0" version="0">
-            <count>2</count>
+            <count>1</count>
             <item_version>0</item_version>
-            <item class_id="38" tracking_level="1" version="0" object_id="_55">
+            <item class_id="38" tracking_level="1" version="0" object_id="_39">
               <id>10</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_56">
-              <id>12</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
           </operations>
         </item>
-        <item class_id_reference="36" object_id="_57">
+        <item class_id_reference="36" object_id="_40">
           <id>2</id>
           <operations>
             <count>1</count>
             <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_58">
-              <id>13</id>
+            <item class_id_reference="38" object_id="_41">
+              <id>12</id>
               <stage>2</stage>
               <latency>2</latency>
             </item>
           </operations>
         </item>
-        <item class_id_reference="36" object_id="_59">
+        <item class_id_reference="36" object_id="_42">
           <id>3</id>
           <operations>
             <count>1</count>
             <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_60">
+            <item class_id_reference="38" object_id="_43">
+              <id>12</id>
+              <stage>1</stage>
+              <latency>2</latency>
+            </item>
+          </operations>
+        </item>
+        <item class_id_reference="36" object_id="_44">
+          <id>4</id>
+          <operations>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item class_id_reference="38" object_id="_45">
+              <id>13</id>
+              <stage>2</stage>
+              <latency>2</latency>
+            </item>
+          </operations>
+        </item>
+        <item class_id_reference="36" object_id="_46">
+          <id>5</id>
+          <operations>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item class_id_reference="38" object_id="_47">
               <id>13</id>
               <stage>1</stage>
               <latency>2</latency>
             </item>
           </operations>
         </item>
-        <item class_id_reference="36" object_id="_61">
-          <id>4</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_62">
-              <id>14</id>
-              <stage>2</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_63">
-          <id>5</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_64">
-              <id>14</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_65">
+        <item class_id_reference="36" object_id="_48">
           <id>6</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_66">
-              <id>15</id>
-              <stage>2</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_67">
-          <id>7</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_68">
-              <id>15</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_69">
-          <id>8</id>
           <operations>
             <count>9</count>
             <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_70">
+            <item class_id_reference="38" object_id="_49">
               <id>3</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_71">
+            <item class_id_reference="38" object_id="_50">
               <id>4</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_72">
+            <item class_id_reference="38" object_id="_51">
               <id>5</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_73">
+            <item class_id_reference="38" object_id="_52">
               <id>6</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_74">
+            <item class_id_reference="38" object_id="_53">
               <id>7</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_75">
+            <item class_id_reference="38" object_id="_54">
               <id>8</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_76">
+            <item class_id_reference="38" object_id="_55">
               <id>9</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_77">
+            <item class_id_reference="38" object_id="_56">
               <id>11</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_78">
-              <id>16</id>
+            <item class_id_reference="38" object_id="_57">
+              <id>14</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
@@ -1026,9 +764,9 @@
         </item>
       </states>
       <transitions class_id="39" tracking_level="0" version="0">
-        <count>7</count>
+        <count>5</count>
         <item_version>0</item_version>
-        <item class_id="40" tracking_level="1" version="0" object_id="_79">
+        <item class_id="40" tracking_level="1" version="0" object_id="_58">
           <inState>1</inState>
           <outState>2</outState>
           <condition class_id="41" tracking_level="0" version="0">
@@ -1043,7 +781,7 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_80">
+        <item class_id_reference="40" object_id="_59">
           <inState>2</inState>
           <outState>3</outState>
           <condition>
@@ -1058,7 +796,7 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_81">
+        <item class_id_reference="40" object_id="_60">
           <inState>3</inState>
           <outState>4</outState>
           <condition>
@@ -1073,7 +811,7 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_82">
+        <item class_id_reference="40" object_id="_61">
           <inState>4</inState>
           <outState>5</outState>
           <condition>
@@ -1088,7 +826,7 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_83">
+        <item class_id_reference="40" object_id="_62">
           <inState>5</inState>
           <outState>6</outState>
           <condition>
@@ -1103,63 +841,33 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_84">
-          <inState>6</inState>
-          <outState>7</outState>
-          <condition>
-            <id>-1</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_85">
-          <inState>7</inState>
-          <outState>8</outState>
-          <condition>
-            <id>-1</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
       </transitions>
     </fsm>
-    <res class_id="44" tracking_level="1" version="0" object_id="_86">
+    <res class_id="44" tracking_level="1" version="0" object_id="_63">
       <dp_component_resource class_id="45" tracking_level="0" version="0">
-        <count>3</count>
+        <count>2</count>
         <item_version>0</item_version>
         <item class_id="46" tracking_level="0" version="0">
-          <first>Loop_VITIS_LOOP_130_3_proc2_U0 (Loop_VITIS_LOOP_130_3_proc2)</first>
+          <first>Block_idct_for_cond_i_exit_proc2_U0 (Block_idct_for_cond_i_exit_proc2)</first>
           <second class_id="47" tracking_level="0" version="0">
             <count>3</count>
             <item_version>0</item_version>
             <item class_id="48" tracking_level="0" version="0">
               <first>DSP</first>
-              <second>24</second>
+              <second>192</second>
             </item>
             <item>
               <first>FF</first>
-              <second>1507</second>
+              <second>7019</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>2526</second>
+              <second>15842</second>
             </item>
           </second>
         </item>
         <item>
-          <first>Loop_VITIS_LOOP_38_1_proc1_U0 (Loop_VITIS_LOOP_38_1_proc1)</first>
+          <first>Loop_VITIS_LOOP_39_1_proc1_U0 (Loop_VITIS_LOOP_39_1_proc1)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -1173,25 +881,6 @@
             </item>
           </second>
         </item>
-        <item>
-          <first>Loop_VITIS_LOOP_59_2_proc_U0 (Loop_VITIS_LOOP_59_2_proc)</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>DSP</first>
-              <second>24</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>1313</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>3805</second>
-            </item>
-          </second>
-        </item>
       </dp_component_resource>
       <dp_expression_resource>
         <count>0</count>
@@ -1202,7 +891,7 @@
         <item_version>0</item_version>
       </dp_fifo_resource>
       <dp_memory_resource>
-        <count>2</count>
+        <count>1</count>
         <item_version>0</item_version>
         <item>
           <first>DCAC_temp_U</first>
@@ -1243,45 +932,6 @@
             </item>
           </second>
         </item>
-        <item>
-          <first>workspace_U</first>
-          <second>
-            <count>8</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Words)</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>21</second>
-            </item>
-            <item>
-              <first>(2Banks)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(3W*Bits*Banks)</first>
-              <second>1344</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>4</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>URAM</first>
-              <second>0</second>
-            </item>
-          </second>
-        </item>
       </dp_memory_resource>
       <dp_multiplexer_resource>
         <count>0</count>
@@ -1292,24 +942,17 @@
         <item_version>0</item_version>
       </dp_register_resource>
       <dp_dsp_resource>
-        <count>3</count>
+        <count>2</count>
         <item_version>0</item_version>
         <item>
-          <first>Loop_VITIS_LOOP_130_3_proc2_U0</first>
+          <first>Block_idct_for_cond_i_exit_proc2_U0</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Loop_VITIS_LOOP_38_1_proc1_U0</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>Loop_VITIS_LOOP_59_2_proc_U0</first>
+          <first>Loop_VITIS_LOOP_39_1_proc1_U0</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -1317,18 +960,10 @@
         </item>
       </dp_dsp_resource>
       <dp_component_map class_id="49" tracking_level="0" version="0">
-        <count>3</count>
+        <count>2</count>
         <item_version>0</item_version>
         <item class_id="50" tracking_level="0" version="0">
-          <first>Loop_VITIS_LOOP_130_3_proc2_U0 (Loop_VITIS_LOOP_130_3_proc2)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>15</item>
-          </second>
-        </item>
-        <item>
-          <first>Loop_VITIS_LOOP_38_1_proc1_U0 (Loop_VITIS_LOOP_38_1_proc1)</first>
+          <first>Block_idct_for_cond_i_exit_proc2_U0 (Block_idct_for_cond_i_exit_proc2)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -1336,11 +971,11 @@
           </second>
         </item>
         <item>
-          <first>Loop_VITIS_LOOP_59_2_proc_U0 (Loop_VITIS_LOOP_59_2_proc)</first>
+          <first>Loop_VITIS_LOOP_39_1_proc1_U0 (Loop_VITIS_LOOP_39_1_proc1)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>14</item>
+            <item>12</item>
           </second>
         </item>
       </dp_component_map>
@@ -1353,7 +988,7 @@
         <item_version>0</item_version>
       </dp_fifo_map>
       <dp_memory_map>
-        <count>2</count>
+        <count>1</count>
         <item_version>0</item_version>
         <item>
           <first>DCAC_temp_U</first>
@@ -1363,18 +998,10 @@
             <item>1</item>
           </second>
         </item>
-        <item>
-          <first>workspace_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>31</item>
-          </second>
-        </item>
       </dp_memory_map>
     </res>
     <node_label_latency class_id="51" tracking_level="0" version="0">
-      <count>6</count>
+      <count>4</count>
       <item_version>0</item_version>
       <item class_id="52" tracking_level="0" version="0">
         <first>10</first>
@@ -1386,35 +1013,21 @@
       <item>
         <first>12</first>
         <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>13</first>
-        <second>
           <first>1</first>
           <second>1</second>
         </second>
       </item>
       <item>
-        <first>14</first>
+        <first>13</first>
         <second>
           <first>3</first>
           <second>1</second>
         </second>
       </item>
       <item>
-        <first>15</first>
+        <first>14</first>
         <second>
           <first>5</first>
-          <second>1</second>
-        </second>
-      </item>
-      <item>
-        <first>16</first>
-        <second>
-          <first>7</first>
           <second>0</second>
         </second>
       </item>
@@ -1423,25 +1036,25 @@
       <count>1</count>
       <item_version>0</item_version>
       <item class_id="55" tracking_level="0" version="0">
-        <first>17</first>
+        <first>15</first>
         <second class_id="56" tracking_level="0" version="0">
           <first>0</first>
-          <second>7</second>
+          <second>5</second>
         </second>
       </item>
     </bblk_ent_exit>
     <regions class_id="57" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="58" tracking_level="1" version="0" object_id="_87">
+      <item class_id="58" tracking_level="1" version="0" object_id="_64">
         <region_name>idct</region_name>
         <basic_blocks>
           <count>1</count>
           <item_version>0</item_version>
-          <item>17</item>
+          <item>15</item>
         </basic_blocks>
         <nodes>
-          <count>14</count>
+          <count>12</count>
           <item_version>0</item_version>
           <item>3</item>
           <item>4</item>
@@ -1455,8 +1068,6 @@
           <item>12</item>
           <item>13</item>
           <item>14</item>
-          <item>15</item>
-          <item>16</item>
         </nodes>
         <anchor_node>-1</anchor_node>
         <region_type>16</region_type>
@@ -1469,10 +1080,10 @@
       </item>
     </regions>
     <dp_fu_nodes class_id="60" tracking_level="0" version="0">
-      <count>5</count>
+      <count>3</count>
       <item_version>0</item_version>
       <item class_id="61" tracking_level="0" version="0">
-        <first>38</first>
+        <first>36</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -1480,75 +1091,41 @@
         </second>
       </item>
       <item>
-        <first>42</first>
+        <first>40</first>
         <second>
-          <count>1</count>
+          <count>2</count>
           <item_version>0</item_version>
+          <item>12</item>
           <item>12</item>
         </second>
       </item>
       <item>
-        <first>46</first>
+        <first>47</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
           <item>13</item>
           <item>13</item>
-        </second>
-      </item>
-      <item>
-        <first>53</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>14</item>
-          <item>14</item>
-        </second>
-      </item>
-      <item>
-        <first>59</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>15</item>
-          <item>15</item>
         </second>
       </item>
     </dp_fu_nodes>
     <dp_fu_nodes_expression class_id="63" tracking_level="0" version="0">
-      <count>2</count>
+      <count>1</count>
       <item_version>0</item_version>
       <item class_id="64" tracking_level="0" version="0">
-        <first>DCAC_temp_alloca_fu_38</first>
+        <first>DCAC_temp_alloca_fu_36</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>10</item>
         </second>
       </item>
-      <item>
-        <first>workspace_alloca_fu_42</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>12</item>
-        </second>
-      </item>
     </dp_fu_nodes_expression>
     <dp_fu_nodes_module>
-      <count>3</count>
+      <count>2</count>
       <item_version>0</item_version>
       <item>
-        <first>grp_Loop_VITIS_LOOP_130_3_proc2_fu_59</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>15</item>
-          <item>15</item>
-        </second>
-      </item>
-      <item>
-        <first>grp_Loop_VITIS_LOOP_38_1_proc1_fu_46</first>
+        <first>grp_Block_idct_for_cond_i_exit_proc2_fu_47</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
@@ -1557,12 +1134,12 @@
         </second>
       </item>
       <item>
-        <first>grp_Loop_VITIS_LOOP_59_2_proc_fu_53</first>
+        <first>grp_Loop_VITIS_LOOP_39_1_proc1_fu_40</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
-          <item>14</item>
-          <item>14</item>
+          <item>12</item>
+          <item>12</item>
         </second>
       </item>
     </dp_fu_nodes_module>
@@ -1607,7 +1184,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>13</item>
+              <item>12</item>
             </second>
           </item>
         </second>
@@ -1622,7 +1199,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>15</item>
+              <item>13</item>
             </second>
           </item>
         </second>
@@ -1633,7 +1210,7 @@
       <item_version>0</item_version>
     </port2core>
     <node2core>
-      <count>5</count>
+      <count>3</count>
       <item_version>0</item_version>
       <item>
         <first>10</first>
@@ -1645,26 +1222,12 @@
       <item>
         <first>12</first>
         <second>
-          <first>666</first>
-          <second>136</second>
+          <first>-1</first>
+          <second>-1</second>
         </second>
       </item>
       <item>
         <first>13</first>
-        <second>
-          <first>-1</first>
-          <second>-1</second>
-        </second>
-      </item>
-      <item>
-        <first>14</first>
-        <second>
-          <first>-1</first>
-          <second>-1</second>
-        </second>
-      </item>
-      <item>
-        <first>15</first>
         <second>
           <first>-1</first>
           <second>-1</second>

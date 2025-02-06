@@ -1847,12 +1847,22 @@ void print_block(pcolor_block_t b);
 void print_dct(pdct_block_t b);
 void print_bitstream(int num_bytes, void* bitstream);
 # 4 "../import_files/import_files/2D_idct.cpp" 2
-# 18 "../import_files/import_files/2D_idct.cpp"
+# 1 "../import_files/import_files/2D_idct.h" 1
+
+
+
+__attribute__((sdx_kernel("idct", 0))) void idct(short input[8][8], unsigned char output[8][8]);
+# 5 "../import_files/import_files/2D_idct.cpp" 2
+# 19 "../import_files/import_files/2D_idct.cpp"
 __attribute__((sdx_kernel("idct", 0))) void idct(int16_t DCAC[8][8], uint8_t blockout[8][8])
 {
-#line 20 "C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csynth.tcl"
+#line 21 "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=idct
-# 19 "../import_files/import_files/2D_idct.cpp"
+# 20 "../import_files/import_files/2D_idct.cpp"
+
+#line 6 "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=idct
+# 20 "../import_files/import_files/2D_idct.cpp"
 
 #pragma HLS interface ap_ctrl_none port=return
 
@@ -1872,7 +1882,7 @@ __attribute__((sdx_kernel("idct", 0))) void idct(int16_t DCAC[8][8], uint8_t blo
 #pragma HLS ARRAY_RESHAPE variable=blockout_temp type=block factor=4 dim=2
 
 
- VITIS_LOOP_38_1: for(int r = 0; r < 8; r++)
+ VITIS_LOOP_39_1: for(int r = 0; r < 8; r++)
  {
   DCAC_col_copy: for(int c = 0; c < 8; c++)
   {
@@ -1893,10 +1903,10 @@ __attribute__((sdx_kernel("idct", 0))) void idct(int16_t DCAC[8][8], uint8_t blo
 
 
 
-    VITIS_LOOP_59_2: for (int col = 0; col < 8; col++) {
+    VITIS_LOOP_60_2: for (int col = 0; col < 8; col++) {
 
 
-#pragma HLS UNROLL factor=2
+#pragma HLS UNROLL factor=8
  z2 = DCAC_temp[2][col];
    z3 = DCAC_temp[6][col];
 
@@ -1964,8 +1974,10 @@ __attribute__((sdx_kernel("idct", 0))) void idct(int16_t DCAC[8][8], uint8_t blo
 
 
 
-    VITIS_LOOP_130_3: for (int row = 0; row < 8; row++) {
-#pragma HLS UNROLL factor=2
+    VITIS_LOOP_131_3: for (int row = 0; row < 8; row++) {
+#pragma HLS UNROLL factor=8
+
+
 
 
 

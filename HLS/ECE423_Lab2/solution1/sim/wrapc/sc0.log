@@ -1,0 +1,8 @@
+   Build using "C:/Software/Xilinx/Vitis_HLS/2022.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling idct_tb_1.cpp_pre.cpp.tb.cpp
+   Compiling apatb_idct.cpp
+   Compiling 2D_idct.cpp_pre.cpp.tb.cpp
+   Compiling util.c_pre.c.tb.c
+   Compiling tables.c_pre.c.tb.c
+   Compiling apatb_idct_ir.ll
+   Generating cosim.tv.exe

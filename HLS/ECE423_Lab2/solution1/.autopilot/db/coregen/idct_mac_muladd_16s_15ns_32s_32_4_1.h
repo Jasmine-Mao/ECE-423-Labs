@@ -5,7 +5,7 @@
 // ==============================================================
 #ifndef __idct_mac_muladd_16s_15ns_32s_32_4_1__HH__
 #define __idct_mac_muladd_16s_15ns_32s_32_4_1__HH__
-#include "idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9.h"
+#include "idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10.h"
 #include <systemc>
 
 template<
@@ -26,16 +26,16 @@ SC_MODULE(idct_mac_muladd_16s_15ns_32s_32_4_1) {
 
 
 
-    idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9 idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9_U;
+    idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10 idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10_U;
 
-    SC_CTOR(idct_mac_muladd_16s_15ns_32s_32_4_1):  idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9_U ("idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9_U") {
-        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9_U.clk(clk);
-        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9_U.rst(reset);
-        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9_U.ce(ce);
-        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9_U.in0(din0);
-        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9_U.in1(din1);
-        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9_U.in2(din2);
-        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_9_U.dout(dout);
+    SC_CTOR(idct_mac_muladd_16s_15ns_32s_32_4_1):  idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10_U ("idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10_U") {
+        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10_U.clk(clk);
+        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10_U.rst(reset);
+        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10_U.ce(ce);
+        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10_U.in0(din0);
+        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10_U.in1(din1);
+        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10_U.in2(din2);
+        idct_mac_muladd_16s_15ns_32s_32_4_1_DSP48_10_U.dout(dout);
 
     }
 

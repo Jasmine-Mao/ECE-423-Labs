@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../Testbenches/idct_tb_1.cpp ../../../../../import_files/import_files/tables.c ../../../../../import_files/import_files/util.c
+HLS_SOURCES = ../../../../../Testbenches/idct_tb_1.cpp ../../../../../import_files/import_files/util.c ../../../../../import_files/import_files/tables.c ../../../../../import_files/import_files/2D_idct.cpp
 
 override TARGET := csim.exe
 
@@ -78,14 +78,20 @@ $(ObjDir)/idct_tb_1.o: ../../../../../Testbenches/idct_tb_1.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/idct_tb_1.d
 
+$(ObjDir)/util.o: ../../../../../import_files/import_files/util.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../../../import_files/import_files/util.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/util.d
+
 $(ObjDir)/tables.o: ../../../../../import_files/import_files/tables.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../../../import_files/import_files/tables.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/tables.d
 
-$(ObjDir)/util.o: ../../../../../import_files/import_files/util.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../../../import_files/import_files/util.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/2D_idct.o: ../../../../../import_files/import_files/2D_idct.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../import_files/import_files/2D_idct.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/util.d
+-include $(ObjDir)/2D_idct.d

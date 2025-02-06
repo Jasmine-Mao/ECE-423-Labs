@@ -5,7 +5,7 @@
 // ==============================================================
 `timescale 1 ns / 1 ps
 
-module idct_mac_muladd_21s_15ns_32ns_32_4_1_DSP48_20(
+module idct_mac_muladd_21s_15ns_32ns_32_4_1_DSP48_32(
     input clk,
     input rst,
     input ce,
@@ -69,7 +69,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-idct_mac_muladd_21s_15ns_32ns_32_4_1_DSP48_20 idct_mac_muladd_21s_15ns_32ns_32_4_1_DSP48_20_U(
+idct_mac_muladd_21s_15ns_32ns_32_4_1_DSP48_32 idct_mac_muladd_21s_15ns_32ns_32_4_1_DSP48_32_U(
     .clk( clk ),
     .rst( reset ),
     .ce( ce ),

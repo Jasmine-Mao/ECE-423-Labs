@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "dct_math.h"
 #include "util.h"
+#include "2D_idct.h"
 
 /*
 * This implementation is based on an algorithm described in
@@ -59,7 +60,7 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
     for (int col = 0; col < DCTSIZE; col++) {
         /* Even part: reverse the even part of the forward DCT. */
         /* The rotator is sqrt(2)*c(-6). */
-		#pragma HLS UNROLL factor=2
+		#pragma HLS UNROLL factor=8 //was 2
 			z2 = DCAC_temp[2][col];
 			z3 = DCAC_temp[6][col];
 
@@ -128,7 +129,9 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
 
     //idct row loop
     for (int row = 0; row < DCTSIZE; row++) {
-		#pragma HLS UNROLL factor=2
+		#pragma HLS UNROLL factor=8 //was 2 but that was causing like dependency errors
+		//#pragma HLS PIPELINE
+
         /* Even part: reverse the even part of the forward DCT. */
         /* The rotator is sqrt(2)*c(-6). */
 

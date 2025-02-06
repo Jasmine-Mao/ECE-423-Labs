@@ -7,7 +7,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity idct_mac_muladd_16s_12ns_31s_31_4_1_DSP48_8 is
+entity idct_mac_muladd_16s_12ns_31s_31_4_1_DSP48_6 is
 port (
     clk: in  std_logic;
     rst: in  std_logic;
@@ -19,7 +19,7 @@ port (
 
 end entity;
 
-architecture behav of idct_mac_muladd_16s_12ns_31s_31_4_1_DSP48_8 is
+architecture behav of idct_mac_muladd_16s_12ns_31s_31_4_1_DSP48_6 is
     signal a       : signed(25-1 downto 0);
     signal b       : signed(18-1 downto 0);
     signal c       : signed(48-1 downto 0);
@@ -73,7 +73,7 @@ entity idct_mac_muladd_16s_12ns_31s_31_4_1 is
 end entity;
 
 architecture arch of idct_mac_muladd_16s_12ns_31s_31_4_1 is
-    component idct_mac_muladd_16s_12ns_31s_31_4_1_DSP48_8 is
+    component idct_mac_muladd_16s_12ns_31s_31_4_1_DSP48_6 is
         port (
             clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -87,7 +87,7 @@ architecture arch of idct_mac_muladd_16s_12ns_31s_31_4_1 is
 
 
 begin
-    idct_mac_muladd_16s_12ns_31s_31_4_1_DSP48_8_U :  component idct_mac_muladd_16s_12ns_31s_31_4_1_DSP48_8
+    idct_mac_muladd_16s_12ns_31s_31_4_1_DSP48_6_U :  component idct_mac_muladd_16s_12ns_31s_31_4_1_DSP48_6
     port map (
         clk => clk,
         rst => reset,

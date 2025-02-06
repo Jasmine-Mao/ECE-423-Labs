@@ -25,11 +25,10 @@ end;
 architecture behav of idct is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "idct_idct,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.778500,HLS_SYN_LAT=194,HLS_SYN_TPT=76,HLS_SYN_MEM=8,HLS_SYN_DSP=0,HLS_SYN_FF=2859,HLS_SYN_LUT=6608,HLS_VERSION=2022_1}";
+    "idct_idct,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.374313,HLS_SYN_LAT=152,HLS_SYN_TPT=86,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=7058,HLS_SYN_LUT=16119,HLS_VERSION=2022_1}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_const_lv21_0 : STD_LOGIC_VECTOR (20 downto 0) := "000000000000000000000";
     constant ap_const_lv5_0 : STD_LOGIC_VECTOR (4 downto 0) := "00000";
 
     signal ap_rst_n_inv : STD_LOGIC;
@@ -38,54 +37,31 @@ architecture behav of idct is
     signal DCAC_temp_t_we0 : STD_LOGIC_VECTOR (3 downto 0);
     signal DCAC_temp_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
     signal DCAC_temp_t_q1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal workspace_i_q0 : STD_LOGIC_VECTOR (20 downto 0);
-    signal workspace_i_q1 : STD_LOGIC_VECTOR (20 downto 0);
-    signal workspace_t_q0 : STD_LOGIC_VECTOR (20 downto 0);
-    signal workspace_t_q1 : STD_LOGIC_VECTOR (20 downto 0);
-    signal Loop_VITIS_LOOP_38_1_proc1_U0_ap_start : STD_LOGIC;
-    signal Loop_VITIS_LOOP_38_1_proc1_U0_ap_done : STD_LOGIC;
-    signal Loop_VITIS_LOOP_38_1_proc1_U0_ap_continue : STD_LOGIC;
-    signal Loop_VITIS_LOOP_38_1_proc1_U0_ap_idle : STD_LOGIC;
-    signal Loop_VITIS_LOOP_38_1_proc1_U0_ap_ready : STD_LOGIC;
-    signal Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_TREADY : STD_LOGIC;
-    signal Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_address0 : STD_LOGIC_VECTOR (4 downto 0);
-    signal Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_ce0 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_we0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_d0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal Loop_VITIS_LOOP_59_2_proc_U0_ap_start : STD_LOGIC;
-    signal Loop_VITIS_LOOP_59_2_proc_U0_ap_done : STD_LOGIC;
-    signal Loop_VITIS_LOOP_59_2_proc_U0_ap_continue : STD_LOGIC;
-    signal Loop_VITIS_LOOP_59_2_proc_U0_ap_idle : STD_LOGIC;
-    signal Loop_VITIS_LOOP_59_2_proc_U0_ap_ready : STD_LOGIC;
-    signal Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_address0 : STD_LOGIC_VECTOR (4 downto 0);
-    signal Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_ce0 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_address1 : STD_LOGIC_VECTOR (4 downto 0);
-    signal Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_ce1 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_59_2_proc_U0_workspace_address0 : STD_LOGIC_VECTOR (5 downto 0);
-    signal Loop_VITIS_LOOP_59_2_proc_U0_workspace_ce0 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_59_2_proc_U0_workspace_we0 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_59_2_proc_U0_workspace_d0 : STD_LOGIC_VECTOR (20 downto 0);
-    signal Loop_VITIS_LOOP_59_2_proc_U0_workspace_address1 : STD_LOGIC_VECTOR (5 downto 0);
-    signal Loop_VITIS_LOOP_59_2_proc_U0_workspace_ce1 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_59_2_proc_U0_workspace_we1 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_59_2_proc_U0_workspace_d1 : STD_LOGIC_VECTOR (20 downto 0);
-    signal Loop_VITIS_LOOP_130_3_proc2_U0_ap_start : STD_LOGIC;
-    signal Loop_VITIS_LOOP_130_3_proc2_U0_ap_done : STD_LOGIC;
-    signal Loop_VITIS_LOOP_130_3_proc2_U0_ap_continue : STD_LOGIC;
-    signal Loop_VITIS_LOOP_130_3_proc2_U0_ap_idle : STD_LOGIC;
-    signal Loop_VITIS_LOOP_130_3_proc2_U0_ap_ready : STD_LOGIC;
-    signal Loop_VITIS_LOOP_130_3_proc2_U0_workspace_address0 : STD_LOGIC_VECTOR (5 downto 0);
-    signal Loop_VITIS_LOOP_130_3_proc2_U0_workspace_ce0 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_130_3_proc2_U0_workspace_address1 : STD_LOGIC_VECTOR (5 downto 0);
-    signal Loop_VITIS_LOOP_130_3_proc2_U0_workspace_ce1 : STD_LOGIC;
-    signal Loop_VITIS_LOOP_130_3_proc2_U0_blockout_TDATA : STD_LOGIC_VECTOR (7 downto 0);
-    signal Loop_VITIS_LOOP_130_3_proc2_U0_blockout_TVALID : STD_LOGIC;
+    signal Loop_VITIS_LOOP_39_1_proc1_U0_ap_start : STD_LOGIC;
+    signal Loop_VITIS_LOOP_39_1_proc1_U0_ap_done : STD_LOGIC;
+    signal Loop_VITIS_LOOP_39_1_proc1_U0_ap_continue : STD_LOGIC;
+    signal Loop_VITIS_LOOP_39_1_proc1_U0_ap_idle : STD_LOGIC;
+    signal Loop_VITIS_LOOP_39_1_proc1_U0_ap_ready : STD_LOGIC;
+    signal Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_TREADY : STD_LOGIC;
+    signal Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_ce0 : STD_LOGIC;
+    signal Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_we0 : STD_LOGIC_VECTOR (3 downto 0);
+    signal Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Block_idct_for_cond_i_exit_proc2_U0_ap_start : STD_LOGIC;
+    signal Block_idct_for_cond_i_exit_proc2_U0_ap_done : STD_LOGIC;
+    signal Block_idct_for_cond_i_exit_proc2_U0_ap_continue : STD_LOGIC;
+    signal Block_idct_for_cond_i_exit_proc2_U0_ap_idle : STD_LOGIC;
+    signal Block_idct_for_cond_i_exit_proc2_U0_ap_ready : STD_LOGIC;
+    signal Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce0 : STD_LOGIC;
+    signal Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address1 : STD_LOGIC_VECTOR (4 downto 0);
+    signal Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce1 : STD_LOGIC;
+    signal Block_idct_for_cond_i_exit_proc2_U0_blockout_TDATA : STD_LOGIC_VECTOR (7 downto 0);
+    signal Block_idct_for_cond_i_exit_proc2_U0_blockout_TVALID : STD_LOGIC;
     signal DCAC_temp_i_full_n : STD_LOGIC;
     signal DCAC_temp_t_empty_n : STD_LOGIC;
-    signal workspace_i_full_n : STD_LOGIC;
-    signal workspace_t_empty_n : STD_LOGIC;
 
-    component idct_Loop_VITIS_LOOP_38_1_proc1 IS
+    component idct_Loop_VITIS_LOOP_39_1_proc1 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -104,7 +80,7 @@ architecture behav of idct is
     end component;
 
 
-    component idct_Loop_VITIS_LOOP_59_2_proc IS
+    component idct_Block_idct_for_cond_i_exit_proc2 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -119,35 +95,9 @@ architecture behav of idct is
         DCAC_temp_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
         DCAC_temp_ce1 : OUT STD_LOGIC;
         DCAC_temp_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
-        workspace_address0 : OUT STD_LOGIC_VECTOR (5 downto 0);
-        workspace_ce0 : OUT STD_LOGIC;
-        workspace_we0 : OUT STD_LOGIC;
-        workspace_d0 : OUT STD_LOGIC_VECTOR (20 downto 0);
-        workspace_address1 : OUT STD_LOGIC_VECTOR (5 downto 0);
-        workspace_ce1 : OUT STD_LOGIC;
-        workspace_we1 : OUT STD_LOGIC;
-        workspace_d1 : OUT STD_LOGIC_VECTOR (20 downto 0) );
-    end component;
-
-
-    component idct_Loop_VITIS_LOOP_130_3_proc2 IS
-    port (
-        ap_clk : IN STD_LOGIC;
-        ap_rst : IN STD_LOGIC;
-        ap_start : IN STD_LOGIC;
-        ap_done : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC;
-        ap_idle : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
-        blockout_TREADY : IN STD_LOGIC;
-        workspace_address0 : OUT STD_LOGIC_VECTOR (5 downto 0);
-        workspace_ce0 : OUT STD_LOGIC;
-        workspace_q0 : IN STD_LOGIC_VECTOR (20 downto 0);
-        workspace_address1 : OUT STD_LOGIC_VECTOR (5 downto 0);
-        workspace_ce1 : OUT STD_LOGIC;
-        workspace_q1 : IN STD_LOGIC_VECTOR (20 downto 0);
         blockout_TDATA : OUT STD_LOGIC_VECTOR (7 downto 0);
-        blockout_TVALID : OUT STD_LOGIC );
+        blockout_TVALID : OUT STD_LOGIC;
+        blockout_TREADY : IN STD_LOGIC );
     end component;
 
 
@@ -184,43 +134,6 @@ architecture behav of idct is
     end component;
 
 
-    component idct_workspace_RAM_AUTO_1R1W IS
-    generic (
-        DataWidth : INTEGER;
-        AddressRange : INTEGER;
-        AddressWidth : INTEGER );
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        i_address0 : IN STD_LOGIC_VECTOR (5 downto 0);
-        i_ce0 : IN STD_LOGIC;
-        i_we0 : IN STD_LOGIC;
-        i_d0 : IN STD_LOGIC_VECTOR (20 downto 0);
-        i_q0 : OUT STD_LOGIC_VECTOR (20 downto 0);
-        i_address1 : IN STD_LOGIC_VECTOR (5 downto 0);
-        i_ce1 : IN STD_LOGIC;
-        i_we1 : IN STD_LOGIC;
-        i_d1 : IN STD_LOGIC_VECTOR (20 downto 0);
-        i_q1 : OUT STD_LOGIC_VECTOR (20 downto 0);
-        t_address0 : IN STD_LOGIC_VECTOR (5 downto 0);
-        t_ce0 : IN STD_LOGIC;
-        t_we0 : IN STD_LOGIC;
-        t_d0 : IN STD_LOGIC_VECTOR (20 downto 0);
-        t_q0 : OUT STD_LOGIC_VECTOR (20 downto 0);
-        t_address1 : IN STD_LOGIC_VECTOR (5 downto 0);
-        t_ce1 : IN STD_LOGIC;
-        t_we1 : IN STD_LOGIC;
-        t_d1 : IN STD_LOGIC_VECTOR (20 downto 0);
-        t_q1 : OUT STD_LOGIC_VECTOR (20 downto 0);
-        i_ce : IN STD_LOGIC;
-        t_ce : IN STD_LOGIC;
-        i_full_n : OUT STD_LOGIC;
-        i_write : IN STD_LOGIC;
-        t_empty_n : OUT STD_LOGIC;
-        t_read : IN STD_LOGIC );
-    end component;
-
-
 
 begin
     DCAC_temp_U : component idct_DCAC_temp_RAM_AUTO_1R1W
@@ -231,141 +144,80 @@ begin
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
-        i_address0 => Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_address0,
-        i_ce0 => Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_ce0,
-        i_we0 => Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_we0,
-        i_d0 => Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_d0,
+        i_address0 => Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_address0,
+        i_ce0 => Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_ce0,
+        i_we0 => Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_we0,
+        i_d0 => Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_d0,
         i_q0 => DCAC_temp_i_q0,
         i_address1 => ap_const_lv5_0,
         i_ce1 => ap_const_logic_0,
         i_q1 => DCAC_temp_i_q1,
-        t_address0 => Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_address0,
-        t_ce0 => Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_ce0,
+        t_address0 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address0,
+        t_ce0 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce0,
         t_we0 => DCAC_temp_t_we0,
         t_d0 => ap_const_lv32_0,
         t_q0 => DCAC_temp_t_q0,
-        t_address1 => Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_address1,
-        t_ce1 => Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_ce1,
+        t_address1 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address1,
+        t_ce1 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce1,
         t_q1 => DCAC_temp_t_q1,
         i_ce => ap_const_logic_1,
         t_ce => ap_const_logic_1,
         i_full_n => DCAC_temp_i_full_n,
-        i_write => Loop_VITIS_LOOP_38_1_proc1_U0_ap_done,
+        i_write => Loop_VITIS_LOOP_39_1_proc1_U0_ap_done,
         t_empty_n => DCAC_temp_t_empty_n,
-        t_read => Loop_VITIS_LOOP_59_2_proc_U0_ap_ready);
+        t_read => Block_idct_for_cond_i_exit_proc2_U0_ap_ready);
 
-    workspace_U : component idct_workspace_RAM_AUTO_1R1W
-    generic map (
-        DataWidth => 21,
-        AddressRange => 64,
-        AddressWidth => 6)
-    port map (
-        clk => ap_clk,
-        reset => ap_rst_n_inv,
-        i_address0 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_address0,
-        i_ce0 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_ce0,
-        i_we0 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_we0,
-        i_d0 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_d0,
-        i_q0 => workspace_i_q0,
-        i_address1 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_address1,
-        i_ce1 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_ce1,
-        i_we1 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_we1,
-        i_d1 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_d1,
-        i_q1 => workspace_i_q1,
-        t_address0 => Loop_VITIS_LOOP_130_3_proc2_U0_workspace_address0,
-        t_ce0 => Loop_VITIS_LOOP_130_3_proc2_U0_workspace_ce0,
-        t_we0 => ap_const_logic_0,
-        t_d0 => ap_const_lv21_0,
-        t_q0 => workspace_t_q0,
-        t_address1 => Loop_VITIS_LOOP_130_3_proc2_U0_workspace_address1,
-        t_ce1 => Loop_VITIS_LOOP_130_3_proc2_U0_workspace_ce1,
-        t_we1 => ap_const_logic_0,
-        t_d1 => ap_const_lv21_0,
-        t_q1 => workspace_t_q1,
-        i_ce => ap_const_logic_1,
-        t_ce => ap_const_logic_1,
-        i_full_n => workspace_i_full_n,
-        i_write => Loop_VITIS_LOOP_59_2_proc_U0_ap_done,
-        t_empty_n => workspace_t_empty_n,
-        t_read => Loop_VITIS_LOOP_130_3_proc2_U0_ap_ready);
-
-    Loop_VITIS_LOOP_38_1_proc1_U0 : component idct_Loop_VITIS_LOOP_38_1_proc1
+    Loop_VITIS_LOOP_39_1_proc1_U0 : component idct_Loop_VITIS_LOOP_39_1_proc1
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => Loop_VITIS_LOOP_38_1_proc1_U0_ap_start,
-        ap_done => Loop_VITIS_LOOP_38_1_proc1_U0_ap_done,
-        ap_continue => Loop_VITIS_LOOP_38_1_proc1_U0_ap_continue,
-        ap_idle => Loop_VITIS_LOOP_38_1_proc1_U0_ap_idle,
-        ap_ready => Loop_VITIS_LOOP_38_1_proc1_U0_ap_ready,
+        ap_start => Loop_VITIS_LOOP_39_1_proc1_U0_ap_start,
+        ap_done => Loop_VITIS_LOOP_39_1_proc1_U0_ap_done,
+        ap_continue => Loop_VITIS_LOOP_39_1_proc1_U0_ap_continue,
+        ap_idle => Loop_VITIS_LOOP_39_1_proc1_U0_ap_idle,
+        ap_ready => Loop_VITIS_LOOP_39_1_proc1_U0_ap_ready,
         DCAC_TVALID => DCAC_TVALID,
         DCAC_TDATA => DCAC_TDATA,
-        DCAC_TREADY => Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_TREADY,
-        DCAC_temp_address0 => Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_address0,
-        DCAC_temp_ce0 => Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_ce0,
-        DCAC_temp_we0 => Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_we0,
-        DCAC_temp_d0 => Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_temp_d0);
+        DCAC_TREADY => Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_TREADY,
+        DCAC_temp_address0 => Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_address0,
+        DCAC_temp_ce0 => Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_ce0,
+        DCAC_temp_we0 => Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_we0,
+        DCAC_temp_d0 => Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_d0);
 
-    Loop_VITIS_LOOP_59_2_proc_U0 : component idct_Loop_VITIS_LOOP_59_2_proc
+    Block_idct_for_cond_i_exit_proc2_U0 : component idct_Block_idct_for_cond_i_exit_proc2
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => Loop_VITIS_LOOP_59_2_proc_U0_ap_start,
-        ap_done => Loop_VITIS_LOOP_59_2_proc_U0_ap_done,
-        ap_continue => Loop_VITIS_LOOP_59_2_proc_U0_ap_continue,
-        ap_idle => Loop_VITIS_LOOP_59_2_proc_U0_ap_idle,
-        ap_ready => Loop_VITIS_LOOP_59_2_proc_U0_ap_ready,
-        DCAC_temp_address0 => Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_address0,
-        DCAC_temp_ce0 => Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_ce0,
+        ap_start => Block_idct_for_cond_i_exit_proc2_U0_ap_start,
+        ap_done => Block_idct_for_cond_i_exit_proc2_U0_ap_done,
+        ap_continue => Block_idct_for_cond_i_exit_proc2_U0_ap_continue,
+        ap_idle => Block_idct_for_cond_i_exit_proc2_U0_ap_idle,
+        ap_ready => Block_idct_for_cond_i_exit_proc2_U0_ap_ready,
+        DCAC_temp_address0 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address0,
+        DCAC_temp_ce0 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce0,
         DCAC_temp_q0 => DCAC_temp_t_q0,
-        DCAC_temp_address1 => Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_address1,
-        DCAC_temp_ce1 => Loop_VITIS_LOOP_59_2_proc_U0_DCAC_temp_ce1,
+        DCAC_temp_address1 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address1,
+        DCAC_temp_ce1 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce1,
         DCAC_temp_q1 => DCAC_temp_t_q1,
-        workspace_address0 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_address0,
-        workspace_ce0 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_ce0,
-        workspace_we0 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_we0,
-        workspace_d0 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_d0,
-        workspace_address1 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_address1,
-        workspace_ce1 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_ce1,
-        workspace_we1 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_we1,
-        workspace_d1 => Loop_VITIS_LOOP_59_2_proc_U0_workspace_d1);
-
-    Loop_VITIS_LOOP_130_3_proc2_U0 : component idct_Loop_VITIS_LOOP_130_3_proc2
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        ap_start => Loop_VITIS_LOOP_130_3_proc2_U0_ap_start,
-        ap_done => Loop_VITIS_LOOP_130_3_proc2_U0_ap_done,
-        ap_continue => Loop_VITIS_LOOP_130_3_proc2_U0_ap_continue,
-        ap_idle => Loop_VITIS_LOOP_130_3_proc2_U0_ap_idle,
-        ap_ready => Loop_VITIS_LOOP_130_3_proc2_U0_ap_ready,
-        blockout_TREADY => blockout_TREADY,
-        workspace_address0 => Loop_VITIS_LOOP_130_3_proc2_U0_workspace_address0,
-        workspace_ce0 => Loop_VITIS_LOOP_130_3_proc2_U0_workspace_ce0,
-        workspace_q0 => workspace_t_q0,
-        workspace_address1 => Loop_VITIS_LOOP_130_3_proc2_U0_workspace_address1,
-        workspace_ce1 => Loop_VITIS_LOOP_130_3_proc2_U0_workspace_ce1,
-        workspace_q1 => workspace_t_q1,
-        blockout_TDATA => Loop_VITIS_LOOP_130_3_proc2_U0_blockout_TDATA,
-        blockout_TVALID => Loop_VITIS_LOOP_130_3_proc2_U0_blockout_TVALID);
+        blockout_TDATA => Block_idct_for_cond_i_exit_proc2_U0_blockout_TDATA,
+        blockout_TVALID => Block_idct_for_cond_i_exit_proc2_U0_blockout_TVALID,
+        blockout_TREADY => blockout_TREADY);
 
 
 
 
-    DCAC_TREADY <= Loop_VITIS_LOOP_38_1_proc1_U0_DCAC_TREADY;
+    Block_idct_for_cond_i_exit_proc2_U0_ap_continue <= ap_const_logic_1;
+    Block_idct_for_cond_i_exit_proc2_U0_ap_start <= DCAC_temp_t_empty_n;
+    DCAC_TREADY <= Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_TREADY;
     DCAC_temp_t_we0 <= (0=>ap_const_logic_0, others=>'-');
-    Loop_VITIS_LOOP_130_3_proc2_U0_ap_continue <= ap_const_logic_1;
-    Loop_VITIS_LOOP_130_3_proc2_U0_ap_start <= workspace_t_empty_n;
-    Loop_VITIS_LOOP_38_1_proc1_U0_ap_continue <= DCAC_temp_i_full_n;
-    Loop_VITIS_LOOP_38_1_proc1_U0_ap_start <= ap_const_logic_1;
-    Loop_VITIS_LOOP_59_2_proc_U0_ap_continue <= workspace_i_full_n;
-    Loop_VITIS_LOOP_59_2_proc_U0_ap_start <= DCAC_temp_t_empty_n;
+    Loop_VITIS_LOOP_39_1_proc1_U0_ap_continue <= DCAC_temp_i_full_n;
+    Loop_VITIS_LOOP_39_1_proc1_U0_ap_start <= ap_const_logic_1;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
     begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-    blockout_TDATA <= Loop_VITIS_LOOP_130_3_proc2_U0_blockout_TDATA;
-    blockout_TVALID <= Loop_VITIS_LOOP_130_3_proc2_U0_blockout_TVALID;
+    blockout_TDATA <= Block_idct_for_cond_i_exit_proc2_U0_blockout_TDATA;
+    blockout_TVALID <= Block_idct_for_cond_i_exit_proc2_U0_blockout_TVALID;
 end behav;
