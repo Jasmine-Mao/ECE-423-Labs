@@ -16,9 +16,10 @@ add_files -tb ../Testbenches/idct_tb_1.cpp -cflags "-Wno-unknown-pragmas" -csimf
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default
+config_export -output C:/Users/hmcculla/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block
 set_clock_uncertainty 1.25
 source "./ECE423_Lab2/solution1/directives.tcl"
 csim_design -clean -setup
 csynth_design
 cosim_design -wave_debug -trace_level all
-export_design -format ip_catalog
+export_design -rtl verilog -format ip_catalog -output C:/Users/hmcculla/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block
