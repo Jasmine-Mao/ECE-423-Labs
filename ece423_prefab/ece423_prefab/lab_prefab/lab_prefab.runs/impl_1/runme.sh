@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/impl_1'
+HD_PWD='C:/Users/j54mao/ece423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

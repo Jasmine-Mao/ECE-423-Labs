@@ -11,6 +11,7 @@
 
 #include <stdlib.h>
 #include <stdint.h>
+#include <xaxidma.h>
 
 typedef int BOOL;
 #define FALSE (0)
@@ -62,4 +63,7 @@ extern dct_block_t Yquant;
 extern dct_block_t Cquant;
 extern int zigzag_table[64];
 
+//DMA API
+extern XAxiDma* InstancePtr;
+extern XAxiDma AxiDma;
 #endif

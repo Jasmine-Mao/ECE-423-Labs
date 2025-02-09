@@ -9,3 +9,12 @@ C:\Users\j54mao\ECE423\ECE-423-Labs\ece423_prefab\ece423_prefab\lab_prefab\lab_p
 baud rate 115200
 
 https://xilinx.github.io/embeddedsw.github.io/axidma/doc/html/api/group___a_x_i_d_m_a.html
+
+CRITICAL WARNING: [xilinx.com:ip:axi_dma:7.1-9] /axi_dma_0
+                   ########################################################### 
+                   Interface connected to S_AXIS_S2MM does not have TLAST port
+                   ###########################################################
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /idct_0/DCAC(2) and /axi_dma_0/M_AXIS_MM2S(4)
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/PixelClk have been updated from connected ip, but BD cell '/rgb2dvi_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 74250000 
+Please resolve any mismatches by directly setting properties on BD cell </rgb2dvi_0> to completely resolve these warnings.

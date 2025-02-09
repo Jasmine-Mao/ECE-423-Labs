@@ -13,10 +13,12 @@
 #include "../common/mjpeg423_types.h"
 #include "mjpeg423_decoder.h"
 #include "../common/util.h"
-
 #include "xtime_l.h"
 #include "ff.h"
 #include "../ece423_vid_ctl/ece423_vid_ctl.h"
+#include "xil_cache.h"
+#include "xil_cache_l.h"
+#include <xaxidma.h>
 
 #define SEEK_FRAMES 120
 #define MAX(i, j) (((i) > (j)) ? (i) : (j))
@@ -285,13 +287,40 @@ uint8_t decode_single_frame()
 //	XTime_GetTime(&end);    // Capture time after the function call
 //	printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //XTime_GetTime(&start);
-    for(int b = 0; b < hYb_size*wYb_size; b++) idct(YDCAC[b], Yblock[b]);
+    //flush caches for coherency
+    Xil_L1DCacheFlush();
+    Xil_L2CacheFlush();
+    for(int b = 0; b < hYb_size*wYb_size; b++){
+    	//idct stuff
+    	XAxiDma_SimpleTransfer(&AxiDma, &YDCAC[b], 1024/8, XAXIDMA_DEVICE_TO_DMA);	//send the 1024 size DCAC block to the idct
+    	XAxiDma_SimpleTransfer(&AxiDma, &Yblock[b], 512/8, XAXIDMA_DMA_TO_DEVICE);	//receive the 512 size blockout from the idct
+
+    	//poll for response
+    	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
+    	XAxiDma_Reset(&AxiDma);
+    	while (!XAxiDma_ResetIsDone(&AxiDma)){}
+    }
+
+
+//    for(int b = 0; b < hYb_size*wYb_size; b++) idct(YDCAC[b], Yblock[b]);
+
+    // remove the idct function here
+    //replace with a transfer to the IDCT
+    //add a transfer back from the idct
+    //poll for a result
+
+
+
+
+
 	//XTime_GetTime(&end);    // Capture time after the function call
 //	printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
 
     for(int b = 0; b < hCb_size*wCb_size; b++) idct(CbDCAC[b], Cbblock[b]);
     for(int b = 0; b < hCb_size*wCb_size; b++) idct(CrDCAC[b], Crblock[b]);
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //ybcbr to rgb conversion
     //XTime_GetTime(&start);
@@ -334,7 +363,7 @@ uint8_t decode_single_frame()
     	printf("VDMA failed");
     }
     frame_index++;
-    printf("%d, %d\n", frame_type, total_memory);
+//    printf("%d, %d\n", frame_type, total_memory);
 
     return 0;
 }

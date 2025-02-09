@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/constrs_1/imports/constraints/constraints.xdc rfile:../../../lab_prefab.srcs/constrs_1/imports/constraints/constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/j54mao/ece423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/constrs_1/imports/constraints/constraints.xdc rfile:../../../lab_prefab.srcs/constrs_1/imports/constraints/constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN M20 IOSTANDARD LVCMOS33} [get_ports {sws_2bits_tri_i[0]}]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]

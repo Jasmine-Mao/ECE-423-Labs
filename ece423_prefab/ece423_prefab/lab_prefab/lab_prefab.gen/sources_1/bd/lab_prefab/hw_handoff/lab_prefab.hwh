@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb  5 21:55:03 2025" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Feb  9 13:30:12 2025" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="lab_prefab" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -9717,7 +9717,7 @@
     </MODULE>
     <MODULE COREREVISION="8" FULLNAME="/rgb2dvi_0" HWVERSION="1.4" INSTANCE="rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/ip/vivado-library-master/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
+        <DOCUMENT SOURCE="c:/Users/j54mao/ece423/ECE-423-Labs/ece423_prefab/ece423_prefab/ip/vivado-library-master/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="true"/>

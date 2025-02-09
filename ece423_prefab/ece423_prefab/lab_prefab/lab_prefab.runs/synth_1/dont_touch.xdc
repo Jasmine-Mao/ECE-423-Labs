@@ -21,9 +21,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_
 # IP: bd/lab_prefab/ip/lab_prefab_axi_vdma_0_0/lab_prefab_axi_vdma_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_axi_vdma_0_0 || ORIG_REF_NAME==lab_prefab_axi_vdma_0_0} -quiet] -quiet
 
-# IP: bd/lab_prefab/ip/lab_prefab_clk_wiz_0_0/lab_prefab_clk_wiz_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_clk_wiz_0_0 || ORIG_REF_NAME==lab_prefab_clk_wiz_0_0} -quiet] -quiet
-
 # IP: bd/lab_prefab/ip/lab_prefab_color_swap_0_0/lab_prefab_color_swap_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_color_swap_0_0 || ORIG_REF_NAME==lab_prefab_color_swap_0_0} -quiet] -quiet
 
@@ -33,23 +30,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_
 # IP: bd/lab_prefab/ip/lab_prefab_one_0/lab_prefab_one_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_one_0 || ORIG_REF_NAME==lab_prefab_one_0} -quiet] -quiet
 
-# IP: bd/lab_prefab/ip/lab_prefab_ps7_0_0/lab_prefab_ps7_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_ps7_0_0 || ORIG_REF_NAME==lab_prefab_ps7_0_0} -quiet] -quiet
-
 # IP: bd/lab_prefab/ip/lab_prefab_ps7_0_axi_periph_0/lab_prefab_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_ps7_0_axi_periph_0 || ORIG_REF_NAME==lab_prefab_ps7_0_axi_periph_0} -quiet] -quiet
 
 # IP: bd/lab_prefab/ip/lab_prefab_ps7_0_axi_periph_1_0/lab_prefab_ps7_0_axi_periph_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_ps7_0_axi_periph_1_0 || ORIG_REF_NAME==lab_prefab_ps7_0_axi_periph_1_0} -quiet] -quiet
-
-# IP: bd/lab_prefab/ip/lab_prefab_rgb2dvi_0_0/lab_prefab_rgb2dvi_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_rgb2dvi_0_0 || ORIG_REF_NAME==lab_prefab_rgb2dvi_0_0} -quiet] -quiet
-
-# IP: bd/lab_prefab/ip/lab_prefab_rst_ps7_0_100M_0/lab_prefab_rst_ps7_0_100M_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_rst_ps7_0_100M_0 || ORIG_REF_NAME==lab_prefab_rst_ps7_0_100M_0} -quiet] -quiet
-
-# IP: bd/lab_prefab/ip/lab_prefab_rst_ps7_0_142M_0/lab_prefab_rst_ps7_0_142M_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_rst_ps7_0_142M_0 || ORIG_REF_NAME==lab_prefab_rst_ps7_0_142M_0} -quiet] -quiet
 
 # IP: bd/lab_prefab/ip/lab_prefab_v_axi4s_vid_out_0_0/lab_prefab_v_axi4s_vid_out_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_v_axi4s_vid_out_0_0 || ORIG_REF_NAME==lab_prefab_v_axi4s_vid_out_0_0} -quiet] -quiet
@@ -59,6 +44,24 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_
 
 # IP: bd/lab_prefab/ip/lab_prefab_zero_0/lab_prefab_zero_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_zero_0 || ORIG_REF_NAME==lab_prefab_zero_0} -quiet] -quiet
+
+# IP: bd/lab_prefab/ip/lab_prefab_idct_0_0/lab_prefab_idct_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_idct_0_0 || ORIG_REF_NAME==lab_prefab_idct_0_0} -quiet] -quiet
+
+# IP: bd/lab_prefab/ip/lab_prefab_clk_wiz_0_0/lab_prefab_clk_wiz_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_clk_wiz_0_0 || ORIG_REF_NAME==lab_prefab_clk_wiz_0_0} -quiet] -quiet
+
+# IP: bd/lab_prefab/ip/lab_prefab_ps7_0_0/lab_prefab_ps7_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_ps7_0_0 || ORIG_REF_NAME==lab_prefab_ps7_0_0} -quiet] -quiet
+
+# IP: bd/lab_prefab/ip/lab_prefab_rgb2dvi_0_0/lab_prefab_rgb2dvi_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_rgb2dvi_0_0 || ORIG_REF_NAME==lab_prefab_rgb2dvi_0_0} -quiet] -quiet
+
+# IP: bd/lab_prefab/ip/lab_prefab_rst_ps7_0_100M_0/lab_prefab_rst_ps7_0_100M_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_rst_ps7_0_100M_0 || ORIG_REF_NAME==lab_prefab_rst_ps7_0_100M_0} -quiet] -quiet
+
+# IP: bd/lab_prefab/ip/lab_prefab_rst_ps7_0_142M_0/lab_prefab_rst_ps7_0_142M_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_rst_ps7_0_142M_0 || ORIG_REF_NAME==lab_prefab_rst_ps7_0_142M_0} -quiet] -quiet
 
 # IP: bd/lab_prefab/ip/lab_prefab_auto_pc_0/lab_prefab_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_auto_pc_0 || ORIG_REF_NAME==lab_prefab_auto_pc_0} -quiet] -quiet
@@ -81,4 +84,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_
 # IP: bd/lab_prefab/ip/lab_prefab_auto_pc_4/lab_prefab_auto_pc_4.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lab_prefab_auto_pc_4 || ORIG_REF_NAME==lab_prefab_auto_pc_4} -quiet] -quiet
 
-# XDC: c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/lab_prefab_ooc.xdc
+# XDC: c:/Users/j54mao/ece423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/lab_prefab_ooc.xdc

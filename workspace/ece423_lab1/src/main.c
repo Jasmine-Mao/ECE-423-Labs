@@ -57,6 +57,7 @@
 #include "common/util.h"
 #include "decoder/mjpeg423_decoder.h"
 #include "ece423_vid_ctl/ece423_vid_ctl.h"
+#include <xaxidma.h>
 
 #define FRAME_BUFF_SIZE 2
 #define TIMER_1S 325000000 //1 second
@@ -73,6 +74,9 @@ static char* file_name[MAX_FILE_NUM][MAX_FILE_NAME_LENGTH];
 
 static FATFS fatfs;
 static FRESULT res;
+
+XAxiDma *InstancePtr;
+XAxiDma AxiDma;
 
 uint32_t timer_delay;
 
@@ -115,9 +119,17 @@ void TimerHandler(void*)
 int main()
 {
 	// initialization
+	InstancePtr = &AxiDma;
+
     init_platform();
     vdma_init(1280, 720, FRAME_BUFF_SIZE);
     timer_gpio_init(TimerHandler, GpioHandler);
+
+    //init DMA
+    XAxiDma_CfgInitialize(&AxiDma, XAxiDma_LookupConfig(XPAR_AXIDMA_0_DEVICE_ID));
+    //disable interrups
+    XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
+    XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
 
     res = f_mount(&fatfs, ROOT, 1); // mount SD card
     if(res != FR_OK) error_and_exit("cannot mount SD card");

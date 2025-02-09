@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="60" Path="C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.xpr">
+<Project Version="7" Minor="60" Path="C:/Users/j54mao/ece423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="3a2c4d54bfdd411e891b05827ad9dabe"/>
@@ -102,59 +102,59 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_ps7_0_0/lab_prefab_ps7_0_0.xci">
-          <Proxy FileSetName="lab_prefab_ps7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_axi_vdma_0_0/lab_prefab_axi_vdma_0_0.xci">
-          <Proxy FileSetName="lab_prefab_axi_vdma_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_clk_wiz_0_0/lab_prefab_clk_wiz_0_0.xci">
-          <Proxy FileSetName="lab_prefab_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_axi_dma_0_0/lab_prefab_axi_dma_0_0.xci">
-          <Proxy FileSetName="lab_prefab_axi_dma_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_color_swap_0_0/lab_prefab_color_swap_0_0.xci">
-          <Proxy FileSetName="lab_prefab_color_swap_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_rst_ps7_0_142M_0/lab_prefab_rst_ps7_0_142M_0.xci">
-          <Proxy FileSetName="lab_prefab_rst_ps7_0_142M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_v_tc_0_0/lab_prefab_v_tc_0_0.xci">
-          <Proxy FileSetName="lab_prefab_v_tc_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_v_axi4s_vid_out_0_0/lab_prefab_v_axi4s_vid_out_0_0.xci">
           <Proxy FileSetName="lab_prefab_v_axi4s_vid_out_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_rgb2dvi_0_0/lab_prefab_rgb2dvi_0_0.xci">
-          <Proxy FileSetName="lab_prefab_rgb2dvi_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_rst_ps7_0_100M_0/lab_prefab_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="lab_prefab_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_clk_wiz_0_0/lab_prefab_clk_wiz_0_0.xci">
+          <Proxy FileSetName="lab_prefab_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_color_swap_0_0/lab_prefab_color_swap_0_0.xci">
+          <Proxy FileSetName="lab_prefab_color_swap_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_v_tc_0_0/lab_prefab_v_tc_0_0.xci">
+          <Proxy FileSetName="lab_prefab_v_tc_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_axi_vdma_0_0/lab_prefab_axi_vdma_0_0.xci">
+          <Proxy FileSetName="lab_prefab_axi_vdma_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_idct_0_0/lab_prefab_idct_0_0.xci">
           <Proxy FileSetName="lab_prefab_idct_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_us_0/lab_prefab_auto_us_0.xci">
-          <Proxy FileSetName="lab_prefab_auto_us_0"/>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_ps7_0_0/lab_prefab_ps7_0_0.xci">
+          <Proxy FileSetName="lab_prefab_ps7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_cc_0/lab_prefab_auto_cc_0.xci">
-          <Proxy FileSetName="lab_prefab_auto_cc_0"/>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_rgb2dvi_0_0/lab_prefab_rgb2dvi_0_0.xci">
+          <Proxy FileSetName="lab_prefab_rgb2dvi_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_pc_4/lab_prefab_auto_pc_4.xci">
-          <Proxy FileSetName="lab_prefab_auto_pc_4"/>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_axi_dma_0_0/lab_prefab_axi_dma_0_0.xci">
+          <Proxy FileSetName="lab_prefab_axi_dma_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_pc_3/lab_prefab_auto_pc_3.xci">
-          <Proxy FileSetName="lab_prefab_auto_pc_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_pc_0/lab_prefab_auto_pc_0.xci">
-          <Proxy FileSetName="lab_prefab_auto_pc_0"/>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_rst_ps7_0_142M_0/lab_prefab_rst_ps7_0_142M_0.xci">
+          <Proxy FileSetName="lab_prefab_rst_ps7_0_142M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_pc_1/lab_prefab_auto_pc_1.xci">
           <Proxy FileSetName="lab_prefab_auto_pc_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_pc_2/lab_prefab_auto_pc_2.xci">
           <Proxy FileSetName="lab_prefab_auto_pc_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_pc_3/lab_prefab_auto_pc_3.xci">
+          <Proxy FileSetName="lab_prefab_auto_pc_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_us_0/lab_prefab_auto_us_0.xci">
+          <Proxy FileSetName="lab_prefab_auto_us_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_pc_0/lab_prefab_auto_pc_0.xci">
+          <Proxy FileSetName="lab_prefab_auto_pc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_pc_4/lab_prefab_auto_pc_4.xci">
+          <Proxy FileSetName="lab_prefab_auto_pc_4"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lab_prefab.bd" FileRelPathName="ip/lab_prefab_auto_cc_0/lab_prefab_auto_cc_0.xci">
+          <Proxy FileSetName="lab_prefab_auto_cc_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/sources/lab_prefab_wrapper.v">
@@ -203,6 +203,14 @@
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
       <Filter Type="Utils"/>
+      <File Path="$PSRCDIR/utils_1/imports/synth_1/lab_prefab_wrapper.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedInSteps" Val="synth_1"/>
+          <Attr Name="AutoDcp" Val="1"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
@@ -273,21 +281,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="lab_prefab_auto_pc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/lab_prefab_auto_pc_0" RelGenDir="$PGENDIR/lab_prefab_auto_pc_0">
-      <Config>
-        <Option Name="TopModule" Val="lab_prefab_auto_pc_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="lab_prefab_auto_pc_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/lab_prefab_auto_pc_1" RelGenDir="$PGENDIR/lab_prefab_auto_pc_1">
       <Config>
         <Option Name="TopModule" Val="lab_prefab_auto_pc_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="lab_prefab_auto_us_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/lab_prefab_auto_us_0" RelGenDir="$PGENDIR/lab_prefab_auto_us_0">
-      <Config>
-        <Option Name="TopModule" Val="lab_prefab_auto_us_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -303,15 +299,27 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="lab_prefab_auto_cc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/lab_prefab_auto_cc_0" RelGenDir="$PGENDIR/lab_prefab_auto_cc_0">
+    <FileSet Name="lab_prefab_auto_us_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/lab_prefab_auto_us_0" RelGenDir="$PGENDIR/lab_prefab_auto_us_0">
       <Config>
-        <Option Name="TopModule" Val="lab_prefab_auto_cc_0"/>
+        <Option Name="TopModule" Val="lab_prefab_auto_us_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="lab_prefab_auto_pc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/lab_prefab_auto_pc_0" RelGenDir="$PGENDIR/lab_prefab_auto_pc_0">
+      <Config>
+        <Option Name="TopModule" Val="lab_prefab_auto_pc_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
     <FileSet Name="lab_prefab_auto_pc_4" Type="BlockSrcs" RelSrcDir="$PSRCDIR/lab_prefab_auto_pc_4" RelGenDir="$PGENDIR/lab_prefab_auto_pc_4">
       <Config>
         <Option Name="TopModule" Val="lab_prefab_auto_pc_4"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="lab_prefab_auto_cc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/lab_prefab_auto_cc_0" RelGenDir="$PGENDIR/lab_prefab_auto_cc_0">
+      <Config>
+        <Option Name="TopModule" Val="lab_prefab_auto_cc_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -335,11 +343,9 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="19">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/lab_prefab_wrapper.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -367,11 +373,12 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_axi_dma_0_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_axi_dma_0_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_axi_dma_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_axi_dma_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_axi_dma_0_0_synth_1">
+    <Run Id="lab_prefab_axi_dma_0_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_axi_dma_0_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_axi_dma_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_axi_dma_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_axi_dma_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_axi_dma_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
@@ -396,154 +403,153 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_clk_wiz_0_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_clk_wiz_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_clk_wiz_0_0_synth_1">
+    <Run Id="lab_prefab_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_clk_wiz_0_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_clk_wiz_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_clk_wiz_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_clk_wiz_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_ps7_0_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_ps7_0_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_ps7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_ps7_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_ps7_0_0_synth_1">
+    <Run Id="lab_prefab_ps7_0_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_ps7_0_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_ps7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_ps7_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_ps7_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_ps7_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_rgb2dvi_0_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_rgb2dvi_0_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_rgb2dvi_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_rgb2dvi_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_rgb2dvi_0_0_synth_1">
+    <Run Id="lab_prefab_rgb2dvi_0_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_rgb2dvi_0_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_rgb2dvi_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_rgb2dvi_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_rgb2dvi_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_rgb2dvi_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_rst_ps7_0_100M_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_rst_ps7_0_100M_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_rst_ps7_0_100M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_100M_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_100M_0_synth_1">
+    <Run Id="lab_prefab_rst_ps7_0_100M_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_rst_ps7_0_100M_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_rst_ps7_0_100M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_rst_ps7_0_100M_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_100M_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_100M_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_rst_ps7_0_142M_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_rst_ps7_0_142M_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_rst_ps7_0_142M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_142M_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_142M_0_synth_1">
+    <Run Id="lab_prefab_rst_ps7_0_142M_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_rst_ps7_0_142M_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_rst_ps7_0_142M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_rst_ps7_0_142M_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_142M_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_142M_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_idct_0_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_idct_0_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_idct_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_idct_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_idct_0_0_synth_1">
+    <Run Id="lab_prefab_idct_0_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_idct_0_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_idct_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_idct_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_idct_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_idct_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_pc_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_0_synth_1">
+    <Run Id="lab_prefab_auto_pc_1_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_pc_1" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_auto_pc_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_1_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_auto_pc_1_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_pc_1" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_1_synth_1">
+    <Run Id="lab_prefab_auto_pc_2_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_pc_2" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_auto_pc_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_2_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_auto_us_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_us_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_us_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_us_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_us_0_synth_1">
+    <Run Id="lab_prefab_auto_pc_3_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_pc_3" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_auto_pc_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_3_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_auto_pc_2_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_pc_2" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_2_synth_1">
+    <Run Id="lab_prefab_auto_us_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_us_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_us_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_auto_us_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_us_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_us_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_auto_pc_3_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_pc_3" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_3_synth_1">
+    <Run Id="lab_prefab_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_pc_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_auto_pc_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_auto_cc_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_cc_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_cc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_cc_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_cc_0_synth_1">
+    <Run Id="lab_prefab_auto_pc_4_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_pc_4" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_auto_pc_4_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_4_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_4_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_auto_pc_4_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_pc_4" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_4_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_4_synth_1">
+    <Run Id="lab_prefab_auto_cc_0_synth_1" Type="Ft3:Synth" SrcSet="lab_prefab_auto_cc_0" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_cc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/lab_prefab_auto_cc_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_cc_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_cc_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -646,9 +652,7 @@
     </Run>
     <Run Id="lab_prefab_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_clk_wiz_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_clk_wiz_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_clk_wiz_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -665,9 +669,7 @@
     </Run>
     <Run Id="lab_prefab_ps7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_ps7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_ps7_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_ps7_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_ps7_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -684,9 +686,7 @@
     </Run>
     <Run Id="lab_prefab_rgb2dvi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_rgb2dvi_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_rgb2dvi_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_rgb2dvi_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_rgb2dvi_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -703,9 +703,7 @@
     </Run>
     <Run Id="lab_prefab_rst_ps7_0_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_rst_ps7_0_100M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_rst_ps7_0_100M_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_100M_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_100M_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -722,9 +720,7 @@
     </Run>
     <Run Id="lab_prefab_rst_ps7_0_142M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_rst_ps7_0_142M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_rst_ps7_0_142M_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_142M_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_rst_ps7_0_142M_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -741,28 +737,7 @@
     </Run>
     <Run Id="lab_prefab_idct_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_idct_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_idct_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_idct_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_idct_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="lab_prefab_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_auto_pc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -778,25 +753,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="lab_prefab_auto_pc_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_auto_pc_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_1_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="lab_prefab_auto_us_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_us_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_auto_us_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_us_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_us_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
           <Desc>Default settings for Implementation.</Desc>
@@ -853,7 +809,26 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="lab_prefab_auto_cc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_cc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_auto_cc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_cc_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_cc_0_impl_1">
+    <Run Id="lab_prefab_auto_us_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_us_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_auto_us_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_us_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_us_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="lab_prefab_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_auto_pc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
           <Desc>Default settings for Implementation.</Desc>
@@ -873,6 +848,25 @@
       <RQSFiles/>
     </Run>
     <Run Id="lab_prefab_auto_pc_4_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_pc_4" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_auto_pc_4_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_4_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_pc_4_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="lab_prefab_auto_cc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="lab_prefab_auto_cc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="lab_prefab_auto_cc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_cc_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/lab_prefab_auto_cc_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
           <Desc>Default settings for Implementation.</Desc>

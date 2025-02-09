@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Mon Jan 13 14:03:00 2025
--- Host        : ECE-MCU13 running 64-bit major release  (build 9200)
+-- Date        : Sun Feb  9 13:36:14 2025
+-- Host        : ECE-MCU21 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_2/lab_prefab_auto_pc_2_stub.vhdl
+--               c:/Users/j54mao/ece423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_2/lab_prefab_auto_pc_2_stub.vhdl
 -- Design      : lab_prefab_auto_pc_2
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
