@@ -25,3 +25,4 @@ bsp write
 bsp reload
 catch {bsp regenerate}
 platform generate -domains standalone_domain 
+platform generate -domains standalone_domain,zynq_fsbl 

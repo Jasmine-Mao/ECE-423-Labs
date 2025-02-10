@@ -18,3 +18,5 @@ CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not ma
 WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/PixelClk have been updated from connected ip, but BD cell '/rgb2dvi_0' does not accept parameter changes, so they may not be synchronized with cell properties:
 	FREQ_HZ = 74250000 
 Please resolve any mismatches by directly setting properties on BD cell </rgb2dvi_0> to completely resolve these warnings.
+
+if debug stuff opens in dissasembly, change the degub configuration from RELEASE to DEBUGGER

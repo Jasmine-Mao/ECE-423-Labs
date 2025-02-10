@@ -290,17 +290,38 @@ uint8_t decode_single_frame()
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //XTime_GetTime(&start);
     //flush caches for coherency
-    Xil_L1DCacheFlush();
-    Xil_L2CacheFlush();
+
     for(int b = 0; b < hYb_size*wYb_size; b++){
+    	XAxiDma_Reset(&AxiDma);
     	//idct stuff
-    	XAxiDma_SimpleTransfer(&AxiDma, &YDCAC[b], 1024/8, XAXIDMA_DEVICE_TO_DMA);	//send the 1024 size DCAC block to the idct
-    	XAxiDma_SimpleTransfer(&AxiDma, &Yblock[b], 512/8, XAXIDMA_DMA_TO_DEVICE);	//receive the 512 size blockout from the idct
+    	printf("Starting simple transfers: \n");
+        Xil_L1DCacheFlush();	//change these to ranged flushes
+        Xil_L2CacheFlush();
+        // argument 2 of simple transfer is the buffer source/destination address
+        // argument 3 of the simple transfer is the length of the transfer in bytes
+
+    	if(XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)&YDCAC[b], 1024/8, XAXIDMA_DEVICE_TO_DMA) == XST_SUCCESS){
+    		printf("Successful transfer from DMA to IDCT \n");
+    	}
+//    	//invalidate
+//    	Xil_L1DCacheInvalidate();
+//    	Xil_L2CacheInvalidate();
+//    	if(XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)&Yblock[b], 512/8, XAXIDMA_DMA_TO_DEVICE) == XST_SUCCESS) {
+//    		printf("Successful transfer from IDCT to DMA \n");
+//    	}
+
 
     	//poll for response
+//    	while(XAxiDma_Busy(&AxiDma, XAXIDMA_DEVICE_TO_DMA)) {}
+//
+//
+//    	while(XAxiDma_Busy(&AxiDma, XAXIDMA_DMA_TO_DEVICE)) {}
+
     	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
     	XAxiDma_Reset(&AxiDma);
+    	//reset the DMA for the next transfer
     	while (!XAxiDma_ResetIsDone(&AxiDma)){}
+
     }
 
 

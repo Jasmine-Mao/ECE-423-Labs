@@ -131,6 +131,10 @@ int main()
     XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
     XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
 
+    if(XAxiDma_Selftest(&AxiDma) == XST_SUCCESS){
+    	printf("self test ok\n");
+    }
+
     res = f_mount(&fatfs, ROOT, 1); // mount SD card
     if(res != FR_OK) error_and_exit("cannot mount SD card");
 
