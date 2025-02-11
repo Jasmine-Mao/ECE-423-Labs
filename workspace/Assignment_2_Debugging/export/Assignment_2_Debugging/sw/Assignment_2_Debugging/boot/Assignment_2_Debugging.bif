@@ -1,0 +1,7 @@
+/*Assignment_2_Debugging*/
+the_ROM_image:
+{
+  [bootloader]<Assignment_2_Debugging/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

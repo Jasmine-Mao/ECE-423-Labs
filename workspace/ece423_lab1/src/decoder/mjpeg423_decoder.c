@@ -289,58 +289,43 @@ uint8_t decode_single_frame()
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //XTime_GetTime(&start);
-    //flush caches for coherency
-
-    for(int b = 0; b < hYb_size*wYb_size; b++){
-    	XAxiDma_Reset(&AxiDma);
-    	//idct stuff
-    	printf("Starting simple transfers: \n");
-        Xil_L1DCacheFlush();	//change these to ranged flushes
-        Xil_L2CacheFlush();
-        // argument 2 of simple transfer is the buffer source/destination address
-        // argument 3 of the simple transfer is the length of the transfer in bytes
-
-    	if(XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)&YDCAC[b], 1024/8, XAXIDMA_DEVICE_TO_DMA) == XST_SUCCESS){
-    		printf("Successful transfer from DMA to IDCT \n");
-    	}
-//    	//invalidate
-//    	Xil_L1DCacheInvalidate();
-//    	Xil_L2CacheInvalidate();
-//    	if(XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)&Yblock[b], 512/8, XAXIDMA_DMA_TO_DEVICE) == XST_SUCCESS) {
-//    		printf("Successful transfer from IDCT to DMA \n");
-//    	}
-
-
-    	//poll for response
-//    	while(XAxiDma_Busy(&AxiDma, XAXIDMA_DEVICE_TO_DMA)) {}
-//
-//
-//    	while(XAxiDma_Busy(&AxiDma, XAXIDMA_DMA_TO_DEVICE)) {}
-
-    	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-    	XAxiDma_Reset(&AxiDma);
-    	//reset the DMA for the next transfer
-    	while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-    }
-
-
-//    for(int b = 0; b < hYb_size*wYb_size; b++) idct(YDCAC[b], Yblock[b]);
-
-    // remove the idct function here
-    //replace with a transfer to the IDCT
-    //add a transfer back from the idct
-    //poll for a result
-
-
-
-
+    //PUT IDCT FUNCTION HERE
 
 	//XTime_GetTime(&end);    // Capture time after the function call
-//	printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
+    //printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
 
-    for(int b = 0; b < hCb_size*wCb_size; b++) idct(CbDCAC[b], Cbblock[b]);
-    for(int b = 0; b < hCb_size*wCb_size; b++) idct(CrDCAC[b], Crblock[b]);
+	//Y COMPONENT///////////////////////////
+	Xil_L1DCacheFlush();
+	Xil_L2CacheFlush();
+
+	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
+	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
+
+	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
+	XAxiDma_Reset(&AxiDma);
+	while (!XAxiDma_ResetIsDone(&AxiDma)){}
+
+	//Cb COMPONENT////////////////////////////
+	Xil_L1DCacheFlush();
+	Xil_L2CacheFlush();
+
+	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CbDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
+	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Cbblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
+
+	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
+	XAxiDma_Reset(&AxiDma);
+	while (!XAxiDma_ResetIsDone(&AxiDma)){}
+
+	//Cr COMPONENT////////////////////////////
+	Xil_L1DCacheFlush();
+	Xil_L2CacheFlush();
+
+	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CrDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
+	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Crblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
+
+	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
+	XAxiDma_Reset(&AxiDma);
+	while (!XAxiDma_ResetIsDone(&AxiDma)){}
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //ybcbr to rgb conversion

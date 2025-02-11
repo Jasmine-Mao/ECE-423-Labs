@@ -4,7 +4,7 @@
 	<comment>Created by Vitis v2022.1</comment>
 	<projects>
 		<project>lab_prefab_wrapper</project>
-		<project>Assignment_2</project>
+		<project>Assignment2_debugging</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
