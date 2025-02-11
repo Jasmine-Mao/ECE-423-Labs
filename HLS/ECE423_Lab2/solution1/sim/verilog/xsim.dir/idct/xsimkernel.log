@@ -1,7 +1,0 @@
-Running: xsim.dir/idct/xsimk.exe -simmode gui -wdb idct.wdb -simrunnum 0 -socket 60220
-Design successfully loaded
-Design Loading Memory Usage: 9912 KB (Peak: 9912 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 21788 KB (Peak: 21788 KB)
-Simulation CPU Usage: 13311 ms

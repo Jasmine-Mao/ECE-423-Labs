@@ -140,9 +140,9 @@ void print_bitstream(signed int llvm_cbe_num_bytes,  char *llvm_cbe_bitstream);
 
 
 /* Global Variable Definitions and Initialization */
-static  char aesl_internal__OC_str1[4] = "%d,";
-static  char aesl_internal__OC_str[11] = "Error: %s\n";
 static  char aesl_internal__OC_str2[4] = "%u\n";
+static  char aesl_internal__OC_str[11] = "Error: %s\n";
+static  char aesl_internal__OC_str1[4] = "%d,";
 static  char aesl_internal__OC_str3[4] = "%d\n";
 static  char aesl_internal__OC_str4[3] = "%u";
 
