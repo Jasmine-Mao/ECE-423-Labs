@@ -5,21 +5,18 @@ module AESL_deadlock_kernel_monitor_top (
     input wire kernel_monitor_reset
 );
 wire [1:0] axis_block_sigs;
-wire [4:0] inst_idle_sigs;
-wire [1:0] inst_block_sigs;
+wire [2:0] inst_idle_sigs;
+wire [0:0] inst_block_sigs;
 wire kernel_block;
 
-assign axis_block_sigs[0] = ~AESL_inst_idct.Loop_DCAC_row_copy_proc1_U0.DCAC_TDATA_blk_n;
-assign axis_block_sigs[1] = ~AESL_inst_idct.Block_idct_for_cond_i_exit_proc2_U0.blockout_TDATA_blk_n;
+assign axis_block_sigs[0] = ~AESL_inst_idct.Block_entry687_proc1_U0.DCAC_TDATA_blk_n;
+assign axis_block_sigs[1] = ~AESL_inst_idct.Block_entry687_proc1_U0.blockout_TDATA_blk_n;
 
-assign inst_idle_sigs[0] = AESL_inst_idct.Loop_DCAC_row_copy_proc1_U0.ap_idle;
-assign inst_block_sigs[0] = (AESL_inst_idct.Loop_DCAC_row_copy_proc1_U0.ap_done & ~AESL_inst_idct.Loop_DCAC_row_copy_proc1_U0.ap_continue);
-assign inst_idle_sigs[1] = AESL_inst_idct.Block_idct_for_cond_i_exit_proc2_U0.ap_idle;
-assign inst_block_sigs[1] = (AESL_inst_idct.Block_idct_for_cond_i_exit_proc2_U0.ap_done & ~AESL_inst_idct.Block_idct_for_cond_i_exit_proc2_U0.ap_continue);
+assign inst_idle_sigs[0] = AESL_inst_idct.Block_entry687_proc1_U0.ap_idle;
+assign inst_block_sigs[0] = (AESL_inst_idct.Block_entry687_proc1_U0.ap_done & ~AESL_inst_idct.Block_entry687_proc1_U0.ap_continue);
 
-assign inst_idle_sigs[2] = 1'b0;
-assign inst_idle_sigs[3] = AESL_inst_idct.Loop_DCAC_row_copy_proc1_U0.ap_idle;
-assign inst_idle_sigs[4] = AESL_inst_idct.Block_idct_for_cond_i_exit_proc2_U0.ap_idle;
+assign inst_idle_sigs[1] = 1'b0;
+assign inst_idle_sigs[2] = AESL_inst_idct.Block_entry687_proc1_U0.ap_idle;
 
 AESL_deadlock_idx0_monitor AESL_deadlock_idx0_monitor_U (
     .clock(kernel_monitor_clock),

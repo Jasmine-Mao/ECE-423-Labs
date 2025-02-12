@@ -23,33 +23,35 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
 	//declare streaming interfaces
 	#pragma HLS INTERFACE axis register both port=DCAC
 	#pragma HLS INTERFACE axis register both port=blockout
+	#pragma HLS ARRAY_RESHAPE variable=DCAC cyclic factor=2 dim=2 //change to block
+	#pragma HLS ARRAY_RESHAPE variable=blockout cyclic factor=4 dim=2
 	#pragma HLS DATAFLOW
 
 	//declare temp arrays
 	int16_t DCAC_temp[DCTSIZE][DCTSIZE];
 	uint8_t blockout_temp[DCTSIZE][DCTSIZE];
-
-	//copy into temp
-	DCAC_row_copy: for(int r = 0; r < DCTSIZE; r++)
-	{
-		DCAC_col_copy: for(int c = 0; c < DCTSIZE; c++)
-		{
-			#pragma HLS PIPELINE
-				DCAC_temp[r][c] = DCAC[r][c];
-		}
-	}
-
-	//reshape arrays
-	#pragma HLS ARRAY_RESHAPE variable=DCAC type=block factor=2 dim=2
-	#pragma HLS ARRAY_RESHAPE variable=blockout type=block factor=4 dim=2
 	#pragma HLS ARRAY_RESHAPE variable=DCAC_temp type=block factor=2 dim=2
 	#pragma HLS ARRAY_RESHAPE variable=blockout_temp type=block factor=4 dim=2
+
+
+	DCAC_row_copy: for(int r = 0; r < DCTSIZE; r++) {
+		#pragma HLS UNROLL
+		DCAC_temp[r][0] = DCAC[r][0];
+		DCAC_temp[r][1] = DCAC[r][1];
+		DCAC_temp[r][2] = DCAC[r][2];
+		DCAC_temp[r][3] = DCAC[r][3];
+		DCAC_temp[r][4] = DCAC[r][4];
+		DCAC_temp[r][5] = DCAC[r][5];
+		DCAC_temp[r][6] = DCAC[r][6];
+		DCAC_temp[r][7] = DCAC[r][7];
+	}
 
     int32_t tmp0, tmp1, tmp2, tmp3;
     int32_t tmp10, tmp11, tmp12, tmp13;
     int32_t z1, z2, z3, z4, z5;
     int32_t temp;
     int32_t workspace[DCTSIZE*DCTSIZE];	/* buffers data between passes */
+	#pragma HLS ARRAY_PARTITION variable=workspace type=complete
     SHIFT_TEMPS
 
     /* Pass 1: process columns from input, store into work array. */

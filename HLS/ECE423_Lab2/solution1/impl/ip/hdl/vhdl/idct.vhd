@@ -11,10 +11,10 @@ use IEEE.numeric_std.all;
 
 entity idct is
 port (
-    ap_clk : IN STD_LOGIC;
-    ap_rst_n : IN STD_LOGIC;
     DCAC_TDATA : IN STD_LOGIC_VECTOR (31 downto 0);
     blockout_TDATA : OUT STD_LOGIC_VECTOR (31 downto 0);
+    ap_clk : IN STD_LOGIC;
+    ap_rst_n : IN STD_LOGIC;
     DCAC_TVALID : IN STD_LOGIC;
     DCAC_TREADY : OUT STD_LOGIC;
     blockout_TVALID : OUT STD_LOGIC;
@@ -25,43 +25,21 @@ end;
 architecture behav of idct is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "idct_idct,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.374313,HLS_SYN_LAT=104,HLS_SYN_TPT=67,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=7002,HLS_SYN_LUT=15752,HLS_VERSION=2022_1}";
+    "idct_idct,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.596625,HLS_SYN_LAT=58,HLS_SYN_TPT=59,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=7114,HLS_SYN_LUT=15307,HLS_VERSION=2022_1}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
-    constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_const_lv5_0 : STD_LOGIC_VECTOR (4 downto 0) := "00000";
 
     signal ap_rst_n_inv : STD_LOGIC;
-    signal DCAC_temp_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal DCAC_temp_i_q1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal DCAC_temp_t_we0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal DCAC_temp_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal DCAC_temp_t_q1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal Loop_DCAC_row_copy_proc1_U0_ap_start : STD_LOGIC;
-    signal Loop_DCAC_row_copy_proc1_U0_ap_done : STD_LOGIC;
-    signal Loop_DCAC_row_copy_proc1_U0_ap_continue : STD_LOGIC;
-    signal Loop_DCAC_row_copy_proc1_U0_ap_idle : STD_LOGIC;
-    signal Loop_DCAC_row_copy_proc1_U0_ap_ready : STD_LOGIC;
-    signal Loop_DCAC_row_copy_proc1_U0_DCAC_TREADY : STD_LOGIC;
-    signal Loop_DCAC_row_copy_proc1_U0_DCAC_temp_address0 : STD_LOGIC_VECTOR (4 downto 0);
-    signal Loop_DCAC_row_copy_proc1_U0_DCAC_temp_ce0 : STD_LOGIC;
-    signal Loop_DCAC_row_copy_proc1_U0_DCAC_temp_we0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal Loop_DCAC_row_copy_proc1_U0_DCAC_temp_d0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal Block_idct_for_cond_i_exit_proc2_U0_ap_start : STD_LOGIC;
-    signal Block_idct_for_cond_i_exit_proc2_U0_ap_done : STD_LOGIC;
-    signal Block_idct_for_cond_i_exit_proc2_U0_ap_continue : STD_LOGIC;
-    signal Block_idct_for_cond_i_exit_proc2_U0_ap_idle : STD_LOGIC;
-    signal Block_idct_for_cond_i_exit_proc2_U0_ap_ready : STD_LOGIC;
-    signal Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address0 : STD_LOGIC_VECTOR (4 downto 0);
-    signal Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce0 : STD_LOGIC;
-    signal Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address1 : STD_LOGIC_VECTOR (4 downto 0);
-    signal Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce1 : STD_LOGIC;
-    signal Block_idct_for_cond_i_exit_proc2_U0_blockout_TDATA : STD_LOGIC_VECTOR (31 downto 0);
-    signal Block_idct_for_cond_i_exit_proc2_U0_blockout_TVALID : STD_LOGIC;
-    signal DCAC_temp_i_full_n : STD_LOGIC;
-    signal DCAC_temp_t_empty_n : STD_LOGIC;
+    signal Block_entry687_proc1_U0_ap_start : STD_LOGIC;
+    signal Block_entry687_proc1_U0_ap_done : STD_LOGIC;
+    signal Block_entry687_proc1_U0_ap_continue : STD_LOGIC;
+    signal Block_entry687_proc1_U0_ap_idle : STD_LOGIC;
+    signal Block_entry687_proc1_U0_ap_ready : STD_LOGIC;
+    signal Block_entry687_proc1_U0_DCAC_TREADY : STD_LOGIC;
+    signal Block_entry687_proc1_U0_blockout_TDATA : STD_LOGIC_VECTOR (31 downto 0);
+    signal Block_entry687_proc1_U0_blockout_TVALID : STD_LOGIC;
 
-    component idct_Loop_DCAC_row_copy_proc1 IS
+    component idct_Block_entry687_proc1 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -70,154 +48,45 @@ architecture behav of idct is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        DCAC_TVALID : IN STD_LOGIC;
         DCAC_TDATA : IN STD_LOGIC_VECTOR (31 downto 0);
+        DCAC_TVALID : IN STD_LOGIC;
         DCAC_TREADY : OUT STD_LOGIC;
-        DCAC_temp_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
-        DCAC_temp_ce0 : OUT STD_LOGIC;
-        DCAC_temp_we0 : OUT STD_LOGIC_VECTOR (3 downto 0);
-        DCAC_temp_d0 : OUT STD_LOGIC_VECTOR (31 downto 0) );
-    end component;
-
-
-    component idct_Block_idct_for_cond_i_exit_proc2 IS
-    port (
-        ap_clk : IN STD_LOGIC;
-        ap_rst : IN STD_LOGIC;
-        ap_start : IN STD_LOGIC;
-        ap_done : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC;
-        ap_idle : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
-        DCAC_temp_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
-        DCAC_temp_ce0 : OUT STD_LOGIC;
-        DCAC_temp_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
-        DCAC_temp_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
-        DCAC_temp_ce1 : OUT STD_LOGIC;
-        DCAC_temp_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
         blockout_TDATA : OUT STD_LOGIC_VECTOR (31 downto 0);
         blockout_TVALID : OUT STD_LOGIC;
         blockout_TREADY : IN STD_LOGIC );
     end component;
 
 
-    component idct_DCAC_temp_RAM_AUTO_1R1W IS
-    generic (
-        DataWidth : INTEGER;
-        AddressRange : INTEGER;
-        AddressWidth : INTEGER );
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        i_address0 : IN STD_LOGIC_VECTOR (4 downto 0);
-        i_ce0 : IN STD_LOGIC;
-        i_we0 : IN STD_LOGIC_VECTOR (3 downto 0);
-        i_d0 : IN STD_LOGIC_VECTOR (31 downto 0);
-        i_q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-        i_address1 : IN STD_LOGIC_VECTOR (4 downto 0);
-        i_ce1 : IN STD_LOGIC;
-        i_q1 : OUT STD_LOGIC_VECTOR (31 downto 0);
-        t_address0 : IN STD_LOGIC_VECTOR (4 downto 0);
-        t_ce0 : IN STD_LOGIC;
-        t_we0 : IN STD_LOGIC_VECTOR (3 downto 0);
-        t_d0 : IN STD_LOGIC_VECTOR (31 downto 0);
-        t_q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-        t_address1 : IN STD_LOGIC_VECTOR (4 downto 0);
-        t_ce1 : IN STD_LOGIC;
-        t_q1 : OUT STD_LOGIC_VECTOR (31 downto 0);
-        i_ce : IN STD_LOGIC;
-        t_ce : IN STD_LOGIC;
-        i_full_n : OUT STD_LOGIC;
-        i_write : IN STD_LOGIC;
-        t_empty_n : OUT STD_LOGIC;
-        t_read : IN STD_LOGIC );
-    end component;
-
-
 
 begin
-    DCAC_temp_U : component idct_DCAC_temp_RAM_AUTO_1R1W
-    generic map (
-        DataWidth => 32,
-        AddressRange => 32,
-        AddressWidth => 5)
-    port map (
-        clk => ap_clk,
-        reset => ap_rst_n_inv,
-        i_address0 => Loop_DCAC_row_copy_proc1_U0_DCAC_temp_address0,
-        i_ce0 => Loop_DCAC_row_copy_proc1_U0_DCAC_temp_ce0,
-        i_we0 => Loop_DCAC_row_copy_proc1_U0_DCAC_temp_we0,
-        i_d0 => Loop_DCAC_row_copy_proc1_U0_DCAC_temp_d0,
-        i_q0 => DCAC_temp_i_q0,
-        i_address1 => ap_const_lv5_0,
-        i_ce1 => ap_const_logic_0,
-        i_q1 => DCAC_temp_i_q1,
-        t_address0 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address0,
-        t_ce0 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce0,
-        t_we0 => DCAC_temp_t_we0,
-        t_d0 => ap_const_lv32_0,
-        t_q0 => DCAC_temp_t_q0,
-        t_address1 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address1,
-        t_ce1 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce1,
-        t_q1 => DCAC_temp_t_q1,
-        i_ce => ap_const_logic_1,
-        t_ce => ap_const_logic_1,
-        i_full_n => DCAC_temp_i_full_n,
-        i_write => Loop_DCAC_row_copy_proc1_U0_ap_done,
-        t_empty_n => DCAC_temp_t_empty_n,
-        t_read => Block_idct_for_cond_i_exit_proc2_U0_ap_ready);
-
-    Loop_DCAC_row_copy_proc1_U0 : component idct_Loop_DCAC_row_copy_proc1
+    Block_entry687_proc1_U0 : component idct_Block_entry687_proc1
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => Loop_DCAC_row_copy_proc1_U0_ap_start,
-        ap_done => Loop_DCAC_row_copy_proc1_U0_ap_done,
-        ap_continue => Loop_DCAC_row_copy_proc1_U0_ap_continue,
-        ap_idle => Loop_DCAC_row_copy_proc1_U0_ap_idle,
-        ap_ready => Loop_DCAC_row_copy_proc1_U0_ap_ready,
-        DCAC_TVALID => DCAC_TVALID,
+        ap_start => Block_entry687_proc1_U0_ap_start,
+        ap_done => Block_entry687_proc1_U0_ap_done,
+        ap_continue => Block_entry687_proc1_U0_ap_continue,
+        ap_idle => Block_entry687_proc1_U0_ap_idle,
+        ap_ready => Block_entry687_proc1_U0_ap_ready,
         DCAC_TDATA => DCAC_TDATA,
-        DCAC_TREADY => Loop_DCAC_row_copy_proc1_U0_DCAC_TREADY,
-        DCAC_temp_address0 => Loop_DCAC_row_copy_proc1_U0_DCAC_temp_address0,
-        DCAC_temp_ce0 => Loop_DCAC_row_copy_proc1_U0_DCAC_temp_ce0,
-        DCAC_temp_we0 => Loop_DCAC_row_copy_proc1_U0_DCAC_temp_we0,
-        DCAC_temp_d0 => Loop_DCAC_row_copy_proc1_U0_DCAC_temp_d0);
-
-    Block_idct_for_cond_i_exit_proc2_U0 : component idct_Block_idct_for_cond_i_exit_proc2
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        ap_start => Block_idct_for_cond_i_exit_proc2_U0_ap_start,
-        ap_done => Block_idct_for_cond_i_exit_proc2_U0_ap_done,
-        ap_continue => Block_idct_for_cond_i_exit_proc2_U0_ap_continue,
-        ap_idle => Block_idct_for_cond_i_exit_proc2_U0_ap_idle,
-        ap_ready => Block_idct_for_cond_i_exit_proc2_U0_ap_ready,
-        DCAC_temp_address0 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address0,
-        DCAC_temp_ce0 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce0,
-        DCAC_temp_q0 => DCAC_temp_t_q0,
-        DCAC_temp_address1 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address1,
-        DCAC_temp_ce1 => Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce1,
-        DCAC_temp_q1 => DCAC_temp_t_q1,
-        blockout_TDATA => Block_idct_for_cond_i_exit_proc2_U0_blockout_TDATA,
-        blockout_TVALID => Block_idct_for_cond_i_exit_proc2_U0_blockout_TVALID,
+        DCAC_TVALID => DCAC_TVALID,
+        DCAC_TREADY => Block_entry687_proc1_U0_DCAC_TREADY,
+        blockout_TDATA => Block_entry687_proc1_U0_blockout_TDATA,
+        blockout_TVALID => Block_entry687_proc1_U0_blockout_TVALID,
         blockout_TREADY => blockout_TREADY);
 
 
 
 
-    Block_idct_for_cond_i_exit_proc2_U0_ap_continue <= ap_const_logic_1;
-    Block_idct_for_cond_i_exit_proc2_U0_ap_start <= DCAC_temp_t_empty_n;
-    DCAC_TREADY <= Loop_DCAC_row_copy_proc1_U0_DCAC_TREADY;
-    DCAC_temp_t_we0 <= (0=>ap_const_logic_0, others=>'-');
-    Loop_DCAC_row_copy_proc1_U0_ap_continue <= DCAC_temp_i_full_n;
-    Loop_DCAC_row_copy_proc1_U0_ap_start <= ap_const_logic_1;
+    Block_entry687_proc1_U0_ap_continue <= ap_const_logic_1;
+    Block_entry687_proc1_U0_ap_start <= ap_const_logic_1;
+    DCAC_TREADY <= Block_entry687_proc1_U0_DCAC_TREADY;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
     begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-    blockout_TDATA <= Block_idct_for_cond_i_exit_proc2_U0_blockout_TDATA;
-    blockout_TVALID <= Block_idct_for_cond_i_exit_proc2_U0_blockout_TVALID;
+    blockout_TDATA <= Block_entry687_proc1_U0_blockout_TDATA;
+    blockout_TVALID <= Block_entry687_proc1_U0_blockout_TVALID;
 end behav;

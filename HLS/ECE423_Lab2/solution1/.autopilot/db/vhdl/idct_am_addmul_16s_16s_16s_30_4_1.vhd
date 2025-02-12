@@ -7,7 +7,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity idct_am_addmul_16s_16s_16s_30_4_1_DSP48_12 is
+entity idct_am_addmul_16s_16s_16s_30_4_1_DSP48_11 is
 port (
     clk: in  std_logic;
     rst: in  std_logic;
@@ -19,7 +19,7 @@ port (
 
 end entity;
 
-architecture behav of idct_am_addmul_16s_16s_16s_30_4_1_DSP48_12 is
+architecture behav of idct_am_addmul_16s_16s_16s_30_4_1_DSP48_11 is
     signal b       : signed(18-1 downto 0);
     signal a       : signed(25-1 downto 0);
     signal d       : signed(25-1 downto 0);
@@ -73,7 +73,7 @@ entity idct_am_addmul_16s_16s_16s_30_4_1 is
 end entity;
 
 architecture arch of idct_am_addmul_16s_16s_16s_30_4_1 is
-    component idct_am_addmul_16s_16s_16s_30_4_1_DSP48_12 is
+    component idct_am_addmul_16s_16s_16s_30_4_1_DSP48_11 is
         port (
             clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -87,7 +87,7 @@ architecture arch of idct_am_addmul_16s_16s_16s_30_4_1 is
 
 
 begin
-    idct_am_addmul_16s_16s_16s_30_4_1_DSP48_12_U :  component idct_am_addmul_16s_16s_16s_30_4_1_DSP48_12
+    idct_am_addmul_16s_16s_16s_30_4_1_DSP48_11_U :  component idct_am_addmul_16s_16s_16s_30_4_1_DSP48_11
     port map (
         clk => clk,
         rst => reset,

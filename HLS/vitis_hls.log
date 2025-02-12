@@ -1,44 +1,44 @@
 INFO: [HLS 200-10] Running 'C:/Software/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'j54mao' on host 'ece-mcu1' (Windows NT_amd64 version 6.2) on Wed Feb 12 14:41:31 -0500 2025
-INFO: [HLS 200-10] In directory 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS'
-Sourcing Tcl script 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/export.tcl'
-INFO: [HLS 200-1510] Running: source C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/export.tcl
+INFO: [HLS 200-10] For user 'hmcculla' on host 'ece-mcu21' (Windows NT_amd64 version 6.2) on Wed Feb 12 16:22:39 -0500 2025
+INFO: [HLS 200-10] In directory 'C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS'
+Sourcing Tcl script 'C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/export.tcl
 INFO: [HLS 200-1510] Running: open_project ECE423_Lab2 
-INFO: [HLS 200-10] Opening project 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2'.
+INFO: [HLS 200-10] Opening project 'C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2'.
 INFO: [HLS 200-1510] Running: set_top idct 
-INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/util.h 
-INFO: [HLS 200-10] Adding design file '../import_files/import_files/util.h' to the project
-INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/util.c 
-INFO: [HLS 200-10] Adding design file '../import_files/import_files/util.c' to the project
-INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/tables.c 
-INFO: [HLS 200-10] Adding design file '../import_files/import_files/tables.c' to the project
-INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/mjpeg423_types.h 
-INFO: [HLS 200-10] Adding design file '../import_files/import_files/mjpeg423_types.h' to the project
-INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/dct_math.h 
-INFO: [HLS 200-10] Adding design file '../import_files/import_files/dct_math.h' to the project
-INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/2D_idct.h 
-INFO: [HLS 200-10] Adding design file '../import_files/import_files/2D_idct.h' to the project
 INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/2D_idct.cpp 
 INFO: [HLS 200-10] Adding design file '../import_files/import_files/2D_idct.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/2D_idct.h 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/2D_idct.h' to the project
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/dct_math.h 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/dct_math.h' to the project
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/mjpeg423_types.h 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/mjpeg423_types.h' to the project
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/tables.c 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/tables.c' to the project
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/util.c 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/util.c' to the project
+INFO: [HLS 200-1510] Running: add_files ../import_files/import_files/util.h 
+INFO: [HLS 200-10] Adding design file '../import_files/import_files/util.h' to the project
 INFO: [HLS 200-1510] Running: add_files -tb ../Testbenches/idct_tb_1.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file '../Testbenches/idct_tb_1.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
-INFO: [HLS 200-10] Opening solution 'C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
-INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/j54mao/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_newest
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/hmcculla/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_hunter_test
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/j54mao/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_newest -rtl verilog 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/hmcculla/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_hunter_test -rtl verilog 
 INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25 
 INFO: [HLS 200-1510] Running: source ./ECE423_Lab2/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name idct idct 
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/j54mao/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_newest 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/hmcculla/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_hunter_test 
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 
 ****** Vivado v2022.1 (64-bit)
@@ -47,10 +47,11 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1281.922 ; gain = 4.438
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Software/Xilinx/Vivado/2022.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Wed Feb 12 14:41:44 2025...
-INFO: [HLS 200-802] Generated output file C:/Users/j54mao/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_newest/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 11.421 seconds; current allocated memory: 472.461 MB.
-INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 13.133 seconds; peak allocated memory: 1.108 GB.
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 12 16:22:53 2025...
+INFO: [HLS 200-802] Generated output file C:/Users/hmcculla/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_hunter_test/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 12.908 seconds; current allocated memory: 380.676 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 14.461 seconds; peak allocated memory: 1.108 GB.

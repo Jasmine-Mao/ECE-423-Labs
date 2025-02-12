@@ -14,8 +14,8 @@
 `define AUTOTB_TOP_INST AESL_inst_apatb_idct_top
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
 `define AUTOTB_CLOCK_PERIOD_DIV2 5.00
-`define AUTOTB_II 67
-`define AUTOTB_LATENCY 104
+`define AUTOTB_II 59
+`define AUTOTB_LATENCY 58
 
 `define AESL_DEPTH_DCAC 1
 `define AESL_DEPTH_blockout 1
@@ -27,7 +27,7 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 6;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 104;
+parameter LATENCY_ESTIMATION = 58;
 parameter LENGTH_DCAC = 32;
 parameter LENGTH_blockout = 16;
 
@@ -84,10 +84,10 @@ wire ap_rst_n;
 wire ap_rst_n_n;
 
 `AUTOTB_DUT `AUTOTB_DUT_INST(
-    .ap_clk(ap_clk),
-    .ap_rst_n(ap_rst_n),
     .DCAC_TDATA(DCAC_TDATA),
     .blockout_TDATA(blockout_TDATA),
+    .ap_clk(ap_clk),
+    .ap_rst_n(ap_rst_n),
     .DCAC_TVALID(DCAC_TVALID),
     .DCAC_TREADY(DCAC_TREADY),
     .blockout_TVALID(blockout_TVALID),
@@ -724,12 +724,6 @@ endtask
 `ifndef POST_SYN
 
 `endif
-
-AESL_deadlock_detector deadlock_detector(
-    .dl_reset(AESL_reset),
-    .all_finish(all_finish),
-    .dl_clock(AESL_clock));
-
 
 AESL_deadlock_kernel_monitor_top kernel_monitor_top(
     .kernel_monitor_reset(~AESL_reset),

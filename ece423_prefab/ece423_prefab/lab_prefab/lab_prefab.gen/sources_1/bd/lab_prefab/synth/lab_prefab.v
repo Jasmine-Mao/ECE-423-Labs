@@ -1,15 +1,15 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Wed Feb 12 13:53:37 2025
-//Host        : ECE-MCU1 running 64-bit major release  (build 9200)
+//Date        : Wed Feb 12 16:31:53 2025
+//Host        : ECE-MCU21 running 64-bit major release  (build 9200)
 //Command     : generate_target lab_prefab.bd
 //Design      : lab_prefab
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "lab_prefab,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=lab_prefab,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=31,numReposBlks=21,numNonXlnxBlks=1,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "lab_prefab.hwdef" *) 
+(* CORE_GENERATION_INFO = "lab_prefab,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=lab_prefab,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=31,numReposBlks=21,numNonXlnxBlks=1,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=3,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "lab_prefab.hwdef" *) 
 module lab_prefab
    (DDR_addr,
     DDR_ba,
@@ -563,7 +563,7 @@ module lab_prefab
         .vsync_out(color_swap_0_pixel_output_VSYNC));
   lab_prefab_hdmi_hpd_0 hdmi_hpd
        (.dout(hdmi_hpd_dout));
-  lab_prefab_idct_0_1 idct_0
+  lab_prefab_idct_0_2 idct_0
        (.DCAC_TDATA(axi_dma_0_M_AXIS_MM2S_TDATA),
         .DCAC_TREADY(axi_dma_0_M_AXIS_MM2S_TREADY),
         .DCAC_TVALID(axi_dma_0_M_AXIS_MM2S_TVALID),

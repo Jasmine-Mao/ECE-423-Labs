@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/synth_1/lab_prefab_wrapper.tcl"
+  variable script "C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.runs/synth_1/lab_prefab_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -77,61 +77,61 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.cache/wt [current_project]
-set_property parent.project_path C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.cache/wt [current_project]
+set_property parent.project_path C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
-  c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/ip/vivado-library-master/ip
-  c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/ip/color_swap_1.1
-  c:/Users/j54mao/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_newest/export
-  c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/ip/vivado-library-master/module
-  c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/ip/vivado-library-master/if
+  c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/ip/vivado-library-master/ip
+  c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/ip/color_swap_1.1
+  c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/ip/vivado-library-master/module
+  c:/Users/hmcculla/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_hunter_test/export
+  c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/ip/vivado-library-master/if
 } [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/j54mao/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_newest/export/ip [current_project]
+set_property ip_output_repo c:/Users/hmcculla/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block/export_hunter_test/export/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/sources_1/imports/sources/lab_prefab_wrapper.v
-add_files C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/sources_1/bd/lab_prefab/lab_prefab.bd
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_dma_0_0/lab_prefab_axi_dma_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_dma_0_0/lab_prefab_axi_dma_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_dma_0_0/lab_prefab_axi_dma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_vdma_0_0/lab_prefab_axi_vdma_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_vdma_0_0/lab_prefab_axi_vdma_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_vdma_0_0/lab_prefab_axi_vdma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_v_axi4s_vid_out_0_0/lab_prefab_v_axi4s_vid_out_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_v_axi4s_vid_out_0_0/lab_prefab_v_axi4s_vid_out_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_v_tc_0_0/lab_prefab_v_tc_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_v_tc_0_0/lab_prefab_v_tc_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_clk_wiz_0_0/lab_prefab_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_clk_wiz_0_0/lab_prefab_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_clk_wiz_0_0/lab_prefab_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_ps7_0_0/lab_prefab_ps7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rgb2dvi_0_0/src/rgb2dvi.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rgb2dvi_0_0/src/rgb2dvi_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_100M_0/lab_prefab_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_100M_0/lab_prefab_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_100M_0/lab_prefab_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_142M_0/lab_prefab_rst_ps7_0_142M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_142M_0/lab_prefab_rst_ps7_0_142M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_142M_0/lab_prefab_rst_ps7_0_142M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_0/lab_prefab_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_1/lab_prefab_auto_pc_1_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_us_0/lab_prefab_auto_us_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_us_0/lab_prefab_auto_us_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_us_0/lab_prefab_auto_us_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_2/lab_prefab_auto_pc_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_3/lab_prefab_auto_pc_3_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_cc_0/lab_prefab_auto_cc_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_cc_0/lab_prefab_auto_cc_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_cc_0/lab_prefab_auto_cc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_4/lab_prefab_auto_pc_4_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_idct_0_1/constraints/idct_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/lab_prefab_ooc.xdc]
+read_verilog -library xil_defaultlib C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/sources_1/imports/sources/lab_prefab_wrapper.v
+add_files C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/sources_1/bd/lab_prefab/lab_prefab.bd
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_dma_0_0/lab_prefab_axi_dma_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_dma_0_0/lab_prefab_axi_dma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_dma_0_0/lab_prefab_axi_dma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_vdma_0_0/lab_prefab_axi_vdma_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_vdma_0_0/lab_prefab_axi_vdma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_axi_vdma_0_0/lab_prefab_axi_vdma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_v_axi4s_vid_out_0_0/lab_prefab_v_axi4s_vid_out_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_v_axi4s_vid_out_0_0/lab_prefab_v_axi4s_vid_out_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_v_tc_0_0/lab_prefab_v_tc_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_v_tc_0_0/lab_prefab_v_tc_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_clk_wiz_0_0/lab_prefab_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_clk_wiz_0_0/lab_prefab_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_clk_wiz_0_0/lab_prefab_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_ps7_0_0/lab_prefab_ps7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rgb2dvi_0_0/src/rgb2dvi.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rgb2dvi_0_0/src/rgb2dvi_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_100M_0/lab_prefab_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_100M_0/lab_prefab_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_100M_0/lab_prefab_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_142M_0/lab_prefab_rst_ps7_0_142M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_142M_0/lab_prefab_rst_ps7_0_142M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_rst_ps7_0_142M_0/lab_prefab_rst_ps7_0_142M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_idct_0_2/constraints/idct_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_0/lab_prefab_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_1/lab_prefab_auto_pc_1_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_us_0/lab_prefab_auto_us_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_us_0/lab_prefab_auto_us_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_us_0/lab_prefab_auto_us_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_2/lab_prefab_auto_pc_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_3/lab_prefab_auto_pc_3_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_cc_0/lab_prefab_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_cc_0/lab_prefab_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_cc_0/lab_prefab_auto_cc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/ip/lab_prefab_auto_pc_4/lab_prefab_auto_pc_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.gen/sources_1/bd/lab_prefab/lab_prefab_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -142,14 +142,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/constrs_1/imports/constraints/constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/constrs_1/imports/constraints/constraints.xdc]
+read_xdc C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/constrs_1/imports/constraints/constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/constrs_1/imports/constraints/constraints.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/j54mao/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/utils_1/imports/synth_1/lab_prefab_wrapper.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/hmcculla/ECE423/ECE-423-Labs/ece423_prefab/ece423_prefab/lab_prefab/lab_prefab.srcs/utils_1/imports/synth_1/lab_prefab_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
