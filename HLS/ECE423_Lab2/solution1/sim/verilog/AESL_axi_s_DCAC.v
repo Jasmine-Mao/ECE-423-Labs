@@ -13,7 +13,7 @@
 module AESL_axi_s_DCAC (
     input clk,
     input reset,
-    output [16 - 1:0] TRAN_DCAC_TDATA,
+    output [32 - 1:0] TRAN_DCAC_TDATA,
     output TRAN_DCAC_TVALID,
     input TRAN_DCAC_TREADY,
     input ready,
@@ -24,11 +24,11 @@ module AESL_axi_s_DCAC (
     wire DCAC_TDATA_full;
     wire DCAC_TDATA_empty;
     reg DCAC_TDATA_write_en;
-    reg [16 - 1:0] DCAC_TDATA_write_data;
+    reg [32 - 1:0] DCAC_TDATA_write_data;
     reg DCAC_TDATA_read_en;
-    wire [16 - 1:0] DCAC_TDATA_read_data;
+    wire [32 - 1:0] DCAC_TDATA_read_data;
     
-    fifo #(64, 16) fifo_DCAC_TDATA (
+    fifo #(32, 32) fifo_DCAC_TDATA (
         .reset(1'b0),
         .write_clock(clk),
         .write_en(DCAC_TDATA_write_en),
@@ -87,7 +87,7 @@ module AESL_axi_s_DCAC (
     initial begin : AXI_stream_driver_DCAC_TDATA
         integer fp;
         reg [143:0] token;
-        reg [16 - 1:0] data;
+        reg [32 - 1:0] data;
         reg [143:0] data_integer;
         reg [8 * 5:1] str;
         integer ret;

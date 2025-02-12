@@ -13,7 +13,7 @@
 module AESL_axi_s_blockout (
     input clk,
     input reset,
-    input [8 - 1:0] TRAN_blockout_TDATA,
+    input [32 - 1:0] TRAN_blockout_TDATA,
     input TRAN_blockout_TVALID,
     output TRAN_blockout_TREADY,
     input ready,
@@ -24,11 +24,11 @@ module AESL_axi_s_blockout (
     wire blockout_TDATA_full;
     wire blockout_TDATA_empty;
     reg blockout_TDATA_write_en;
-    reg [8 - 1:0] blockout_TDATA_write_data;
+    reg [32 - 1:0] blockout_TDATA_write_data;
     reg blockout_TDATA_read_en;
-    wire [8 - 1:0] blockout_TDATA_read_data;
+    wire [32 - 1:0] blockout_TDATA_read_data;
     
-    fifo #(64, 8) fifo_blockout_TDATA (
+    fifo #(16, 32) fifo_blockout_TDATA (
         .reset(1'b0),
         .write_clock(clk),
         .write_en(blockout_TDATA_write_en),
@@ -95,7 +95,7 @@ module AESL_axi_s_blockout (
     
     initial begin : AXI_stream_receiver_blockout_TDATA
         integer fp;
-        reg [8 - 1:0] data;
+        reg [32 - 1:0] data;
         reg [8 * 5:1] str;
         
         transaction_save_blockout_TDATA = 0;

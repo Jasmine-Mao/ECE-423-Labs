@@ -1,5 +1,5 @@
 set depth_list {
-{DCAC 64}
-{blockout 64}
+{DCAC 32}
+{blockout 16}
 }
 set trans_num 6

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="idct" xd:componentRef="idct" xd:initiationInterval="67" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="*(DCAC)" xd:originalName="DCAC" xd:direction="in" xd:interfaceRef="DCAC" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(blockout)" xd:originalName="blockout" xd:direction="out" xd:interfaceRef="blockout" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="104" xd:worst-case="104" xd:average-case="104"/>
+  <xd:resourceEstimates xd:LUT="15754" xd:FF="7002" xd:BRAM="0" xd:DSP="192"/>
+</xd:acceleratorMap>

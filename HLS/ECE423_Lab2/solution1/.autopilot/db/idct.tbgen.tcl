@@ -13,19 +13,19 @@ set hasInterrupt 0
 set C_modelName {idct}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ DCAC int 16 regular {axi_s 0 volatile  { DCAC Data } }  }
-	{ blockout int 8 regular {axi_s 1 volatile  { blockout Data } }  }
+	{ DCAC int 32 regular {axi_s 0 volatile  { DCAC Data } }  }
+	{ blockout int 32 regular {axi_s 1 volatile  { blockout Data } }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "DCAC", "interface" : "axis", "bitwidth" : 16, "direction" : "READONLY"} , 
- 	{ "Name" : "blockout", "interface" : "axis", "bitwidth" : 8, "direction" : "WRITEONLY"} ]}
+	{ "Name" : "DCAC", "interface" : "axis", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "blockout", "interface" : "axis", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
 set portNum 8
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
-	{ DCAC_TDATA sc_in sc_lv 16 signal 0 } 
-	{ blockout_TDATA sc_out sc_lv 8 signal 1 } 
+	{ DCAC_TDATA sc_in sc_lv 32 signal 0 } 
+	{ blockout_TDATA sc_out sc_lv 32 signal 1 } 
 	{ DCAC_TVALID sc_in sc_logic 1 invld 0 } 
 	{ DCAC_TREADY sc_out sc_logic 1 inacc 0 } 
 	{ blockout_TVALID sc_out sc_logic 1 outvld 1 } 
@@ -34,8 +34,8 @@ set portList {
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
  	{ "name": "ap_rst_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst_n", "role": "default" }} , 
- 	{ "name": "DCAC_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "DCAC", "role": "TDATA" }} , 
- 	{ "name": "blockout_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "blockout", "role": "TDATA" }} , 
+ 	{ "name": "DCAC_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "DCAC", "role": "TDATA" }} , 
+ 	{ "name": "blockout_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "blockout", "role": "TDATA" }} , 
  	{ "name": "DCAC_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "DCAC", "role": "TVALID" }} , 
  	{ "name": "DCAC_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "DCAC", "role": "TREADY" }} , 
  	{ "name": "blockout_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "blockout", "role": "TVALID" }} , 
@@ -48,7 +48,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0", "real_start" : "0",
 		"Pipeline" : "Dataflow", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "1",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "152", "EstimateLatencyMax" : "152",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "104", "EstimateLatencyMax" : "104",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -57,19 +57,19 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"InputProcess" : [
-			{"ID" : "2", "Name" : "Loop_VITIS_LOOP_39_1_proc1_U0"}],
+			{"ID" : "2", "Name" : "Loop_DCAC_row_copy_proc1_U0"}],
 		"OutputProcess" : [
 			{"ID" : "5", "Name" : "Block_idct_for_cond_i_exit_proc2_U0"}],
 		"Port" : [
 			{"Name" : "DCAC", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "Loop_VITIS_LOOP_39_1_proc1_U0", "Port" : "DCAC"}]},
+					{"ID" : "2", "SubInstance" : "Loop_DCAC_row_copy_proc1_U0", "Port" : "DCAC"}]},
 			{"Name" : "blockout", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
 					{"ID" : "5", "SubInstance" : "Block_idct_for_cond_i_exit_proc2_U0", "Port" : "blockout"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.DCAC_temp_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Loop_VITIS_LOOP_39_1_proc1_U0", "Parent" : "0", "Child" : ["3", "4"],
-		"CDFG" : "Loop_VITIS_LOOP_39_1_proc1",
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Loop_DCAC_row_copy_proc1_U0", "Parent" : "0", "Child" : ["3", "4"],
+		"CDFG" : "Loop_DCAC_row_copy_proc1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -88,17 +88,17 @@ set RtlHierarchyInfo {[
 					{"Name" : "DCAC_TDATA_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "DCAC_temp", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["5"], "DependentChan" : "1"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_39_1_DCAC_col_copy", "PipelineType" : "UPC",
+			{"Name" : "DCAC_row_copy_DCAC_col_copy", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Loop_VITIS_LOOP_39_1_proc1_U0.flow_control_loop_pipe_U", "Parent" : "2"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Loop_VITIS_LOOP_39_1_proc1_U0.regslice_both_DCAC_U", "Parent" : "2"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Loop_DCAC_row_copy_proc1_U0.flow_control_loop_pipe_U", "Parent" : "2"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Loop_DCAC_row_copy_proc1_U0.regslice_both_DCAC_U", "Parent" : "2"},
 	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Block_idct_for_cond_i_exit_proc2_U0", "Parent" : "0", "Child" : ["6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "174", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198"],
 		"CDFG" : "Block_idct_for_cond_i_exit_proc2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "85", "EstimateLatencyMax" : "85",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "37", "EstimateLatencyMax" : "37",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -310,7 +310,7 @@ set ArgLastReadFirstWriteLatency {
 	idct {
 		DCAC {Type I LastRead 0 FirstWrite -1}
 		blockout {Type O LastRead -1 FirstWrite 21}}
-	Loop_VITIS_LOOP_39_1_proc1 {
+	Loop_DCAC_row_copy_proc1 {
 		DCAC {Type I LastRead 0 FirstWrite -1}
 		DCAC_temp {Type O LastRead -1 FirstWrite 1}}
 	Block_idct_for_cond_i_exit_proc2 {
@@ -320,16 +320,16 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "152", "Max" : "152"}
-	, {"Name" : "Interval", "Min" : "86", "Max" : "86"}
+	{"Name" : "Latency", "Min" : "104", "Max" : "104"}
+	, {"Name" : "Interval", "Min" : "67", "Max" : "67"}
 ]}
 
 set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	DCAC { axis {  { DCAC_TDATA in_data 0 16 }  { DCAC_TVALID in_vld 0 1 }  { DCAC_TREADY in_acc 1 1 } } }
-	blockout { axis {  { blockout_TDATA out_data 1 8 }  { blockout_TVALID out_vld 1 1 }  { blockout_TREADY out_acc 0 1 } } }
+	DCAC { axis {  { DCAC_TDATA in_data 0 32 }  { DCAC_TVALID in_vld 0 1 }  { DCAC_TREADY in_acc 1 1 } } }
+	blockout { axis {  { blockout_TDATA out_data 1 32 }  { blockout_TVALID out_vld 1 1 }  { blockout_TREADY out_acc 0 1 } } }
 }
 
 set maxi_interface_dict [dict create]

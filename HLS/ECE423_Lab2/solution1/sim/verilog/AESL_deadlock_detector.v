@@ -46,13 +46,13 @@ module AESL_deadlock_detector (
     wire token_clear;
     wire [1:0] origin;
 
-    reg ap_done_reg_0;// for module AESL_inst_idct.Loop_VITIS_LOOP_39_1_proc1_U0
+    reg ap_done_reg_0;// for module AESL_inst_idct.Loop_DCAC_row_copy_proc1_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_0 <= 'b0;
         end
         else begin
-            ap_done_reg_0 <= AESL_inst_idct.Loop_VITIS_LOOP_39_1_proc1_U0.ap_done & ~AESL_inst_idct.Loop_VITIS_LOOP_39_1_proc1_U0.ap_continue;
+            ap_done_reg_0 <= AESL_inst_idct.Loop_DCAC_row_copy_proc1_U0.ap_done & ~AESL_inst_idct.Loop_DCAC_row_copy_proc1_U0.ap_continue;
         end
     end
 
@@ -66,7 +66,7 @@ module AESL_deadlock_detector (
         end
     end
 
-    // Process: AESL_inst_idct.Loop_VITIS_LOOP_39_1_proc1_U0
+    // Process: AESL_inst_idct.Loop_DCAC_row_copy_proc1_U0
     AESL_deadlock_detect_unit #(2, 0, 1, 1) AESL_deadlock_detect_unit_0 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -83,7 +83,7 @@ module AESL_deadlock_detector (
         .dl_detect_out(dl_in_vec[0]));
 
     assign proc_0_data_FIFO_blk[0] = 1'b0;
-    assign proc_0_data_PIPO_blk[0] = 1'b0 | (~AESL_inst_idct.DCAC_temp_U.i_full_n & AESL_inst_idct.Loop_VITIS_LOOP_39_1_proc1_U0.ap_done & ap_done_reg_0 & ~AESL_inst_idct.DCAC_temp_U.t_read);
+    assign proc_0_data_PIPO_blk[0] = 1'b0 | (~AESL_inst_idct.DCAC_temp_U.i_full_n & AESL_inst_idct.Loop_DCAC_row_copy_proc1_U0.ap_done & ap_done_reg_0 & ~AESL_inst_idct.DCAC_temp_U.t_read);
     assign proc_0_start_FIFO_blk[0] = 1'b0;
     assign proc_0_TLF_FIFO_blk[0] = 1'b0;
     assign proc_0_input_sync_blk[0] = 1'b0;

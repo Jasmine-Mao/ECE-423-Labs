@@ -202,7 +202,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
             index = proc_index(dl_vec);
             case (index)
                 0 : begin
-                    proc_path = "idct.Loop_VITIS_LOOP_39_1_proc1_U0";
+                    proc_path = "idct.Loop_DCAC_row_copy_proc1_U0";
                 end
                 1 : begin
                     proc_path = "idct.Block_idct_for_cond_i_exit_proc2_U0";
@@ -268,7 +268,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 0 : begin
                     case(index2)
                     1: begin
-                        if (~AESL_inst_idct.DCAC_temp_U.i_full_n & AESL_inst_idct.Loop_VITIS_LOOP_39_1_proc1_U0.ap_done & ap_done_reg_0 & ~AESL_inst_idct.DCAC_temp_U.t_read) begin
+                        if (~AESL_inst_idct.DCAC_temp_U.i_full_n & AESL_inst_idct.Loop_DCAC_row_copy_proc1_U0.ap_done & ap_done_reg_0 & ~AESL_inst_idct.DCAC_temp_U.t_read) begin
                             if (~AESL_inst_idct.DCAC_temp_U.t_empty_n) begin
                                 $display("//      Blocked by empty input PIPO 'idct.DCAC_temp_U' written by process 'idct.Block_idct_for_cond_i_exit_proc2_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path idct.DCAC_temp_U");
@@ -288,12 +288,12 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                     0: begin
                         if (~AESL_inst_idct.DCAC_temp_U.t_empty_n & AESL_inst_idct.Block_idct_for_cond_i_exit_proc2_U0.ap_idle & ~AESL_inst_idct.DCAC_temp_U.i_write) begin
                             if (~AESL_inst_idct.DCAC_temp_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'idct.DCAC_temp_U' written by process 'idct.Loop_VITIS_LOOP_39_1_proc1_U0'");
+                                $display("//      Blocked by empty input PIPO 'idct.DCAC_temp_U' written by process 'idct.Loop_DCAC_row_copy_proc1_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path idct.DCAC_temp_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~AESL_inst_idct.DCAC_temp_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'idct.DCAC_temp_U' read by process 'idct.Loop_VITIS_LOOP_39_1_proc1_U0'");
+                                $display("//      Blocked by full output PIPO 'idct.DCAC_temp_U' read by process 'idct.Loop_DCAC_row_copy_proc1_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path idct.DCAC_temp_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end

@@ -1,13 +1,13 @@
 <root versionMajor = "1" versionMinor = "5">
   <kernel src_name="idct" language="c" hwCtrl="ap_ctrl_none" mem_layout="fpga64-xilinx-none">
     <args>
-      <arg id="0" access_type="r" src_name="DCAC" src_type="short*" src_isptr="1" src_bitwidth="16" src_size_or_depth="64">
-        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="DCAC" hw_bitwidth="16" hw_size_or_depth="8" hw_kernel_support="true">
+      <arg id="0" access_type="r" src_name="DCAC" src_type="short*" src_isptr="1" src_bitwidth="16" src_size_or_depth="32">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="DCAC" hw_bitwidth="32" hw_size_or_depth="32" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="1" access_type="w" src_name="blockout" src_type="unsigned char*" src_isptr="1" src_bitwidth="8" src_size_or_depth="64">
-        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="blockout" hw_bitwidth="8" hw_size_or_depth="8" hw_kernel_support="true">
+      <arg id="1" access_type="w" src_name="blockout" src_type="unsigned char*" src_isptr="1" src_bitwidth="8" src_size_or_depth="16">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="blockout" hw_bitwidth="32" hw_size_or_depth="16" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>

@@ -1927,20 +1927,14 @@ void idct(int16_t DCAC[8][8], uint8_t blockout[8][8])
 
 #pragma HLS INTERFACE axis register both port=DCAC
 #pragma HLS INTERFACE axis register both port=blockout
-
 #pragma HLS DATAFLOW
-
 
 
  int16_t DCAC_temp[8][8];
  uint8_t blockout_temp[8][8];
 
 
-#pragma HLS ARRAY_RESHAPE variable=DCAC_temp type=block factor=2 dim=2
-#pragma HLS ARRAY_RESHAPE variable=blockout_temp type=block factor=4 dim=2
-
-
- for(int r = 0; r < 8; r++)
+ DCAC_row_copy: for(int r = 0; r < 8; r++)
  {
   DCAC_col_copy: for(int c = 0; c < 8; c++)
   {
@@ -1948,6 +1942,12 @@ void idct(int16_t DCAC[8][8], uint8_t blockout[8][8])
     DCAC_temp[r][c] = DCAC[r][c];
   }
  }
+
+
+#pragma HLS ARRAY_RESHAPE variable=DCAC type=block factor=2 dim=2
+#pragma HLS ARRAY_RESHAPE variable=blockout type=block factor=4 dim=2
+#pragma HLS ARRAY_RESHAPE variable=DCAC_temp type=block factor=2 dim=2
+#pragma HLS ARRAY_RESHAPE variable=blockout_temp type=block factor=4 dim=2
 
     int32_t tmp0, tmp1, tmp2, tmp3;
     int32_t tmp10, tmp11, tmp12, tmp13;
@@ -1964,7 +1964,7 @@ void idct(int16_t DCAC[8][8], uint8_t blockout[8][8])
     for (int col = 0; col < 8; col++) {
 
 
-#pragma HLS UNROLL factor=8
+#pragma HLS UNROLL factor = 8
    z2 = DCAC_temp[2][col];
    z3 = DCAC_temp[6][col];
 
@@ -2016,7 +2016,7 @@ void idct(int16_t DCAC[8][8], uint8_t blockout[8][8])
    tmp3 += z1 + z4;
 
 
-#pragma HLS PIPELINE
+
     workspace[col+8*0] = (int32_t) (((tmp10 + tmp3) + (((int32_t) 1) << ((13 -2)-1))) >> (13 -2));
     workspace[col+8*7] = (int32_t) (((tmp10 - tmp3) + (((int32_t) 1) << ((13 -2)-1))) >> (13 -2));
     workspace[col+8*1] = (int32_t) (((tmp11 + tmp2) + (((int32_t) 1) << ((13 -2)-1))) >> (13 -2));
@@ -2089,25 +2089,22 @@ void idct(int16_t DCAC[8][8], uint8_t blockout[8][8])
 
 
 
-#pragma HLS PIPELINE
-    blockout_temp[row][0] = (temp = ((((tmp10 + tmp3) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
-    blockout_temp[row][1] = (temp = ((((tmp11 + tmp2) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
-    blockout_temp[row][2] = (temp = ((((tmp12 + tmp1) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
-    blockout_temp[row][3] = (temp = ((((tmp13 + tmp0) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
-    blockout_temp[row][4] = (temp = ((((tmp13 - tmp0) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
-    blockout_temp[row][5] = (temp = ((((tmp12 - tmp1) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
-    blockout_temp[row][6] = (temp = ((((tmp11 - tmp2) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
-    blockout_temp[row][7] = (temp = ((((tmp10 - tmp3) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
+   blockout_temp[row][0] = (temp = ((((tmp10 + tmp3) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
+   blockout_temp[row][1] = (temp = ((((tmp11 + tmp2) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
+   blockout_temp[row][2] = (temp = ((((tmp12 + tmp1) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
+   blockout_temp[row][3] = (temp = ((((tmp13 + tmp0) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
+   blockout_temp[row][4] = (temp = ((((tmp13 - tmp0) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
+   blockout_temp[row][5] = (temp = ((((tmp12 - tmp1) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
+   blockout_temp[row][6] = (temp = ((((tmp11 - tmp2) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
+   blockout_temp[row][7] = (temp = ((((tmp10 - tmp3) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
 
-#pragma HLS PIPELINE
-    blockout[row][0] = blockout_temp[row][0];
-    blockout[row][1] = blockout_temp[row][1];
-    blockout[row][2] = blockout_temp[row][2];
-    blockout[row][3] = blockout_temp[row][3];
-    blockout[row][4] = blockout_temp[row][4];
-    blockout[row][5] = blockout_temp[row][5];
-    blockout[row][6] = blockout_temp[row][6];
-    blockout[row][7] = blockout_temp[row][7];
-
+   blockout[row][0] = blockout_temp[row][0];
+   blockout[row][1] = blockout_temp[row][1];
+   blockout[row][2] = blockout_temp[row][2];
+   blockout[row][3] = blockout_temp[row][3];
+   blockout[row][4] = blockout_temp[row][4];
+   blockout[row][5] = blockout_temp[row][5];
+   blockout[row][6] = blockout_temp[row][6];
+   blockout[row][7] = blockout_temp[row][7];
     }
 }

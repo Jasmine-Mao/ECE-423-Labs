@@ -330,7 +330,7 @@ static AESL_FILE_HANDLER aesl_fh;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<16> > DCAC_pc_buffer(64);
+          std::vector<sc_bv<32> > DCAC_pc_buffer(32);
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -356,8 +356,10 @@ static AESL_FILE_HANDLER aesl_fh;
   
           if (i > 0) {{
 		    int i = 0;
-            for (int j = 0, e = 64; j < e; j += 1, ++i) {((char*)__xlx_apatb_param_DCAC)[j*2+0] = DCAC_pc_buffer[i].range(7, 0).to_int64();
-((char*)__xlx_apatb_param_DCAC)[j*2+1] = DCAC_pc_buffer[i].range(15, 8).to_int64();
+            for (int j = 0, e = 32; j < e; j += 1, ++i) {((char*)__xlx_apatb_param_DCAC)[j*4+0] = DCAC_pc_buffer[i].range(7, 0).to_int64();
+((char*)__xlx_apatb_param_DCAC)[j*4+1] = DCAC_pc_buffer[i].range(15, 8).to_int64();
+((char*)__xlx_apatb_param_DCAC)[j*4+2] = DCAC_pc_buffer[i].range(23, 16).to_int64();
+((char*)__xlx_apatb_param_DCAC)[j*4+3] = DCAC_pc_buffer[i].range(31, 24).to_int64();
 }}}
         } // end transaction
       } // end file is good
@@ -381,7 +383,7 @@ static AESL_FILE_HANDLER aesl_fh;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<8> > blockout_pc_buffer(64);
+          std::vector<sc_bv<32> > blockout_pc_buffer(16);
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -407,7 +409,10 @@ static AESL_FILE_HANDLER aesl_fh;
   
           if (i > 0) {{
 		    int i = 0;
-            for (int j = 0, e = 64; j < e; j += 1, ++i) {((char*)__xlx_apatb_param_blockout)[j*1+0] = blockout_pc_buffer[i].range(7, 0).to_int64();
+            for (int j = 0, e = 16; j < e; j += 1, ++i) {((char*)__xlx_apatb_param_blockout)[j*4+0] = blockout_pc_buffer[i].range(7, 0).to_int64();
+((char*)__xlx_apatb_param_blockout)[j*4+1] = blockout_pc_buffer[i].range(15, 8).to_int64();
+((char*)__xlx_apatb_param_blockout)[j*4+2] = blockout_pc_buffer[i].range(23, 16).to_int64();
+((char*)__xlx_apatb_param_blockout)[j*4+3] = blockout_pc_buffer[i].range(31, 24).to_int64();
 }}}
         } // end transaction
       } // end file is good
@@ -425,13 +430,13 @@ CodeState = DUMP_INPUTS;
 {
 aesl_fh.write(AUTOTB_TVIN_DCAC, begin_str(AESL_transaction));
 if (__xlx_apatb_param_DCAC) {
-for (int i = 0; i < 64; ++i) {
-auto *pos = (unsigned char*)__xlx_apatb_param_DCAC+i*2;
-aesl_fh.write(AUTOTB_TVIN_DCAC, formatData(pos, 16));
+for (int i = 0; i < 32; ++i) {
+auto *pos = (unsigned char*)__xlx_apatb_param_DCAC+i*4;
+aesl_fh.write(AUTOTB_TVIN_DCAC, formatData(pos, 32));
 }
 }
 
-  tcl_file.set_num(64, &tcl_file.DCAC_depth);
+  tcl_file.set_num(32, &tcl_file.DCAC_depth);
 aesl_fh.write(AUTOTB_TVIN_DCAC, end_str());
 }
 
@@ -439,13 +444,13 @@ aesl_fh.write(AUTOTB_TVIN_DCAC, end_str());
 {
 aesl_fh.write(AUTOTB_TVIN_blockout, begin_str(AESL_transaction));
 if (__xlx_apatb_param_blockout) {
-for (int i = 0; i < 64; ++i) {
-auto *pos = (unsigned char*)__xlx_apatb_param_blockout+i*1;
-aesl_fh.write(AUTOTB_TVIN_blockout, formatData(pos, 8));
+for (int i = 0; i < 16; ++i) {
+auto *pos = (unsigned char*)__xlx_apatb_param_blockout+i*4;
+aesl_fh.write(AUTOTB_TVIN_blockout, formatData(pos, 32));
 }
 }
 
-  tcl_file.set_num(64, &tcl_file.blockout_depth);
+  tcl_file.set_num(16, &tcl_file.blockout_depth);
 aesl_fh.write(AUTOTB_TVIN_blockout, end_str());
 }
 
@@ -456,13 +461,13 @@ CodeState = DUMP_OUTPUTS;
 {
 aesl_fh.write(AUTOTB_TVOUT_DCAC, begin_str(AESL_transaction));
 if (__xlx_apatb_param_DCAC) {
-for (int i = 0; i < 64; ++i) {
-auto *pos = (unsigned char*)__xlx_apatb_param_DCAC+i*2;
-aesl_fh.write(AUTOTB_TVOUT_DCAC, formatData(pos, 16));
+for (int i = 0; i < 32; ++i) {
+auto *pos = (unsigned char*)__xlx_apatb_param_DCAC+i*4;
+aesl_fh.write(AUTOTB_TVOUT_DCAC, formatData(pos, 32));
 }
 }
 
-  tcl_file.set_num(64, &tcl_file.DCAC_depth);
+  tcl_file.set_num(32, &tcl_file.DCAC_depth);
 aesl_fh.write(AUTOTB_TVOUT_DCAC, end_str());
 }
 
@@ -470,13 +475,13 @@ aesl_fh.write(AUTOTB_TVOUT_DCAC, end_str());
 {
 aesl_fh.write(AUTOTB_TVOUT_blockout, begin_str(AESL_transaction));
 if (__xlx_apatb_param_blockout) {
-for (int i = 0; i < 64; ++i) {
-auto *pos = (unsigned char*)__xlx_apatb_param_blockout+i*1;
-aesl_fh.write(AUTOTB_TVOUT_blockout, formatData(pos, 8));
+for (int i = 0; i < 16; ++i) {
+auto *pos = (unsigned char*)__xlx_apatb_param_blockout+i*4;
+aesl_fh.write(AUTOTB_TVOUT_blockout, formatData(pos, 32));
 }
 }
 
-  tcl_file.set_num(64, &tcl_file.blockout_depth);
+  tcl_file.set_num(16, &tcl_file.blockout_depth);
 aesl_fh.write(AUTOTB_TVOUT_blockout, end_str());
 }
 

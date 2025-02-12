@@ -14,8 +14,8 @@
 `define AUTOTB_TOP_INST AESL_inst_apatb_idct_top
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
 `define AUTOTB_CLOCK_PERIOD_DIV2 5.00
-`define AUTOTB_II 86
-`define AUTOTB_LATENCY 152
+`define AUTOTB_II 67
+`define AUTOTB_LATENCY 104
 
 `define AESL_DEPTH_DCAC 1
 `define AESL_DEPTH_blockout 1
@@ -27,9 +27,9 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 6;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 152;
-parameter LENGTH_DCAC = 64;
-parameter LENGTH_blockout = 64;
+parameter LATENCY_ESTIMATION = 104;
+parameter LENGTH_DCAC = 32;
+parameter LENGTH_blockout = 16;
 
 task read_token;
     input integer fp;
@@ -60,8 +60,8 @@ reg AESL_done_delay2 = 0;
 reg AESL_ready_delay = 0;
 wire ready;
 wire ready_wire;
-wire [15 : 0] DCAC_TDATA;
-wire [7 : 0] blockout_TDATA;
+wire [31 : 0] DCAC_TDATA;
+wire [31 : 0] blockout_TDATA;
 wire  DCAC_TVALID;
 wire  DCAC_TREADY;
 wire  blockout_TVALID;

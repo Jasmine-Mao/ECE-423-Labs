@@ -5,6 +5,7 @@
 	<projects>
 		<project>lab_prefab_wrapper</project>
 		<project>Assignment2_debugging</project>
+		<project>Assignment2_newest</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

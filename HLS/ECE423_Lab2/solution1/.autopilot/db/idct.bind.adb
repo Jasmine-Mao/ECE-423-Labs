@@ -34,10 +34,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1919897710</coreId>
+						<coreId>1937011311</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -70,10 +70,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702129263</coreId>
+						<coreId>540876915</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>0</if_type>
@@ -95,7 +95,7 @@
 						<name>DCAC_temp</name>
 						<fileName>../import_files/import_files/2D_idct.cpp</fileName>
 						<fileDirectory>C:\Users\j54mao\ECE423\ECE-423-Labs\HLS</fileDirectory>
-						<lineNumber>31</lineNumber>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>idct</contextFuncName>
 						<contextNormFuncName>idct</contextNormFuncName>
 						<inlineStackInfo>
@@ -111,7 +111,7 @@
 											<first>../import_files/import_files/2D_idct.cpp</first>
 											<second>idct</second>
 										</first>
-										<second>31</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>
@@ -166,7 +166,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1423638672</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -210,7 +210,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1428313672</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -238,10 +238,10 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>_ln209</name>
+						<name>_ln206</name>
 						<fileName>../import_files/import_files/2D_idct.cpp</fileName>
 						<fileDirectory>C:\Users\j54mao\ECE423\ECE-423-Labs\HLS</fileDirectory>
-						<lineNumber>209</lineNumber>
+						<lineNumber>206</lineNumber>
 						<contextFuncName>idct</contextFuncName>
 						<contextNormFuncName>idct</contextNormFuncName>
 						<inlineStackInfo>
@@ -257,7 +257,7 @@
 											<first>../import_files/import_files/2D_idct.cpp</first>
 											<second>idct</second>
 										</first>
-										<second>209</second>
+										<second>206</second>
 									</item>
 								</second>
 							</item>
@@ -270,7 +270,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1990790400</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -328,7 +328,7 @@
 					<Obj>
 						<type>2</type>
 						<id>18</id>
-						<name>Loop_VITIS_LOOP_39_1_proc1</name>
+						<name>Loop_DCAC_row_copy_proc1</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -346,13 +346,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702129263</coreId>
+						<coreId>1937011311</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:Loop_VITIS_LOOP_39_1_proc1&gt;</content>
+				<content>&lt;constant:Loop_DCAC_row_copy_proc1&gt;</content>
 			</item>
 			<item class_id_reference="16" object_id="_9">
 				<Value>
@@ -377,7 +377,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544437362</coreId>
+						<coreId>540946976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -411,7 +411,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>99</coreId>
+					<coreId>34</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -513,8 +513,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>152</mMinLatency>
-			<mMaxLatency>152</mMaxLatency>
+			<mMinLatency>104</mMinLatency>
+			<mMaxLatency>104</mMaxLatency>
 			<mIsDfPipe>1</mIsDfPipe>
 			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_21">
 				<port_list class_id="24" tracking_level="0" version="0">
@@ -542,7 +542,7 @@
 					<item_version>0</item_version>
 					<item class_id="28" tracking_level="1" version="0" object_id="_24">
 						<type>0</type>
-						<name>Loop_VITIS_LOOP_39_1_proc1_U0</name>
+						<name>Loop_DCAC_row_copy_proc1_U0</name>
 						<ssdmobj_id>12</ssdmobj_id>
 						<pins class_id="29" tracking_level="0" version="0">
 							<count>1</count>
@@ -558,7 +558,7 @@
 								</port>
 								<inst class_id="31" tracking_level="1" version="0" object_id="_27">
 									<type>0</type>
-									<name>Loop_VITIS_LOOP_39_1_proc1_U0</name>
+									<name>Loop_DCAC_row_copy_proc1_U0</name>
 									<ssdmobj_id>12</ssdmobj_id>
 								</inst>
 							</item>
@@ -978,7 +978,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_Loop_VITIS_LOOP_39_1_proc1_fu_40</first>
+			<first>grp_Loop_DCAC_row_copy_proc1_fu_40</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>

@@ -38,5 +38,4 @@ add_wave /apatb_idct_top/DCAC_TVALID -into $tb_return_group -color #ffff00 -radi
 add_wave /apatb_idct_top/DCAC_TDATA -into $tb_return_group -radix hex
 save_wave_config idct.wcfg
 run all
-quit
 

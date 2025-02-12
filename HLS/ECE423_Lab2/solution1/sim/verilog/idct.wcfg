@@ -12,13 +12,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0ns"></ZoomStartTime>
-      <ZoomEndTime time="2000ns"></ZoomEndTime>
-      <Cursor1Time time="0ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,461.337 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="257"></NameColumnWidth>
-      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="3" />
    <wvobject fp_name="HLS Process Summary Group" type="group">
@@ -47,8 +47,8 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_idct_top/AESL_inst_idct/blockout_TDATA" type="array">
-               <obj_property name="ElementShortName">blockout_TDATA[7:0]</obj_property>
-               <obj_property name="ObjectShortName">blockout_TDATA[7:0]</obj_property>
+               <obj_property name="ElementShortName">blockout_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">blockout_TDATA[31:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
@@ -72,8 +72,8 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_idct_top/AESL_inst_idct/DCAC_TDATA" type="array">
-               <obj_property name="ElementShortName">DCAC_TDATA[15:0]</obj_property>
-               <obj_property name="ObjectShortName">DCAC_TDATA[15:0]</obj_property>
+               <obj_property name="ElementShortName">DCAC_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">DCAC_TDATA[31:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
@@ -164,8 +164,8 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_idct_top/blockout_TDATA" type="array">
-               <obj_property name="ElementShortName">blockout_TDATA[7:0]</obj_property>
-               <obj_property name="ObjectShortName">blockout_TDATA[7:0]</obj_property>
+               <obj_property name="ElementShortName">blockout_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">blockout_TDATA[31:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
@@ -189,8 +189,8 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_idct_top/DCAC_TDATA" type="array">
-               <obj_property name="ElementShortName">DCAC_TDATA[15:0]</obj_property>
-               <obj_property name="ObjectShortName">DCAC_TDATA[15:0]</obj_property>
+               <obj_property name="ElementShortName">DCAC_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">DCAC_TDATA[31:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>

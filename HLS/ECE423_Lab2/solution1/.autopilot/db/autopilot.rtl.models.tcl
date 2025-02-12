@@ -1,5 +1,5 @@
 set SynModuleInfo {
-  {SRCNAME Loop_VITIS_LOOP_39_1_proc1 MODELNAME Loop_VITIS_LOOP_39_1_proc1 RTLNAME idct_Loop_VITIS_LOOP_39_1_proc1
+  {SRCNAME Loop_DCAC_row_copy_proc1 MODELNAME Loop_DCAC_row_copy_proc1 RTLNAME idct_Loop_DCAC_row_copy_proc1
     SUBMODULES {
       {MODELNAME idct_regslice_both RTLNAME idct_regslice_both BINDTYPE interface TYPE interface_regslice INSTNAME idct_regslice_both_U}
       {MODELNAME idct_flow_control_loop_pipe RTLNAME idct_flow_control_loop_pipe BINDTYPE interface TYPE internal_upc_flow_control INSTNAME idct_flow_control_loop_pipe_U}

@@ -14,11 +14,11 @@ set C_modelName {Block_idct_for.cond.i.exit_proc2}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ DCAC_temp int 32 regular {array 32 { 1 1 } 1 1 }  }
-	{ blockout int 8 regular {axi_s 1 volatile  { blockout Data } }  }
+	{ blockout int 32 regular {axi_s 1 volatile  { blockout Data } }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "DCAC_temp", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
- 	{ "Name" : "blockout", "interface" : "axis", "bitwidth" : 8, "direction" : "WRITEONLY"} ]}
+ 	{ "Name" : "blockout", "interface" : "axis", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
 set portNum 16
 set portList { 
@@ -35,7 +35,7 @@ set portList {
 	{ DCAC_temp_address1 sc_out sc_lv 5 signal 0 } 
 	{ DCAC_temp_ce1 sc_out sc_logic 1 signal 0 } 
 	{ DCAC_temp_q1 sc_in sc_lv 32 signal 0 } 
-	{ blockout_TDATA sc_out sc_lv 8 signal 1 } 
+	{ blockout_TDATA sc_out sc_lv 32 signal 1 } 
 	{ blockout_TVALID sc_out sc_logic 1 outvld 1 } 
 	{ blockout_TREADY sc_in sc_logic 1 outacc 1 } 
 }
@@ -53,7 +53,7 @@ set NewPortList {[
  	{ "name": "DCAC_temp_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "DCAC_temp", "role": "address1" }} , 
  	{ "name": "DCAC_temp_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "DCAC_temp", "role": "ce1" }} , 
  	{ "name": "DCAC_temp_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "DCAC_temp", "role": "q1" }} , 
- 	{ "name": "blockout_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "blockout", "role": "TDATA" }} , 
+ 	{ "name": "blockout_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "blockout", "role": "TDATA" }} , 
  	{ "name": "blockout_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "blockout", "role": "TVALID" }} , 
  	{ "name": "blockout_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "blockout", "role": "TREADY" }}  ]}
 
@@ -64,7 +64,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "85", "EstimateLatencyMax" : "85",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "37", "EstimateLatencyMax" : "37",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -280,8 +280,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "85", "Max" : "85"}
-	, {"Name" : "Interval", "Min" : "85", "Max" : "85"}
+	{"Name" : "Latency", "Min" : "37", "Max" : "37"}
+	, {"Name" : "Interval", "Min" : "37", "Max" : "37"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -289,5 +289,5 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	DCAC_temp { ap_memory {  { DCAC_temp_address0 mem_address 1 5 }  { DCAC_temp_ce0 mem_ce 1 1 }  { DCAC_temp_q0 in_data 0 32 }  { DCAC_temp_address1 MemPortADDR2 1 5 }  { DCAC_temp_ce1 MemPortCE2 1 1 }  { DCAC_temp_q1 in_data 0 32 } } }
-	blockout { axis {  { blockout_TDATA out_data 1 8 }  { blockout_TVALID out_vld 1 1 }  { blockout_TREADY out_acc 0 1 } } }
+	blockout { axis {  { blockout_TDATA out_data 1 32 }  { blockout_TVALID out_vld 1 1 }  { blockout_TREADY out_acc 0 1 } } }
 }

@@ -30,3 +30,4 @@ domain active {zynq_fsbl}
 bsp reload
 bsp reload
 platform generate -domains 
+platform generate

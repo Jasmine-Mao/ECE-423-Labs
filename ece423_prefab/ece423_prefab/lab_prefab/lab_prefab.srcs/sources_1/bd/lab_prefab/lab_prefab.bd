@@ -46,12 +46,12 @@
       "v_axi4s_vid_out_0": "",
       "v_tc_0": "",
       "zero": "",
-      "idct_0": "",
       "clk_wiz_0": "",
       "ps7_0": "",
       "rgb2dvi_0": "",
       "rst_ps7_0_100M": "",
-      "rst_ps7_0_142M": ""
+      "rst_ps7_0_142M": "",
+      "idct_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1432,12 +1432,6 @@
             "value": "0"
           }
         }
-      },
-      "idct_0": {
-        "vlnv": "xilinx.com:hls:idct:1.0",
-        "xci_name": "lab_prefab_idct_0_0",
-        "xci_path": "ip\\lab_prefab_idct_0_0\\lab_prefab_idct_0_0.xci",
-        "inst_hier_path": "idct_0"
       },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
@@ -3265,13 +3259,19 @@
         "xci_name": "lab_prefab_rst_ps7_0_142M_0",
         "xci_path": "ip\\lab_prefab_rst_ps7_0_142M_0\\lab_prefab_rst_ps7_0_142M_0.xci",
         "inst_hier_path": "rst_ps7_0_142M"
+      },
+      "idct_0": {
+        "vlnv": "xilinx.com:hls:idct:1.0",
+        "xci_name": "lab_prefab_idct_0_1",
+        "xci_path": "ip\\lab_prefab_idct_0_1\\lab_prefab_idct_0_1.xci",
+        "inst_hier_path": "idct_0"
       }
     },
     "interface_nets": {
       "axi_dma_0_M_AXIS_MM2S": {
         "interface_ports": [
-          "axi_dma_0/M_AXIS_MM2S",
-          "idct_0/DCAC"
+          "idct_0/DCAC",
+          "axi_dma_0/M_AXIS_MM2S"
         ]
       },
       "axi_dma_0_M_AXI_MM2S": {
@@ -3324,8 +3324,8 @@
       },
       "idct_0_blockout": {
         "interface_ports": [
-          "axi_dma_0/S_AXIS_S2MM",
-          "idct_0/blockout"
+          "idct_0/blockout",
+          "axi_dma_0/S_AXIS_S2MM"
         ]
       },
       "ps7_0_DDR": {
@@ -3428,13 +3428,13 @@
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/S00_ACLK",
           "ps7_0_axi_periph_1/S00_ACLK",
-          "idct_0/ap_clk",
           "clk_wiz_0/clk_in1",
           "ps7_0/M_AXI_GP0_ACLK",
           "ps7_0/M_AXI_GP1_ACLK",
           "ps7_0/S_AXI_HP1_ACLK",
           "ps7_0/S_AXI_HP2_ACLK",
-          "rst_ps7_0_100M/slowest_sync_clk"
+          "rst_ps7_0_100M/slowest_sync_clk",
+          "idct_0/ap_clk"
         ]
       },
       "ps7_0_FCLK_CLK1": {

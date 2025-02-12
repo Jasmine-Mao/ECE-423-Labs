@@ -1,15 +1,15 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Sun Feb  9 13:30:10 2025
-//Host        : ECE-MCU21 running 64-bit major release  (build 9200)
+//Date        : Wed Feb 12 13:53:38 2025
+//Host        : ECE-MCU1 running 64-bit major release  (build 9200)
 //Command     : generate_target lab_prefab.bd
 //Design      : lab_prefab
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "lab_prefab,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=lab_prefab,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=31,numReposBlks=21,numNonXlnxBlks=1,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "lab_prefab.hwdef" *) 
+(* CORE_GENERATION_INFO = "lab_prefab,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=lab_prefab,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=31,numReposBlks=21,numNonXlnxBlks=1,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "lab_prefab.hwdef" *) 
 module lab_prefab
    (DDR_addr,
     DDR_ba,
@@ -174,7 +174,7 @@ module lab_prefab
   wire color_swap_0_pixel_output_HSYNC;
   wire color_swap_0_pixel_output_VSYNC;
   wire [0:0]hdmi_hpd_dout;
-  wire [7:0]idct_0_blockout_TDATA;
+  wire [31:0]idct_0_blockout_TDATA;
   wire idct_0_blockout_TREADY;
   wire idct_0_blockout_TVALID;
   wire [0:0]one_dout;
@@ -393,7 +393,7 @@ module lab_prefab
         .s_axi_lite_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
         .s_axis_s2mm_tdata(idct_0_blockout_TDATA),
-        .s_axis_s2mm_tkeep(1'b1),
+        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1}),
         .s_axis_s2mm_tlast(1'b0),
         .s_axis_s2mm_tready(idct_0_blockout_TREADY),
         .s_axis_s2mm_tvalid(idct_0_blockout_TVALID));
@@ -563,8 +563,8 @@ module lab_prefab
         .vsync_out(color_swap_0_pixel_output_VSYNC));
   lab_prefab_hdmi_hpd_0 hdmi_hpd
        (.dout(hdmi_hpd_dout));
-  lab_prefab_idct_0_0 idct_0
-       (.DCAC_TDATA(axi_dma_0_M_AXIS_MM2S_TDATA[15:0]),
+  lab_prefab_idct_0_1 idct_0
+       (.DCAC_TDATA(axi_dma_0_M_AXIS_MM2S_TDATA),
         .DCAC_TREADY(axi_dma_0_M_AXIS_MM2S_TREADY),
         .DCAC_TVALID(axi_dma_0_M_AXIS_MM2S_TVALID),
         .ap_clk(ps7_0_FCLK_CLK0),

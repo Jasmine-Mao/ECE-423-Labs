@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'idct'" level="0">
-<item name = "Date">Tue Feb 11 19:25:37 2025
+<item name = "Date">Wed Feb 12 14:35:52 2025
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">ECE423_Lab2</item>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">152, 152, 1.520 us, 1.520 us, 86, 86, dataflow</column>
+<column name="">104, 104, 1.040 us, 1.040 us, 67, 67, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_Loop_VITIS_LOOP_39_1_proc1_fu_40">Loop_VITIS_LOOP_39_1_proc1, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
-<column name="grp_Block_idct_for_cond_i_exit_proc2_fu_47">Block_idct_for_cond_i_exit_proc2, 85, 85, 0.850 us, 0.850 us, 85, 85, no</column>
+<column name="grp_Loop_DCAC_row_copy_proc1_fu_40">Loop_DCAC_row_copy_proc1, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
+<column name="grp_Block_idct_for_cond_i_exit_proc2_fu_47">Block_idct_for_cond_i_exit_proc2, 37, 37, 0.370 us, 0.370 us, 37, 37, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

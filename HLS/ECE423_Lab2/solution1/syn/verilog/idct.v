@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="idct_idct,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.374313,HLS_SYN_LAT=152,HLS_SYN_TPT=86,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=7058,HLS_SYN_LUT=16119,HLS_VERSION=2022_1}" *)
+(* CORE_GENERATION_INFO="idct_idct,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.374313,HLS_SYN_LAT=104,HLS_SYN_TPT=67,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=7002,HLS_SYN_LUT=15752,HLS_VERSION=2022_1}" *)
 
 module idct (
         ap_clk,
@@ -23,8 +23,8 @@ module idct (
 
 input   ap_clk;
 input   ap_rst_n;
-input  [15:0] DCAC_TDATA;
-output  [7:0] blockout_TDATA;
+input  [31:0] DCAC_TDATA;
+output  [31:0] blockout_TDATA;
 input   DCAC_TVALID;
 output   DCAC_TREADY;
 output   blockout_TVALID;
@@ -36,16 +36,16 @@ wire   [31:0] DCAC_temp_i_q1;
 wire   [3:0] DCAC_temp_t_we0;
 wire   [31:0] DCAC_temp_t_q0;
 wire   [31:0] DCAC_temp_t_q1;
-wire    Loop_VITIS_LOOP_39_1_proc1_U0_ap_start;
-wire    Loop_VITIS_LOOP_39_1_proc1_U0_ap_done;
-wire    Loop_VITIS_LOOP_39_1_proc1_U0_ap_continue;
-wire    Loop_VITIS_LOOP_39_1_proc1_U0_ap_idle;
-wire    Loop_VITIS_LOOP_39_1_proc1_U0_ap_ready;
-wire    Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_TREADY;
-wire   [4:0] Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_address0;
-wire    Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_ce0;
-wire   [3:0] Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_we0;
-wire   [31:0] Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_d0;
+wire    Loop_DCAC_row_copy_proc1_U0_ap_start;
+wire    Loop_DCAC_row_copy_proc1_U0_ap_done;
+wire    Loop_DCAC_row_copy_proc1_U0_ap_continue;
+wire    Loop_DCAC_row_copy_proc1_U0_ap_idle;
+wire    Loop_DCAC_row_copy_proc1_U0_ap_ready;
+wire    Loop_DCAC_row_copy_proc1_U0_DCAC_TREADY;
+wire   [4:0] Loop_DCAC_row_copy_proc1_U0_DCAC_temp_address0;
+wire    Loop_DCAC_row_copy_proc1_U0_DCAC_temp_ce0;
+wire   [3:0] Loop_DCAC_row_copy_proc1_U0_DCAC_temp_we0;
+wire   [31:0] Loop_DCAC_row_copy_proc1_U0_DCAC_temp_d0;
 wire    Block_idct_for_cond_i_exit_proc2_U0_ap_start;
 wire    Block_idct_for_cond_i_exit_proc2_U0_ap_done;
 wire    Block_idct_for_cond_i_exit_proc2_U0_ap_continue;
@@ -55,7 +55,7 @@ wire   [4:0] Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address0;
 wire    Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce0;
 wire   [4:0] Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_address1;
 wire    Block_idct_for_cond_i_exit_proc2_U0_DCAC_temp_ce1;
-wire   [7:0] Block_idct_for_cond_i_exit_proc2_U0_blockout_TDATA;
+wire   [31:0] Block_idct_for_cond_i_exit_proc2_U0_blockout_TDATA;
 wire    Block_idct_for_cond_i_exit_proc2_U0_blockout_TVALID;
 wire    DCAC_temp_i_full_n;
 wire    DCAC_temp_t_empty_n;
@@ -67,10 +67,10 @@ idct_DCAC_temp_RAM_AUTO_1R1W #(
 DCAC_temp_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .i_address0(Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_address0),
-    .i_ce0(Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_ce0),
-    .i_we0(Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_we0),
-    .i_d0(Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_d0),
+    .i_address0(Loop_DCAC_row_copy_proc1_U0_DCAC_temp_address0),
+    .i_ce0(Loop_DCAC_row_copy_proc1_U0_DCAC_temp_ce0),
+    .i_we0(Loop_DCAC_row_copy_proc1_U0_DCAC_temp_we0),
+    .i_d0(Loop_DCAC_row_copy_proc1_U0_DCAC_temp_d0),
     .i_q0(DCAC_temp_i_q0),
     .i_address1(5'd0),
     .i_ce1(1'b0),
@@ -86,26 +86,26 @@ DCAC_temp_U(
     .i_ce(1'b1),
     .t_ce(1'b1),
     .i_full_n(DCAC_temp_i_full_n),
-    .i_write(Loop_VITIS_LOOP_39_1_proc1_U0_ap_done),
+    .i_write(Loop_DCAC_row_copy_proc1_U0_ap_done),
     .t_empty_n(DCAC_temp_t_empty_n),
     .t_read(Block_idct_for_cond_i_exit_proc2_U0_ap_ready)
 );
 
-idct_Loop_VITIS_LOOP_39_1_proc1 Loop_VITIS_LOOP_39_1_proc1_U0(
+idct_Loop_DCAC_row_copy_proc1 Loop_DCAC_row_copy_proc1_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(Loop_VITIS_LOOP_39_1_proc1_U0_ap_start),
-    .ap_done(Loop_VITIS_LOOP_39_1_proc1_U0_ap_done),
-    .ap_continue(Loop_VITIS_LOOP_39_1_proc1_U0_ap_continue),
-    .ap_idle(Loop_VITIS_LOOP_39_1_proc1_U0_ap_idle),
-    .ap_ready(Loop_VITIS_LOOP_39_1_proc1_U0_ap_ready),
+    .ap_start(Loop_DCAC_row_copy_proc1_U0_ap_start),
+    .ap_done(Loop_DCAC_row_copy_proc1_U0_ap_done),
+    .ap_continue(Loop_DCAC_row_copy_proc1_U0_ap_continue),
+    .ap_idle(Loop_DCAC_row_copy_proc1_U0_ap_idle),
+    .ap_ready(Loop_DCAC_row_copy_proc1_U0_ap_ready),
     .DCAC_TVALID(DCAC_TVALID),
     .DCAC_TDATA(DCAC_TDATA),
-    .DCAC_TREADY(Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_TREADY),
-    .DCAC_temp_address0(Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_address0),
-    .DCAC_temp_ce0(Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_ce0),
-    .DCAC_temp_we0(Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_we0),
-    .DCAC_temp_d0(Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_temp_d0)
+    .DCAC_TREADY(Loop_DCAC_row_copy_proc1_U0_DCAC_TREADY),
+    .DCAC_temp_address0(Loop_DCAC_row_copy_proc1_U0_DCAC_temp_address0),
+    .DCAC_temp_ce0(Loop_DCAC_row_copy_proc1_U0_DCAC_temp_ce0),
+    .DCAC_temp_we0(Loop_DCAC_row_copy_proc1_U0_DCAC_temp_we0),
+    .DCAC_temp_d0(Loop_DCAC_row_copy_proc1_U0_DCAC_temp_d0)
 );
 
 idct_Block_idct_for_cond_i_exit_proc2 Block_idct_for_cond_i_exit_proc2_U0(
@@ -131,13 +131,13 @@ assign Block_idct_for_cond_i_exit_proc2_U0_ap_continue = 1'b1;
 
 assign Block_idct_for_cond_i_exit_proc2_U0_ap_start = DCAC_temp_t_empty_n;
 
-assign DCAC_TREADY = Loop_VITIS_LOOP_39_1_proc1_U0_DCAC_TREADY;
+assign DCAC_TREADY = Loop_DCAC_row_copy_proc1_U0_DCAC_TREADY;
 
 assign DCAC_temp_t_we0 = 1'b0;
 
-assign Loop_VITIS_LOOP_39_1_proc1_U0_ap_continue = DCAC_temp_i_full_n;
+assign Loop_DCAC_row_copy_proc1_U0_ap_continue = DCAC_temp_i_full_n;
 
-assign Loop_VITIS_LOOP_39_1_proc1_U0_ap_start = 1'b1;
+assign Loop_DCAC_row_copy_proc1_U0_ap_start = 1'b1;
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;

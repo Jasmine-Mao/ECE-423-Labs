@@ -37,6 +37,6 @@ idct_mac_muladd_21s_14ns_32ns_32_4_1
 idct_regslice_both
 idct_DCAC_temp_RAM_AUTO_1R1W_memcore
 idct_DCAC_temp_RAM_AUTO_1R1W
-Loop_VITIS_LOOP_39_1_proc1
+Loop_DCAC_row_copy_proc1
 Block_idct_for_cond_i_exit_proc2
 idct

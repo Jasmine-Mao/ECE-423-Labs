@@ -22,22 +22,22 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>85</Best-caseLatency>
-<Average-caseLatency>85</Average-caseLatency>
-<Worst-caseLatency>85</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.850 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.850 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.850 us</Worst-caseRealTimeLatency>
-<Interval-min>85</Interval-min>
-<Interval-max>85</Interval-max>
+<Best-caseLatency>37</Best-caseLatency>
+<Average-caseLatency>37</Average-caseLatency>
+<Worst-caseLatency>37</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.370 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.370 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.370 us</Worst-caseRealTimeLatency>
+<Interval-min>37</Interval-min>
+<Interval-max>37</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <DSP>192</DSP>
-<FF>7019</FF>
-<LUT>15842</LUT>
+<FF>6947</FF>
+<LUT>15375</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -202,7 +202,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>

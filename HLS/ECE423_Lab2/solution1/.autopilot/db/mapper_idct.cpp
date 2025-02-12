@@ -182,8 +182,8 @@ class AESL_RUNTIME_BC {
 };
 extern "C" void idct(volatile void *, volatile void *);
 extern "C" void apatb_idct_hw(volatile void * __xlx_apatb_param_DCAC, volatile void * __xlx_apatb_param_blockout) {
-auto* sDCAC = bcsim::createStream(__xlx_apatb_param_DCAC, 2);
-auto* sblockout = bcsim::createStream(__xlx_apatb_param_blockout, 1);
+auto* sDCAC = bcsim::createStream(__xlx_apatb_param_DCAC, 4);
+auto* sblockout = bcsim::createStream(__xlx_apatb_param_blockout, 4);
   // DUT call
   idct(__xlx_apatb_param_DCAC, __xlx_apatb_param_blockout);
 }

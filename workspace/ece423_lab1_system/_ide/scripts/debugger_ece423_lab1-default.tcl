@@ -14,9 +14,9 @@ targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
 targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82E5A" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82E5A-23727093-0"}
-fpga -file C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper_lab2.bit
+fpga -file C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper_newest_lab2.bit
 targets -set -nocase -filter {name =~"APU*"}
-loadhw -hw C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment_2/export/Assignment_2/hw/lab_prefab_wrapper_lab2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+loadhw -hw C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_newest/export/Assignment2_newest/hw/lab_prefab_wrapper_newest_lab2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
 configparams force-mem-access 1
 targets -set -nocase -filter {name =~"APU*"}
 source C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl

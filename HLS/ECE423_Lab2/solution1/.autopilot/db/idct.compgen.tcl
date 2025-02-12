@@ -108,7 +108,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { DCAC_TDATA { I 16 vector } DCAC_TVALID { I 1 bit } DCAC_TREADY { O 1 bit } } \
+    ports { DCAC_TDATA { I 32 vector } DCAC_TVALID { I 1 bit } DCAC_TREADY { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'DCAC'"
@@ -127,7 +127,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { blockout_TDATA { O 8 vector } blockout_TVALID { O 1 bit } blockout_TREADY { I 1 bit } } \
+    ports { blockout_TDATA { O 32 vector } blockout_TVALID { O 1 bit } blockout_TREADY { I 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'blockout'"

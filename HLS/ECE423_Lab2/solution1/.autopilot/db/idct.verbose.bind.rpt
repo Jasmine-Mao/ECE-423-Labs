@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'idct'
 ================================================================
-* Date:           Tue Feb 11 19:25:37 2025
+* Date:           Wed Feb 12 14:35:52 2025
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        ECE423_Lab2
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
     |   min   |   max   |    min   |    max   | min | max |   Type   |
     +---------+---------+----------+----------+-----+-----+----------+
-    |      152|      152|  1.520 us|  1.520 us|   86|   86|  dataflow|
+    |      104|      104|  1.040 us|  1.040 us|   67|   67|  dataflow|
     +---------+---------+----------+----------+-----+-----+----------+
 
     + Detail: 
@@ -38,8 +38,8 @@
         |                                            |                                  |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
         |                  Instance                  |              Module              |   min   |   max   |    min   |    max   | min | max |   Type  |
         +--------------------------------------------+----------------------------------+---------+---------+----------+----------+-----+-----+---------+
-        |grp_Loop_VITIS_LOOP_39_1_proc1_fu_40        |Loop_VITIS_LOOP_39_1_proc1        |       66|       66|  0.660 us|  0.660 us|   66|   66|       no|
-        |grp_Block_idct_for_cond_i_exit_proc2_fu_47  |Block_idct_for_cond_i_exit_proc2  |       85|       85|  0.850 us|  0.850 us|   85|   85|       no|
+        |grp_Loop_DCAC_row_copy_proc1_fu_40          |Loop_DCAC_row_copy_proc1          |       66|       66|  0.660 us|  0.660 us|   66|   66|       no|
+        |grp_Block_idct_for_cond_i_exit_proc2_fu_47  |Block_idct_for_cond_i_exit_proc2  |       37|       37|  0.370 us|  0.370 us|   37|   37|       no|
         +--------------------------------------------+----------------------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
@@ -87,30 +87,30 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 3.25>
-ST_1 : Operation 7 [1/1] (3.25ns)   --->   "%DCAC_temp = alloca i64 1" [../import_files/import_files/2D_idct.cpp:31]   --->   Operation 7 'alloca' 'DCAC_temp' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 7 [1/1] (3.25ns)   --->   "%DCAC_temp = alloca i64 1" [../import_files/import_files/2D_idct.cpp:29]   --->   Operation 7 'alloca' 'DCAC_temp' <Predicate = true> <Delay = 3.25>
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_39_1_proc1, i16 %DCAC, i32 %DCAC_temp"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_DCAC_row_copy_proc1, i32 %DCAC, i32 %DCAC_temp"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 9 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_VITIS_LOOP_39_1_proc1, i16 %DCAC, i32 %DCAC_temp"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 9 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_DCAC_row_copy_proc1, i32 %DCAC, i32 %DCAC_temp"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Block_idct_for.cond.i.exit_proc2, i32 %DCAC_temp, i8 %blockout"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Block_idct_for.cond.i.exit_proc2, i32 %DCAC_temp, i32 %blockout"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 0.00>
-ST_5 : Operation 11 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Block_idct_for.cond.i.exit_proc2, i32 %DCAC_temp, i8 %blockout"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 11 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Block_idct_for.cond.i.exit_proc2, i32 %DCAC_temp, i32 %blockout"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 12 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln27 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty" [../import_files/import_files/2D_idct.cpp:27]   --->   Operation 12 'specdataflowpipeline' 'specdataflowpipeline_ln27' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 13 [1/1] (0.00ns)   --->   "%spectopmodule_ln19 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [../import_files/import_files/2D_idct.cpp:19]   --->   Operation 13 'spectopmodule' 'spectopmodule_ln19' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln19 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0" [../import_files/import_files/2D_idct.cpp:19]   --->   Operation 14 'specinterface' 'specinterface_ln19' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %DCAC, void @empty_0, i32 1, i32 1, void @empty_1, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %DCAC"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %blockout, void @empty_0, i32 1, i32 1, void @empty_1, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %blockout"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 12 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty"   --->   Operation 12 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 13 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2"   --->   Operation 13 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %DCAC, void @empty_0, i32 1, i32 1, void @empty_1, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %DCAC"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %blockout, void @empty_0, i32 1, i32 1, void @empty_1, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %blockout"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 19 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i32 %DCAC_temp"   --->   Operation 19 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 20 [1/1] (0.00ns)   --->   "%ret_ln209 = ret" [../import_files/import_files/2D_idct.cpp:209]   --->   Operation 20 'ret' 'ret_ln209' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 20 [1/1] (0.00ns)   --->   "%ret_ln206 = ret" [../import_files/import_files/2D_idct.cpp:206]   --->   Operation 20 'ret' 'ret_ln206' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -135,15 +135,15 @@ Port [ blockout]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; e
 DCAC_temp                  (alloca                ) [ 0011111]
 call_ln0                   (call                  ) [ 0000000]
 call_ln0                   (call                  ) [ 0000000]
-specdataflowpipeline_ln27  (specdataflowpipeline  ) [ 0000000]
-spectopmodule_ln19         (spectopmodule         ) [ 0000000]
-specinterface_ln19         (specinterface         ) [ 0000000]
+specdataflowpipeline_ln0   (specdataflowpipeline  ) [ 0000000]
+spectopmodule_ln0          (spectopmodule         ) [ 0000000]
+specinterface_ln0          (specinterface         ) [ 0000000]
 specinterface_ln0          (specinterface         ) [ 0000000]
 specbitsmap_ln0            (specbitsmap           ) [ 0000000]
 specinterface_ln0          (specinterface         ) [ 0000000]
 specbitsmap_ln0            (specbitsmap           ) [ 0000000]
 specbramwithbyteenable_ln0 (specbramwithbyteenable) [ 0000000]
-ret_ln209                  (ret                   ) [ 0000000]
+ret_ln206                  (ret                   ) [ 0000000]
 </LifeTime>
 
 <model>
@@ -181,7 +181,7 @@ ret_ln209                  (ret                   ) [ 0000000]
 <pin id="7" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="Loop_VITIS_LOOP_39_1_proc1"/></StgValue>
+<StgValue><ssdm name="Loop_DCAC_row_copy_proc1"/></StgValue>
 </bind>
 </comp>
 
@@ -322,10 +322,10 @@ ret_ln209                  (ret                   ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="40" class="1004" name="grp_Loop_VITIS_LOOP_39_1_proc1_fu_40">
+<comp id="40" class="1004" name="grp_Loop_DCAC_row_copy_proc1_fu_40">
 <pin_list>
 <pin id="41" dir="0" index="0" bw="0" slack="0"/>
-<pin id="42" dir="0" index="1" bw="16" slack="0"/>
+<pin id="42" dir="0" index="1" bw="32" slack="0"/>
 <pin id="43" dir="0" index="2" bw="32" slack="2147483647"/>
 <pin id="44" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
@@ -339,7 +339,7 @@ ret_ln209                  (ret                   ) [ 0000000]
 <pin_list>
 <pin id="48" dir="0" index="0" bw="0" slack="0"/>
 <pin id="49" dir="0" index="1" bw="32" slack="2147483647"/>
-<pin id="50" dir="0" index="2" bw="8" slack="0"/>
+<pin id="50" dir="0" index="2" bw="32" slack="0"/>
 <pin id="51" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -388,10 +388,10 @@ ret_ln209                  (ret                   ) [ 0000000]
 |----------|--------------------------------------------|---------|---------|---------|---------|
 | Operation|               Functional Unit              |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|--------------------------------------------|---------|---------|---------|---------|
-|   call   |    grp_Loop_VITIS_LOOP_39_1_proc1_fu_40    |    0    |    0    |    35   |   109   |
-|          | grp_Block_idct_for_cond_i_exit_proc2_fu_47 |   192   | 301.551 |  13500  |  17297  |
+|   call   |     grp_Loop_DCAC_row_copy_proc1_fu_40     |    0    |    0    |    51   |   209   |
+|          | grp_Block_idct_for_cond_i_exit_proc2_fu_47 |   192   | 301.584 |  13980  |  17158  |
 |----------|--------------------------------------------|---------|---------|---------|---------|
-|   Total  |                                            |   192   | 301.551 |  13535  |  17406  |
+|   Total  |                                            |   192   | 301.584 |  14031  |  17367  |
 |----------|--------------------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -419,10 +419,10 @@ N/A
 +-----------+--------+--------+--------+--------+--------+--------+
 |           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
 +-----------+--------+--------+--------+--------+--------+--------+
-|  Function |    -   |   192  |   301  |  13535 |  17406 |    -   |
+|  Function |    -   |   192  |   301  |  14031 |  17367 |    -   |
 |   Memory  |    4   |    -   |    -   |    0   |    0   |    0   |
 |Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
 |  Register |    -   |    -   |    -   |    -   |    -   |    -   |
 +-----------+--------+--------+--------+--------+--------+--------+
-|   Total   |    4   |   192  |   301  |  13535 |  17406 |    0   |
+|   Total   |    4   |   192  |   301  |  14031 |  17367 |    0   |
 +-----------+--------+--------+--------+--------+--------+--------+

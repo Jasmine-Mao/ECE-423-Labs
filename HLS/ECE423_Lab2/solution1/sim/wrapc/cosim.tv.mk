@@ -64,14 +64,14 @@ $(ObjDir)/idct_tb_1.cpp_pre.cpp.tb.o : idct_tb_1.cpp_pre.cpp.tb.cpp $(ObjDir)/.d
 	$(Echo) "   Compiling idct_tb_1.cpp_pre.cpp.tb.cpp" $(AVE_DIR_DLOG)
 	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN}  -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
-$(ObjDir)/util.c_pre.c.tb.o : util.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling util.c_pre.c.tb.c" $(AVE_DIR_DLOG)
-	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN} -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+$(ObjDir)/2D_idct.cpp_pre.cpp.tb.o : 2D_idct.cpp_pre.cpp.tb.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling 2D_idct.cpp_pre.cpp.tb.cpp" $(AVE_DIR_DLOG)
+	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN}  -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
 $(ObjDir)/tables.c_pre.c.tb.o : tables.c_pre.c.tb.c $(ObjDir)/.dir
 	$(Echo) "   Compiling tables.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN} -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
-$(ObjDir)/2D_idct.cpp_pre.cpp.tb.o : 2D_idct.cpp_pre.cpp.tb.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling 2D_idct.cpp_pre.cpp.tb.cpp" $(AVE_DIR_DLOG)
-	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN}  -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+$(ObjDir)/util.c_pre.c.tb.o : util.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling util.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN} -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \

@@ -1,13 +1,13 @@
 <pragmas>
-<pragma file="../import_files/import_files/2D_idct.cpp" line="27" pragmaType="dataflow" parentfunction="idct" disable_start_propagation="0"/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="26" pragmaType="dataflow" parentfunction="idct" disable_start_propagation="0"/>
 <pragma file="../import_files/import_files/2D_idct.cpp" line="132" pragmaType="unroll" parentfunction="idct" factor="8" skip_exit_check="0"/>
-<pragma file="../import_files/import_files/2D_idct.cpp" line="198" pragmaType="pipeline" parentfunction="idct" off="0" ii="-1" rewind="0" style=""/>
 <pragma file="../import_files/import_files/2D_idct.cpp" line="63" pragmaType="unroll" parentfunction="idct" factor="8" skip_exit_check="0"/>
-<pragma file="../import_files/import_files/2D_idct.cpp" line="115" pragmaType="pipeline" parentfunction="idct" off="0" ii="-1" rewind="0" style=""/>
-<pragma file="../import_files/import_files/2D_idct.cpp" line="43" pragmaType="pipeline" parentfunction="idct" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="37" pragmaType="pipeline" parentfunction="idct" off="0" ii="-1" rewind="0" style=""/>
 <pragma file="../import_files/import_files/2D_idct.cpp" line="21" pragmaType="interface" parentfunction="idct" mode="ap_ctrl_none" port="return" name=""/>
 <pragma file="../import_files/import_files/2D_idct.cpp" line="24" pragmaType="interface" parentfunction="idct" mode="axis" port="DCAC" register="1" register_mode="both" name="" depth="-1"/>
 <pragma file="../import_files/import_files/2D_idct.cpp" line="25" pragmaType="interface" parentfunction="idct" mode="axis" port="blockout" register="1" register_mode="both" name="" depth="-1"/>
-<pragma file="../import_files/import_files/2D_idct.cpp" line="35" pragmaType="array_reshape" parentfunction="idct" dim="2" factor="2" mode="block" variable=""/>
-<pragma file="../import_files/import_files/2D_idct.cpp" line="36" pragmaType="array_reshape" parentfunction="idct" dim="2" factor="4" mode="block" variable=""/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="43" pragmaType="array_reshape" parentfunction="idct" dim="2" factor="2" mode="block" variable="DCAC"/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="44" pragmaType="array_reshape" parentfunction="idct" dim="2" factor="4" mode="block" variable="blockout"/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="45" pragmaType="array_reshape" parentfunction="idct" dim="2" factor="2" mode="block" variable=""/>
+<pragma file="../import_files/import_files/2D_idct.cpp" line="46" pragmaType="array_reshape" parentfunction="idct" dim="2" factor="4" mode="block" variable=""/>
 </pragmas>

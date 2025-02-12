@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1739319953548">
-  <ports id="1" name="DCAC" type="PortType" originalName="DCAC" coreId="1919897710" bitwidth="16">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1739388968119">
+  <ports id="1" name="DCAC" type="PortType" originalName="DCAC" coreId="1937011311" bitwidth="32">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="blockout" type="PortType" originalName="blockout" coreId="1702129263" bitwidth="8" direction="DirOut">
+  <ports id="2" name="blockout" type="PortType" originalName="blockout" coreId="540876915" bitwidth="32" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="20" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
@@ -14,28 +14,28 @@
   <edges id="109" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
   <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="64" RegionName="idct">
     <basic_blocks id="15" name="idct" type="BlockType">
-      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="DCAC_temp" lineNumber="31" originalName="DCAC_temp" fileName="../import_files/import_files/2D_idct.cpp" fileDirectory=".." rtlName="DCAC_temp_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="82" contextFuncName="idct" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../import_files/import_files/2D_idct.cpp" linenumber="31" fileDirectory="C:\Users\j54mao\ECE423\ECE-423-Labs\HLS" functionName="idct"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="DCAC_temp" lineNumber="29" originalName="DCAC_temp" fileName="../import_files/import_files/2D_idct.cpp" fileDirectory=".." rtlName="DCAC_temp_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="82" contextFuncName="idct" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../import_files/import_files/2D_idct.cpp" linenumber="29" fileDirectory="C:\Users\j54mao\ECE423\ECE-423-Labs\HLS" functionName="idct"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="_ln0" rtlName="Loop_VITIS_LOOP_39_1_proc1_U0" coreId="0" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="_ln0" rtlName="Loop_DCAC_row_copy_proc1_U0" coreId="1423638672" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
         <dataInputObjs>DCAC</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
-        <constName>Loop_VITIS_LOOP_39_1_proc1</constName>
+        <constName>Loop_DCAC_row_copy_proc1</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="_ln0" rtlName="Block_idct_for_cond_i_exit_proc2_U0" coreId="0" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="_ln0" rtlName="Block_idct_for_cond_i_exit_proc2_U0" coreId="1428313672" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>blockout</dataOutputObjs>
         <constName>Block_idct_for_cond_i_exit_proc2</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="_ln209" lineNumber="209" fileName="../import_files/import_files/2D_idct.cpp" fileDirectory=".." coreId="0" contextFuncName="idct" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../import_files/import_files/2D_idct.cpp" linenumber="209" fileDirectory="C:\Users\j54mao\ECE423\ECE-423-Labs\HLS" functionName="idct"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="_ln206" lineNumber="206" fileName="../import_files/import_files/2D_idct.cpp" fileDirectory=".." coreId="1990790400" contextFuncName="idct" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../import_files/import_files/2D_idct.cpp" linenumber="206" fileDirectory="C:\Users\j54mao\ECE423\ECE-423-Labs\HLS" functionName="idct"/>
       </node_objs>
       <fileValidLineNumbers fileName="../import_files/import_files/2D_idct.cpp">
-        <validLinenumbers>31</validLinenumbers>
-        <validLinenumbers>209</validLinenumbers>
+        <validLinenumbers>29</validLinenumbers>
+        <validLinenumbers>206</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -51,7 +51,7 @@
   <moduleNodes realName="grp_Block_idct_for_cond_i_exit_proc2_fu_47">
     <nodeIds>13</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_Loop_VITIS_LOOP_39_1_proc1_fu_40">
+  <moduleNodes realName="grp_Loop_DCAC_row_copy_proc1_fu_40">
     <nodeIds>12</nodeIds>
   </moduleNodes>
   <ioPorts name="DCAC">
@@ -108,13 +108,13 @@
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="idct" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="152" mMaxLatency="152" mIsDfPipe="true">
+    <cfgRegions mId="1" mTag="idct" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="104" mMaxLatency="104" mIsDfPipe="true">
       <basicBlocks>15</basicBlocks>
       <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst">
-        <processe_list name="Loop_VITIS_LOOP_39_1_proc1_U0" ssdmobj_id="12">
+        <processe_list name="Loop_DCAC_row_copy_proc1_U0" ssdmobj_id="12">
           <pins>
             <port name="DCAC" type="SIOType" top_port_object_id="" top_port_object_id_reference="_22" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="Loop_VITIS_LOOP_39_1_proc1_U0" ssdmobj_id="12" object_id="_27"/>
+            <inst name="Loop_DCAC_row_copy_proc1_U0" ssdmobj_id="12" object_id="_27"/>
           </pins>
         </processe_list>
         <processe_list name="Block_idct_for_cond_i_exit_proc2_U0" ssdmobj_id="13">
@@ -126,7 +126,7 @@
         <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="DCAC_temp" ssdmobj_id="10">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="Loop_VITIS_LOOP_39_1_proc1_U0" ssdmobj_id="12" object_id="_27"/>
+            <inst name="Loop_DCAC_row_copy_proc1_U0" ssdmobj_id="12" object_id="_27"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
