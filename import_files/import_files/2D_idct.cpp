@@ -40,7 +40,7 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
 	{
 		DCAC_col_copy: for(int c = 0; c < DCTSIZE; c++)
 		{
-			#pragma HLS_PIPELINE //pipeline the loop
+			#pragma HLS PIPELINE //pipeline the loop
 				DCAC_temp[r][c] = DCAC[r][c];
 		}
 	}
@@ -112,7 +112,7 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
 			tmp3 += z1 + z4;
 
 			/* Final output stage: inputs are tmp10..tmp13, tmp0..tmp3 */
-//			#pragma HLS_PIPELINE
+			#pragma HLS PIPELINE
 				workspace[col+DCTSIZE*0] = (int32_t) DESCALE(tmp10 + tmp3, CONST_BITS-PASS1_BITS);
 				workspace[col+DCTSIZE*7] = (int32_t) DESCALE(tmp10 - tmp3, CONST_BITS-PASS1_BITS);
 				workspace[col+DCTSIZE*1] = (int32_t) DESCALE(tmp11 + tmp2, CONST_BITS-PASS1_BITS);
@@ -185,7 +185,7 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
 
 			/* Final output stage: inputs are tmp10..tmp13, tmp0..tmp3 */
 
-//			#pragma HLS_PIPELINE
+			#pragma HLS PIPELINE
 				blockout_temp[row][0] = NORMALIZE(DESCALE(tmp10 + tmp3, CONST_BITS+PASS1_BITS+3));
 				blockout_temp[row][1] = NORMALIZE(DESCALE(tmp11 + tmp2, CONST_BITS+PASS1_BITS+3));
 				blockout_temp[row][2] = NORMALIZE(DESCALE(tmp12 + tmp1, CONST_BITS+PASS1_BITS+3));
@@ -195,7 +195,7 @@ void idct(int16_t DCAC[DCTSIZE][DCTSIZE], uint8_t blockout[DCTSIZE][DCTSIZE])
 				blockout_temp[row][6] = NORMALIZE(DESCALE(tmp11 - tmp2, CONST_BITS+PASS1_BITS+3));
 				blockout_temp[row][7] = NORMALIZE(DESCALE(tmp10 - tmp3, CONST_BITS+PASS1_BITS+3));
 
-//			#pragma HLS_PIPELINE
+			#pragma HLS PIPELINE
 				blockout[row][0] = blockout_temp[row][0];
 				blockout[row][1] = blockout_temp[row][1];
 				blockout[row][2] = blockout_temp[row][2];

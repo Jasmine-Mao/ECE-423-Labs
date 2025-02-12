@@ -1856,11 +1856,11 @@ __attribute__((sdx_kernel("idct", 0))) void idct(short input[8][8], unsigned cha
 # 19 "../import_files/import_files/2D_idct.cpp"
 __attribute__((sdx_kernel("idct", 0))) void idct(int16_t DCAC[8][8], uint8_t blockout[8][8])
 {
-#line 21 "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csynth.tcl"
+#line 22 "C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=idct
 # 20 "../import_files/import_files/2D_idct.cpp"
 
-#line 6 "C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/directives.tcl"
+#line 6 "C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=idct
 # 20 "../import_files/import_files/2D_idct.cpp"
 
@@ -1886,7 +1886,7 @@ __attribute__((sdx_kernel("idct", 0))) void idct(int16_t DCAC[8][8], uint8_t blo
  {
   DCAC_col_copy: for(int c = 0; c < 8; c++)
   {
-#pragma HLS_PIPELINE
+#pragma HLS PIPELINE
  DCAC_temp[r][c] = DCAC[r][c];
   }
  }
@@ -1958,8 +1958,8 @@ __attribute__((sdx_kernel("idct", 0))) void idct(int16_t DCAC[8][8], uint8_t blo
    tmp3 += z1 + z4;
 
 
-
-    workspace[col+8*0] = (int32_t) (((tmp10 + tmp3) + (((int32_t) 1) << ((13 -2)-1))) >> (13 -2));
+#pragma HLS PIPELINE
+ workspace[col+8*0] = (int32_t) (((tmp10 + tmp3) + (((int32_t) 1) << ((13 -2)-1))) >> (13 -2));
     workspace[col+8*7] = (int32_t) (((tmp10 - tmp3) + (((int32_t) 1) << ((13 -2)-1))) >> (13 -2));
     workspace[col+8*1] = (int32_t) (((tmp11 + tmp2) + (((int32_t) 1) << ((13 -2)-1))) >> (13 -2));
     workspace[col+8*6] = (int32_t) (((tmp11 - tmp2) + (((int32_t) 1) << ((13 -2)-1))) >> (13 -2));
@@ -2031,8 +2031,8 @@ __attribute__((sdx_kernel("idct", 0))) void idct(int16_t DCAC[8][8], uint8_t blo
 
 
 
-
-    blockout_temp[row][0] = (temp = ((((tmp10 + tmp3) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
+#pragma HLS PIPELINE
+ blockout_temp[row][0] = (temp = ((((tmp10 + tmp3) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
     blockout_temp[row][1] = (temp = ((((tmp11 + tmp2) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
     blockout_temp[row][2] = (temp = ((((tmp12 + tmp1) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
     blockout_temp[row][3] = (temp = ((((tmp13 + tmp0) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
@@ -2041,8 +2041,8 @@ __attribute__((sdx_kernel("idct", 0))) void idct(int16_t DCAC[8][8], uint8_t blo
     blockout_temp[row][6] = (temp = ((((tmp11 - tmp2) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
     blockout_temp[row][7] = (temp = ((((tmp10 - tmp3) + (((int32_t) 1) << ((13 +2 +3)-1))) >> (13 +2 +3))), ( (temp < 0) ? 0 : ( (temp > 255) ? 255 : temp ) ) );
 
-
-    blockout[row][0] = blockout_temp[row][0];
+#pragma HLS PIPELINE
+ blockout[row][0] = blockout_temp[row][0];
     blockout[row][1] = blockout_temp[row][1];
     blockout[row][2] = blockout_temp[row][2];
     blockout[row][3] = blockout_temp[row][3];

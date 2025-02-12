@@ -6,7 +6,7 @@
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "C:\/Users\/hmcculla\/ECE423\/ECE-423-Labs\/HLS\/ECE423_Lab2\/solution1\/directives.tcl",
+          "sourceFile": "C:\/Users\/j54mao\/ECE423\/ECE-423-Labs\/HLS\/ECE423_Lab2\/solution1\/directives.tcl",
           "sourceLine": "6",
           "pragma": {
             "name": "TOP",
@@ -21,8 +21,8 @@
           "label": "",
           "functionLabel": "",
           "id": "2",
-          "sourceFile": "C:\/Users\/hmcculla\/ECE423\/ECE-423-Labs\/HLS\/ECE423_Lab2\/solution1\/csynth.tcl",
-          "sourceLine": "21",
+          "sourceFile": "C:\/Users\/j54mao\/ECE423\/ECE-423-Labs\/HLS\/ECE423_Lab2\/solution1\/csynth.tcl",
+          "sourceLine": "22",
           "pragma": {
             "name": "TOP",
             "option": [{
@@ -36,8 +36,8 @@
           "label": "",
           "functionLabel": "",
           "id": "3",
-          "sourceFile": "C:\/Users\/hmcculla\/ECE423\/ECE-423-Labs\/HLS\/ECE423_Lab2\/solution1\/csynth.tcl",
-          "sourceLine": "21",
+          "sourceFile": "C:\/Users\/j54mao\/ECE423\/ECE-423-Labs\/HLS\/ECE423_Lab2\/solution1\/csynth.tcl",
+          "sourceLine": "22",
           "pragma": {
             "name": "TOP",
             "option": [{
@@ -51,8 +51,8 @@
           "label": "",
           "functionLabel": "",
           "id": "4",
-          "sourceFile": "C:\/Users\/hmcculla\/ECE423\/ECE-423-Labs\/HLS\/ECE423_Lab2\/solution1\/csynth.tcl",
-          "sourceLine": "21",
+          "sourceFile": "C:\/Users\/j54mao\/ECE423\/ECE-423-Labs\/HLS\/ECE423_Lab2\/solution1\/csynth.tcl",
+          "sourceLine": "22",
           "pragma": {
             "name": "TOP",
             "option": [{

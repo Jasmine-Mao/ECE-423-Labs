@@ -1,5 +1,6 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-make: 'csim.exe' is up to date.
+   Compiling ../../../../../import_files/import_files/2D_idct.cpp in debug mode
+   Generating csim.exe
 INFO: [SIM 1] CSim file generation done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

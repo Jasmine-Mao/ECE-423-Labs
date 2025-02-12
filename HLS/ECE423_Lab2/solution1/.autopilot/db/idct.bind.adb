@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1031040613</coreId>
+						<coreId>1919897710</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1031040613</coreId>
+						<coreId>1702129263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -94,7 +94,7 @@
 						<id>10</id>
 						<name>DCAC_temp</name>
 						<fileName>../import_files/import_files/2D_idct.cpp</fileName>
-						<fileDirectory>C:\Users\hmcculla\ECE423\ECE-423-Labs\HLS</fileDirectory>
+						<fileDirectory>C:\Users\j54mao\ECE423\ECE-423-Labs\HLS</fileDirectory>
 						<lineNumber>31</lineNumber>
 						<contextFuncName>idct</contextFuncName>
 						<contextNormFuncName>idct</contextNormFuncName>
@@ -102,7 +102,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>C:\Users\hmcculla\ECE423\ECE-423-Labs\HLS</first>
+								<first>C:\Users\j54mao\ECE423\ECE-423-Labs\HLS</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -166,7 +166,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -210,7 +210,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2281913664</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -240,7 +240,7 @@
 						<id>14</id>
 						<name>_ln209</name>
 						<fileName>../import_files/import_files/2D_idct.cpp</fileName>
-						<fileDirectory>C:\Users\hmcculla\ECE423\ECE-423-Labs\HLS</fileDirectory>
+						<fileDirectory>C:\Users\j54mao\ECE423\ECE-423-Labs\HLS</fileDirectory>
 						<lineNumber>209</lineNumber>
 						<contextFuncName>idct</contextFuncName>
 						<contextNormFuncName>idct</contextNormFuncName>
@@ -248,7 +248,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\hmcculla\ECE423\ECE-423-Labs\HLS</first>
+								<first>C:\Users\j54mao\ECE423\ECE-423-Labs\HLS</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -270,7 +270,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2280545872</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -315,7 +315,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1043472445</coreId>
+						<coreId>1702129263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -346,7 +346,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1031040613</coreId>
+						<coreId>1702129263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -411,7 +411,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1295780106</coreId>
+					<coreId>99</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

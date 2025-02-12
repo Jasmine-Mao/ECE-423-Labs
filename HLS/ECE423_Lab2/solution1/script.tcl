@@ -21,5 +21,5 @@ set_clock_uncertainty 1.25
 source "./ECE423_Lab2/solution1/directives.tcl"
 csim_design
 csynth_design
-cosim_design -wave_debug -trace_level all
+cosim_design -trace_level all
 export_design -rtl verilog -format ip_catalog -output C:/Users/hmcculla/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block

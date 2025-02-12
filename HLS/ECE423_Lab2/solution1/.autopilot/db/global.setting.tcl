@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c {../../../import_files/import_files/util.c ../../../import_files/import_files/tables.c ../../../import_files/import_files/2D_idct.cpp}}
 set SourceFlags {sc {} c {{} {} {}}}
-set DirectiveFile C:/Users/hmcculla/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/solution1.directive
+set DirectiveFile C:/Users/j54mao/ECE423/ECE-423-Labs/HLS/ECE423_Lab2/solution1/solution1.directive
 set TBFiles {verilog ../../../Testbenches/idct_tb_1.cpp bc ../../../Testbenches/idct_tb_1.cpp vhdl ../../../Testbenches/idct_tb_1.cpp sc ../../../Testbenches/idct_tb_1.cpp cas ../../../Testbenches/idct_tb_1.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

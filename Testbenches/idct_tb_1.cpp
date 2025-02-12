@@ -291,25 +291,25 @@ int main(int argc, char **argv){
 
 	cout << "Running test 1..." << endl;
 	test_0(error_count);
-	cout << "Error Count: " << error_count << endl;
+	cout << "Count: " << error_count << endl;
 
 	cout << "Running test 2..." << endl;
 	test_1(error_count);
-	cout << "Error Count: " << error_count << endl;
+	cout << "Count: " << error_count << endl;
 
 	cout << "Running test 3..." << endl;
 	test_general(error_count);
-	cout << "Error Count: " << error_count << endl;
+	cout << "Count: " << error_count << endl;
 
 	cout << "Running test 4..." << endl;
 	test_general(error_count);
-	cout << "Error Count: " << error_count << endl;
+	cout << "Count: " << error_count << endl;
 
 	cout << "Running test 5..." << endl;
 	test_general(error_count);
-	cout << "Error Count: " << error_count << endl;
+	cout << "Count: " << error_count << endl;
 
 	cout << "Running test 6..." << endl;
 	test_general(error_count);
-	cout << "Error Count: " << error_count << endl;
+	cout << "Count: " << error_count << endl;
 }

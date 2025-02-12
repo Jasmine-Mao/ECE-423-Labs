@@ -151,7 +151,7 @@
                     <ModuleName>Loop_VITIS_LOOP_39_1_proc1</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>40</ID>
-                    <BindInstances>add_ln39_1_fu_120_p2 add_ln39_fu_174_p2 add_ln41_fu_155_p2</BindInstances>
+                    <BindInstances>add_ln39_1_fu_118_p2 add_ln39_fu_172_p2 add_ln41_fu_153_p2</BindInstances>
                 </Instance>
                 <Instance>
                     <InstName>Block_idct_for_cond_i_exit_proc2_U0</InstName>
@@ -219,9 +219,9 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_1_DCAC_col_copy" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_1_fu_120_p2" SOURCE="../import_files/import_files/2D_idct.cpp:39" URAM="0" VARIABLE="add_ln39_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_1_DCAC_col_copy" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_fu_174_p2" SOURCE="../import_files/import_files/2D_idct.cpp:39" URAM="0" VARIABLE="add_ln39"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_1_DCAC_col_copy" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_fu_155_p2" SOURCE="../import_files/import_files/2D_idct.cpp:41" URAM="0" VARIABLE="add_ln41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_1_DCAC_col_copy" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_1_fu_118_p2" SOURCE="../import_files/import_files/2D_idct.cpp:39" URAM="0" VARIABLE="add_ln39_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_1_DCAC_col_copy" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_fu_172_p2" SOURCE="../import_files/import_files/2D_idct.cpp:39" URAM="0" VARIABLE="add_ln39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_1_DCAC_col_copy" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_fu_153_p2" SOURCE="../import_files/import_files/2D_idct.cpp:41" URAM="0" VARIABLE="add_ln41"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1025,6 +1025,7 @@
         <config_storage>
             <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
         </config_storage>
+        <config_export output="C:/Users/hmcculla/ECE423/ECE-423-Labs/IDCT_Accel_IP_Block"/>
     </UserConfigCommands>
     <Args>
         <Arg ArgName="DCAC" index="0" direction="in" srcType="short*" srcSize="16">
@@ -1129,8 +1130,12 @@
         </Pragma>
         <Pragma type="array_reshape" location="../import_files/import_files/2D_idct.cpp:35" status="valid" parentFunction="idct" variable="DCAC_temp" isDirective="0" options="variable=DCAC_temp type=block factor=2 dim=2"/>
         <Pragma type="array_reshape" location="../import_files/import_files/2D_idct.cpp:36" status="valid" parentFunction="idct" variable="blockout_temp" isDirective="0" options="variable=blockout_temp type=block factor=4 dim=2"/>
+        <Pragma type="pipeline" location="../import_files/import_files/2D_idct.cpp:43" status="valid" parentFunction="idct" variable="" isDirective="0" options=""/>
         <Pragma type="unroll" location="../import_files/import_files/2D_idct.cpp:63" status="valid" parentFunction="idct" variable="" isDirective="0" options="factor=8"/>
+        <Pragma type="pipeline" location="../import_files/import_files/2D_idct.cpp:115" status="valid" parentFunction="idct" variable="" isDirective="0" options=""/>
         <Pragma type="unroll" location="../import_files/import_files/2D_idct.cpp:132" status="valid" parentFunction="idct" variable="" isDirective="0" options="factor=8"/>
+        <Pragma type="pipeline" location="../import_files/import_files/2D_idct.cpp:188" status="valid" parentFunction="idct" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../import_files/import_files/2D_idct.cpp:198" status="valid" parentFunction="idct" variable="" isDirective="0" options=""/>
     </PragmaReport>
 </profile>
 
