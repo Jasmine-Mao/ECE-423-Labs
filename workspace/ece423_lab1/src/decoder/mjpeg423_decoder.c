@@ -317,22 +317,30 @@ uint8_t decode_single_frame()
 //	printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //XTime_GetTime(&start);
+
     //PUT IDCT FUNCTION HERE
 
-	//XTime_GetTime(&end);    // Capture time after the function call
-    //printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
+
 
 	//Y COMPONENT///////////////////////////
-	Xil_L1DCacheFlush();
-	Xil_L2CacheFlush();
 
+    Xil_L1DCacheFlush();
+    Xil_L2CacheFlush();
+
+
+
+    XTime_GetTime(&start);
 	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
 	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
+	XTime_GetTime(&end);    // Capture time after the function call
+    printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
+
 
 	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
 	XAxiDma_Reset(&AxiDma);
 	while (!XAxiDma_ResetIsDone(&AxiDma)){}
+
+
 
 	//Cb COMPONENT////////////////////////////
 	Xil_L1DCacheFlush();
