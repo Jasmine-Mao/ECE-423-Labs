@@ -568,3 +568,11 @@ timestamp=[2025-02-13 12:41:22], mode=PLATFORM_GENERATION, duration=0:00:39.745,
 timestamp=[2025-02-13 12:41:26], mode=BUILD, duration=0:00:04.593, duration_ms=4593, data={name=ece423_lab1, configuration=Debug, clean_build=false}
 timestamp=[2025-02-13 12:43:08], mode=BUILD, duration=0:00:00.453, duration_ms=453, data={name=ece423_lab1, configuration=Debug, clean_build=false}
 timestamp=[2025-02-13 12:48:28], mode=BUILD, duration=0:00:02.202, duration_ms=2202, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-02-13 12:55:22], mode=BUILD, duration=0:00:01.140, duration_ms=1140, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-02-13 12:55:40], mode=BUILD, duration=0:00:01.078, duration_ms=1078, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-02-13 13:00:17], mode=BUILD, duration=0:00:01.078, duration_ms=1078, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-02-13 13:10:37], mode=PLATFORM_GENERATION, duration=0:00:02.616, duration_ms=2616, data={name=Assignment2_debugging}
+timestamp=[2025-02-13 13:10:38], mode=BUILD, duration=0:00:00.438, duration_ms=438, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-02-13 13:10:50], mode=BUILD, duration=0:00:03.369, duration_ms=3369, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-02-13 13:11:34], mode=BUILD, duration=0:00:00.398, duration_ms=398, data={name=ece423_lab1, configuration=Release, clean_build=false}
+timestamp=[2025-02-13 13:13:16], mode=BUILD, duration=0:00:00.437, duration_ms=437, data={name=ece423_lab1, configuration=Debug, clean_build=false}

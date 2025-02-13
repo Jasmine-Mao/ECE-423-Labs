@@ -155,10 +155,39 @@ void decode_entire_video(const char* filename_in)
         lossless_decode(hCb_size*wCb_size, Cbbitstream, CbDCAC, Cquant, frame_type);
         lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
 
-        //fdct
-        for(int b = 0; b < hYb_size*wYb_size; b++) idct(YDCAC[b], Yblock[b]);
-        for(int b = 0; b < hCb_size*wCb_size; b++) idct(CbDCAC[b], Cbblock[b]);
-        for(int b = 0; b < hCb_size*wCb_size; b++) idct(CrDCAC[b], Crblock[b]);
+    	//Y COMPONENT///////////////////////////
+    	Xil_L1DCacheFlush();
+    	Xil_L2CacheFlush();
+
+    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
+    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
+
+    	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
+    	XAxiDma_Reset(&AxiDma);
+    	while (!XAxiDma_ResetIsDone(&AxiDma)){}
+
+    	//Cb COMPONENT////////////////////////////
+    	Xil_L1DCacheFlush();
+    	Xil_L2CacheFlush();
+
+    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CbDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
+    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Cbblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
+
+    	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
+    	XAxiDma_Reset(&AxiDma);
+    	while (!XAxiDma_ResetIsDone(&AxiDma)){}
+
+    	//Cr COMPONENT////////////////////////////
+    	Xil_L1DCacheFlush();
+    	Xil_L2CacheFlush();
+
+    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CrDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
+    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Crblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
+
+    	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
+    	XAxiDma_Reset(&AxiDma);
+    	while (!XAxiDma_ResetIsDone(&AxiDma)){}
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //ybcbr to rgb conversion
         for(int b = 0; b < hCb_size*wCb_size; b++)

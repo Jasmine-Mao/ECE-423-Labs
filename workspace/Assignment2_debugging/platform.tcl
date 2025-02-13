@@ -32,3 +32,14 @@ bsp reload
 platform generate -domains 
 platform generate
 platform generate
+platform active {Assignment2_debugging}
+bsp reload
+domain active {standalone_domain}
+bsp reload
+domain active {zynq_fsbl}
+bsp reload
+domain active {standalone_domain}
+bsp reload
+domain active {zynq_fsbl}
+bsp reload
+platform generate -domains 
