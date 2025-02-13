@@ -55,3 +55,4 @@ bsp config num_logical_vol "10"
 bsp write
 bsp write
 platform generate -domains standalone_domain 
+platform generate

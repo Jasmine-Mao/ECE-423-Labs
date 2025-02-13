@@ -76,3 +76,4 @@ platform generate -domains standalone_ps7_cortexa9_0,zynq_fsbl
 platform generate
 platform generate
 platform generate -domains standalone_ps7_cortexa9_0 
+platform generate
