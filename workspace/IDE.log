@@ -7012,3 +7012,167 @@ con
 ----------------End of Script----------------
 
 12:49:02 INFO  : Launch script is exported to file 'C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\ece423_lab1_system\_ide\scripts\systemdebugger_ece423_lab1_system_standalone.tcl'
+14:07:55 DEBUG : Logs will be stored at 'C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/IDE.log'.
+14:07:56 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\j54mao\ECE423\ECE-423-Labs\workspace\temp_xsdb_launch_script.tcl
+14:08:04 INFO  : XSCT server has started successfully.
+14:08:04 INFO  : plnx-install-location is set to ''
+14:08:04 INFO  : Successfully done setting XSCT server connection channel  
+14:08:04 INFO  : Successfully done setting workspace for the tool. 
+14:08:05 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+14:08:05 INFO  : Platform repository initialization has completed.
+14:08:05 INFO  : Registering command handlers for Vitis TCF services
+14:08:06 INFO  : Successfully done query RDI_DATADIR 
+14:15:58 INFO  : Result from executing command 'getProjects': Assignment2_debugging;Assignment2_newest;Assignment_2;assignment2_hunter_test;lab_prefab_wrapper
+14:15:58 INFO  : Result from executing command 'getPlatforms': 
+14:17:02 INFO  : Result from executing command 'getProjects': Assignment2_debugging;Assignment2_newest;Assignment_2;assignment2_hunter_test;lab_prefab_wrapper
+14:17:02 INFO  : Result from executing command 'getPlatforms': Assignment2_debugging|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_debugging/export/Assignment2_debugging/Assignment2_debugging.xpfm
+14:18:03 INFO  : Result from executing command 'getProjects': Assignment2_debugging;Assignment2_newest;Assignment_2;assignment2_hunter_test;lab_prefab_wrapper
+14:18:03 INFO  : Result from executing command 'getPlatforms': Assignment2_debugging|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_debugging/export/Assignment2_debugging/Assignment2_debugging.xpfm;Assignment2_newest|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_newest/export/Assignment2_newest/Assignment2_newest.xpfm
+14:19:04 INFO  : Result from executing command 'getProjects': Assignment2_debugging;Assignment2_newest;Assignment_2;assignment2_hunter_test;lab_prefab_wrapper
+14:19:04 INFO  : Result from executing command 'getPlatforms': Assignment2_debugging|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_debugging/export/Assignment2_debugging/Assignment2_debugging.xpfm;Assignment2_newest|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_newest/export/Assignment2_newest/Assignment2_newest.xpfm;assignment2_hunter_test|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/assignment2_hunter_test/export/assignment2_hunter_test/assignment2_hunter_test.xpfm
+14:19:04 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+14:19:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:19:48 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82E5A' is selected.
+14:19:48 INFO  : 'jtag frequency' command is executed.
+14:19:50 INFO  : Context for 'APU' is selected.
+14:19:50 INFO  : System reset is completed.
+14:19:53 INFO  : 'after 3000' command is executed.
+14:19:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82E5A" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82E5A-23727093-0"}' command is executed.
+14:19:53 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:19:53 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:19:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+14:19:54 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:20:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:20:26 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82E5A' is selected.
+14:20:26 INFO  : 'jtag frequency' command is executed.
+14:20:26 INFO  : Context for 'APU' is selected.
+14:20:26 INFO  : System reset is completed.
+14:20:29 INFO  : 'after 3000' command is executed.
+14:20:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82E5A" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82E5A-23727093-0"}' command is executed.
+14:20:29 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:20:29 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:20:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+14:20:29 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:20:48 INFO  : Result from executing command 'removePlatformRepo': 
+14:20:58 INFO  : Result from executing command 'removePlatformRepo': 
+14:21:13 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+14:21:16 INFO  : Result from executing command 'removePlatformRepo': 
+14:21:27 INFO  : Result from executing command 'removePlatformRepo': 
+14:21:52 ERROR : The platform 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/assignment2_hunter_test/export/assignment2_hunter_test/assignment2_hunter_test.xpfm' used by the system project 'ece423_lab1_system' is not valid.
+14:22:42 INFO  : Result from executing command 'getProjects': Assignment2_debugging;Assignment2_newest;Assignment_2;assignment2_hunter_test;lab_prefab_wrapper
+14:22:42 INFO  : Result from executing command 'getPlatforms': lab_prefab_wrapper|C:/Users/j54mao/ece423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/lab_prefab_wrapper.xpfm
+14:23:35 INFO  : Result from executing command 'getProjects': Assignment2_debugging;Assignment2_newest;Assignment_2;assignment2_hunter_test;lab_prefab_wrapper
+14:23:35 INFO  : Result from executing command 'getPlatforms': Assignment2_debugging|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_debugging/export/Assignment2_debugging/Assignment2_debugging.xpfm
+14:24:38 INFO  : Result from executing command 'getProjects': Assignment2_debugging;Assignment2_newest;Assignment_2;assignment2_hunter_test;lab_prefab_wrapper
+14:24:38 INFO  : Result from executing command 'getPlatforms': Assignment2_debugging|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_debugging/export/Assignment2_debugging/Assignment2_debugging.xpfm;Assignment2_newest|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_newest/export/Assignment2_newest/Assignment2_newest.xpfm
+14:25:40 INFO  : Result from executing command 'getProjects': Assignment2_debugging;Assignment2_newest;Assignment_2;assignment2_hunter_test;lab_prefab_wrapper
+14:25:40 INFO  : Result from executing command 'getPlatforms': Assignment2_debugging|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_debugging/export/Assignment2_debugging/Assignment2_debugging.xpfm;Assignment2_newest|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_newest/export/Assignment2_newest/Assignment2_newest.xpfm;assignment2_hunter_test|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/assignment2_hunter_test/export/assignment2_hunter_test/assignment2_hunter_test.xpfm
+14:25:41 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+14:26:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:26:55 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82E5A' is selected.
+14:26:55 INFO  : 'jtag frequency' command is executed.
+14:26:55 INFO  : Context for 'APU' is selected.
+14:26:55 INFO  : System reset is completed.
+14:26:58 INFO  : 'after 3000' command is executed.
+14:26:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82E5A" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82E5A-23727093-0"}' command is executed.
+14:26:59 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:26:59 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:26:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+14:26:59 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:27:16 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+14:28:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:28:58 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82E5A' is selected.
+14:28:58 INFO  : 'jtag frequency' command is executed.
+14:28:58 INFO  : Context for 'APU' is selected.
+14:28:58 INFO  : System reset is completed.
+14:29:01 INFO  : 'after 3000' command is executed.
+14:29:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82E5A" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82E5A-23727093-0"}' command is executed.
+14:29:01 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:29:01 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:29:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+14:29:01 ERROR : couldn't open "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit": no such file or directory
+14:30:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:30:27 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82E5A' is selected.
+14:30:27 INFO  : 'jtag frequency' command is executed.
+14:30:27 INFO  : Context for 'APU' is selected.
+14:30:27 INFO  : System reset is completed.
+14:30:30 INFO  : 'after 3000' command is executed.
+14:30:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82E5A" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82E5A-23727093-0"}' command is executed.
+14:30:33 INFO  : Device configured successfully with "C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+14:30:33 INFO  : Context for 'APU' is selected.
+14:30:33 INFO  : Hardware design and registers information is loaded from 'C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/assignment2_hunter_test/export/assignment2_hunter_test/hw/lab_prefab_wrapper.xsa'.
+14:30:33 INFO  : 'configparams force-mem-access 1' command is executed.
+14:30:33 INFO  : Context for 'APU' is selected.
+14:30:33 INFO  : Sourcing of 'C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+14:30:33 INFO  : 'ps7_init' command is executed.
+14:30:33 INFO  : 'ps7_post_config' command is executed.
+14:30:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:30:33 INFO  : The application 'C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/ece423_lab1/Release/ece423_lab1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:30:34 INFO  : 'configparams force-mem-access 0' command is executed.
+14:30:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82E5A" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82E5A-23727093-0"}
+fpga -file C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/assignment2_hunter_test/export/assignment2_hunter_test/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/ece423_lab1/Release/ece423_lab1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:30:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:30:34 INFO  : 'con' command is executed.
+14:30:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:30:34 INFO  : Launch script is exported to file 'C:\Users\j54mao\ECE423\ECE-423-Labs\workspace\ece423_lab1_system\_ide\scripts\systemdebugger_ece423_lab1_system_standalone.tcl'
+14:33:35 WARN  : An unexpected exception occurred in the module 'platform project logging'
+14:33:39 INFO  : Result from executing command 'getProjects': Assignment2_debugging;Assignment2_newest;Assignment_2;assignment2_hunter_test;lab_prefab_wrapper
+14:33:39 INFO  : Result from executing command 'getPlatforms': Assignment2_debugging|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_debugging/export/Assignment2_debugging/Assignment2_debugging.xpfm;Assignment2_newest|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment2_newest/export/Assignment2_newest/Assignment2_newest.xpfm;assignment2_hunter_test|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/assignment2_hunter_test/export/assignment2_hunter_test/assignment2_hunter_test.xpfm;lab_prefab_wrapper|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/lab_prefab_wrapper.xpfm;lab_prefab_wrapper|C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/export/lab_prefab_wrapper/lab_prefab_wrapper.xpfm
+14:33:39 WARN  : An unexpected exception occurred in the module 'platform project logging'
+14:33:41 INFO  : Platform 'assignment2_hunter_test' is added to custom repositories.
+14:38:18 INFO  : No changes in MSS file content so sources will not be generated.
+14:41:23 ERROR : An unexpected exception occurred in the module 'reading platform'
+14:41:29 ERROR : An unexpected exception occurred in the module 'reading platform'
+15:02:59 INFO  : Disconnected from the channel tcfchan#5.

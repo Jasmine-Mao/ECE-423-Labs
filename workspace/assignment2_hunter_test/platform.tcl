@@ -41,3 +41,36 @@ bsp reload
 catch {bsp regenerate}
 platform generate
 platform generate
+platform generate
+platform clean
+platform generate
+domain create -name {standalone_ps7_cortexa9_1} -display-name {standalone_ps7_cortexa9_1} -os {standalone} -proc {ps7_cortexa9_1} -runtime {cpp} -arch {32-bit} -support-app {hello_world}
+platform generate -domains 
+platform active {assignment2_hunter_test}
+domain active {zynq_fsbl}
+domain active {standalone_domain}
+domain active {standalone_ps7_cortexa9_1}
+platform generate -quick
+domain active {zynq_fsbl}
+bsp reload
+bsp reload
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DSHAREABLE_DDR"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {standalone_domain}
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DSHAREABLE_DDR"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {standalone_ps7_cortexa9_1}
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DSHAREABLE_DDR -DUSE_ AMP=1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+catch {platform remove Assignment2_newest}
+catch {platform remove Assignment2_debugging}
+catch {platform remove Assignment_2}

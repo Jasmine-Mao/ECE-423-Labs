@@ -288,5 +288,11 @@ _SDA2_BASE_ = __sdata2_start + ((__sbss2_end - __sdata2_start) / 2 );
 } > ps7_ddr_0
 
 _end = .;
-}
 
+.spinlock_section [SHARED ADDRESS HERE]:{
+	KEEP (*(.spinlock_section))
+	FILL(0)
+	. += 0x1000;
+	. = ALIGN(0x100000);
+}
+}

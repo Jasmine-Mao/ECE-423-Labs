@@ -80,6 +80,13 @@ XAxiDma AxiDma;
 
 uint32_t timer_delay;
 
+//FOR MASTER CORE:
+int dummyvar __attribute((section(".spinlock_section")));
+
+//FOR TLB SETUP
+Xil_SetTlbAttributes(<Your shared address start>,DEVICE_-MEMORY);	//MODIFY THIS ONCE WE KNOW!!!
+// this is just for finding the spinlocks faster in shared memory
+
 void scan_files()
 {
 	DIR video_dir;
