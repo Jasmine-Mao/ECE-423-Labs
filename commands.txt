@@ -33,10 +33,10 @@ MONDAY MARCH 24 PROGRESS AND TODO:
 			[X] how much memory does core 0 need?
 			[X] how much memory does core 1 need?
 			[X] how much is leftover for sharing?
-		[] figure out where the shared memory starts
-			[] how are we going to partition the entire memory?
-		[] replace fields in the core0 linker script
-		[] decide how we want to allocate the circular buffers
+		[X] figure out where the shared memory starts
+			[X] how are we going to partition the entire memory?
+		[X] replace fields in the core0 linker script
+		[X] decide how we want to allocate the circular buffers
 --------------------------------------------------------------------------------------------------------------------------
 
 WEDNESDAY MARCH 26
@@ -48,7 +48,12 @@ cpu1 gets a new main function
 	we pass some of the functionality of core0 onto core 1
 
 
-
+TODO
+	[] calculate the size of the circular buffer for an agreed upon number of frames
+	[] figure out how to create seperate functions for all the components that go into decoding a frame
+	[] split decode into the necessary functions
+	[] add spinlocks for synchronization
+	[] adjust the stack size as we move functionality from core0 to core1
 
 
 

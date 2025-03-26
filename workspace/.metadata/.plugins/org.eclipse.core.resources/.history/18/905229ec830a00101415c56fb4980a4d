@@ -54,12 +54,8 @@ int main()
 {
     init_platform();
 
-    // malloc 190 * 100 * 4 * (num frames we want to buffer) bytes for the circular buffer
-    // void *circular_buffer = malloc(190*100*4*num_frames_to_buffer);
-    // this should malloc at the beginning of the heap of core 1
-
-    spin_lock(0x14AF8A80);
-    spin_unlock(0x14AF8A80);
-    // pick up and put down the lock as a method of synchronization
-
+    print("Hello World\n\r");
+    print("Successfully ran Hello World application");
+    cleanup_platform();
+    return 0;
 }

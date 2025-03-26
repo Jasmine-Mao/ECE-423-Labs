@@ -128,7 +128,6 @@ int main()
 	// this is just for finding the spinlocks faster in shared memory
 
 	spin_lock(0x14AF8A80);	// lock the initialization so core 1 doesn't keep going
-
 	// initialization
 	InstancePtr = &AxiDma;
 
@@ -151,9 +150,7 @@ int main()
 
 
     scan_files();
-    // lock
-    load_video(file_name[file_counter]);	// since this writes to globals, this needs to have a lock around it. we can also put the locks INTO THE FUNCTION to avoid needing to write this all the time
-    // unlock
+    load_video(file_name[file_counter]);
 
     spin_unlock(0x14AF8A80);	//unlock and allow core 1 to keep working
 //    XTime start, end;

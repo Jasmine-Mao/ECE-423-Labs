@@ -55,8 +55,6 @@ static uint8_t* Crbitstream;
 
 uint32_t y_memory, cr_memory, cb_memory, idct_memory, rgb_memory;
 XTime start, end;
-//^ all variables up here are GLOBALS, we need to alloc them in the shared region of memory
-// when these variables are assigned, they need to be LOCKED for safety. Im p sure they only get written to when we load the video
 
 
 //main decoder function
@@ -226,7 +224,6 @@ void load_video(const char* filename_in) //HM
     if(f_status != FR_OK) error_and_exit_error_code("cannot open input file", (uint32_t)f_status);
 
     //read header
-
     f_status = f_read(&file_in, (void*)&num_frames, sizeof(uint32_t), (UINT*)&num_bytes_read);
     if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
     DEBUG_PRINT_ARG("Decoder start. Num frames #%lu\n", num_frames)

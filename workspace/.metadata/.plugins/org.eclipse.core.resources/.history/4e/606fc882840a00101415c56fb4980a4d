@@ -227,6 +227,7 @@ void load_video(const char* filename_in) //HM
 
     //read header
 
+    // lock
     f_status = f_read(&file_in, (void*)&num_frames, sizeof(uint32_t), (UINT*)&num_bytes_read);
     if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
     DEBUG_PRINT_ARG("Decoder start. Num frames #%lu\n", num_frames)

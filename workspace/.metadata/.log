@@ -13815,3 +13815,220 @@ Caused by: org.eclipse.swt.SWTException: Invalid thread access
 	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:39)
 	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
 	... 32 more
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 16:47:42.153
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/system.mss ], Thread: Worker-13: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 16:47:42.160
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-13: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 16:47:42.160
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/system.mss], Thread: Worker-13: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 16:47:42.163
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.7",
+}]. Thread: Worker-13: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-26 16:47:42.163
+!MESSAGE Generating MD5 hash for file: C:\Users\j54mao\ECE423\ECE-423-Labs\workspace\Assignment3_platform\export\Assignment3_platform\sw\Assignment3_platform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 16:47:42.164
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/system.mss], Thread: Worker-13: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 16:47:42.166
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-13: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-03-26 16:47:43.598
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-03-26 16:47:43.655
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Corrupted database: ece423_lab1_system.1736795936260.pdom
+	at org.eclipse.cdt.internal.core.pdom.db.Database.databaseCorruptionDetected(Database.java:318)
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:298)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:545)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:531)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties$DBProperty.search(DBProperties.java:225)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.removeProperty(DBProperties.java:117)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.setProperty(DBProperties.java:103)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.setProperty(WritablePDOM.java:200)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.setResume(AbstractIndexerTask.java:625)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:545)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:161)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2025-03-26 16:47:43.655
+!MESSAGE Corrupted database: ece423_lab1_system.1736795936260.pdom
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-03-26 16:47:44.112
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Corrupted database: ece423_lab1_system.1736795936260.pdom
+	at org.eclipse.cdt.internal.core.pdom.db.Database.databaseCorruptionDetected(Database.java:318)
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:298)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:545)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:531)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties$DBProperty.search(DBProperties.java:225)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.removeProperty(DBProperties.java:117)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.setProperty(DBProperties.java:103)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.setProperty(WritablePDOM.java:200)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.setResume(AbstractIndexerTask.java:625)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:545)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:161)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2025-03-26 16:47:44.119
+!MESSAGE Corrupted database: ece423_lab1_system.1736795936260.pdom
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-03-26 16:47:44.154
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Corrupted database: ece423_lab1_system.1736795936260.pdom
+	at org.eclipse.cdt.internal.core.pdom.db.Database.databaseCorruptionDetected(Database.java:318)
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:298)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:545)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:531)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties$DBProperty.search(DBProperties.java:225)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.removeProperty(DBProperties.java:117)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.setProperty(DBProperties.java:103)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.setProperty(WritablePDOM.java:200)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.setResume(AbstractIndexerTask.java:625)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:545)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:161)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2025-03-26 16:47:44.155
+!MESSAGE Corrupted database: ece423_lab1_system.1736795936260.pdom
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-03-26 16:47:44.214
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Corrupted database: ece423_lab1_system.1736795936260.pdom
+	at org.eclipse.cdt.internal.core.pdom.db.Database.databaseCorruptionDetected(Database.java:318)
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:298)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:545)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:531)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties$DBProperty.search(DBProperties.java:225)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.removeProperty(DBProperties.java:117)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.setProperty(DBProperties.java:103)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.setProperty(WritablePDOM.java:200)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.setResume(AbstractIndexerTask.java:625)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:545)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:161)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2025-03-26 16:47:44.228
+!MESSAGE Corrupted database: ece423_lab1_system.1736795936260.pdom
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-03-26 16:47:45.616
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Corrupted database: ece423_lab1_system.1736795936260.pdom
+	at org.eclipse.cdt.internal.core.pdom.db.Database.databaseCorruptionDetected(Database.java:318)
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:298)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:545)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:531)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties$DBProperty.search(DBProperties.java:225)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.removeProperty(DBProperties.java:117)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.setProperty(DBProperties.java:103)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.setProperty(WritablePDOM.java:200)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.setResume(AbstractIndexerTask.java:625)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:545)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:161)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2025-03-26 16:47:45.616
+!MESSAGE Corrupted database: ece423_lab1_system.1736795936260.pdom
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-03-26 16:51:16.197
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Corrupted database: ece423_lab1_system.1736795936260.pdom
+	at org.eclipse.cdt.internal.core.pdom.db.Database.databaseCorruptionDetected(Database.java:318)
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:298)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:545)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:531)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties$DBProperty.search(DBProperties.java:225)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.getProperty(DBProperties.java:63)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.getProperty(PDOM.java:1474)
+	at org.eclipse.cdt.internal.core.index.IndexFactory.safeAddFragment(IndexFactory.java:148)
+	at org.eclipse.cdt.internal.core.index.IndexFactory.getIndex(IndexFactory.java:73)
+	at org.eclipse.cdt.internal.core.pdom.PDOMManager.getIndex(PDOMManager.java:1271)
+	at org.eclipse.cdt.internal.ui.callhierarchy.CallHierarchyUI.findDefinitions(CallHierarchyUI.java:192)
+	at org.eclipse.cdt.internal.ui.callhierarchy.CallHierarchyUI.access$1(CallHierarchyUI.java:189)
+	at org.eclipse.cdt.internal.ui.callhierarchy.CallHierarchyUI$2.run(CallHierarchyUI.java:162)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2025-03-26 16:51:16.199
+!MESSAGE Corrupted database: ece423_lab1_system.1736795936260.pdom
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-03-26 16:51:16.411
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Corrupted database: ece423_lab1_system.1736795936260.pdom
+	at org.eclipse.cdt.internal.core.pdom.db.Database.databaseCorruptionDetected(Database.java:318)
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:298)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:545)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:531)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties$DBProperty.search(DBProperties.java:225)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.getProperty(DBProperties.java:63)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.getProperty(PDOM.java:1474)
+	at org.eclipse.cdt.internal.core.index.IndexFactory.safeAddFragment(IndexFactory.java:148)
+	at org.eclipse.cdt.internal.core.index.IndexFactory.getIndex(IndexFactory.java:73)
+	at org.eclipse.cdt.internal.core.pdom.PDOMManager.getIndex(PDOMManager.java:1271)
+	at org.eclipse.cdt.internal.ui.callhierarchy.CHContentProvider.asyncComputeRoot(CHContentProvider.java:114)
+	at org.eclipse.cdt.internal.ui.callhierarchy.CHContentProvider.asyncronouslyComputeChildren(CHContentProvider.java:95)
+	at org.eclipse.cdt.internal.ui.viewsupport.AsyncTreeContentProvider.runJob(AsyncTreeContentProvider.java:229)
+	at org.eclipse.cdt.internal.ui.viewsupport.AsyncTreeContentProvider.access$0(AsyncTreeContentProvider.java:224)
+	at org.eclipse.cdt.internal.ui.viewsupport.AsyncTreeContentProvider$1.run(AsyncTreeContentProvider.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2025-03-26 16:51:16.411
+!MESSAGE Corrupted database: ece423_lab1_system.1736795936260.pdom
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-03-26 16:51:16.538
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Corrupted database: ece423_lab1_system.1736795936260.pdom
+	at org.eclipse.cdt.internal.core.pdom.db.Database.databaseCorruptionDetected(Database.java:318)
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:298)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:545)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:531)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties$DBProperty.search(DBProperties.java:225)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.getProperty(DBProperties.java:63)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.getProperty(PDOM.java:1474)
+	at org.eclipse.cdt.internal.core.index.IndexFactory.safeAddFragment(IndexFactory.java:148)
+	at org.eclipse.cdt.internal.core.index.IndexFactory.getIndex(IndexFactory.java:73)
+	at org.eclipse.cdt.internal.core.pdom.PDOMManager.getIndex(PDOMManager.java:1276)
+	at org.eclipse.cdt.internal.ui.callhierarchy.CHContentProvider.asyncronouslyComputeReferencedBy(CHContentProvider.java:161)
+	at org.eclipse.cdt.internal.ui.callhierarchy.CHContentProvider.asyncronouslyComputeChildren(CHContentProvider.java:101)
+	at org.eclipse.cdt.internal.ui.viewsupport.AsyncTreeContentProvider.runJob(AsyncTreeContentProvider.java:229)
+	at org.eclipse.cdt.internal.ui.viewsupport.AsyncTreeContentProvider.access$0(AsyncTreeContentProvider.java:224)
+	at org.eclipse.cdt.internal.ui.viewsupport.AsyncTreeContentProvider$1.run(AsyncTreeContentProvider.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2025-03-26 16:51:16.538
+!MESSAGE Corrupted database: ece423_lab1_system.1736795936260.pdom
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-03-26 16:51:16.542
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Corrupted database: ece423_lab1_system.1736795936260.pdom
+	at org.eclipse.cdt.internal.core.pdom.db.Database.databaseCorruptionDetected(Database.java:318)
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:298)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:545)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:531)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties$DBProperty.search(DBProperties.java:225)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.getProperty(DBProperties.java:63)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.getProperty(PDOM.java:1474)
+	at org.eclipse.cdt.internal.core.index.IndexFactory.safeAddFragment(IndexFactory.java:148)
+	at org.eclipse.cdt.internal.core.index.IndexFactory.getIndex(IndexFactory.java:73)
+	at org.eclipse.cdt.internal.core.pdom.PDOMManager.getIndex(PDOMManager.java:1276)
+	at org.eclipse.cdt.internal.ui.callhierarchy.CHContentProvider.asyncronouslyComputeReferencedBy(CHContentProvider.java:161)
+	at org.eclipse.cdt.internal.ui.callhierarchy.CHContentProvider.asyncronouslyComputeChildren(CHContentProvider.java:101)
+	at org.eclipse.cdt.internal.ui.viewsupport.AsyncTreeContentProvider.runJob(AsyncTreeContentProvider.java:229)
+	at org.eclipse.cdt.internal.ui.viewsupport.AsyncTreeContentProvider.access$0(AsyncTreeContentProvider.java:224)
+	at org.eclipse.cdt.internal.ui.viewsupport.AsyncTreeContentProvider$1.run(AsyncTreeContentProvider.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2025-03-26 16:51:16.542
+!MESSAGE Corrupted database: ece423_lab1_system.1736795936260.pdom
