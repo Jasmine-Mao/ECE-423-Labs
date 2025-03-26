@@ -58,12 +58,14 @@
 #include "decoder/mjpeg423_decoder.h"
 #include "ece423_vid_ctl/ece423_vid_ctl.h"
 #include <xaxidma.h>
+#include "spinlocks/spinlock1.h"
 
 #define FRAME_BUFF_SIZE 2
 #define TIMER_1S 325000000 //1 second
 #define ROOT "3:/"
 #define MAX_FILE_NUM 3
 #define MAX_FILE_NAME_LENGTH 20
+#define DEVICE_MEMORY 0xC06
 
 volatile int8_t pin_value = -1;
 volatile int8_t is_paused = 0;
@@ -82,10 +84,6 @@ uint32_t timer_delay;
 
 //FOR MASTER CORE:
 int dummyvar __attribute((section(".spinlock_section")));
-
-//FOR TLB SETUP
-Xil_SetTlbAttributes(<Your shared address start>,DEVICE_-MEMORY);	//MODIFY THIS ONCE WE KNOW!!!
-// this is just for finding the spinlocks faster in shared memory
 
 void scan_files()
 {
@@ -125,6 +123,10 @@ void TimerHandler(void*)
 
 int main()
 {
+	//FOR TLB SETUP
+	Xil_SetTlbAttributes(0x14A04840, DEVICE_MEMORY);	//MODIFY THIS ONCE WE KNOW!!!
+	// this is just for finding the spinlocks faster in shared memory
+
 	// initialization
 	InstancePtr = &AxiDma;
 

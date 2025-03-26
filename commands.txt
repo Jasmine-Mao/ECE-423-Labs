@@ -29,11 +29,40 @@ MONDAY MARCH 24 PROGRESS AND TODO:
 		Removed old platforms -- no more clutter
 		
 	TODO
-		[] need output data size to better calculate how many bytes to allocate
-			[] how much memory does core 0 need?
-			[] how much memory does core 1 need?
-			[] how much is leftover for sharing?
+		[X] need output data size to better calculate how many bytes to allocate
+			[X] how much memory does core 0 need?
+			[X] how much memory does core 1 need?
+			[X] how much is leftover for sharing?
 		[] figure out where the shared memory starts
 			[] how are we going to partition the entire memory?
 		[] replace fields in the core0 linker script
 		[] decide how we want to allocate the circular buffers
+--------------------------------------------------------------------------------------------------------------------------
+
+WEDNESDAY MARCH 26
+
+Shared memory should start at: 0x14A04840
+spinlock address at: 0x14AF8A80 (start of shared memory + 1MB)
+
+cpu1 gets a new main function
+	we pass some of the functionality of core0 onto core 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

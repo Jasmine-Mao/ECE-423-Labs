@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="cpu1" location="C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/cpu1" platform="C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/assignment2_hunter_test/export/assignment2_hunter_test/assignment2_hunter_test.xpfm" platformUID="xilinx:pynq-z1::0.0(custom)" systemProject="cpu1_system" sysConfig="assignment2_hunter_test" runtime="cpp" cpu="standalone_ps7_cortexa9_1" cpuInstance="ps7_cortexa9_1" os="standalone" mssSignature="24d510683c96df95830c6b324ecaf217">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.338550004" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.37527409" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

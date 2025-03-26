@@ -239,6 +239,8 @@ BEGIN LIBRARY
  PARAMETER LIBRARY_NAME = xilffs
  PARAMETER LIBRARY_VER = 4.7
  PARAMETER PROC_INSTANCE = ps7_cortexa9_0
+ PARAMETER enable_multi_partition = true
+ PARAMETER num_logical_vol = 10
 END
 
 

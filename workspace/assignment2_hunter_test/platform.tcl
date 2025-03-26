@@ -74,3 +74,4 @@ catch {bsp regenerate}
 catch {platform remove Assignment2_newest}
 catch {platform remove Assignment2_debugging}
 catch {platform remove Assignment_2}
+platform clean
