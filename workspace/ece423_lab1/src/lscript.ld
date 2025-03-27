@@ -23,7 +23,7 @@ _UNDEF_STACK_SIZE = DEFINED(_UNDEF_STACK_SIZE) ? _UNDEF_STACK_SIZE : 1024;
 
 MEMORY
 {
-   ps7_ddr_0 : ORIGIN = 0x100000, LENGTH = 0xCD0A3C0
+   ps7_ddr_0 : ORIGIN = 0x100000, LENGTH = 0xCEF2840
    ps7_qspi_linear_0 : ORIGIN = 0xFC000000, LENGTH = 0x1000000
    ps7_ram_0 : ORIGIN = 0x0, LENGTH = 0x30000
    ps7_ram_1 : ORIGIN = 0xFFFF0000, LENGTH = 0xFE00
@@ -289,7 +289,7 @@ _SDA2_BASE_ = __sdata2_start + ((__sbss2_end - __sdata2_start) / 2 );
 
 _end = .;
 
-.spinlock_section 0x14A04840:{
+.spinlock_section 0x14DD5140:{
 	KEEP (*(.spinlock_section))
 	FILL(0)
 	. += 0x1000;

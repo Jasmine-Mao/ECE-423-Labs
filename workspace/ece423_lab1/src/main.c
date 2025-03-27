@@ -82,8 +82,15 @@ XAxiDma AxiDma;
 
 uint32_t timer_delay;
 
+
+//lab 3 stuff
+//volatile UINTPTR lock = 1;
+//volatile uint32_t* test_ptr = 0x14EC9380;
+
 //FOR MASTER CORE:
 int dummyvar __attribute((section(".spinlock_section")));
+
+__attribute((section(".spinlock_section"))) volatile UINTPTR lock = 1; //check if we need both variables
 
 void scan_files()
 {
@@ -124,10 +131,12 @@ void TimerHandler(void*)
 int main()
 {
 	//FOR TLB SETUP
-	Xil_SetTlbAttributes(0x14A04840, DEVICE_MEMORY);	//MODIFY THIS ONCE WE KNOW!!!
+	Xil_SetTlbAttributes(0x14DD5140, DEVICE_MEMORY);	//MODIFY THIS ONCE WE KNOW!!!
 	// this is just for finding the spinlocks faster in shared memory
 
-	spin_lock(0x14AF8A80);	// lock the initialization so core 1 doesn't keep going
+	//spin_lock(&lock);	// lock the initialization so core 1 doesn't keep going
+
+	printf("LOCK IS HERE %x\n",&lock);
 
 	// initialization
 	InstancePtr = &AxiDma;
@@ -155,7 +164,7 @@ int main()
     load_video(file_name[file_counter]);	// since this writes to globals, this needs to have a lock around it. we can also put the locks INTO THE FUNCTION to avoid needing to write this all the time
     // unlock
 
-    spin_unlock(0x14AF8A80);	//unlock and allow core 1 to keep working
+    spin_unlock(&lock);	//unlock and allow core 1 to keep working
 //    XTime start, end;
 //    XTime_GetTime(&start);  // Capture time before the function call
 //    XTime_GetTime(&end);    // Capture time after the function call
@@ -163,6 +172,7 @@ int main()
 
     // decode single frame then pause video
     is_paused = 1;
+    //printf("WHAT IS STORED HERE %x\n",*test_ptr);
 
     decode_single_frame();
 

@@ -1,0 +1,10 @@
+17:02:15 **** Build of configuration Debug for project ece423_lab1_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 55830 C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/Assignment3_platform.xpfm standalone_domain C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/Assignment3_platform.xpfm --sys_config Assignment3_platform --bif C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1_system/Debug/system.bif --bitstream C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit --elf C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+Running C:/Software/Xilinx/Vitis/2022.1/bin/bootgen  -image C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+17:02:24 Build Finished (took 9s.963ms)
+

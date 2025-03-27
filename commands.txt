@@ -41,8 +41,8 @@ MONDAY MARCH 24 PROGRESS AND TODO:
 
 WEDNESDAY MARCH 26
 
-Shared memory should start at: 0x14A04840
-spinlock address at: 0x14AF8A80 (start of shared memory + 1MB)
+Shared memory should start at: 0x174CC140
+spinlock address at: 0x175C0380 (start of shared memory + 1MB)
 
 cpu1 gets a new main function
 	we pass some of the functionality of core0 onto core 1
@@ -57,6 +57,7 @@ TODO
 
 
 
+https://www.hackster.io/whitney-knitter/dual-arm-hello-world-on-zynq-using-vitis-9fc8b7
 
 
 

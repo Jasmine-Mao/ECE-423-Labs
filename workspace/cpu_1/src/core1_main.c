@@ -48,18 +48,32 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "spinlocks/spinlock1.h"
 
+UINTPTR* lock_ptr = 0x14dd5144;
+//#define TEST_PTR ((volatile uint32_t*)0x14EC9380)
 
 int main()
 {
     init_platform();
+//    *TEST_PTR = 0xabcd1234;
+
 
     // malloc 190 * 100 * 4 * (num frames we want to buffer) bytes for the circular buffer
     // void *circular_buffer = malloc(190*100*4*num_frames_to_buffer);
     // this should malloc at the beginning of the heap of core 1
 
-    spin_lock(0x14AF8A80);
-    spin_unlock(0x14AF8A80);
-    // pick up and put down the lock as a method of synchronization
+    printf("CORE 1 is starting");
+
+    spin_lock(*lock_ptr);
+
+	printf("CORE 1 made it here");
+    //spin_unlock(*lock_ptr);
+    // pick up and put down the lock as a method of synchronization]
+
+    while(1)
+    {
+    	printf("CORE 1 made it here");
+    }
 
 }
