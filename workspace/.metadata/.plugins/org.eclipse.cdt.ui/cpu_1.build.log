@@ -1,36 +1,10 @@
-15:16:18 **** Incremental Build of configuration Debug for project cpu_1 ****
+16:26:56 **** Incremental Build of configuration Debug for project cpu_1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/circular_buffer/buff.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/circular_buffer/buff.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_ps7_cortexa9_1/bspinclude/include -MMD -MP -MF"src/circular_buffer/buff.d" -MT"src/circular_buffer/buff.o" -o "src/circular_buffer/buff.o" "../src/circular_buffer/buff.c"
-In file included from ../src/circular_buffer/buff.c:1:
-../src/circular_buffer/buff.h:5:9: error: unknown type name 'uint8_t'
-    5 |         uint8_t *buff;
-      |         ^~~~~~~
-../src/circular_buffer/buff.h:11:89: error: expected declaration specifiers or '...' before ')' token
-   11 | int push (circular_buff_t* buffer, /*whatever type it is we're putting into the buffer*/);
-      |                                                                                         ^
-../src/circular_buffer/buff.h:12:95: error: expected declaration specifiers or '...' before ')' token
-   12 | int pop(circular_buff_t* buffer, /*whatever it is we want to remove from the circular buffer*/);
-      |                                                                                               ^
-../src/circular_buffer/buff.c: In function 'init':
-../src/circular_buffer/buff.c:6:35: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
-    6 |         circular_buff_t *buffer = malloc(sizeof(circular_buff_t));      // init the circular buffer object
-      |                                   ^~~~~~
-../src/circular_buffer/buff.c:4:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
-    3 | #include <stdio.h>
-  +++ |+#include <stdlib.h>
-    4 | 
-../src/circular_buffer/buff.c:6:35: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
-    6 |         circular_buff_t *buffer = malloc(sizeof(circular_buff_t));      // init the circular buffer object
-      |                                   ^~~~~~
-../src/circular_buffer/buff.c:6:35: note: include '<stdlib.h>' or provide a declaration of 'malloc'
-make[1]: *** [src/circular_buffer/subdir.mk:20: src/circular_buffer/buff.o] Error 1
-make: *** [makefile:36: all] Error 2
+make[1]: Nothing to be done for 'main-build'.
 
-15:16:19 Build Finished (took 735ms)
+16:26:57 Build Finished (took 766ms)
 

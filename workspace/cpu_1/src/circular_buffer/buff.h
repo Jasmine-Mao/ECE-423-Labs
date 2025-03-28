@@ -10,6 +10,6 @@ typedef struct {
 } circular_buff_t;
 
 circular_buff_t* init(int buff_size, int element_size, int capacity);
-int push (circular_buff_t* buffer, /*whatever type it is we're putting into the buffer*/);
-int pop(circular_buff_t* buffer, /*whatever it is we want to remove from the circular buffer*/);
+int push (circular_buff_t* buffer /*whatever type it is we're putting into the buffer*/);
+int pop(circular_buff_t* buffer /*whatever it is we want to remove from the circular buffer*/);
 int is_full(circular_buff_t* buffer);

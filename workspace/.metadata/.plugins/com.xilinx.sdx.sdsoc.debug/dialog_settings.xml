@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="export_registers_location" value="C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\regs_dump.txt"/>
+	<item key="target_select_cmd" value=""/>
+	<item key="target_register_groups" value="r0,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,sp,lr,pc,cpsr,usr,fiq,irq,abt,und,svc,mon,vfp,cp15,Jazelle,gpv_qos301_cpu,gpv_qos301_dmac,gpv_qos301_iou,gpv_trustzone,l2cache,mpcore"/>
+</section>

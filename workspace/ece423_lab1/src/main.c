@@ -161,7 +161,9 @@ int main()
 
 
     scan_files();
-    // lock
+    spin_lock(&lock);
+    spin_lock(&lock);
+
     load_video(file_name[file_counter]);	// since this writes to globals, this needs to have a lock around it. we can also put the locks INTO THE FUNCTION to avoid needing to write this all the time
     // unlock
 

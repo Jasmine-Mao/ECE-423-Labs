@@ -73,6 +73,7 @@ int main()
 
     while(1)
     {
+    	print("HERE\n");
     }
 //	return 0;
 }
