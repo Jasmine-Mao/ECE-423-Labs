@@ -17,22 +17,17 @@ circular_buff_t* init(int buff_size, int element_size, int capacity){
 
 int push(circular_buff_t* buffer, void* element){
 	if (is_full(buffer)){
-		return 1;			// fail to insert, need to wait
+		return 0;
 	}
 	memcpy(buffer->buff + (buffer->head * buffer->element_size), element, buff->element_size);	// copy the stuff we want to put into the buffer into the buffer
 	buffer->head = (buffer-> head + 1) % buffer->capacity;
 	return 0;
 }
 
-int pop(circular_buff_t* buffer, void* element){	// function type needs to change to be of type of whatever we're popping off the buffer
-	if(is_empty(buffer)){
-		return 1;			// fail to pop, need to wait for something to come in
-	}
-	// increment the tail
-	int old_tail = buffer->tail;	// store old value to make the mth look prettier
-	buffer->tail = (buffer->tail + 1)%buffer->capacity;
-
-	return ;
+int pop(circular_buff_t* buffer, void* element){
+	// takes from the head
+	// increments the head mod by capacity
+	return 0;
 }
 
 int is_full(circular_buff_t* buffer){
