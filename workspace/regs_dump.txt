@@ -1,0 +1,491 @@
+r0 r0: 0000000a
+r1 r1: 0000000a
+r2 r2: e000002c
+r3 r3: 00000000
+r4 r4: 00000003
+r5 r5: 0000001e
+r6 r6: 00000030
+r7 r7: f8f00000
+r8 r8: 00000000
+r9 r9: ffffffff
+r10 r10: 00000000
+r11 r11: 14bf64ec
+r12 r12: 00000014
+sp sp: 14bf64e8
+lr lr: 0cff542c
+pc pc: 0cff2d20
+cpsr cpsr: 600f00df
+usr r8: 00000000
+usr r9: ffffffff
+usr r10: 00000000
+usr r11: 14bf64ec
+usr r12: 00000014
+usr sp: 14bf64e8
+usr lr: 0cff542c
+fiq r8: 00000000
+fiq r9: 00000000
+fiq r10: 00000000
+fiq r11: 00000000
+fiq r12: 00000000
+fiq sp: 14bf78f0
+fiq lr: 00000000
+fiq spsr: 600f00d1
+irq sp: 14bf68f0
+irq lr: 00000000
+irq spsr: 600f00d2
+abt sp: 14bf74f0
+abt lr: 00000000
+abt spsr: 600f00d7
+und sp: 14bf7cf0
+und lr: 00000000
+und spsr: 600f00db
+svc sp: 14bf70f0
+svc lr: 0cff29c4
+svc spsr: 600f00d3
+mon sp: 00000000
+mon lr: 00000000
+mon spsr: 00000000
+vfp fpsid: 41033094
+vfp fpscr: 00000000
+vfp mvfr1: 01111111
+vfp mvfr0: 10110222
+vfp fpexc: 40000000
+vfp q0: 80083ca028204004020a951b0000c620
+vfp q1: 0003d102bf9c6e711210997a81f164e8
+vfp q2: 1008c909fd5f6dc608100114c79f667f
+vfp q3: ec5e0335364b0218d683a5263b7b0280
+vfp q4: 75b3008732d810410000000000000000
+vfp q5: 3b6ec2310080c00800002353e08584cc
+vfp q6: 22eefb3a5da384024366f37bf714fc01
+vfp q7: 0000fa40ffafec4d1c90d50ddbca0002
+vfp q8: ffef941376c33c6abb06b95c368d688a
+vfp q9: 7fcfd95f9dd8eb764aaec69032224530
+vfp q10: a9bb10a8ff8751b6ded91a558fdd2d7b
+vfp q11: 8fffa509307a00005d0f0c4067c20000
+vfp q12: ddb7eebf00000000e677c5fce73e0000
+vfp q13: bd78b51c00000000de2a987d00007c00
+vfp q14: dedefe4008de67b2e7f2efd73f7c0100
+vfp q15: 77f996202dc817aa00008e616eb147b7
+cp15 c0 midr: 413fc090
+cp15 c0 ctr: 83338003
+cp15 c0 tcmtr: 00000000
+cp15 c0 tlbtr: 00000402
+cp15 c0 mpidr: 80000001
+cp15 c0 revidr: 00000000
+cp15 c0 id_pfr0: 00001231
+cp15 c0 id_pfr1: 00000011
+cp15 c0 id_dfr0: 00010444
+cp15 c0 id_afr0: 00000000
+cp15 c0 id_mmfr0: 00100103
+cp15 c0 id_mmfr1: 20000000
+cp15 c0 id_mmfr2: 01230000
+cp15 c0 id_mmfr3: 00102111
+cp15 c0 id_isar0: 00101111
+cp15 c0 id_isar1: 13112111
+cp15 c0 id_isar2: 21232041
+cp15 c0 id_isar3: 11112131
+cp15 c0 id_isar4: 00011142
+cp15 c0 id_isar5: 00000000
+cp15 c0 ccsidr: 701fe019
+cp15 c0 clidr: 09200003
+cp15 c0 aidr: 00000000
+cp15 c0 csselr: 00000000
+cp15 c1 sctlr: 08c5187d
+cp15 c1 actlr: 00000047
+cp15 c1 cpacr: 00f00000
+cp15 c1 scr: 00000000
+cp15 c1 sder: 00000000
+cp15 c1 nsacr: 00000000
+cp15 c1 vcr: 00000000
+cp15 c2 ttbr0: 0cff805b
+cp15 c2 ttbr1: 02000000
+cp15 c2 ttbcr: 00000000
+cp15 c3 dacr: ffffffff
+cp15 c5 dfsr: 00000000
+cp15 c5 ifsr: 00000000
+cp15 c5 adfsr: 00000000
+cp15 c5 aifsr: 00000000
+cp15 c6 dfar: 00000000
+cp15 c6 ifar: 00000000
+cp15 c7 par: 00000000
+cp15 c9 pmcr: 41093009
+cp15 c9 pmcntenset: 80000000
+cp15 c9 pmcntenclr: 80000000
+cp15 c9 pmovsr: 00000000
+cp15 c9 pmselr: 00000000
+cp15 c9 pmccntr: 5f59e814
+cp15 c9 pmxevtyper: 00000000
+cp15 c9 pmxevcntr: 00000000
+cp15 c9 pmuserenr: 00000000
+cp15 c9 pmintenset: 00000000
+cp15 c9 pmintenclr: 00000000
+cp15 c10 tlblr: 00000000
+cp15 c10 prrr: 00098aa4
+cp15 c10 nmrr: 44e048e0
+cp15 c11 pleidr: 00100001
+cp15 c11 pleasr: 00000000
+cp15 c11 plefsr: 00000010
+cp15 c11 pleuar: 00000000
+cp15 c11 plepcr: 3fffffff
+cp15 c12 vbar: 0cff2840
+cp15 c12 mvbar: 00000000
+cp15 c12 isr: 00000000
+cp15 c12 vir: 00000000
+cp15 c13 fcseidr: 00000000
+cp15 c13 contextidr: 00000100
+cp15 c13 tpidrurw: 00000000
+cp15 c13 tpidruro: 00000000
+cp15 c13 tpidrprw: 00400000
+cp15 c15 pcr: 00000700
+cp15 c15 diag: 00000000
+cp15 c15 nbr: 00000000
+cp15 c15 cbar: f8f00000
+cp15 c15 mtlbvar: 04000000
+cp15 c15 mtlbpar: 00420000
+cp15 c15 mtlbar: 00000000
+Jazelle jidr: f4100168
+Jazelle joscr: 00000000
+Jazelle jmcr: 00000000
+Jazelle jpr: 003fc4fa
+gpv_qos301_cpu qos_cntl: 00000000
+gpv_qos301_cpu max_ot: 00000000
+gpv_qos301_cpu max_comb_ot: 00000000
+gpv_qos301_cpu aw_p: 00000000
+gpv_qos301_cpu aw_b: 00000000
+gpv_qos301_cpu aw_r: 00000000
+gpv_qos301_cpu ar_p: 00000000
+gpv_qos301_cpu ar_b: 00000000
+gpv_qos301_cpu ar_r: 00000000
+gpv_qos301_dmac qos_cntl: 00000000
+gpv_qos301_dmac max_ot: 00000000
+gpv_qos301_dmac max_comb_ot: 00000000
+gpv_qos301_dmac aw_p: 00000000
+gpv_qos301_dmac aw_b: 00000000
+gpv_qos301_dmac aw_r: 00000000
+gpv_qos301_dmac ar_p: 00000000
+gpv_qos301_dmac ar_b: 00000000
+gpv_qos301_dmac ar_r: 00000000
+gpv_qos301_iou qos_cntl: 00000000
+gpv_qos301_iou max_ot: 00000000
+gpv_qos301_iou max_comb_ot: 00000000
+gpv_qos301_iou aw_p: 00000000
+gpv_qos301_iou aw_b: 00000000
+gpv_qos301_iou aw_r: 00000000
+gpv_qos301_iou ar_p: 00000000
+gpv_qos301_iou ar_b: 00000000
+gpv_qos301_iou ar_r: 00000000
+gpv_trustzone security_gp0_axi security_gp0_axi: N/A
+gpv_trustzone security_gp1_axi security_gp1_axi: N/A
+l2cache reg0_cache_id: 410000c8
+l2cache reg0_cache_type: 9e300300
+l2cache reg1_control: 00000001
+l2cache reg1_aux_control: 72360000
+l2cache reg1_tag_ram_control: 00000111
+l2cache reg1_data_ram_control: 00000121
+l2cache reg2_ev_counter_ctrl: 00000000
+l2cache reg2_ev_counter1_cfg: 00000000
+l2cache reg2_ev_counter0_cfg: 00000000
+l2cache reg2_ev_counter1: 00000000
+l2cache reg2_ev_counter0: 00000000
+l2cache reg2_int_mask: 00000000
+l2cache reg2_int_mask_status: 00000000
+l2cache reg2_int_raw_status: 00000000
+l2cache reg2_int_clear: 00000000
+l2cache reg7_cache_sync: 00000000
+l2cache reg7_inv_pa: 00000000
+l2cache reg7_inv_way: 00000000
+l2cache reg7_clean_pa: 00000000
+l2cache reg7_clean_index: 00000000
+l2cache reg7_clean_way: 00000000
+l2cache reg7_clean_inv_pa: 00000000
+l2cache reg7_clean_inv_index: 00000000
+l2cache reg7_clean_inv_way: 00000000
+l2cache reg9_d_lockdown0: 00000000
+l2cache reg9_i_lockdown0: 00000000
+l2cache reg9_d_lockdown1: 00000000
+l2cache reg9_i_lockdown1: 00000000
+l2cache reg9_d_lockdown2: 00000000
+l2cache reg9_i_lockdown2: 00000000
+l2cache reg9_d_lockdown3: 00000000
+l2cache reg9_i_lockdown3: 00000000
+l2cache reg9_d_lockdown4: 00000000
+l2cache reg9_i_lockdown4: 00000000
+l2cache reg9_d_lockdown5: 00000000
+l2cache reg9_i_lockdown5: 00000000
+l2cache reg9_d_lockdown6: 00000000
+l2cache reg9_i_lockdown6: 00000000
+l2cache reg9_d_lockdown7: 00000000
+l2cache reg9_i_lockdown7: 00000000
+l2cache reg9_lock_line_en: 00000000
+l2cache reg9_unlock_way: 00000000
+l2cache reg12_addr_filtering_start: 40000001
+l2cache reg12_addr_filtering_end: fff00000
+l2cache reg15_debug_ctrl: 00000004
+l2cache reg15_prefetch_ctrl: 30000000
+l2cache reg15_power_ctrl: 00000000
+mpcore scu_control_register: 00000003
+mpcore scu_configuration_register: 00000531
+mpcore scu_cpu_power_status_register: 03030000
+mpcore scu_invalidate_all_registers_in_secure_state scu_invalidate_all_registers_in_secure_state: N/A
+mpcore filtering_start_address_register: 00100000
+mpcore filtering_end_address_register: ffe00000
+mpcore scu_access_control_register_sac: 0000000f
+mpcore scu_non_secure_access_control_register: 00000000
+mpcore iccicr: 00000000
+mpcore iccpmr: 00000000
+mpcore iccbpr: 00000002
+mpcore icciar: N/A
+mpcore icceoir icceoir: N/A
+mpcore iccrpr: 000000ff
+mpcore icchpir: 000003ff
+mpcore iccabpr: 00000003
+mpcore iccidr: 3901243b
+mpcore global_timer_counter_register: 0000000d5a58855d
+mpcore global_timer_control_register: 00000001
+mpcore global_timer_interrupt_status_register: 00000000
+mpcore comparator_value_register: 0000000000000000
+mpcore auto_increment_register: 00000000
+mpcore private_timer_load_register: 00000000
+mpcore private_timer_counter_register: 00000000
+mpcore private_timer_control_register: 00000000
+mpcore private_timer_interrupt_status_register: 00000000
+mpcore watchdog_load_register: 00000000
+mpcore watchdog_counter_register: 00000000
+mpcore watchdog_control_register: 00000000
+mpcore watchdog_interrupt_status_register: 00000000
+mpcore watchdog_reset_status_register: 00000000
+mpcore watchdog_disable_register: 00000000
+mpcore icddcr: 00000001
+mpcore icdictr: 0000fc22
+mpcore icdiidr: 0102043b
+mpcore icdisr: 00000000
+mpcore icdiser0: 0000ffff
+mpcore icdiser1: 00100000
+mpcore icdiser2: 00000000
+mpcore icdicer0: 0000ffff
+mpcore icdicer1: 00100000
+mpcore icdicer2: 00000000
+mpcore icdispr0: 00000000
+mpcore icdispr1: 00000000
+mpcore icdispr2: 00000000
+mpcore icdicpr0: 00000000
+mpcore icdicpr1: 00000000
+mpcore icdicpr2: 00000000
+mpcore icdabr0: 00000000
+mpcore icdabr1: 00000000
+mpcore icdabr2: 00000000
+mpcore icdipr ipr0: 00
+mpcore icdipr ipr1: 00
+mpcore icdipr ipr2: 00
+mpcore icdipr ipr3: 00
+mpcore icdipr ipr4: 00
+mpcore icdipr ipr5: 00
+mpcore icdipr ipr6: 00
+mpcore icdipr ipr7: 00
+mpcore icdipr ipr8: 00
+mpcore icdipr ipr9: 00
+mpcore icdipr ipr10: 00
+mpcore icdipr ipr11: 00
+mpcore icdipr ipr12: 00
+mpcore icdipr ipr13: 00
+mpcore icdipr ipr14: 00
+mpcore icdipr ipr15: 00
+mpcore icdipr ipr16: 00
+mpcore icdipr ipr17: 00
+mpcore icdipr ipr18: 00
+mpcore icdipr ipr19: 00
+mpcore icdipr ipr20: 00
+mpcore icdipr ipr21: 00
+mpcore icdipr ipr22: 00
+mpcore icdipr ipr23: 00
+mpcore icdipr ipr24: 00
+mpcore icdipr ipr25: 00
+mpcore icdipr ipr26: 00
+mpcore icdipr ipr27: 00
+mpcore icdipr ipr28: 00
+mpcore icdipr ipr29: 00
+mpcore icdipr ipr30: 00
+mpcore icdipr ipr31: 00
+mpcore icdipr ipr32: a0
+mpcore icdipr ipr33: a0
+mpcore icdipr ipr34: a0
+mpcore icdipr ipr35: a0
+mpcore icdipr ipr36: a0
+mpcore icdipr ipr37: a0
+mpcore icdipr ipr38: a0
+mpcore icdipr ipr39: a0
+mpcore icdipr ipr40: a0
+mpcore icdipr ipr41: a0
+mpcore icdipr ipr42: a0
+mpcore icdipr ipr43: a0
+mpcore icdipr ipr44: a0
+mpcore icdipr ipr45: a0
+mpcore icdipr ipr46: a0
+mpcore icdipr ipr47: a0
+mpcore icdipr ipr48: a0
+mpcore icdipr ipr49: a0
+mpcore icdipr ipr50: a0
+mpcore icdipr ipr51: a0
+mpcore icdipr ipr52: a0
+mpcore icdipr ipr53: a0
+mpcore icdipr ipr54: a0
+mpcore icdipr ipr55: a0
+mpcore icdipr ipr56: a0
+mpcore icdipr ipr57: a0
+mpcore icdipr ipr58: a0
+mpcore icdipr ipr59: a0
+mpcore icdipr ipr60: a0
+mpcore icdipr ipr61: a0
+mpcore icdipr ipr62: a0
+mpcore icdipr ipr63: a0
+mpcore icdipr ipr64: a0
+mpcore icdipr ipr65: a0
+mpcore icdipr ipr66: a0
+mpcore icdipr ipr67: a0
+mpcore icdipr ipr68: a0
+mpcore icdipr ipr69: a0
+mpcore icdipr ipr70: a0
+mpcore icdipr ipr71: a0
+mpcore icdipr ipr72: a0
+mpcore icdipr ipr73: a0
+mpcore icdipr ipr74: a0
+mpcore icdipr ipr75: a0
+mpcore icdipr ipr76: a0
+mpcore icdipr ipr77: a0
+mpcore icdipr ipr78: a0
+mpcore icdipr ipr79: a0
+mpcore icdipr ipr80: a0
+mpcore icdipr ipr81: a0
+mpcore icdipr ipr82: a0
+mpcore icdipr ipr83: a0
+mpcore icdipr ipr84: a0
+mpcore icdipr ipr85: a0
+mpcore icdipr ipr86: a0
+mpcore icdipr ipr87: a0
+mpcore icdipr ipr88: a0
+mpcore icdipr ipr89: a0
+mpcore icdipr ipr90: a0
+mpcore icdipr ipr91: a0
+mpcore icdipr ipr92: a0
+mpcore icdipr ipr93: a0
+mpcore icdipr ipr94: a0
+mpcore icdipr ipr95: a0
+mpcore icdiptr iptr0: 02
+mpcore icdiptr iptr1: 02
+mpcore icdiptr iptr2: 02
+mpcore icdiptr iptr3: 02
+mpcore icdiptr iptr4: 02
+mpcore icdiptr iptr5: 02
+mpcore icdiptr iptr6: 02
+mpcore icdiptr iptr7: 02
+mpcore icdiptr iptr8: 02
+mpcore icdiptr iptr9: 02
+mpcore icdiptr iptr10: 02
+mpcore icdiptr iptr11: 02
+mpcore icdiptr iptr12: 02
+mpcore icdiptr iptr13: 02
+mpcore icdiptr iptr14: 02
+mpcore icdiptr iptr15: 02
+mpcore icdiptr iptr16: 00
+mpcore icdiptr iptr17: 00
+mpcore icdiptr iptr18: 00
+mpcore icdiptr iptr19: 00
+mpcore icdiptr iptr20: 00
+mpcore icdiptr iptr21: 00
+mpcore icdiptr iptr22: 00
+mpcore icdiptr iptr23: 00
+mpcore icdiptr iptr24: 00
+mpcore icdiptr iptr25: 00
+mpcore icdiptr iptr26: 00
+mpcore icdiptr iptr27: 02
+mpcore icdiptr iptr28: 02
+mpcore icdiptr iptr29: 02
+mpcore icdiptr iptr30: 02
+mpcore icdiptr iptr31: 02
+mpcore icdiptr iptr32: 00
+mpcore icdiptr iptr33: 00
+mpcore icdiptr iptr34: 00
+mpcore icdiptr iptr35: 00
+mpcore icdiptr iptr36: 00
+mpcore icdiptr iptr37: 00
+mpcore icdiptr iptr38: 00
+mpcore icdiptr iptr39: 00
+mpcore icdiptr iptr40: 00
+mpcore icdiptr iptr41: 00
+mpcore icdiptr iptr42: 00
+mpcore icdiptr iptr43: 00
+mpcore icdiptr iptr44: 00
+mpcore icdiptr iptr45: 00
+mpcore icdiptr iptr46: 00
+mpcore icdiptr iptr47: 00
+mpcore icdiptr iptr48: 00
+mpcore icdiptr iptr49: 00
+mpcore icdiptr iptr50: 00
+mpcore icdiptr iptr51: 00
+mpcore icdiptr iptr52: 01
+mpcore icdiptr iptr53: 00
+mpcore icdiptr iptr54: 00
+mpcore icdiptr iptr55: 00
+mpcore icdiptr iptr56: 00
+mpcore icdiptr iptr57: 00
+mpcore icdiptr iptr58: 00
+mpcore icdiptr iptr59: 00
+mpcore icdiptr iptr60: 00
+mpcore icdiptr iptr61: 00
+mpcore icdiptr iptr62: 00
+mpcore icdiptr iptr63: 00
+mpcore icdiptr iptr64: 00
+mpcore icdiptr iptr65: 00
+mpcore icdiptr iptr66: 00
+mpcore icdiptr iptr67: 00
+mpcore icdiptr iptr68: 00
+mpcore icdiptr iptr69: 00
+mpcore icdiptr iptr70: 00
+mpcore icdiptr iptr71: 00
+mpcore icdiptr iptr72: 00
+mpcore icdiptr iptr73: 00
+mpcore icdiptr iptr74: 00
+mpcore icdiptr iptr75: 00
+mpcore icdiptr iptr76: 00
+mpcore icdiptr iptr77: 00
+mpcore icdiptr iptr78: 00
+mpcore icdiptr iptr79: 00
+mpcore icdiptr iptr80: 00
+mpcore icdiptr iptr81: 00
+mpcore icdiptr iptr82: 00
+mpcore icdiptr iptr83: 00
+mpcore icdiptr iptr84: 00
+mpcore icdiptr iptr85: 00
+mpcore icdiptr iptr86: 00
+mpcore icdiptr iptr87: 00
+mpcore icdiptr iptr88: 00
+mpcore icdiptr iptr89: 00
+mpcore icdiptr iptr90: 00
+mpcore icdiptr iptr91: 00
+mpcore icdiptr iptr92: 00
+mpcore icdiptr iptr93: 00
+mpcore icdiptr iptr94: 00
+mpcore icdiptr iptr95: 00
+mpcore icdicfr0: aaaaaaaa
+mpcore icdicfr1: 7dc00000
+mpcore icdicfr2: 55555555
+mpcore icdicfr3: 55555555
+mpcore icdicfr4: 55555555
+mpcore icdicfr5: 55555555
+mpcore ppi_status: 00000000
+mpcore spi_status_0: 00000000
+mpcore spi_status_1: 00000000
+mpcore icdsgir: 00000000
+mpcore icpidr4: 00000004
+mpcore icpidr5: 00000000
+mpcore icpidr6: 00000000
+mpcore icpidr7: 00000000
+mpcore icpidr0: 00000090
+mpcore icpidr1: 000000b3
+mpcore icpidr2: 0000001b
+mpcore icpidr3: 00000000
+mpcore iccidr0: 0000000d
+mpcore iccidr1: 000000f0
+mpcore iccidr2: 00000005
+mpcore iccidr3: 000000b1
+

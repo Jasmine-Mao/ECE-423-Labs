@@ -1,4 +1,4 @@
-17:21:04 **** Incremental Build of configuration Debug for project ece423_lab1 ****
+15:14:57 **** Incremental Build of configuration Debug for project ece423_lab1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -6,5 +6,5 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
 
-17:21:05 Build Finished (took 718ms)
+15:14:58 Build Finished (took 734ms)
 

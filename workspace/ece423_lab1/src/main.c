@@ -137,6 +137,7 @@ int main()
 	//spin_lock(&lock);	// lock the initialization so core 1 doesn't keep going
 
 	printf("LOCK IS HERE %x\n",&lock);
+	//while(1){}
 
 	// initialization
 	InstancePtr = &AxiDma;
@@ -164,7 +165,7 @@ int main()
     load_video(file_name[file_counter]);	// since this writes to globals, this needs to have a lock around it. we can also put the locks INTO THE FUNCTION to avoid needing to write this all the time
     // unlock
 
-    spin_unlock(&lock);	//unlock and allow core 1 to keep working
+    //spin_unlock(&lock);	//unlock and allow core 1 to keep working
 //    XTime start, end;
 //    XTime_GetTime(&start);  // Capture time before the function call
 //    XTime_GetTime(&end);    // Capture time after the function call

@@ -63,17 +63,16 @@ int main()
     // void *circular_buffer = malloc(190*100*4*num_frames_to_buffer);
     // this should malloc at the beginning of the heap of core 1
 
-    printf("CORE 1 is starting");
+    printf("CORE 1 is starting\n");
 
-    spin_lock(*lock_ptr);
+    //spin_lock(*lock_ptr);
 
-	printf("CORE 1 made it here");
+	printf("CORE 1 made it here\n");
     //spin_unlock(*lock_ptr);
     // pick up and put down the lock as a method of synchronization]
 
     while(1)
     {
-    	printf("CORE 1 made it here");
     }
-
+//	return 0;
 }

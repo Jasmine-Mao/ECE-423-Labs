@@ -1,0 +1,9 @@
+typedef struct {
+	int head;
+	int tail;
+	int max_size;
+	uint8_t *buff;
+	int element_size;
+} circular_buff_t;
+
+c

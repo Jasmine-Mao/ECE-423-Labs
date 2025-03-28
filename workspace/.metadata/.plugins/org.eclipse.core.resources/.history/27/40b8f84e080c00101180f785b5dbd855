@@ -1,0 +1,22 @@
+#include "buff.h"
+
+circular_buff_t* init(int buff_size, int element_size, int capacity){
+	circular_buff_t *buffer = malloc(sizeof(circulat_buffer_t));	// init the circular buffer object
+
+	buffer->element_size = element_size;
+	buffer->max_size = buff_size;
+	buffer->buff = malloc(buff_size);	// mallocs the amount of data needed into the heap
+	buffer->head = 0;
+	buffer->tail = 0;
+	buffer->capacity = capacity;
+
+	return buffer;	// returns the initialized buffer
+}
+
+int push(circular_buff_t* buffer, /*insert all the rgb block element types*/){
+
+}
+
+int is_full(circular_buff_t* buffer){
+
+}
