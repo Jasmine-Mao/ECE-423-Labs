@@ -50,12 +50,26 @@
 #include "xil_printf.h"
 #include "spinlocks/spinlock1.h"
 
-UINTPTR* lock_ptr = 0x14dd5144;
+#define DEVICE_MEMORY 0xC06
+
+#define LOCK_ADDRESS 0x15000004
+UINTPTR* volatile lock_ptr = (UINTPTR*)LOCK_ADDRESS;
 //#define TEST_PTR ((volatile uint32_t*)0x14EC9380)
+
+//#define SHARED_MEMORY_ADDR 0x15000000
+//volatile uint32_t *shared_var = (uint32_t *)SHARED_MEMORY_ADDR;
 
 int main()
 {
+    printf("CORE1 is starting\n");
+    //while (1);
+	Xil_SetTlbAttributes(0x15000000, 0xC06);
+//    uint32_t value = *shared_var;
+
+
+
     init_platform();
+//    Xil_SetTlbAttributes(0x14DD5140, 0x1C);
 //    *TEST_PTR = 0xabcd1234;
 
 
@@ -63,17 +77,26 @@ int main()
     // void *circular_buffer = malloc(190*100*4*num_frames_to_buffer);
     // this should malloc at the beginning of the heap of core 1
 
-    printf("CORE 1 is starting\n");
+    printf("CORE1 this is where lock_ptr points to:%x\n",lock_ptr);
+    printf("CORE1 current value of the lock:%x\n",*lock_ptr);
 
-    //spin_lock(*lock_ptr);
 
-	printf("CORE 1 made it here\n");
-    //spin_unlock(*lock_ptr);
+
+    printf("Core1 trying to spin_lock");
+
+    spin_lock(lock_ptr);
+    //while(*lock_ptr == 0);
+
+	printf("CORE1 made it here after the lock\n");
+    //spin_unlock(lock_ptr);
+
     // pick up and put down the lock as a method of synchronization]
+
+	printf("Core1 Spinlock state: %d\n",*lock_ptr);
 
     while(1)
     {
-    	print("HERE\n");
+    	//print("HERE\n");
     }
 //	return 0;
 }

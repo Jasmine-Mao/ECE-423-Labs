@@ -289,7 +289,7 @@ _SDA2_BASE_ = __sdata2_start + ((__sbss2_end - __sdata2_start) / 2 );
 
 _end = .;
 
-.spinlock_section 0x14DD5140:{
+.spinlock_section 0x15000000:{
 	KEEP (*(.spinlock_section))
 	FILL(0)
 	. += 0x1000;

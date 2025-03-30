@@ -13,4 +13,4 @@ circular_buff_t* init(int buff_size, int element_size, int capacity);
 int push (circular_buff_t* buffer, void* element);
 int pop(circular_buff_t* buffer, void* element);
 int is_full(circular_buff_t* buffer);
-int is_empty(circular_buffer_t* buffer);
+int is_empty(circular_buff_t* buffer);

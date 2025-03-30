@@ -19,7 +19,7 @@ int push(circular_buff_t* buffer, void* element){
 	if (is_full(buffer)){
 		return 1;			// fail to insert, need to wait
 	}
-	memcpy(buffer->buff + (buffer->head * buffer->element_size), element, buff->element_size);	// copy the stuff we want to put into the buffer into the buffer
+	//memcpy(buffer->buff + (buffer->head * buffer->element_size), element, buff->element_size);	// copy the stuff we want to put into the buffer into the buffer
 	buffer->head = (buffer-> head + 1) % buffer->capacity;
 	return 0;
 }
@@ -41,7 +41,7 @@ int is_full(circular_buff_t* buffer){
 	// if this is false, it will return 0 meaning that there is still room in the buffer
 }
 
-int is_empty(circular_buffer_t* buffer){
+int is_empty(circular_buff_t* buffer){
 	return (buffer->head == buffer->tail);
 	// if this is true, return 1 since it is empty
 	// else return 0

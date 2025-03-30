@@ -92,6 +92,13 @@ int dummyvar __attribute((section(".spinlock_section")));
 
 __attribute((section(".spinlock_section"))) volatile UINTPTR lock = 1; //check if we need both variables
 
+#define LOCK_ADDRESS  0x15000000
+//volatile UINTPTR *lock = (UINTPTR *)LOCK_ADDRESS;
+
+//#define SHARED_MEMORY_ADDR 0x15000000
+//volatile uint32_t *shared_var = (uint32_t *)SHARED_MEMORY_ADDR;
+
+
 void scan_files()
 {
 	DIR video_dir;
@@ -130,13 +137,27 @@ void TimerHandler(void*)
 
 int main()
 {
+
+	//testing shared memory
+//	Xil_SetTlbAttributes(0x15000000, DEVICE_MEMORY);
+//    *shared_var = 42;
+//    while (1);
+
+
+
 	//FOR TLB SETUP
-	Xil_SetTlbAttributes(0x14DD5140, DEVICE_MEMORY);	//MODIFY THIS ONCE WE KNOW!!!
+	printf("CORE0 LOCK IS HERE %x\n",&lock);
+	Xil_SetTlbAttributes(0x15000000, DEVICE_MEMORY); //DEVICE_MEMORY	//MODIFY THIS ONCE WE KNOW!!!
+	spin_lock(&lock);
 	// this is just for finding the spinlocks faster in shared memory
+	printf("CORE0 current value of the lock:%x\n",lock);
 
 	//spin_lock(&lock);	// lock the initialization so core 1 doesn't keep going
 
-	printf("LOCK IS HERE %x\n",&lock);
+
+
+
+
 	//while(1){}
 
 	// initialization
@@ -161,8 +182,9 @@ int main()
 
 
     scan_files();
-    spin_lock(&lock);
-    spin_lock(&lock);
+    //spin_lock(&lock);
+    //spin_lock(&lock);
+
 
     load_video(file_name[file_counter]);	// since this writes to globals, this needs to have a lock around it. we can also put the locks INTO THE FUNCTION to avoid needing to write this all the time
     // unlock
@@ -178,6 +200,18 @@ int main()
     //printf("WHAT IS STORED HERE %x\n",*test_ptr);
 
     decode_single_frame();
+
+
+	printf("CORE0 other core should print out something soon %x\n",&lock);
+	spin_unlock(&lock);
+
+	//printf("CORE0 current value of the lock:%x\n",lock);
+
+    while(1)
+    {
+    	//print("HERE\n");
+    }
+
 
 
     //vdma_out();

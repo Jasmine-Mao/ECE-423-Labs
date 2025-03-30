@@ -120,3 +120,17 @@ domain active {standalone_ps7_cortexa9_1}
 bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DSHAREABLE_DRR -DUSE_AMP=1"
 bsp reload
 platform generate
+platform generate
+platform active {Assignment3_platform}
+domain active {standalone_domain}
+bsp reload
+domain active {zynq_fsbl}
+bsp reload
+bsp reload
+domain active {standalone_domain}
+bsp reload
+domain active {standalone_ps7_cortexa9_1}
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DSHAREABLE_DRR -DUSE_AMP=1"
+bsp reload
+platform generate -domains 

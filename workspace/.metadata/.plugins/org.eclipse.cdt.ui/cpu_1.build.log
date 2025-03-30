@@ -1,10 +1,36 @@
-16:26:56 **** Incremental Build of configuration Debug for project cpu_1 ****
+17:18:26 **** Incremental Build of configuration Debug for project cpu_1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/core1_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/core1_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_ps7_cortexa9_1/bspinclude/include -MMD -MP -MF"src/core1_main.d" -MT"src/core1_main.o" -o "src/core1_main.o" "../src/core1_main.c"
+../src/core1_main.c: In function 'main':
+../src/core1_main.c:66:9: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+   66 |         Xil_SetTlbAttributes(0x15000000, 0xC06);
+      |         ^~~~~~~~~~~~~~~~~~~~
+../src/core1_main.c:80:53: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'UINTPTR *' {aka 'unsigned int *'} [-Wformat=]
+   80 |     printf("CORE1 this is where lock_ptr points to:%x\n",lock_ptr);
+      |                                                    ~^    ~~~~~~~~
+      |                                                     |    |
+      |                                                     |    UINTPTR * {aka unsigned int *}
+      |                                                     unsigned int
+      |                                                    %ls
+'Finished building: ../src/core1_main.c'
+' '
+'Building target: cpu_1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_ps7_cortexa9_1/bsplib/lib -o "cpu_1.elf"  ./src/spinlocks/spinlock1.o  ./src/circular_buffer/buff.o  ./src/core1_main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: cpu_1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cpu_1.elf  |tee "cpu_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  52287	   2548	130006248	130061083	7c0931b	cpu_1.elf
+'Finished building: cpu_1.elf.size'
+' '
 
-16:26:57 Build Finished (took 766ms)
+17:18:29 Build Finished (took 3s.327ms)
 
