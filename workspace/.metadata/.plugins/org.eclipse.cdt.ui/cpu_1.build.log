@@ -1,4 +1,4 @@
-15:32:35 **** Incremental Build of configuration Debug for project cpu_1 ****
+15:47:30 **** Incremental Build of configuration Debug for project cpu_1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -29,8 +29,8 @@ C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assi
 ../src/core1_main.c:131:9: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
   131 |         Xil_SetTlbAttributes(0x15000000, 0xC06);
       |         ^~~~~~~~~~~~~~~~~~~~
-../src/core1_main.c:152:13: warning: implicit declaration of function 'ycbcr_to_rgb' [-Wimplicit-function-declaration]
-  152 |             ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
+../src/core1_main.c:156:13: warning: implicit declaration of function 'ycbcr_to_rgb' [-Wimplicit-function-declaration]
+  156 |             ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
       |             ^~~~~~~~~~~~
 ../src/core1_main.c:142:26: warning: unused variable 'buffer' [-Wunused-variable]
   142 |         circular_buff_t* buffer = init(90*160*4, 5);    //creates a circular buffer of capacity 5 (for now)
@@ -59,6 +59,9 @@ At top level:
       |             ^~~~~~~~~~~~
 ../src/core1_main.c:102:13: warning: 'hYb_size_ptr' defined but not used [-Wunused-variable]
   102 | static int* hYb_size_ptr = (int*)HYB_SIZE_ADDRESS;
+      |             ^~~~~~~~~~~~
+../src/core1_main.c:100:13: warning: 'hCb_size_ptr' defined but not used [-Wunused-variable]
+  100 | static int* hCb_size_ptr = (int*)HCB_SIZE_ADDRESS;
       |             ^~~~~~~~~~~~
 ../src/core1_main.c:98:18: warning: 'frame_index_ptr' defined but not used [-Wunused-variable]
    98 | static uint32_t* frame_index_ptr = (uint32_t*)FRAME_INDEX_ADDRESS;
@@ -104,5 +107,5 @@ arm-none-eabi-size cpu_1.elf  |tee "cpu_1.elf.size"
 'Finished building: cpu_1.elf.size'
 ' '
 
-15:32:36 Build Finished (took 1s.375ms)
+15:47:33 Build Finished (took 2s.710ms)
 

@@ -397,12 +397,6 @@ uint8_t decode_single_frame()
 	printf("Core0 Unlock\n");
 	spin_unlock(&lock);
 	printf("Core0 lock\n");
-
-	for(int b = 12000; b < 14400; b++)
-	{
-		ycbcr_to_rgb(b/wCb_size*8, b%wCb_size*8, w_size, Yblock[b], Cbblock[b], Crblock[b], rgbblock);
-	}
-
 	spin_lock(&lock);
 	printf("Core0 made it past the lock\n");
     //ybcbr to rgb conversion
