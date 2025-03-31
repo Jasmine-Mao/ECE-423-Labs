@@ -6862,3 +6862,23 @@ Caused by: org.eclipse.swt.SWTException: Invalid thread access
 
 !ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 15:49:28.456
 !MESSAGE XSCT command with result: [disconnect tcfchan#42], Result: [null, ]. Thread: Thread-5891
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-03-31 15:51:51.949
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Corrupted database: ece423_lab1_system.1736795936260.pdom
+	at org.eclipse.cdt.internal.core.pdom.db.Database.databaseCorruptionDetected(Database.java:318)
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:298)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:545)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:531)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties$DBProperty.search(DBProperties.java:225)
+	at org.eclipse.cdt.internal.core.pdom.db.DBProperties.getProperty(DBProperties.java:63)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.getProperty(PDOM.java:1474)
+	at org.eclipse.cdt.internal.core.index.IndexFactory.safeAddFragment(IndexFactory.java:148)
+	at org.eclipse.cdt.internal.core.index.IndexFactory.getIndex(IndexFactory.java:73)
+	at org.eclipse.cdt.internal.core.pdom.PDOMManager.getIndex(PDOMManager.java:1271)
+	at org.eclipse.cdt.internal.ui.search.actions.OpenDeclarationsJob.performNavigation(OpenDeclarationsJob.java:160)
+	at org.eclipse.cdt.internal.ui.search.actions.OpenDeclarationsJob.run(OpenDeclarationsJob.java:146)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2025-03-31 15:51:51.949
+!MESSAGE Corrupted database: ece423_lab1_system.1736795936260.pdom

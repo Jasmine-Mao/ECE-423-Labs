@@ -363,7 +363,7 @@ uint8_t decode_single_frame()
 	XAxiDma_Reset(&AxiDma);
 	while (!XAxiDma_ResetIsDone(&AxiDma)){}
 
-	//IDCT Cr COMPONENT////////////////////////////
+	//Cr COMPONENT////////////////////////////
 	Xil_L1DCacheFlush();
 	Xil_L2CacheFlush();
 
@@ -374,8 +374,6 @@ uint8_t decode_single_frame()
 	XAxiDma_Reset(&AxiDma);
 	while (!XAxiDma_ResetIsDone(&AxiDma)){}
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 	printf("Core0 Unlock\n");
 	spin_unlock(&lock);
 	printf("Core0 lock\n");

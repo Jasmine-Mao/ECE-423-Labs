@@ -305,8 +305,6 @@ void load_video(const char* filename_in) //HM
 
 uint8_t decode_single_frame()
 {
-
-	////////////////////////////////////////////SD READ////////////////////////
 	//XTime_GetTime(&start);  // Capture time before the function call
 	rgbblock = buff_next();	// this gets malloced
 	if (rgbblock == NULL) return 1; // overflowing buffer
@@ -321,30 +319,52 @@ uint8_t decode_single_frame()
     //set the Cb and Cr bitstreams to point to the right location
     Cbbitstream = Ybitstream + Ysize;
     Crbitstream = Cbbitstream + Cbsize;
-   ///////////////////////////////////////////////SD READ END//////////////
 
-
-    //////////////////////////////////////////////LOSSLESS Y//////////////////
+    //XTime_GetTime(&start);
     lossless_decode(hYb_size*wYb_size, Ybitstream, YDCAC, Yquant, frame_type);
+//	XTime_GetTime(&end);    // Capture time after the function call
+//	printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
 
-
-    //////////////////////////////////////////////LOSSLESS Cb///////////////////
+    //XTime_GetTime(&start);
     lossless_decode(hCb_size*wCb_size, Cbbitstream, CbDCAC, Cquant, frame_type);
+	//	XTime_GetTime(&end);    // Capture time after the function call
+	//	printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
 
-    //////////////////////////////////////////////LOSSLESS Cr///////////////////
+    //XTime_GetTime(&start);
     lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
-
+//	XTime_GetTime(&end);    // Capture time after the function call
+//	printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    //PUT IDCT FUNCTION HERE
 
-	//IDCT Y COMPONENT///////////////////////////
+
+
+	//Y COMPONENT///////////////////////////
 
     Xil_L1DCacheFlush();
     Xil_L2CacheFlush();
 
+
+
+    XTime_GetTime(&start);
 	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
 	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
+	XTime_GetTime(&end);    // Capture time after the function call
+    printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
+
+//	printf("num_frames:%x\n",&num_frames);
+//	printf("w_size:%x\n",&w_size);
+//	printf("h_size:%x\n",&h_size);
+//	printf("num_iframes:%x\n",&num_iframes);
+//	printf("payload_size:%x\n",&payload_size);
+//	printf("Ysize:%x\n",&Ysize);
+//	printf("Cbsize:%x\n",&Cbsize);
+//	printf("frame_size:%x\n",&frame_size);
+//	printf("frame_type:%x\n",&frame_type);
+	//printf("trailer:%x\n", &trailer);
+
 
 	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
 	XAxiDma_Reset(&AxiDma);
@@ -352,7 +372,7 @@ uint8_t decode_single_frame()
 
 
 
-	//IDCT Cb COMPONENT////////////////////////////
+	//Cb COMPONENT////////////////////////////
 	Xil_L1DCacheFlush();
 	Xil_L2CacheFlush();
 
@@ -363,7 +383,7 @@ uint8_t decode_single_frame()
 	XAxiDma_Reset(&AxiDma);
 	while (!XAxiDma_ResetIsDone(&AxiDma)){}
 
-	//IDCT Cr COMPONENT////////////////////////////
+	//Cr COMPONENT////////////////////////////
 	Xil_L1DCacheFlush();
 	Xil_L2CacheFlush();
 
@@ -374,8 +394,6 @@ uint8_t decode_single_frame()
 	XAxiDma_Reset(&AxiDma);
 	while (!XAxiDma_ResetIsDone(&AxiDma)){}
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 	printf("Core0 Unlock\n");
 	spin_unlock(&lock);
 	printf("Core0 lock\n");
