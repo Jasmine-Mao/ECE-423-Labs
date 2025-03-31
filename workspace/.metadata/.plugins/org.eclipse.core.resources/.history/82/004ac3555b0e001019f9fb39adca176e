@@ -1,0 +1,48 @@
+#include "buff.h"
+#include <string.h>
+#include <stdio.h>
+
+circular_buff_t* init(int element_size, int capacity){
+	circular_buff_t *buffer = malloc(sizeof(circular_buff_t));	// init the circular buffer object
+
+	buffer->element_size = element_size;
+	buffer->max_size = buff_size;
+	buffer->buff = malloc(buff_size);	// mallocs the amount of data needed into the heap
+	buffer->head = 0;
+	buffer->tail = 0;
+	buffer->capacity = capacity;
+
+	return buffer;	// returns the initialized buffer
+}
+
+int push(circular_buff_t* buffer, void* element){
+	if (is_full(buffer)){
+		return 1;			// fail to insert, need to wait
+	}
+	memcpy(buffer->buff + (buffer->head * buffer->element_size), element, buffer->element_size);	// copy the stuff we want to put into the buffer into the buffer
+	buffer->head = (buffer-> head + 1) % buffer->capacity;
+	return 0;
+}
+
+int pop(circular_buff_t* buffer, void* element){	// function type needs to change to be of type of whatever we're popping off the buffer
+	if(is_empty(buffer)){
+		return 1;			// fail to pop, need to wait for something to come in
+	}
+	// increment the tail
+	int old_tail = buffer->tail;	// store old value to make the mth look prettier
+	buffer->tail = (buffer->tail + 1)%buffer->capacity;
+
+	return ;
+}
+
+int is_full(circular_buff_t* buffer){
+	return ((buffer->head+1) == (buffer->tail % buffer->capacity));
+	// if this is true, return 1 meaning the buffer is full
+	// if this is false, it will return 0 meaning that there is still room in the buffer
+}
+
+int is_empty(circular_buff_t* buffer){
+	return (buffer->head == buffer->tail);
+	// if this is true, return 1 since it is empty
+	// else return 0
+}

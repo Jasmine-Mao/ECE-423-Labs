@@ -295,4 +295,11 @@ _end = .;
 	. += 0x1000;
 	. = ALIGN(0x100000);
 }
+
+.shared_memory_section 0x15100000:{
+	KEEP (*(.shared_memory_section))
+	FILL(0)
+	. += 0x1000;
+	. = ALIGN(0x100000);
+}
 }

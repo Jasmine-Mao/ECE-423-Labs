@@ -93,8 +93,9 @@ int dummyvar __attribute((section(".spinlock_section")));
 __attribute((section(".spinlock_section"))) volatile UINTPTR lock = 1; //check if we need both variables
 
 #define LOCK_ADDRESS  0x15000000
-//volatile UINTPTR *lock = (UINTPTR *)LOCK_ADDRESS;
 
+
+//volatile UINTPTR *lock = (UINTPTR *)LOCK_ADDRESS;
 //#define SHARED_MEMORY_ADDR 0x15000000
 //volatile uint32_t *shared_var = (uint32_t *)SHARED_MEMORY_ADDR;
 
@@ -182,14 +183,12 @@ int main()
 
 
     scan_files();
-    //spin_lock(&lock);
-    //spin_lock(&lock);
 
 
     load_video(file_name[file_counter]);	// since this writes to globals, this needs to have a lock around it. we can also put the locks INTO THE FUNCTION to avoid needing to write this all the time
     // unlock
 
-    //spin_unlock(&lock);	//unlock and allow core 1 to keep working
+//    spin_unlock(&lock);	//unlock and allow core 1 to keep working
 //    XTime start, end;
 //    XTime_GetTime(&start);  // Capture time before the function call
 //    XTime_GetTime(&end);    // Capture time after the function call
@@ -201,16 +200,18 @@ int main()
 
     decode_single_frame();
 
+    //printf("CORE0 about to lock\n");
+    //spin_lock(&lock);
 
-	printf("CORE0 other core should print out something soon %x\n",&lock);
-	spin_unlock(&lock);
+	//printf("CORE0 other core should print out something soon %x\n",&lock);
+	//spin_unlock(&lock);
 
 	//printf("CORE0 current value of the lock:%x\n",lock);
 
-    while(1)
-    {
-    	//print("HERE\n");
-    }
+//    while(1)
+//    {
+//    	//print("HERE\n");
+//    }
 
 
 
@@ -231,6 +232,7 @@ int main()
     }
 
     // infinite loop
+//    spin_lock(&lock);	//core 0 starts with the lock as it's the master
     for(;;)
     {
     	if (!is_paused && timer_triggered)

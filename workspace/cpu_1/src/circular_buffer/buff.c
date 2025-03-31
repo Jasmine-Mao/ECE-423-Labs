@@ -2,12 +2,12 @@
 #include <string.h>
 #include <stdio.h>
 
-circular_buff_t* init(int buff_size, int element_size, int capacity){
+circular_buff_t* init(int element_size, int capacity){
 	circular_buff_t *buffer = malloc(sizeof(circular_buff_t));	// init the circular buffer object
 
 	buffer->element_size = element_size;
-	buffer->max_size = buff_size;
-	buffer->buff = malloc(buff_size);	// mallocs the amount of data needed into the heap
+	buffer->max_size = element_size*capacity;
+	buffer->buff = malloc(buffer->max_size);	// mallocs the amount of data needed into the heap
 	buffer->head = 0;
 	buffer->tail = 0;
 	buffer->capacity = capacity;
@@ -19,7 +19,7 @@ int push(circular_buff_t* buffer, void* element){
 	if (is_full(buffer)){
 		return 1;			// fail to insert, need to wait
 	}
-	//memcpy(buffer->buff + (buffer->head * buffer->element_size), element, buff->element_size);	// copy the stuff we want to put into the buffer into the buffer
+	memcpy(buffer->buff + (buffer->head * buffer->element_size), element, buffer->element_size);	// copy the stuff we want to put into the buffer into the buffer
 	buffer->head = (buffer-> head + 1) % buffer->capacity;
 	return 0;
 }

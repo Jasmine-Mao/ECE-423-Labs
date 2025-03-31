@@ -49,11 +49,71 @@
 #include "platform.h"
 #include "xil_printf.h"
 #include "spinlocks/spinlock1.h"
+#include "common/mjpeg423_types.h"
+#include "circular_buffer/buff.h"
 
 #define DEVICE_MEMORY 0xC06
 
 #define LOCK_ADDRESS 0x15000004
 UINTPTR* volatile lock_ptr = (UINTPTR*)LOCK_ADDRESS;
+
+#define NUM_FRAMES_ADDESS 		0x15100000
+#define W_SIZE_ADDRESS 			0x15100004
+#define H_SIZE_ADDRESS 			0x15100008
+#define NUM_IFRAMES_ADDRESS 	0x1510000C
+#define PAYLOAD_SIZE_ADDRESS 	0x15100010
+#define YSIZE_ADDRESS 			0x15100014
+#define CBSIZE_ADDRESS			0x15100018
+#define FRAME_SIZE_ADDRESS		0x1510001C
+#define FRAME_TYPE_ADDRESS		0x15100020
+#define TRAILER_ADDRESS			0x15100024
+#define FRAME_INDEX_ADDRESS		0x15100028
+#define HCB_SIZE_ADDRESS		0x1510002C
+#define WCB_SIZE_ADDRESS		0x15100030
+#define HYB_SIZE_ADDRESS		0x15100034
+#define WYB_SIZE_ADDRESS		0x15100038
+#define RGBBLOCK_ADDRESS		0x1510003C
+#define YBLOCK_ADDRESS			0x15100040
+#define CBBLOCK_ADDRESS			0x15100044
+#define CRBLOCK_ADDRESS			0x15100048
+#define YDCAC_ADDRESS			0x1510004C
+#define CBDCAC_ADDRESS			0x15100050
+#define CRDCAC_ADDRESS			0x15100054
+#define YBITSTREAM_ADDRESS		0x15100058
+#define CBBITSTREAM_ADDRESS		0x1510005C
+#define CRBITSTREAM_ADDRESS		0x15100060
+
+static uint32_t* num_frames_ptr = (uint32_t*)NUM_FRAMES_ADDESS;
+static uint32_t* w_size_ptr = (uint32_t*)W_SIZE_ADDRESS;
+static uint32_t* h_size_ptr = (uint32_t*)H_SIZE_ADDRESS;
+static uint32_t* num_iframes_ptr = (uint32_t*)NUM_IFRAMES_ADDRESS;
+static uint32_t* payload_size_ptr = (uint32_t*)PAYLOAD_SIZE_ADDRESS;
+static uint32_t* Ysize_ptr = (uint32_t*)YSIZE_ADDRESS;
+static uint32_t* Cbsize_ptr = (uint32_t*)CBSIZE_ADDRESS;
+static uint32_t* frame_size_ptr = (uint32_t*)FRAME_SIZE_ADDRESS;
+static uint32_t* frame_type_ptr = (uint32_t*)FRAME_TYPE_ADDRESS;
+
+static iframe_trailer_t** trailer_ptr = (iframe_trailer_t**)TRAILER_ADDRESS;
+
+static uint32_t* frame_index_ptr = (uint32_t*)FRAME_INDEX_ADDRESS;
+
+static int* hCb_size_ptr = (int*)HCB_SIZE_ADDRESS;
+static int* wCb_size_ptr = (int*)WCB_SIZE_ADDRESS;
+static int* hYb_size_ptr = (int*)HYB_SIZE_ADDRESS;
+static int* wYb_size_ptr = (int*)WYB_SIZE_ADDRESS;
+
+static rgb_pixel_t** rgbblock_ptr = (rgb_pixel_t**)RGBBLOCK_ADDRESS;
+static color_block_t** Yblock_ptr = (color_block_t**)YBLOCK_ADDRESS;
+static color_block_t** Cbblock_ptr = (color_block_t**)CBBLOCK_ADDRESS;
+static color_block_t** Crblock_ptr = (color_block_t**)CRBLOCK_ADDRESS;
+static dct_block_t** YDCAC_ptr = (dct_block_t**)YDCAC_ADDRESS;
+static dct_block_t** CbDCAC_ptr = (dct_block_t**)CBDCAC_ADDRESS;
+static dct_block_t** CrDCAC_ptr = (dct_block_t**)CRDCAC_ADDRESS;
+static uint8_t** Ybitstream_ptr = (uint8_t**)YBITSTREAM_ADDRESS;
+static uint8_t** Cbbitstream_ptr = (uint8_t**)CBBITSTREAM_ADDRESS;
+static uint8_t** Crbitstream_ptr = (uint8_t**)CRBITSTREAM_ADDRESS;
+
+
 //#define TEST_PTR ((volatile uint32_t*)0x14EC9380)
 
 //#define SHARED_MEMORY_ADDR 0x15000000
@@ -61,6 +121,11 @@ UINTPTR* volatile lock_ptr = (UINTPTR*)LOCK_ADDRESS;
 
 int main()
 {
+    printf("Core1 trying to spin_lock");
+
+    //spin_lock(lock_ptr);
+
+
     printf("CORE1 is starting\n");
     //while (1);
 	Xil_SetTlbAttributes(0x15000000, 0xC06);
@@ -72,31 +137,23 @@ int main()
 //    Xil_SetTlbAttributes(0x14DD5140, 0x1C);
 //    *TEST_PTR = 0xabcd1234;
 
-
-    // malloc 190 * 100 * 4 * (num frames we want to buffer) bytes for the circular buffer
-    // void *circular_buffer = malloc(190*100*4*num_frames_to_buffer);
-    // this should malloc at the beginning of the heap of core 1
-
-    printf("CORE1 this is where lock_ptr points to:%x\n",lock_ptr);
-    printf("CORE1 current value of the lock:%x\n",*lock_ptr);
-
-
-
-    printf("Core1 trying to spin_lock");
-
-    spin_lock(lock_ptr);
-    //while(*lock_ptr == 0);
-
-	printf("CORE1 made it here after the lock\n");
     //spin_unlock(lock_ptr);
 
-    // pick up and put down the lock as a method of synchronization]
-
-	printf("Core1 Spinlock state: %d\n",*lock_ptr);
+	circular_buff_t* buffer = init(90*160*4, 5);	//creates a circular buffer of capacity 5 (for now)
 
     while(1)
     {
-    	//print("HERE\n");
+    	printf("Core1 lock\n");
+    	spin_lock(lock_ptr);
+    	printf("Core1 made it past the lock\n");
+
+        for(int b = 0; b < (*hCb_size_ptr)*(*wCb_size_ptr); b++)
+        {
+            ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
+        }
+
+        printf("Core1 Unlock\n");
+        spin_unlock(lock_ptr);
     }
-//	return 0;
+	return 0;
 }
