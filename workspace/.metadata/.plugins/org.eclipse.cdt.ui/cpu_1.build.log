@@ -1,4 +1,4 @@
-15:47:30 **** Incremental Build of configuration Debug for project cpu_1 ****
+16:31:46 **** Incremental Build of configuration Debug for project cpu_1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -107,5 +107,5 @@ arm-none-eabi-size cpu_1.elf  |tee "cpu_1.elf.size"
 'Finished building: cpu_1.elf.size'
 ' '
 
-15:47:33 Build Finished (took 2s.710ms)
+16:31:47 Build Finished (took 1s.140ms)
 

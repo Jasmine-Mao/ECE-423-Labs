@@ -305,6 +305,39 @@ void load_video(const char* filename_in) //HM
 
 uint8_t decode_single_frame()
 {
+	/////////////////////////////////////////////////////////////////////////////////
+	//
+	//	area for roughing out how decode will look on CORE 0\
+	//
+	//	check frame type
+	//	for i frame:
+	//		if we are the first frame (1): 'ignore' anything that would be form a previous frame (ex. if there is room for a colour conversion from frame 0, skip over it)
+	//
+	//		SD read
+	//		LD Cr
+	//		LD Cb first half
+	//			after this, there is a pause for something from previous. this will always be a colour conversion followed by a L1 flush
+	//			if this is the first frame, we ignore the stuff from previous and immediately move on
+	//		L1 and L2 flush followed by IDCT for Cr
+	//		LD Cb second half
+	//		flush L1 and L2 on core 0 AND flush L1 on core 1 [THIS WIL REQUIRE SYNCHRONIZATION]
+	//		once the IDCT Cb 1 finishes, flush L1 and L2 caches on core 0 in preperation for IDCT Y
+	//		if the following is a I frame, perform the next SD read after the IDCT for Y finishes
+	//		if the following frame is a P frame, the scheduling for the next read might be a bit more complex [THIS WILL REQUIRE LOCKS AND OTHER SYNCHRONIZATION, MAYBE DELAYS?]
+	//
+	//	for p frame:
+	//		p frames will never be the first frame so we never need to worry about this
+	//
+	//		SD read
+	//		LD Cr
+	//		L1 and L2 flush; IDCT for cr
+	//		LD y
+	//		L1 and L2 flush, IDCT for y
+	//		L1 and L2 flush, IDCT for cb
+	//			after the cache flushes, we immediately run a colour conversion for the prvious frame if the previous was a P frame
+	//			**** I think i found a potential issue in the PIP schedule. If we consider a PPI, there is a colour conversion that needs to run before the I frame can begin running the SD read. this might need a bit more consideratio here
+	//
+	/////////////////////////////////////////////////////////////////////////////////
 
 	////////////////////////////////////////////SD READ////////////////////////
 	//XTime_GetTime(&start);  // Capture time before the function call

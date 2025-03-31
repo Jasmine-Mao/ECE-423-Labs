@@ -1001,3 +1001,8 @@ timestamp=[2025-03-31 15:43:49], mode=BUILD, duration=0:00:00.516, duration_ms=5
 timestamp=[2025-03-31 15:43:54], mode=BUILD, duration=0:00:00.625, duration_ms=625, data={name=ece423_lab1, configuration=Debug, clean_build=false}
 timestamp=[2025-03-31 15:47:33], mode=BUILD, duration=0:00:02.710, duration_ms=2710, data={name=cpu_1, configuration=Debug, clean_build=false}
 timestamp=[2025-03-31 15:47:44], mode=BUILD, duration=0:00:02.220, duration_ms=2220, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-03-31 16:31:30], mode=WORKBENCH_START, duration=0:00:09.663, duration_ms=9663, data={}
+timestamp=[2025-03-31 16:31:32], mode=WORKBENCH_UI_INIT, duration=0:00:01.391, duration_ms=1391, data={editors_count=18, platform_editors_count=5, projects_count=8, platform_projects_count=3, active_platform_editor=false, projects=Assignment3_platform,RemoteSystemsTempFiles,assignment2_hunter_test,cpu_1,cpu_1_system,ece423_lab1,ece423_lab1_system,lab_prefab_wrapper}
+timestamp=[2025-03-31 16:31:38], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.125, duration_ms=125, data={}
+timestamp=[2025-03-31 16:31:47], mode=BUILD, duration=0:00:01.172, duration_ms=1172, data={name=cpu_1, configuration=Debug, clean_build=false}
+timestamp=[2025-03-31 16:31:51], mode=BUILD, duration=0:00:01.171, duration_ms=1171, data={name=ece423_lab1, configuration=Debug, clean_build=false}
