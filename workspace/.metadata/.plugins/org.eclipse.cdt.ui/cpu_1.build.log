@@ -1,4 +1,4 @@
-16:31:46 **** Incremental Build of configuration Debug for project cpu_1 ****
+14:45:01 **** Incremental Build of configuration Debug for project cpu_1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -29,8 +29,14 @@ C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assi
 ../src/core1_main.c:131:9: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
   131 |         Xil_SetTlbAttributes(0x15000000, 0xC06);
       |         ^~~~~~~~~~~~~~~~~~~~
-../src/core1_main.c:156:13: warning: implicit declaration of function 'ycbcr_to_rgb' [-Wimplicit-function-declaration]
-  156 |             ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
+../src/core1_main.c:150:37: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  150 |         printf("CORE 1 frame type: %d\n",*frame_type_ptr);
+      |                                    ~^    ~~~~~~~~~~~~~~~
+      |                                     |    |
+      |                                     int  uint32_t {aka long unsigned int}
+      |                                    %ld
+../src/core1_main.c:158:13: warning: implicit declaration of function 'ycbcr_to_rgb' [-Wimplicit-function-declaration]
+  158 |             ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
       |             ^~~~~~~~~~~~
 ../src/core1_main.c:142:26: warning: unused variable 'buffer' [-Wunused-variable]
   142 |         circular_buff_t* buffer = init(90*160*4, 5);    //creates a circular buffer of capacity 5 (for now)
@@ -69,9 +75,6 @@ At top level:
 ../src/core1_main.c:96:27: warning: 'trailer_ptr' defined but not used [-Wunused-variable]
    96 | static iframe_trailer_t** trailer_ptr = (iframe_trailer_t**)TRAILER_ADDRESS;
       |                           ^~~~~~~~~~~
-../src/core1_main.c:94:18: warning: 'frame_type_ptr' defined but not used [-Wunused-variable]
-   94 | static uint32_t* frame_type_ptr = (uint32_t*)FRAME_TYPE_ADDRESS;
-      |                  ^~~~~~~~~~~~~~
 ../src/core1_main.c:93:18: warning: 'frame_size_ptr' defined but not used [-Wunused-variable]
    93 | static uint32_t* frame_size_ptr = (uint32_t*)FRAME_SIZE_ADDRESS;
       |                  ^~~~~~~~~~~~~~
@@ -103,9 +106,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size cpu_1.elf  |tee "cpu_1.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  54039	   3164	130006248	130063451	7c09c5b	cpu_1.elf
+  54031	   3164	130006248	130063443	7c09c53	cpu_1.elf
 'Finished building: cpu_1.elf.size'
 ' '
 
-16:31:47 Build Finished (took 1s.140ms)
+14:45:02 Build Finished (took 1s.47ms)
 

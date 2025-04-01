@@ -15158,3 +15158,310 @@ con
 
 15:48:10 INFO  : Launch script is exported to file 'C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\cpu_1_system\_ide\scripts\debugger_cpu_1-default.tcl'
 15:49:28 INFO  : Disconnected from the channel tcfchan#42.
+16:31:27 DEBUG : Logs will be stored at 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/IDE.log'.
+16:31:28 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\temp_xsdb_launch_script.tcl
+16:31:37 INFO  : Checking for BSP changes to sync application flags for project 'cpu_1'...
+16:31:37 ERROR : Failed to get platform details for the project 'cpu_1'. Cannot sync application flags.
+16:31:38 INFO  : Platform repository initialization has completed.
+16:31:39 INFO  : Registering command handlers for Vitis TCF services
+16:31:41 INFO  : XSCT server has started successfully.
+16:31:42 INFO  : plnx-install-location is set to ''
+16:31:42 INFO  : Successfully done setting XSCT server connection channel  
+16:31:42 INFO  : Successfully done query RDI_DATADIR 
+16:31:42 INFO  : Successfully done setting workspace for the tool. 
+16:31:42 INFO  : Checking for BSP changes to sync application flags for project 'cpu_1'...
+16:31:50 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+16:32:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:32:03 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+16:32:03 INFO  : 'jtag frequency' command is executed.
+16:32:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+16:32:05 INFO  : Device configured successfully with "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+16:32:06 INFO  : Context for 'APU' is selected.
+16:32:06 INFO  : Hardware design and registers information is loaded from 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa'.
+16:32:06 INFO  : 'configparams force-mem-access 1' command is executed.
+16:32:06 INFO  : Context for 'APU' is selected.
+16:32:06 INFO  : 'stop' command is executed.
+16:32:06 INFO  : Sourcing of 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+16:32:06 ERROR : Memory read error at 0xF8007080. AHB AP transaction error, DAP status 0xF0000021
+16:32:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}
+fpga -file C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+16:32:06 ERROR : Memory read error at 0xF8007080. AHB AP transaction error, DAP status 0xF0000021
+16:32:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:32:25 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+16:32:25 INFO  : 'jtag frequency' command is executed.
+16:32:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+16:32:27 INFO  : Device configured successfully with "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+16:32:27 INFO  : Context for 'APU' is selected.
+16:32:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa'.
+16:32:27 INFO  : 'configparams force-mem-access 1' command is executed.
+16:32:27 INFO  : Context for 'APU' is selected.
+16:32:27 INFO  : 'stop' command is executed.
+16:32:27 INFO  : Sourcing of 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+16:32:28 INFO  : 'ps7_init' command is executed.
+16:32:28 INFO  : 'ps7_post_config' command is executed.
+16:32:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:32:28 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:32:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:32:32 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:32:32 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+16:32:32 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf' is downloaded to processor 'ps7_cortexa9_1'.
+16:32:32 INFO  : 'configparams force-mem-access 0' command is executed.
+16:32:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}
+fpga -file C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:32:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:32:33 INFO  : 'con' command is executed.
+16:32:33 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+16:32:33 INFO  : 'con' command is executed.
+16:32:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+16:32:33 INFO  : Launch script is exported to file 'C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\cpu_1_system\_ide\scripts\debugger_cpu_1-default.tcl'
+16:55:14 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\temp_xsdb_launch_script.tcl
+10:20:01 DEBUG : Logs will be stored at 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/IDE.log'.
+10:20:03 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\temp_xsdb_launch_script.tcl
+10:20:10 INFO  : Registering command handlers for Vitis TCF services
+10:20:10 INFO  : Platform repository initialization has completed.
+10:20:15 INFO  : XSCT server has started successfully.
+10:20:15 INFO  : plnx-install-location is set to ''
+10:20:19 INFO  : Successfully done setting XSCT server connection channel  
+10:20:19 INFO  : Successfully done query RDI_DATADIR 
+10:20:19 INFO  : Successfully done setting workspace for the tool. 
+10:29:11 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+10:29:21 INFO  : Checking for BSP changes to sync application flags for project 'cpu_1'...
+10:29:26 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+10:29:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:30:03 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+10:30:03 INFO  : 'jtag frequency' command is executed.
+10:30:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+10:30:06 INFO  : Device configured successfully with "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+10:30:06 INFO  : Context for 'APU' is selected.
+10:30:07 INFO  : Hardware design and registers information is loaded from 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa'.
+10:30:07 INFO  : 'configparams force-mem-access 1' command is executed.
+10:30:07 INFO  : Context for 'APU' is selected.
+10:30:07 INFO  : 'stop' command is executed.
+10:30:07 INFO  : Sourcing of 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+10:30:07 INFO  : 'ps7_init' command is executed.
+10:30:07 INFO  : 'ps7_post_config' command is executed.
+10:30:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:30:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:30:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:30:13 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:30:13 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+10:30:13 ERROR : Memory write error at 0xCFF0000. MMU section translation fault
+10:30:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}
+fpga -file C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf
+----------------End of Script----------------
+
+10:30:13 ERROR : Memory write error at 0xCFF0000. MMU section translation fault
+10:31:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:31:03 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+10:31:03 INFO  : 'jtag frequency' command is executed.
+10:31:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+10:31:06 INFO  : Device configured successfully with "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+10:31:06 INFO  : Context for 'APU' is selected.
+10:31:06 INFO  : Hardware design and registers information is loaded from 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa'.
+10:31:06 INFO  : 'configparams force-mem-access 1' command is executed.
+10:31:06 INFO  : Context for 'APU' is selected.
+10:31:06 INFO  : 'stop' command is executed.
+10:31:06 INFO  : Sourcing of 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+10:31:06 INFO  : 'ps7_init' command is executed.
+10:31:06 INFO  : 'ps7_post_config' command is executed.
+10:31:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:31:06 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:31:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:31:12 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:31:12 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+10:31:12 ERROR : Memory write error at 0xCFF0000. MMU section translation fault
+10:31:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}
+fpga -file C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf
+----------------End of Script----------------
+
+10:31:12 ERROR : Memory write error at 0xCFF0000. MMU section translation fault
+10:31:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:31:28 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+10:31:28 INFO  : 'jtag frequency' command is executed.
+10:31:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+10:31:30 INFO  : Device configured successfully with "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+10:31:30 INFO  : Context for 'APU' is selected.
+10:31:30 INFO  : Hardware design and registers information is loaded from 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa'.
+10:31:30 INFO  : 'configparams force-mem-access 1' command is executed.
+10:31:30 INFO  : Context for 'APU' is selected.
+10:31:30 INFO  : 'stop' command is executed.
+10:31:30 INFO  : Sourcing of 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+10:31:31 INFO  : 'ps7_init' command is executed.
+10:31:31 INFO  : 'ps7_post_config' command is executed.
+10:31:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:31:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:31:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:31:37 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:31:38 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+10:31:38 ERROR : Memory write error at 0xCFF0000. MMU section translation fault
+10:31:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}
+fpga -file C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf
+----------------End of Script----------------
+
+10:31:38 ERROR : Memory write error at 0xCFF0000. MMU section translation fault
+10:33:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:33:36 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+10:33:36 INFO  : 'jtag frequency' command is executed.
+10:33:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+10:33:39 INFO  : Device configured successfully with "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+10:33:39 INFO  : Context for 'APU' is selected.
+10:33:39 INFO  : Hardware design and registers information is loaded from 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa'.
+10:33:39 INFO  : 'configparams force-mem-access 1' command is executed.
+10:33:39 INFO  : Context for 'APU' is selected.
+10:33:43 INFO  : 'stop' command is executed.
+10:33:43 INFO  : Sourcing of 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+10:33:44 INFO  : 'ps7_init' command is executed.
+10:33:44 INFO  : 'ps7_post_config' command is executed.
+10:33:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:33:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:33:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:33:51 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:33:51 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+10:33:51 ERROR : Memory write error at 0xCFF0000. MMU section translation fault
+10:33:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}
+fpga -file C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf
+----------------End of Script----------------
+
+10:33:51 ERROR : Memory write error at 0xCFF0000. MMU section translation fault
+10:34:07 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+10:34:11 INFO  : Checking for BSP changes to sync application flags for project 'cpu_1'...
+10:34:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:34:32 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+10:34:32 INFO  : 'jtag frequency' command is executed.
+10:34:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+10:34:36 INFO  : Device configured successfully with "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+10:34:36 INFO  : Context for 'APU' is selected.
+10:34:36 INFO  : Hardware design and registers information is loaded from 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa'.
+10:34:36 INFO  : 'configparams force-mem-access 1' command is executed.
+10:34:36 INFO  : Context for 'APU' is selected.
+10:34:36 INFO  : 'stop' command is executed.
+10:34:36 INFO  : Sourcing of 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+10:34:37 INFO  : 'ps7_init' command is executed.
+10:34:37 INFO  : 'ps7_post_config' command is executed.
+10:34:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:34:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:34:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:34:43 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:34:43 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+10:34:43 ERROR : Memory write error at 0xCFF0000. MMU section translation fault
+10:34:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}
+fpga -file C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf
+----------------End of Script----------------
+
+10:34:43 ERROR : Memory write error at 0xCFF0000. MMU section translation fault

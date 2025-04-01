@@ -338,41 +338,6 @@ uint8_t decode_single_frame()
 	//			**** I think i found a potential issue in the PIP schedule. If we consider a PPI, there is a colour conversion that needs to run before the I frame can begin running the SD read. this might need a bit more consideratio here
 	//
 	/////////////////////////////////////////////////////////////////////////////////
-	if(frame_type == 0) //Iframe
-	{
-		////////////////////////////////////////////SD READ////////////////////////
-		//XTime_GetTime(&start);  // Capture time before the function call
-		rgbblock = buff_next();	// this gets malloced
-		if (rgbblock == NULL) return 1; // overflowing buffer
-		if (frame_index >= num_frames) return 1; // reached end of video
-
-	    //read frame payload
-		f_status = f_read(&file_in, (void*)&frame_size, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&frame_type, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&Ysize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&Cbsize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)Ybitstream, frame_size - 4 * sizeof(uint32_t), (UINT*)&num_bytes_read);
-	    //set the Cb and Cr bitstreams to point to the right location
-	    Cbbitstream = Ybitstream + Ysize;
-	    Crbitstream = Cbbitstream + Cbsize;
-	    ///////////////////////////////////////////////SD READ END//////////////
-
-	    //////////////////////////////////////////////LOSSLESS Cr///////////////////
-	    lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
-
-	    //////////////////////////////////////////////LOSSLESS Cb///////////////////
-	    //WE WILL HAVE TO SPLIT THIS LATER
-	    lossless_decode(hCb_size*wCb_size, Cbbitstream, CbDCAC, Cquant, frame_type);
-
-
-
-
-
-	}
-	else //Pframe
-	{
-		...
-	}
 
 	////////////////////////////////////////////SD READ////////////////////////
 	//XTime_GetTime(&start);  // Capture time before the function call
@@ -390,7 +355,7 @@ uint8_t decode_single_frame()
     Cbbitstream = Ybitstream + Ysize;
     Crbitstream = Cbbitstream + Cbsize;
    ///////////////////////////////////////////////SD READ END//////////////
-    //printf("CORE 0 frame type: %d\n",frame_type);
+    printf("frame type: %d\n",frame_index);
 
 
     //////////////////////////////////////////////LOSSLESS Y//////////////////
@@ -473,8 +438,31 @@ uint8_t decode_single_frame()
 
 //    XTime_GetTime(&start);
     buff_reg();
+//    XTime_GetTime(&end);
+//	printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
 
+    ///MEMORY STUFF////////////////////////////////////
+//    uint32_t total_memory = 0;
+//    // stuff from load memory
+//    total_memory += sizeof(uint32_t)*9;							//header information, some frame information
+//	total_memory += sizeof(iframe_trailer_t)*num_iframes;		//trailer
+//
+//	//ybistream -> this should be the one that's changing
+//
+//	total_memory += frame_size - 4 * sizeof(uint32_t);			//reading ybitstream
+//	// malloced stuff
+//    total_memory += w_size*h_size*sizeof(rgb_pixel_t);			//rbgblock
+//    total_memory += hYb_size * wYb_size * 64;					//Yblock
+//    total_memory += hCb_size * wCb_size * 64;					//Cbblock
+//    total_memory += hCb_size * wCb_size * 64;					//Crblock
+//    total_memory += hYb_size * wYb_size * 64 * sizeof(DCTELEM);	//YDCAC
+//    total_memory += hCb_size * wCb_size * 64 * sizeof(DCTELEM); //CbDCAC
+//    total_memory += hCb_size * wCb_size * 64 * sizeof(DCTELEM); //CrDCAC
+//    total_memory += hYb_size * wYb_size * 64 * sizeof(DCTELEM) + 2 * hCb_size * wCb_size * 64 * sizeof(DCTELEM); //Ybitstream
+    // END MEMORY STUFF////////////////////////////////
 
+	//XTime_GetTime(&end);    // Capture time after the function call
+	//printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
     if(vdma_out() == 0)
     {
     	printf("VDMA failed");

@@ -145,9 +145,9 @@ int main()
     {
     	printf("Core1 lock\n");
     	spin_lock(lock_ptr);
-    	//printf("Core1 made it past the lock\n");
+    	printf("Core1 made it past the lock\n");
 
-    	//printf("CORE 1 frame type: %d\n",*frame_type_ptr);
+    	printf("CORE 1 frame type: %d\n",*frame_type_ptr);
 
 //        for(int b = 0; b < (*hCb_size_ptr)*(*wCb_size_ptr); b++)
 //        {
