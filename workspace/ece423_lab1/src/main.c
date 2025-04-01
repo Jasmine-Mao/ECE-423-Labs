@@ -95,6 +95,7 @@ __attribute((section(".spinlock_section"))) volatile UINTPTR lock = 1; //check i
 #define LOCK_ADDRESS  0x15000000
 
 
+
 //volatile UINTPTR *lock = (UINTPTR *)LOCK_ADDRESS;
 //#define SHARED_MEMORY_ADDR 0x15000000
 //volatile uint32_t *shared_var = (uint32_t *)SHARED_MEMORY_ADDR;

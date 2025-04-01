@@ -40,6 +40,7 @@ void ycbcr_to_rgb(int h, int w, uint32_t w_size, pcolor_block_t Y, pcolor_block_
 void idct(dct_block_t DCAC, color_block_t block);
 void lossless_decode(int num_blocks, void* bitstream, dct_block_t* DCACq, dct_block_t quant, BOOL P);
 double calculate_fps(double time_ellapsed);
+//static rgb_pixel_t* circular_buffer_ptr;
 
 extern uint32_t timer_delay;
 #endif
