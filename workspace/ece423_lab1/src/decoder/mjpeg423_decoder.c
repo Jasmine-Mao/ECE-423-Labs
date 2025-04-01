@@ -55,7 +55,7 @@ __attribute((section(".shared_memory_section"))) static dct_block_t* CrDCAC;
 __attribute((section(".shared_memory_section"))) static uint8_t* Ybitstream;
 __attribute((section(".shared_memory_section"))) static uint8_t* Cbbitstream;
 __attribute((section(".shared_memory_section"))) static uint8_t* Crbitstream;
-__attribute((section(".shared_memory_section"))) static rgb_pixel_t* circular_buffer_ptr;
+__attribute((section(".shared_memory_section"))) volatile rgb_pixel_t* circular_buffer_ptr;
 
 extern volatile UINTPTR lock;
 

@@ -20,7 +20,7 @@ static volatile int32_t mid;
 
 static uint32_t h_size, w_size, frame_buff_limit;
 
-//extern rgb_pixel_t* circular_buffer_ptr;
+extern volatile rgb_pixel_t* circular_buffer_ptr;
 
 
 rgb_pixel_t* buff_disp();
@@ -34,7 +34,7 @@ uint32_t vdma_init(uint32_t width, uint32_t height, uint32_t frame_buff_size){
 	w_size = width;
 	frame_buff_limit = frame_buff_size;
 	frame_buff = malloc(frame_buff_limit * sizeof(frame_buff));
-	//circular_buffer_ptr = &frame_buff;
+	circular_buffer_ptr = &frame_buff;
     write_reg(XPAR_AXI_VDMA_0_BASEADDR, 0x00, 0x04);	// read reset
     while(read_reg(XPAR_AXI_VDMA_0_BASEADDR, 0x00) & 0x4){}
     for (int count = 0; count < frame_buff_limit; count++){
@@ -87,6 +87,20 @@ rgb_pixel_t* buff_disp(){
 	} else {
 		return NULL;
 	}
+}
+
+uint32_t buff_full(){
+	if(((front + 1) % frame_buff_limit) == rear){	// if the buffer is full
+		return TRUE;
+	}
+	else return FALSE;
+}
+
+uint32_t buff_empty(){
+	if(front == rear){
+		return TRUE;
+	}
+	else return FALSE;
 }
 
 

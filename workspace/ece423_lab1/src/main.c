@@ -61,6 +61,7 @@
 #include "spinlocks/spinlock1.h"
 
 #define FRAME_BUFF_SIZE 2
+
 #define TIMER_1S 325000000 //1 second
 #define ROOT "3:/"
 #define MAX_FILE_NUM 3
@@ -139,28 +140,13 @@ void TimerHandler(void*)
 
 int main()
 {
-
-	//testing shared memory
-//	Xil_SetTlbAttributes(0x15000000, DEVICE_MEMORY);
-//    *shared_var = 42;
-//    while (1);
-
-
-
 	//FOR TLB SETUP
 	printf("CORE0 LOCK IS HERE %x\n",&lock);
 	Xil_SetTlbAttributes(0x15000000, DEVICE_MEMORY); //DEVICE_MEMORY	//MODIFY THIS ONCE WE KNOW!!!
-	spin_lock(&lock);
+	spin_lock(&lock);	// starting lock, core 1 cannot lock now
 	// this is just for finding the spinlocks faster in shared memory
 	printf("CORE0 current value of the lock:%x\n",lock);
 
-	//spin_lock(&lock);	// lock the initialization so core 1 doesn't keep going
-
-
-
-
-
-	//while(1){}
 
 	// initialization
 	InstancePtr = &AxiDma;
@@ -182,41 +168,22 @@ int main()
     res = f_mount(&fatfs, ROOT, 1); // mount SD card
     if(res != FR_OK) error_and_exit("cannot mount SD card");
 
-
     scan_files();
 
+    load_video(file_name[file_counter]);
 
-    load_video(file_name[file_counter]);	// since this writes to globals, this needs to have a lock around it. we can also put the locks INTO THE FUNCTION to avoid needing to write this all the time
-    // unlock
-
-//    spin_unlock(&lock);	//unlock and allow core 1 to keep working
-//    XTime start, end;
-//    XTime_GetTime(&start);  // Capture time before the function call
-//    XTime_GetTime(&end);    // Capture time after the function call
-//    timer_delay = end - start;
-
-    // decode single frame then pause video
     is_paused = 1;
-    //printf("WHAT IS STORED HERE %x\n",*test_ptr);
 
     decode_single_frame();
 
-    //printf("CORE0 about to lock\n");
-    //spin_lock(&lock);
-
-	//printf("CORE0 other core should print out something soon %x\n",&lock);
-	//spin_unlock(&lock);
-
-	//printf("CORE0 current value of the lock:%x\n",lock);
-
-//    while(1)
-//    {
-//    	//print("HERE\n");
+//	^should we run this multiple times? enough to fill the buffer? something like...
+//
+//    while(!buff_full()){		<-- buff full checks to see if the circular buffer is full or not
+//    	decode_single_frame();
 //    }
+//	  exits to here once the buffer is full
 
-
-
-    //vdma_out();
+    //vdma_out();		<-- will need to add this back at some point
 
     timer_start(TIMER_1S/TIMER_FPS);    // start timer
     //pin_value = -1; // reset pin value
@@ -227,18 +194,22 @@ int main()
     {
 //		XTime_GetTime(&start);
 		decode_entire_video(file_name[1]);
+		//^we're going to need to adjust the decode entire video at some point as well
 //		XTime_GetTime(&end);
 //		double time_ellapsed = (double)(end - start)/((double)325000000);
 //		printf("Entire video time:%f  fps:%f\n",time_ellapsed,calculate_fps(time_ellapsed));
     }
 
     // infinite loop
-//    spin_lock(&lock);	//core 0 starts with the lock as it's the master
     for(;;)
     {
     	if (!is_paused && timer_triggered)
     	{ // decodes a single frame to the VDMA
-    		//timer here
+    		// check to make sure there are things in the buffer to output
+    		//if(!buff_empty()){
+    			//probably do a VDMA out?
+    			//this checks to make sure that there is stuff in the buffer to output
+    		//}
             decode_single_frame();
             if (is_last_frame())
 			{
@@ -246,7 +217,6 @@ int main()
 			}
             timer_triggered = 0;
     	}
-
         if (pin_value != -1)
         {
             printf("button %d has been pressed!\n", pin_value);
@@ -290,6 +260,10 @@ int main()
         	}
         	pin_value = -1;
         }
+        //add a new if clause here for if nothing happens and there is room in the buffer
+//        if(!buff_full()){
+//        	decode_single_frame();
+//        }
     }
 
     // close

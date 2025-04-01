@@ -15763,3 +15763,211 @@ con
 
 14:45:30 INFO  : Launch script is exported to file 'C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\cpu_1_system\_ide\scripts\debugger_cpu_1-default.tcl'
 14:50:56 INFO  : Disconnected from the channel tcfchan#3.
+15:47:05 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+15:47:25 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+15:47:57 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+15:48:20 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+15:53:28 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+15:54:47 INFO  : Checking for BSP changes to sync application flags for project 'cpu_1'...
+15:55:10 INFO  : Checking for BSP changes to sync application flags for project 'cpu_1'...
+15:55:37 INFO  : Checking for BSP changes to sync application flags for project 'cpu_1'...
+15:56:09 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+15:56:55 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+15:57:39 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+15:58:19 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+15:58:56 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+15:59:21 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+15:59:26 INFO  : Checking for BSP changes to sync application flags for project 'cpu_1'...
+15:59:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:59:35 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+15:59:35 INFO  : 'jtag frequency' command is executed.
+15:59:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+15:59:37 INFO  : Device configured successfully with "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+15:59:38 INFO  : Context for 'APU' is selected.
+15:59:38 INFO  : Hardware design and registers information is loaded from 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa'.
+15:59:38 INFO  : 'configparams force-mem-access 1' command is executed.
+15:59:38 INFO  : Context for 'APU' is selected.
+15:59:38 INFO  : 'stop' command is executed.
+15:59:38 INFO  : Sourcing of 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+15:59:38 INFO  : 'ps7_init' command is executed.
+15:59:38 INFO  : 'ps7_post_config' command is executed.
+15:59:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:59:38 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:59:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:59:45 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:59:45 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+15:59:45 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf' is downloaded to processor 'ps7_cortexa9_1'.
+15:59:45 INFO  : 'configparams force-mem-access 0' command is executed.
+15:59:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}
+fpga -file C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:59:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:59:45 INFO  : 'con' command is executed.
+15:59:45 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+15:59:45 INFO  : 'con' command is executed.
+15:59:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+15:59:45 INFO  : Launch script is exported to file 'C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\cpu_1_system\_ide\scripts\debugger_cpu_1-default.tcl'
+16:00:30 INFO  : Disconnected from the channel tcfchan#4.
+16:04:35 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+16:04:49 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+16:05:12 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+16:05:19 INFO  : Checking for BSP changes to sync application flags for project 'cpu_1'...
+16:05:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:05:34 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+16:05:34 INFO  : 'jtag frequency' command is executed.
+16:05:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+16:05:36 INFO  : Device configured successfully with "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+16:05:36 INFO  : Context for 'APU' is selected.
+16:05:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa'.
+16:05:37 INFO  : 'configparams force-mem-access 1' command is executed.
+16:05:37 INFO  : Context for 'APU' is selected.
+16:05:37 INFO  : 'stop' command is executed.
+16:05:37 INFO  : Sourcing of 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+16:05:37 ERROR : Memory read error at 0xF8007080. AHB AP transaction error, DAP status 0xF0000021
+16:05:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}
+fpga -file C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+16:05:37 ERROR : Memory read error at 0xF8007080. AHB AP transaction error, DAP status 0xF0000021
+16:05:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:05:50 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+16:05:50 INFO  : 'jtag frequency' command is executed.
+16:05:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+16:05:53 INFO  : Device configured successfully with "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+16:05:53 INFO  : Context for 'APU' is selected.
+16:05:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa'.
+16:05:53 INFO  : 'configparams force-mem-access 1' command is executed.
+16:05:53 INFO  : Context for 'APU' is selected.
+16:05:53 INFO  : 'stop' command is executed.
+16:05:53 INFO  : Sourcing of 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+16:05:53 INFO  : 'ps7_init' command is executed.
+16:05:53 INFO  : 'ps7_post_config' command is executed.
+16:05:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:05:53 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:05:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:05:58 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:05:59 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+16:05:59 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf' is downloaded to processor 'ps7_cortexa9_1'.
+16:05:59 INFO  : 'configparams force-mem-access 0' command is executed.
+16:05:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}
+fpga -file C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:06:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:06:01 INFO  : 'con' command is executed.
+16:06:01 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+16:06:01 INFO  : 'con' command is executed.
+16:06:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+16:06:01 INFO  : Launch script is exported to file 'C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\cpu_1_system\_ide\scripts\debugger_cpu_1-default.tcl'
+16:09:38 INFO  : Checking for BSP changes to sync application flags for project 'ece423_lab1'...
+16:09:43 INFO  : Disconnected from the channel tcfchan#5.
+16:09:44 INFO  : Checking for BSP changes to sync application flags for project 'cpu_1'...
+16:10:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:10:11 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017AC82EDA' is selected.
+16:10:11 INFO  : 'jtag frequency' command is executed.
+16:10:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}' command is executed.
+16:10:15 INFO  : Device configured successfully with "C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit"
+16:10:15 INFO  : Context for 'APU' is selected.
+16:10:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa'.
+16:10:16 INFO  : 'configparams force-mem-access 1' command is executed.
+16:10:16 INFO  : Context for 'APU' is selected.
+16:10:16 INFO  : 'stop' command is executed.
+16:10:16 INFO  : Sourcing of 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl' is done.
+16:10:17 INFO  : 'ps7_init' command is executed.
+16:10:17 INFO  : 'ps7_post_config' command is executed.
+16:10:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:10:17 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:10:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:10:24 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:10:24 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+16:10:25 INFO  : The application 'C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf' is downloaded to processor 'ps7_cortexa9_1'.
+16:10:25 INFO  : 'configparams force-mem-access 0' command is executed.
+16:10:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017AC82EDA" && level==0 && jtag_device_ctx=="jsn-Xilinx PYNQ-Z1-003017AC82EDA-23727093-0"}
+fpga -file C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/bitstream/lab_prefab_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/hw/lab_prefab_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:10:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:10:25 INFO  : 'con' command is executed.
+16:10:25 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+16:10:25 INFO  : 'con' command is executed.
+16:10:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+16:10:25 INFO  : Launch script is exported to file 'C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\cpu_1_system\_ide\scripts\debugger_cpu_1-default.tcl'

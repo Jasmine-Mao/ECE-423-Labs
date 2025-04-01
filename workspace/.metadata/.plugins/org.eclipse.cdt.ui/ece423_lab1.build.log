@@ -1,233 +1,9 @@
-16:09:38 **** Incremental Build of configuration Debug for project ece423_lab1 ****
+17:22:28 **** Incremental Build of configuration Debug for project ece423_lab1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/ece423_vid_ctl/ece423_vid_ctl.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece423_vid_ctl/ece423_vid_ctl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/ece423_vid_ctl/ece423_vid_ctl.d" -MT"src/ece423_vid_ctl/ece423_vid_ctl.o" -o "src/ece423_vid_ctl/ece423_vid_ctl.o" "../src/ece423_vid_ctl/ece423_vid_ctl.c"
-In file included from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
-                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
-../src/ece423_vid_ctl/../common/mjpeg423_types.h:17: warning: "FALSE" redefined
-   17 | #define FALSE (0)
-      | 
-In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/ece423_vid_ctl/../common/mjpeg423_types.h:14,
-                 from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
-                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
-C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
-   53 | #  define FALSE         0U
-      | 
-In file included from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
-                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
-../src/ece423_vid_ctl/../common/mjpeg423_types.h:18: warning: "TRUE" redefined
-   18 | #define TRUE !FALSE
-      | 
-In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/ece423_vid_ctl/../common/mjpeg423_types.h:14,
-                 from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
-                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
-C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
-   49 | #  define TRUE          1U
-      | 
-'Finished building: ../src/ece423_vid_ctl/ece423_vid_ctl.c'
-' '
-'Building file: ../src/decoder/idct.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/decoder/idct.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/decoder/idct.d" -MT"src/decoder/idct.o" -o "src/decoder/idct.o" "../src/decoder/idct.c"
-In file included from ../src/decoder/mjpeg423_decoder.h:12,
-                 from ../src/decoder/idct.c:10:
-../src/decoder/../common/mjpeg423_types.h:17: warning: "FALSE" redefined
-   17 | #define FALSE (0)
-      | 
-In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/decoder/../common/mjpeg423_types.h:14,
-                 from ../src/decoder/mjpeg423_decoder.h:12,
-                 from ../src/decoder/idct.c:10:
-C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
-   53 | #  define FALSE         0U
-      | 
-In file included from ../src/decoder/mjpeg423_decoder.h:12,
-                 from ../src/decoder/idct.c:10:
-../src/decoder/../common/mjpeg423_types.h:18: warning: "TRUE" redefined
-   18 | #define TRUE !FALSE
-      | 
-In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/decoder/../common/mjpeg423_types.h:14,
-                 from ../src/decoder/mjpeg423_decoder.h:12,
-                 from ../src/decoder/idct.c:10:
-C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
-   49 | #  define TRUE          1U
-      | 
-../src/decoder/idct.c:31:24: warning: argument 1 of type 'pdct_block_t' {aka 'short int (*)[8]'} declared as a pointer [-Warray-parameter=]
-   31 | void idct(pdct_block_t DCAC, pcolor_block_t block)
-      |           ~~~~~~~~~~~~~^~~~
-In file included from ../src/decoder/idct.c:10:
-../src/decoder/mjpeg423_decoder.h:40:23: note: previously declared as an array 'int16_t[8][8]' {aka 'short int[8][8]'}
-   40 | void idct(dct_block_t DCAC, color_block_t block);
-      |           ~~~~~~~~~~~~^~~~
-../src/decoder/idct.c:31:45: warning: argument 2 of type 'pcolor_block_t' {aka 'unsigned char (*)[8]'} declared as a pointer [-Warray-parameter=]
-   31 | void idct(pdct_block_t DCAC, pcolor_block_t block)
-      |                              ~~~~~~~~~~~~~~~^~~~~
-In file included from ../src/decoder/idct.c:10:
-../src/decoder/mjpeg423_decoder.h:40:43: note: previously declared as an array 'uint8_t[8][8]' {aka 'unsigned char[8][8]'}
-   40 | void idct(dct_block_t DCAC, color_block_t block);
-      |                             ~~~~~~~~~~~~~~^~~~~
-'Finished building: ../src/decoder/idct.c'
-' '
-'Building file: ../src/decoder/lossless_decode.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/decoder/lossless_decode.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/decoder/lossless_decode.d" -MT"src/decoder/lossless_decode.o" -o "src/decoder/lossless_decode.o" "../src/decoder/lossless_decode.c"
-In file included from ../src/decoder/lossless_decode.c:10:
-../src/decoder/../common/mjpeg423_types.h:17: warning: "FALSE" redefined
-   17 | #define FALSE (0)
-      | 
-In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/decoder/../common/mjpeg423_types.h:14,
-                 from ../src/decoder/lossless_decode.c:10:
-C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
-   53 | #  define FALSE         0U
-      | 
-In file included from ../src/decoder/lossless_decode.c:10:
-../src/decoder/../common/mjpeg423_types.h:18: warning: "TRUE" redefined
-   18 | #define TRUE !FALSE
-      | 
-In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/decoder/../common/mjpeg423_types.h:14,
-                 from ../src/decoder/lossless_decode.c:10:
-C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
-   49 | #  define TRUE          1U
-      | 
-'Finished building: ../src/decoder/lossless_decode.c'
-' '
-'Building file: ../src/decoder/mjpeg423_decoder.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/decoder/mjpeg423_decoder.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/decoder/mjpeg423_decoder.d" -MT"src/decoder/mjpeg423_decoder.o" -o "src/decoder/mjpeg423_decoder.o" "../src/decoder/mjpeg423_decoder.c"
-In file included from ../src/decoder/mjpeg423_decoder.c:13:
-../src/decoder/../common/mjpeg423_types.h:17: warning: "FALSE" redefined
-   17 | #define FALSE (0)
-      | 
-In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/decoder/../common/mjpeg423_types.h:14,
-                 from ../src/decoder/mjpeg423_decoder.c:13:
-C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
-   53 | #  define FALSE         0U
-      | 
-In file included from ../src/decoder/mjpeg423_decoder.c:13:
-../src/decoder/../common/mjpeg423_types.h:18: warning: "TRUE" redefined
-   18 | #define TRUE !FALSE
-      | 
-In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/decoder/../common/mjpeg423_types.h:14,
-                 from ../src/decoder/mjpeg423_decoder.c:13:
-C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
-   49 | #  define TRUE          1U
-      | 
-../src/decoder/mjpeg423_decoder.c: In function 'decode_single_frame':
-../src/decoder/mjpeg423_decoder.c:300:9: warning: multi-line comment [-Wcomment]
-  300 |         //      area for roughing out how decode will look on CORE 0\
-      |         ^
-../src/decoder/mjpeg423_decoder.c:412:9: warning: implicit declaration of function 'spin_unlock' [-Wimplicit-function-declaration]
-  412 |         spin_unlock(&lock);
-      |         ^~~~~~~~~~~
-../src/decoder/mjpeg423_decoder.c:420:9: warning: implicit declaration of function 'spin_lock'; did you mean 'print_block'? [-Wimplicit-function-declaration]
-  420 |         spin_lock(&lock);
-      |         ^~~~~~~~~
-      |         print_block
-../src/decoder/mjpeg423_decoder.c: In function 'forward_button':
-../src/decoder/mjpeg423_decoder.c:502:40: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  502 |                 printf("Current frame %d is too close to the end, pausing video\n",frame_index);
-      |                                       ~^                                           ~~~~~~~~~~~
-      |                                        |                                           |
-      |                                        int                                         uint32_t {aka long unsigned int}
-      |                                       %ld
-../src/decoder/mjpeg423_decoder.c:511:48: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  511 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count + 1].frame_index);
-      |                                               ~^                   ~~~~~~~~~~~
-      |                                                |                   |
-      |                                                int                 uint32_t {aka long unsigned int}
-      |                                               %ld
-../src/decoder/mjpeg423_decoder.c:511:63: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  511 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count + 1].frame_index);
-      |                                                              ~^                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                               |                                  |
-      |                                                               int                                uint32_t {aka long unsigned int}
-      |                                                              %ld
-../src/decoder/mjpeg423_decoder.c: In function 'backward_button':
-../src/decoder/mjpeg423_decoder.c:527:40: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  527 |                 printf("Current frame %d is too close to beginning, setting to frame 0\n",frame_index);
-      |                                       ~^                                                  ~~~~~~~~~~~
-      |                                        |                                                  |
-      |                                        int                                                uint32_t {aka long unsigned int}
-      |                                       %ld
-../src/decoder/mjpeg423_decoder.c:536:48: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  536 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count-1].frame_index);
-      |                                               ~^                   ~~~~~~~~~~~
-      |                                                |                   |
-      |                                                int                 uint32_t {aka long unsigned int}
-      |                                               %ld
-../src/decoder/mjpeg423_decoder.c:536:63: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  536 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count-1].frame_index);
-      |                                                              ~^                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                               |                                |
-      |                                                               int                              uint32_t {aka long unsigned int}
-      |                                                              %ld
-At top level:
-../src/decoder/mjpeg423_decoder.c:58:70: warning: 'circular_buffer_ptr' defined but not used [-Wunused-variable]
-   58 | __attribute((section(".shared_memory_section"))) static rgb_pixel_t* circular_buffer_ptr;
-      |                                                                      ^~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/decoder/mjpeg423_decoder.c'
-' '
-'Building file: ../src/decoder/ycbcr_to_rgb.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/decoder/ycbcr_to_rgb.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/decoder/ycbcr_to_rgb.d" -MT"src/decoder/ycbcr_to_rgb.o" -o "src/decoder/ycbcr_to_rgb.o" "../src/decoder/ycbcr_to_rgb.c"
-In file included from ../src/decoder/mjpeg423_decoder.h:12,
-                 from ../src/decoder/ycbcr_to_rgb.c:10:
-../src/decoder/../common/mjpeg423_types.h:17: warning: "FALSE" redefined
-   17 | #define FALSE (0)
-      | 
-In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/decoder/../common/mjpeg423_types.h:14,
-                 from ../src/decoder/mjpeg423_decoder.h:12,
-                 from ../src/decoder/ycbcr_to_rgb.c:10:
-C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
-   53 | #  define FALSE         0U
-      | 
-In file included from ../src/decoder/mjpeg423_decoder.h:12,
-                 from ../src/decoder/ycbcr_to_rgb.c:10:
-../src/decoder/../common/mjpeg423_types.h:18: warning: "TRUE" redefined
-   18 | #define TRUE !FALSE
-      | 
-In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
-                 from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/decoder/../common/mjpeg423_types.h:14,
-                 from ../src/decoder/mjpeg423_decoder.h:12,
-                 from ../src/decoder/ycbcr_to_rgb.c:10:
-C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
-   49 | #  define TRUE          1U
-      | 
-'Finished building: ../src/decoder/ycbcr_to_rgb.c'
-' '
 'Building file: ../src/main.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
@@ -252,8 +28,8 @@ C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assi
    49 | #  define TRUE          1U
       | 
 ../src/main.c: In function 'scan_files':
-../src/main.c:118:43: warning: passing argument 1 of 'snprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-  118 |                         snprintf(file_name[i], sizeof(file_name[i]), "%s/%s", "3:/", fno.fname);
+../src/main.c:119:43: warning: passing argument 1 of 'snprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  119 |                         snprintf(file_name[i], sizeof(file_name[i]), "%s/%s", "3:/", fno.fname);
       |                                  ~~~~~~~~~^~~
       |                                           |
       |                                           char **
@@ -261,31 +37,31 @@ In file included from ../src/main.c:48:
 c:\software\xilinx\vitis\2022.1\gnu\aarch32\nt\gcc-arm-none-eabi\aarch32-xilinx-eabi\usr\include\stdio.h:266:19: note: expected 'char * restrict' but argument is of type 'char **'
   266 | int     snprintf (char *__restrict, size_t, const char *__restrict, ...)
       |                   ^
-../src/main.c:119:34: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char **' [-Wformat=]
-  119 |                         printf("%s\n", file_name[i]);
+../src/main.c:120:34: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char **' [-Wformat=]
+  120 |                         printf("%s\n", file_name[i]);
       |                                 ~^     ~~~~~~~~~~~~
       |                                  |              |
       |                                  char *         char **
 ../src/main.c: In function 'main':
-../src/main.c:151:37: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'volatile UINTPTR *' {aka 'volatile unsigned int *'} [-Wformat=]
-  151 |         printf("CORE0 LOCK IS HERE %x\n",&lock);
+../src/main.c:144:37: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'volatile UINTPTR *' {aka 'volatile unsigned int *'} [-Wformat=]
+  144 |         printf("CORE0 LOCK IS HERE %x\n",&lock);
       |                                    ~^    ~~~~~
       |                                     |    |
       |                                     |    volatile UINTPTR * {aka volatile unsigned int *}
       |                                     unsigned int
       |                                    %ls
-../src/main.c:152:9: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
-  152 |         Xil_SetTlbAttributes(0x15000000, DEVICE_MEMORY); //DEVICE_MEMORY        //MODIFY THIS ONCE WE KNOW!!!
+../src/main.c:145:9: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+  145 |         Xil_SetTlbAttributes(0x15000000, DEVICE_MEMORY); //DEVICE_MEMORY        //MODIFY THIS ONCE WE KNOW!!!
       |         ^~~~~~~~~~~~~~~~~~~~
-../src/main.c:153:19: warning: passing argument 1 of 'spin_lock' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
-  153 |         spin_lock(&lock);
+../src/main.c:146:19: warning: passing argument 1 of 'spin_lock' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  146 |         spin_lock(&lock);       // starting lock, core 1 cannot lock now
       |                   ^~~~~
 In file included from ../src/main.c:61:
 ../src/spinlocks/spinlock1.h:4:25: note: expected 'UINTPTR *' {aka 'unsigned int *'} but argument is of type 'volatile UINTPTR *' {aka 'volatile unsigned int *'}
     4 | void spin_lock(UINTPTR *lock);
       |                ~~~~~~~~~^~~~
-../src/main.c:170:35: warning: passing argument 2 of 'timer_gpio_init' from incompatible pointer type [-Wincompatible-pointer-types]
-  170 |     timer_gpio_init(TimerHandler, GpioHandler);
+../src/main.c:156:35: warning: passing argument 2 of 'timer_gpio_init' from incompatible pointer type [-Wincompatible-pointer-types]
+  156 |     timer_gpio_init(TimerHandler, GpioHandler);
       |                                   ^~~~~~~~~~~
       |                                   |
       |                                   void (*)(void *, u32,  u32) {aka void (*)(void *, long unsigned int,  long unsigned int)}
@@ -293,8 +69,8 @@ In file included from ../src/main.c:54:
 ../src/timer_gpio.h:4:59: note: expected 'void (*)(void *)' but argument is of type 'void (*)(void *, u32,  u32)' {aka 'void (*)(void *, long unsigned int,  long unsigned int)'}
     4 | int timer_gpio_init(void (*fun_timer)(void* data), void (*fun_gpio)(void* data));
       |                                                    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
-../src/main.c:189:25: warning: passing argument 1 of 'load_video' from incompatible pointer type [-Wincompatible-pointer-types]
-  189 |     load_video(file_name[file_counter]);        // since this writes to globals, this needs to have a lock around it. we can also put the locks INTO THE FUNCTION to avoid needing to write this all the time
+../src/main.c:173:25: warning: passing argument 1 of 'load_video' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |     load_video(file_name[file_counter]);
       |                ~~~~~~~~~^~~~~~~~~~~~~~
       |                         |
       |                         char **
@@ -302,8 +78,8 @@ In file included from ../src/main.c:58:
 ../src/decoder/mjpeg423_decoder.h:30:29: note: expected 'const char *' but argument is of type 'char **'
    30 | void load_video(const char* filename_in);
       |                 ~~~~~~~~~~~~^~~~~~~~~~~
-../src/main.c:229:46: warning: passing argument 1 of 'decode_entire_video' from incompatible pointer type [-Wincompatible-pointer-types]
-  229 |                 decode_entire_video(file_name[1]);
+../src/main.c:196:46: warning: passing argument 1 of 'decode_entire_video' from incompatible pointer type [-Wincompatible-pointer-types]
+  196 |                 decode_entire_video(file_name[1]);
       |                                     ~~~~~~~~~^~~
       |                                              |
       |                                              char **
@@ -311,8 +87,8 @@ In file included from ../src/main.c:58:
 ../src/decoder/mjpeg423_decoder.h:29:38: note: expected 'const char *' but argument is of type 'char **'
    29 | void decode_entire_video(const char* filename_in);
       |                          ~~~~~~~~~~~~^~~~~~~~~~~
-../src/main.c:258:41: warning: passing argument 1 of 'load_video' from incompatible pointer type [-Wincompatible-pointer-types]
-  258 |                     load_video(file_name[file_counter]);
+../src/main.c:228:41: warning: passing argument 1 of 'load_video' from incompatible pointer type [-Wincompatible-pointer-types]
+  228 |                     load_video(file_name[file_counter]);
       |                                ~~~~~~~~~^~~~~~~~~~~~~~
       |                                         |
       |                                         char **
@@ -330,9 +106,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size ece423_lab1.elf  |tee "ece423_lab1.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 131468	2101136	215012224	217244828	cf2e49c	ece423_lab1.elf
+ 131660	2101136	215012224	217245020	cf2e55c	ece423_lab1.elf
 'Finished building: ece423_lab1.elf.size'
 ' '
 
-16:09:41 Build Finished (took 2s.817ms)
+17:22:29 Build Finished (took 1s.147ms)
 

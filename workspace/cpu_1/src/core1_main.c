@@ -82,6 +82,8 @@ UINTPTR* volatile lock_ptr = (UINTPTR*)LOCK_ADDRESS;
 #define YBITSTREAM_ADDRESS		0x15100058
 #define CBBITSTREAM_ADDRESS		0x1510005C
 #define CRBITSTREAM_ADDRESS		0x15100060
+#define CIRCULAR_BUFFER_ADDRESS 0x15100064
+
 
 static uint32_t* num_frames_ptr = (uint32_t*)NUM_FRAMES_ADDESS;
 static uint32_t* w_size_ptr = (uint32_t*)W_SIZE_ADDRESS;
@@ -113,6 +115,8 @@ static uint8_t** Ybitstream_ptr = (uint8_t**)YBITSTREAM_ADDRESS;
 static uint8_t** Cbbitstream_ptr = (uint8_t**)CBBITSTREAM_ADDRESS;
 static uint8_t** Crbitstream_ptr = (uint8_t**)CRBITSTREAM_ADDRESS;
 
+volatile rgb_pixel_t* circular_buffer_ptr = (rgb_pixel_t*) CIRCULAR_BUFFER_ADDRESS;
+
 
 //#define TEST_PTR ((volatile uint32_t*)0x14EC9380)
 
@@ -121,7 +125,7 @@ static uint8_t** Crbitstream_ptr = (uint8_t**)CRBITSTREAM_ADDRESS;
 
 int main()
 {
-    printf("Core1 trying to spin_lock");
+//    printf("Core1 trying to spin_lock");
 
     //spin_lock(lock_ptr);
 
@@ -139,7 +143,7 @@ int main()
 
     //spin_unlock(lock_ptr);
 
-	circular_buff_t* buffer = init(90*160*4, 5);	//creates a circular buffer of capacity 5 (for now)
+//	circular_buff_t* buffer = init(90*160*4, 5);	//creates a circular buffer of capacity 5 (for now)
 
     while(1)
     {
