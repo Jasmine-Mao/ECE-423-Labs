@@ -1,10 +1,108 @@
-17:22:22 **** Incremental Build of configuration Debug for project cpu_1 ****
+18:45:40 **** Incremental Build of configuration Debug for project cpu_1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/core1_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/core1_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_ps7_cortexa9_1/bspinclude/include -MMD -MP -MF"src/core1_main.d" -MT"src/core1_main.o" -o "src/core1_main.o" "../src/core1_main.c"
+In file included from ../src/core1_main.c:52:
+../src/common/mjpeg423_types.h:17: warning: "FALSE" redefined
+   17 | #define FALSE (0)
+      | 
+In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_ps7_cortexa9_1/bspinclude/include/xil_printf.h:15,
+                 from ../src/core1_main.c:50:
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_ps7_cortexa9_1/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
+   53 | #  define FALSE         0U
+      | 
+In file included from ../src/core1_main.c:52:
+../src/common/mjpeg423_types.h:18: warning: "TRUE" redefined
+   18 | #define TRUE !FALSE
+      | 
+In file included from C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_ps7_cortexa9_1/bspinclude/include/xil_printf.h:15,
+                 from ../src/core1_main.c:50:
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_ps7_cortexa9_1/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
+   49 | #  define TRUE          1U
+      | 
+../src/core1_main.c: In function 'main':
+../src/core1_main.c:135:9: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+  135 |         Xil_SetTlbAttributes(0x15000000, 0xC06);
+      |         ^~~~~~~~~~~~~~~~~~~~
+../src/core1_main.c:163:13: warning: implicit declaration of function 'ycbcr_to_rgb' [-Wimplicit-function-declaration]
+  163 |             ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
+      |             ^~~~~~~~~~~~
+At top level:
+../src/core1_main.c:116:18: warning: 'Crbitstream_ptr' defined but not used [-Wunused-variable]
+  116 | static uint8_t** Crbitstream_ptr = (uint8_t**)CRBITSTREAM_ADDRESS;
+      |                  ^~~~~~~~~~~~~~~
+../src/core1_main.c:115:18: warning: 'Cbbitstream_ptr' defined but not used [-Wunused-variable]
+  115 | static uint8_t** Cbbitstream_ptr = (uint8_t**)CBBITSTREAM_ADDRESS;
+      |                  ^~~~~~~~~~~~~~~
+../src/core1_main.c:114:18: warning: 'Ybitstream_ptr' defined but not used [-Wunused-variable]
+  114 | static uint8_t** Ybitstream_ptr = (uint8_t**)YBITSTREAM_ADDRESS;
+      |                  ^~~~~~~~~~~~~~
+../src/core1_main.c:113:22: warning: 'CrDCAC_ptr' defined but not used [-Wunused-variable]
+  113 | static dct_block_t** CrDCAC_ptr = (dct_block_t**)CRDCAC_ADDRESS;
+      |                      ^~~~~~~~~~
+../src/core1_main.c:112:22: warning: 'CbDCAC_ptr' defined but not used [-Wunused-variable]
+  112 | static dct_block_t** CbDCAC_ptr = (dct_block_t**)CBDCAC_ADDRESS;
+      |                      ^~~~~~~~~~
+../src/core1_main.c:111:22: warning: 'YDCAC_ptr' defined but not used [-Wunused-variable]
+  111 | static dct_block_t** YDCAC_ptr = (dct_block_t**)YDCAC_ADDRESS;
+      |                      ^~~~~~~~~
+../src/core1_main.c:105:13: warning: 'wYb_size_ptr' defined but not used [-Wunused-variable]
+  105 | static int* wYb_size_ptr = (int*)WYB_SIZE_ADDRESS;
+      |             ^~~~~~~~~~~~
+../src/core1_main.c:104:13: warning: 'hYb_size_ptr' defined but not used [-Wunused-variable]
+  104 | static int* hYb_size_ptr = (int*)HYB_SIZE_ADDRESS;
+      |             ^~~~~~~~~~~~
+../src/core1_main.c:102:13: warning: 'hCb_size_ptr' defined but not used [-Wunused-variable]
+  102 | static int* hCb_size_ptr = (int*)HCB_SIZE_ADDRESS;
+      |             ^~~~~~~~~~~~
+../src/core1_main.c:100:18: warning: 'frame_index_ptr' defined but not used [-Wunused-variable]
+  100 | static uint32_t* frame_index_ptr = (uint32_t*)FRAME_INDEX_ADDRESS;
+      |                  ^~~~~~~~~~~~~~~
+../src/core1_main.c:98:27: warning: 'trailer_ptr' defined but not used [-Wunused-variable]
+   98 | static iframe_trailer_t** trailer_ptr = (iframe_trailer_t**)TRAILER_ADDRESS;
+      |                           ^~~~~~~~~~~
+../src/core1_main.c:96:18: warning: 'frame_type_ptr' defined but not used [-Wunused-variable]
+   96 | static uint32_t* frame_type_ptr = (uint32_t*)FRAME_TYPE_ADDRESS;
+      |                  ^~~~~~~~~~~~~~
+../src/core1_main.c:95:18: warning: 'frame_size_ptr' defined but not used [-Wunused-variable]
+   95 | static uint32_t* frame_size_ptr = (uint32_t*)FRAME_SIZE_ADDRESS;
+      |                  ^~~~~~~~~~~~~~
+../src/core1_main.c:94:18: warning: 'Cbsize_ptr' defined but not used [-Wunused-variable]
+   94 | static uint32_t* Cbsize_ptr = (uint32_t*)CBSIZE_ADDRESS;
+      |                  ^~~~~~~~~~
+../src/core1_main.c:93:18: warning: 'Ysize_ptr' defined but not used [-Wunused-variable]
+   93 | static uint32_t* Ysize_ptr = (uint32_t*)YSIZE_ADDRESS;
+      |                  ^~~~~~~~~
+../src/core1_main.c:92:18: warning: 'payload_size_ptr' defined but not used [-Wunused-variable]
+   92 | static uint32_t* payload_size_ptr = (uint32_t*)PAYLOAD_SIZE_ADDRESS;
+      |                  ^~~~~~~~~~~~~~~~
+../src/core1_main.c:91:18: warning: 'num_iframes_ptr' defined but not used [-Wunused-variable]
+   91 | static uint32_t* num_iframes_ptr = (uint32_t*)NUM_IFRAMES_ADDRESS;
+      |                  ^~~~~~~~~~~~~~~
+../src/core1_main.c:90:18: warning: 'h_size_ptr' defined but not used [-Wunused-variable]
+   90 | static uint32_t* h_size_ptr = (uint32_t*)H_SIZE_ADDRESS;
+      |                  ^~~~~~~~~~
+../src/core1_main.c:88:18: warning: 'num_frames_ptr' defined but not used [-Wunused-variable]
+   88 | static uint32_t* num_frames_ptr = (uint32_t*)NUM_FRAMES_ADDESS;
+      |                  ^~~~~~~~~~~~~~
+'Finished building: ../src/core1_main.c'
+' '
+'Building target: cpu_1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_ps7_cortexa9_1/bsplib/lib -o "cpu_1.elf"  ./src/spinlocks/spinlock1.o  ./src/ece423_vid_ctl/ece423_vid_ctl.o  ./src/common/tables.o ./src/common/util.o  ./src/circular_buffer/buff.o  ./src/core1_main.o ./src/platform.o ./src/ycbcr_to_rgb.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: cpu_1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cpu_1.elf  |tee "cpu_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54111	   3164	130006280	130063555	7c09cc3	cpu_1.elf
+'Finished building: cpu_1.elf.size'
+' '
 
-17:22:22 Build Finished (took 468ms)
+18:45:41 Build Finished (took 1s.0ms)
 

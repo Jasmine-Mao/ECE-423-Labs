@@ -145,6 +145,7 @@ int main()
 
 //	circular_buff_t* buffer = init(90*160*4, 5);	//creates a circular buffer of capacity 5 (for now)
 
+    // need some way to indicate that we are starting a decode single frame
     while(1)
     {
     	printf("Core1 lock\n");

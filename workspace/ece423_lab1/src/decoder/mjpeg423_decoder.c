@@ -57,6 +57,9 @@ __attribute((section(".shared_memory_section"))) static uint8_t* Cbbitstream;
 __attribute((section(".shared_memory_section"))) static uint8_t* Crbitstream;
 __attribute((section(".shared_memory_section"))) volatile rgb_pixel_t* circular_buffer_ptr;
 
+//__attribute((section(".shared_memory_section"))) volatile uint32_t* start_decode;
+//^ this is for when we want core 1 to start; this might not be needed
+
 extern volatile UINTPTR lock;
 
 
@@ -328,9 +331,39 @@ uint8_t decode_single_frame()
 	//			**** I think i found a potential issue in the PIP schedule. If we consider a PPI, there is a colour conversion that needs to run before the I frame can begin running the SD read. this might need a bit more consideratio here
 	//
 	/////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
 	if(frame_type == 0) //Iframe
 	{
-		;
+		if(frame_index != 0){
+			spin_unlock(&lock)	// for sync
+			spin_lock(&lock);
+		}
+
+		////////////////////////////////////////////SD READ////////////////////////
+		//XTime_GetTime(&start);  // Capture time before the function call
+		rgbblock = buff_next();	// this gets malloced
+		if (rgbblock == NULL) return 1; // overflowing buffer
+		if (frame_index >= num_frames) return 1; // reached end of video
+
+		//read frame payload
+		f_status = f_read(&file_in, (void*)&frame_size, sizeof(uint32_t), (UINT*)&num_bytes_read);
+		f_status = f_read(&file_in, (void*)&frame_type, sizeof(uint32_t), (UINT*)&num_bytes_read);
+		f_status = f_read(&file_in, (void*)&Ysize, sizeof(uint32_t), (UINT*)&num_bytes_read);
+		f_status = f_read(&file_in, (void*)&Cbsize, sizeof(uint32_t), (UINT*)&num_bytes_read);
+		f_status = f_read(&file_in, (void*)Ybitstream, frame_size - 4 * sizeof(uint32_t), (UINT*)&num_bytes_read);
+		//set the Cb and Cr bitstreams to point to the right location
+		Cbbitstream = Ybitstream + Ysize;
+		Crbitstream = Cbbitstream + Cbsize;
+	    //////////////////////////////////////////////SD READ END//////////////
+
+
 	}
 	else //Pframe
 	{

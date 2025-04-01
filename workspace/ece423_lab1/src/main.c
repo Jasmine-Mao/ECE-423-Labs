@@ -206,10 +206,10 @@ int main()
     	if (!is_paused && timer_triggered)
     	{ // decodes a single frame to the VDMA
     		// check to make sure there are things in the buffer to output
-    		//if(!buff_empty()){
-    			//probably do a VDMA out?
-    			//this checks to make sure that there is stuff in the buffer to output
-    		//}
+    		if(!buff_empty()){
+//    			probably do a VDMA out?
+//    			this checks to make sure that there is stuff in the buffer to output
+    		}
             decode_single_frame();
             if (is_last_frame())
 			{
@@ -261,9 +261,9 @@ int main()
         	pin_value = -1;
         }
         //add a new if clause here for if nothing happens and there is room in the buffer
-//        if(!buff_full()){
+        if(!buff_full()){
 //        	decode_single_frame();
-//        }
+        }
     }
 
     // close
