@@ -473,7 +473,7 @@ uint8_t decode_single_frame()
 		XAxiDma_Reset(&AxiDma);
 		while (!XAxiDma_ResetIsDone(&AxiDma)){}
 
-		spin_lock(&lock);
+
 
 	}
 

@@ -148,40 +148,27 @@ int main()
 
     // need some way to indicate that we are starting a decode single frame
 
-//    spin_lock(lock_ptr);
-//    spin_unlock(lock_ptr); //14400
+    spin_lock(lock_ptr);
 
     while(1)
     {
+    	if(*frame_index_ptr!=0)
+    	{
 
-        spin_lock(lock_ptr);
-        spin_unlock(lock_ptr);
-		for(int b = 0; b < (14400/2); b++)
-		{
-			ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
-		}
 
-		if(*frame_type_ptr == 1)
-		{
-			spin_lock(lock_ptr);
-		}
+            for(int b = 0; b < (*hCb_size_ptr)*(*wCb_size_ptr); b++)
+            {
+                ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
+            }
 
-		for(int b = (14400/2); b < 14400; b++)
-		{
-			ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
-		}
+            printf("Core1 Unlock\n");
+            spin_unlock(lock_ptr);
+            spin_lock(lock_ptr);
+    	}
+    	else
+    	{
 
-		//BUFF REG HERE
-
-		if(*frame_type_ptr == 1)
-		{
-			spin_unlock(lock_ptr);
-		}
-
-//            printf("Core1 Unlock\n");
-//            spin_lock(lock_ptr);
-//            spin_unlock(lock_ptr);
-
+    	}
     	//printf("Core1 lock\n");
 
     }

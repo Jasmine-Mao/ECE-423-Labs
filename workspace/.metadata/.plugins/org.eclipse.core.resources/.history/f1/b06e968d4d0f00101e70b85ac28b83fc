@@ -363,118 +363,11 @@ uint8_t decode_single_frame()
 		Crbitstream = Cbbitstream + Cbsize;
 	    //////////////////////////////////////////////SD READ END//////////////
 
-	    //////////////////////////////////////////////LOSSLESS Cr///////////////////
-	    lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
-
-		/////////////////////////////////////////////IDCT Cr COMPONENT////////////////////////////
-		Xil_L1DCacheFlush();
-		Xil_L2CacheFlush();
-
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CrDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Crblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
-
-	    //////////////////////////////////////////////LOSSLESS Cb///////////////////
-	    lossless_decode(hCb_size*wCb_size, Cbbitstream, CbDCAC, Cquant, frame_type);
-
-		//////////////////////////////////////////////IDCT POLLING///////////////////
-		while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-		XAxiDma_Reset(&AxiDma);
-		while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-		///////////////////////////////////////////IDCT Cb COMPONENT////////////////////////////
-		Xil_L1DCacheFlush();
-		Xil_L2CacheFlush();
-
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CbDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Cbblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
-
-	    //////////////////////////////////////////////LOSSLESS Y//////////////////
-	    lossless_decode(hYb_size*wYb_size, Ybitstream, YDCAC, Yquant, frame_type);
-
-		//////////////////////////////////////////////IDCT POLLING///////////////////
-		while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-		XAxiDma_Reset(&AxiDma);
-		while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-		//////////////////////////////IDCT Y COMPONENT///////////////////////////
-
-	    Xil_L1DCacheFlush();
-	    Xil_L2CacheFlush();
-
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
-
-		while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-		XAxiDma_Reset(&AxiDma);
-		while (!XAxiDma_ResetIsDone(&AxiDma)){}
 
 	}
 	else //Pframe
 	{
-		spin_unlock(&lock)	// for sync
-		//spin_lock(&lock);	// this would be removed and moved to where we check what frame type we are
-
-		////////////////////////////////////////////SD READ////////////////////////
-		//XTime_GetTime(&start);  // Capture time before the function call
-		rgbblock = buff_next();	// this gets malloced
-		if (rgbblock == NULL) return 1; // overflowing buffer
-		if (frame_index >= num_frames) return 1; // reached end of video
-
-	    //read frame payload
-		f_status = f_read(&file_in, (void*)&frame_size, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&frame_type, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&Ysize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&Cbsize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)Ybitstream, frame_size - 4 * sizeof(uint32_t), (UINT*)&num_bytes_read);
-	    //set the Cb and Cr bitstreams to point to the right location
-	    Cbbitstream = Ybitstream + Ysize;
-	    Crbitstream = Cbbitstream + Cbsize;
-	    ///////////////////////////////////////////////SD READ END//////////////
-
-	    //////////////////////////////////////////////LOSSLESS Cr///////////////////
-	    lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
-
-		//IDCT Cr COMPONENT////////////////////////////
-		Xil_L1DCacheFlush();
-		Xil_L2CacheFlush();
-
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CrDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Crblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
-
-	    //////////////////////////////////////////////LOSSLESS Y//////////////////
-	    lossless_decode(hYb_size*wYb_size, Ybitstream, YDCAC, Yquant, frame_type);
-
-		//////////////////////////////////////////////IDCT POLLING///////////////////
-		while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-		XAxiDma_Reset(&AxiDma);
-		while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-		///////////////IDCT Y COMPONENT///////////////////////////
-
-	    Xil_L1DCacheFlush();
-	    Xil_L2CacheFlush();
-
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
-
-		while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-		XAxiDma_Reset(&AxiDma);
-		while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-
-		/////////////////////IDCT Cb COMPONENT////////////////////////////
-		Xil_L1DCacheFlush();
-		Xil_L2CacheFlush();
-
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CbDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Cbblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
-
-		while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-		XAxiDma_Reset(&AxiDma);
-		while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-		spin_lock(&lock);
-
+		;
 	}
 
 	////////////////////////////////////////////SD READ////////////////////////

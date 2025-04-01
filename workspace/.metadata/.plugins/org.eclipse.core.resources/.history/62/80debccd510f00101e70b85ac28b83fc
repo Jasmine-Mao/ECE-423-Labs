@@ -412,7 +412,7 @@ uint8_t decode_single_frame()
 	else //Pframe
 	{
 		spin_unlock(&lock)	// for sync
-		//spin_lock(&lock);	// this would be removed and moved to where we check what frame type we are
+		spin_lock(&lock);
 
 		////////////////////////////////////////////SD READ////////////////////////
 		//XTime_GetTime(&start);  // Capture time before the function call
@@ -449,31 +449,7 @@ uint8_t decode_single_frame()
 		XAxiDma_Reset(&AxiDma);
 		while (!XAxiDma_ResetIsDone(&AxiDma)){}
 
-		///////////////IDCT Y COMPONENT///////////////////////////
 
-	    Xil_L1DCacheFlush();
-	    Xil_L2CacheFlush();
-
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
-
-		while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-		XAxiDma_Reset(&AxiDma);
-		while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-
-		/////////////////////IDCT Cb COMPONENT////////////////////////////
-		Xil_L1DCacheFlush();
-		Xil_L2CacheFlush();
-
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CbDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
-		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Cbblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
-
-		while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-		XAxiDma_Reset(&AxiDma);
-		while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-		spin_lock(&lock);
 
 	}
 

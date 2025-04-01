@@ -125,7 +125,6 @@ volatile rgb_pixel_t* circular_buffer_ptr = (rgb_pixel_t*) CIRCULAR_BUFFER_ADDRE
 
 int main()
 {
-
 //    printf("Core1 trying to spin_lock");
 
     //spin_lock(lock_ptr);
@@ -147,43 +146,18 @@ int main()
 //	circular_buff_t* buffer = init(90*160*4, 5);	//creates a circular buffer of capacity 5 (for now)
 
     // need some way to indicate that we are starting a decode single frame
-
-//    spin_lock(lock_ptr);
-//    spin_unlock(lock_ptr); //14400
-
     while(1)
     {
-
-        spin_lock(lock_ptr);
-        spin_unlock(lock_ptr);
-		for(int b = 0; b < (14400/2); b++)
-		{
-			ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
-		}
-
-		if(*frame_type_ptr == 1)
-		{
-			spin_lock(lock_ptr);
-		}
-
-		for(int b = (14400/2); b < 14400; b++)
-		{
-			ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
-		}
-
-		//BUFF REG HERE
-
-		if(*frame_type_ptr == 1)
-		{
-			spin_unlock(lock_ptr);
-		}
-
-//            printf("Core1 Unlock\n");
-//            spin_lock(lock_ptr);
-//            spin_unlock(lock_ptr);
-
     	//printf("Core1 lock\n");
+    	spin_lock(lock_ptr);
 
+        for(int b = 0; b < (*hCb_size_ptr)*(*wCb_size_ptr); b++)
+        {
+            ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
+        }
+
+        printf("Core1 Unlock\n");
+        spin_unlock(lock_ptr);
     }
 	return 0;
 }

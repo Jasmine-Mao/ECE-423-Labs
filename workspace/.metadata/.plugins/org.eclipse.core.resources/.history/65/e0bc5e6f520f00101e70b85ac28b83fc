@@ -165,7 +165,6 @@ int main()
 		{
 			spin_lock(lock_ptr);
 		}
-
 		for(int b = (14400/2); b < 14400; b++)
 		{
 			ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
