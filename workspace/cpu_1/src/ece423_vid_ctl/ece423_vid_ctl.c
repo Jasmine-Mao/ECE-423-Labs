@@ -11,6 +11,17 @@
 #define write_reg(BaseAddress, RegOffset, Data) Xil_Out32((BaseAddress) + (RegOffset), (uint32_t)(Data))
 #define read_reg(BaseAddress, RegOffset)        Xil_In32((BaseAddress) + (RegOffset))
 
+#define CIRCULAR_BUFFER_ADDRESS 0x15100064
+#define FRONT_ADDRESS 			0x15100068
+#define REAR_ADDRESS 			0x1510006C
+#define MID_ADDRESS 			0x15100070
+
+volatile rgb_pixel_t* circular_buffer_ptr = (rgb_pixel_t*) CIRCULAR_BUFFER_ADDRESS;
+volatile int32_t* front_ptr = (int32_t*) FRONT_ADDRESS;
+volatile int32_t* rear_ptr = (int32_t*) REAR_ADDRESS;
+volatile int32_t* mid_ptr = (int32_t*) MID_ADDRESS;
+
+
 //////////////////////////////////////////////////////////////////////////////////
 //
 //		THIS IS FOR CORE 1!!!!!!!!!!
@@ -20,11 +31,11 @@
 rgb_pixel_t** frame_buff;
 
 
-static volatile int32_t front;
-static volatile int32_t rear;
-static volatile int32_t mid;
+//static volatile int32_t front;
+//static volatile int32_t rear;
+//static volatile int32_t mid;
 
-static uint32_t h_size, w_size, frame_buff_limit;
+//static uint32_t h_size, w_size, frame_buff_limit;
 
 rgb_pixel_t* buff_disp();
 
@@ -75,9 +86,9 @@ rgb_pixel_t* buff_disp();
 //}
 
 uint32_t buff_reg(){
-	if(mid < front){
-		mid++;
-		Xil_DCacheFlushRange((UINTPTR)frame_buff[mid  % frame_buff_limit], w_size*h_size*sizeof(rgb_pixel_t));
+	if(*mid_ptr < *front_ptr){
+		(*mid_ptr)++;
+		Xil_DCacheFlushRange((UINTPTR)&circular_buffer_ptr[((*mid_ptr)  % 5)], 1280*720*sizeof(rgb_pixel_t));
 		return TRUE;
 	} else return FALSE;
 }

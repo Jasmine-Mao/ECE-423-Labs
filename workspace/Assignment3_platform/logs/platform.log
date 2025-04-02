@@ -28178,3 +28178,773 @@ C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/ps7_cortexa9_
 C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/lab_prefab_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_2||
 
 TRACE::2025-03-30.15:39:11::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:06::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:06::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:06::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:06::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:06::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:06::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:06::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened new HwDB with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWReader::Active system found as  Assignment3_platform
+TRACE::2025-04-02.15:44:10::SCWReader::Handling sysconfig Assignment3_platform
+TRACE::2025-04-02.15:44:10::SCWDomain::checking for install qemu data   : 
+TRACE::2025-04-02.15:44:10::SCWDomain:: Using the QEMU Data from install at  : C:/Software/Xilinx/Vitis/2022.1/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2025-04-02.15:44:10::SCWDomain:: Using the QEMU args  from install at  : C:/Software/Xilinx/Vitis/2022.1/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-04-02.15:44:10::SCWMssOS::No sw design opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::mss exists loading the mss file  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::Opened the sw design from mss  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::Adding the swdes entry C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-04-02.15:44:10::SCWMssOS::updating the scw layer about changes
+TRACE::2025-04-02.15:44:10::SCWMssOS::Opened the sw design.  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS:: library already available in sw design:  xilffs:4.7
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::Saving the mss changes C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-02.15:44:10::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-02.15:44:10::SCWMssOS::Commit changes completed.
+TRACE::2025-04-02.15:44:10::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-04-02.15:44:10::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWReader::No isolation master present  
+TRACE::2025-04-02.15:44:10::SCWDomain::checking for install qemu data   : 
+TRACE::2025-04-02.15:44:10::SCWDomain:: Using the QEMU Data from install at  : C:/Software/Xilinx/Vitis/2022.1/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2025-04-02.15:44:10::SCWDomain:: Using the QEMU args  from install at  : C:/Software/Xilinx/Vitis/2022.1/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::No sw design opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::mss exists loading the mss file  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::Opened the sw design from mss  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::Adding the swdes entry C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2025-04-02.15:44:10::SCWMssOS::updating the scw layer about changes
+TRACE::2025-04-02.15:44:10::SCWMssOS::Opened the sw design.  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS:: library already available in sw design:  xilffs:4.7
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::Saving the mss changes C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-02.15:44:10::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-02.15:44:10::SCWMssOS::Commit changes completed.
+TRACE::2025-04-02.15:44:10::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-04-02.15:44:10::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWReader::No isolation master present  
+TRACE::2025-04-02.15:44:10::SCWDomain::checking for install qemu data   : 
+TRACE::2025-04-02.15:44:10::SCWDomain:: Using the QEMU Data from install at  : C:/Software/Xilinx/Vitis/2022.1/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2025-04-02.15:44:10::SCWDomain:: Using the QEMU args  from install at  : C:/Software/Xilinx/Vitis/2022.1/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:10::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:10::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:10::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:10::SCWMssOS::No sw design opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::mss exists loading the mss file  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::Opened the sw design from mss  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:10::SCWMssOS::Adding the swdes entry C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss with des name system_1
+TRACE::2025-04-02.15:44:10::SCWMssOS::updating the scw layer about changes
+TRACE::2025-04-02.15:44:11::SCWMssOS::Opened the sw design.  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:11::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:11::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWMssOS:: library already available in sw design:  xilffs:4.7
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:11::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:11::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:11::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:11::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:11::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:11::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:11::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:11::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:11::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:11::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:11::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:11::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWMssOS::Saving the mss changes C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-02.15:44:11::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-02.15:44:11::SCWMssOS::Commit changes completed.
+TRACE::2025-04-02.15:44:11::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-04-02.15:44:11::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:11::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:11::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:11::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:11::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:11::SCWReader::No isolation master present  
+LOG::2025-04-02.15:44:53::SCWPlatform::Started generating the artifacts platform Assignment3_platform
+TRACE::2025-04-02.15:44:53::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-04-02.15:44:53::SCWPlatform::Started generating the artifacts for system configuration Assignment3_platform
+LOG::2025-04-02.15:44:53::SCWSystem::Checking the domain zynq_fsbl
+LOG::2025-04-02.15:44:53::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2025-04-02.15:44:53::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-04-02.15:44:53::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2025-04-02.15:44:53::SCWSystem::Checking the domain standalone_domain
+LOG::2025-04-02.15:44:53::SCWSystem::Not a boot domain 
+LOG::2025-04-02.15:44:53::SCWSystem::Checking the domain standalone_ps7_cortexa9_1
+LOG::2025-04-02.15:44:53::SCWSystem::Not a boot domain 
+LOG::2025-04-02.15:44:53::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2025-04-02.15:44:53::SCWDomain::Generating domain artifcats
+TRACE::2025-04-02.15:44:53::SCWMssOS::Generating standalone artifcats
+TRACE::2025-04-02.15:44:53::SCWMssOS::Copying the qemu file from  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/resources/Assignment3_platform/standalone_domain/qemu_args.txt To C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/qemu/
+TRACE::2025-04-02.15:44:53::SCWMssOS::Copying the qemu file from  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/resources/Assignment3_platform/standalone_domain/qemu_args.txt To C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/qemu/
+TRACE::2025-04-02.15:44:53::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-04-02.15:44:53::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:53::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:53::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:53::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:53::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:53::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:53::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:53::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:53::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:53::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:53::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:53::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:53::SCWMssOS::Completed writing the mss file at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2025-04-02.15:44:53::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:53::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-04-02.15:44:53::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-04-02.15:44:53::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2025-04-02.15:44:53::SCWMssOS::skipping the bsp build ... 
+TRACE::2025-04-02.15:44:53::SCWMssOS::Copying to export directory.
+TRACE::2025-04-02.15:44:53::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-04-02.15:44:53::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-04-02.15:44:53::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2025-04-02.15:44:53::SCWSystem::Started Processing the domain standalone_ps7_cortexa9_1
+TRACE::2025-04-02.15:44:53::SCWDomain::Generating domain artifcats
+TRACE::2025-04-02.15:44:53::SCWMssOS::Generating standalone artifcats
+TRACE::2025-04-02.15:44:53::SCWMssOS::Copying the qemu file from  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/resources/Assignment3_platform/standalone_ps7_cortexa9_1/qemu_args.txt To C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_ps7_cortexa9_1/qemu/
+TRACE::2025-04-02.15:44:53::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-04-02.15:44:53::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:53::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:53::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:53::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:53::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:53::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:53::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:53::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:53::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:53::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:53::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:53::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:53::SCWMssOS::Completed writing the mss file at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp
+TRACE::2025-04-02.15:44:53::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:53::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-04-02.15:44:53::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-04-02.15:44:53::SCWDomain::Skipping the build for domain :  standalone_ps7_cortexa9_1
+TRACE::2025-04-02.15:44:53::SCWMssOS::skipping the bsp build ... 
+TRACE::2025-04-02.15:44:53::SCWMssOS::Copying to export directory.
+TRACE::2025-04-02.15:44:54::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-04-02.15:44:54::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-04-02.15:44:54::SCWSystem::Completed Processing the domain standalone_ps7_cortexa9_1
+LOG::2025-04-02.15:44:54::SCWSystem::Completed Processing the sysconfig Assignment3_platform
+LOG::2025-04-02.15:44:54::SCWPlatform::Completed generating the artifacts for system configuration Assignment3_platform
+TRACE::2025-04-02.15:44:54::SCWPlatform::Started preparing the platform 
+TRACE::2025-04-02.15:44:54::SCWSystem::Writing the bif file for system config Assignment3_platform
+TRACE::2025-04-02.15:44:54::SCWSystem::dir created 
+TRACE::2025-04-02.15:44:54::SCWSystem::Writing the bif 
+TRACE::2025-04-02.15:44:54::SCWPlatform::Started writing the spfm file 
+TRACE::2025-04-02.15:44:54::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-04-02.15:44:54::SCWPlatform::Completed generating the platform
+TRACE::2025-04-02.15:44:54::SCWMssOS::Saving the mss changes C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-02.15:44:54::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-02.15:44:54::SCWMssOS::Commit changes completed.
+TRACE::2025-04-02.15:44:54::SCWMssOS::Saving the mss changes C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-02.15:44:54::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-02.15:44:54::SCWMssOS::Commit changes completed.
+TRACE::2025-04-02.15:44:54::SCWMssOS::Saving the mss changes C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-02.15:44:54::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-02.15:44:54::SCWMssOS::Commit changes completed.
+TRACE::2025-04-02.15:44:54::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:54::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:54::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:54::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:54::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:54::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:54::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:54::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:54::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:54::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:54::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:54::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:54::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:54::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:54::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:54::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWWriter::formatted JSON is {
+	"platformName":	"Assignment3_platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"Assignment3_platform",
+	"platHandOff":	"C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/assignment2_hunter_test/hw/lab_prefab_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/lab_prefab_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"Assignment3_platform",
+	"systems":	[{
+			"systemName":	"Assignment3_platform",
+			"systemDesc":	"Assignment3_platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"Assignment3_platform",
+			"sysActiveDom":	"standalone_ps7_cortexa9_1",
+			"sysDefaultDom":	"standalone_ps7_cortexa9_1",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.7",
+					"mssFile":	"",
+					"md5Digest":	"461cb4c64d2f43abda4608f696ad182a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.7", "xilrsa:1.6"],
+					"libOptions":	{
+						"ps7_cortexa9_0":	{
+							"extra_compiler_flags":	"-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DSHAREABLE_DRR",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"libsContainingOptions":	["ps7_cortexa9_0"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"<platformDir>/resources/Assignment3_platform/standalone_domain/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/Assignment3_platform/standalone_domain/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.7",
+					"mssFile":	"",
+					"md5Digest":	"854dac6cc6088728a51018c4dfab2e79",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.7"],
+					"libOptions":	{
+						"ps7_cortexa9_0":	{
+							"extra_compiler_flags":	"-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DSHAREABLE_DRR",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"xilffs":	{
+							"enable_multi_partition":	"true",
+							"num_logical_vol":	"10",
+							"libOptionNames":	["enable_multi_partition", "num_logical_vol"]
+						},
+						"libsContainingOptions":	["ps7_cortexa9_0", "xilffs"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_ps7_cortexa9_1",
+					"domainDispName":	"standalone_ps7_cortexa9_1",
+					"domainDesc":	"standalone_ps7_cortexa9_1",
+					"processors":	"ps7_cortexa9_1",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"<platformDir>/resources/Assignment3_platform/standalone_ps7_cortexa9_1/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/Assignment3_platform/standalone_ps7_cortexa9_1/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.7",
+					"mssFile":	"",
+					"md5Digest":	"462f87de901c660a50a8f9a848be6d50",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.7"],
+					"libOptions":	{
+						"ps7_cortexa9_1":	{
+							"extra_compiler_flags":	"-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DSHAREABLE_DRR -DUSE_AMP=1",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"xilffs":	{
+							"enable_multi_partition":	"true",
+							"num_logical_vol":	"10",
+							"libOptionNames":	["enable_multi_partition", "num_logical_vol"]
+						},
+						"libsContainingOptions":	["ps7_cortexa9_1", "xilffs"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-04-02.15:44:54::SCWPlatform::updated the xpfm file.
+TRACE::2025-04-02.15:44:54::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:54::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:54::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:54::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:54::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:54::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWPlatform::Trying to open the hw design at C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA given C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA absoulate path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform::DSA directory C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw
+TRACE::2025-04-02.15:44:54::SCWPlatform:: Platform Path C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/hw/lab_prefab_wrapper.xsa
+TRACE::2025-04-02.15:44:54::SCWPlatform:: Unique name xilinx:pynq-z1::0.0
+TRACE::2025-04-02.15:44:54::SCWPlatform::Trying to set the existing hwdb with name lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:54::SCWPlatform::Opened existing hwdb lab_prefab_wrapper_23
+TRACE::2025-04-02.15:44:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-02.15:44:54::SCWMssOS::Checking the sw design at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss
+TRACE::2025-04-02.15:44:54::SCWMssOS::DEBUG:  swdes dump  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss|system_1||
+C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-02.15:44:54::SCWMssOS::Sw design exists and opened at  C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/ps7_cortexa9_1/standalone_ps7_cortexa9_1/bsp/system.mss

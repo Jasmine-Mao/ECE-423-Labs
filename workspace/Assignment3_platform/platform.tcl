@@ -134,3 +134,5 @@ bsp reload
 bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DSHAREABLE_DRR -DUSE_AMP=1"
 bsp reload
 platform generate -domains 
+platform active {Assignment3_platform}
+platform generate -domains 

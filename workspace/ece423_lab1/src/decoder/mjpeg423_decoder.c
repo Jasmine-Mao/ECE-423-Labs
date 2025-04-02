@@ -56,6 +56,10 @@ __attribute((section(".shared_memory_section"))) static uint8_t* Ybitstream;
 __attribute((section(".shared_memory_section"))) static uint8_t* Cbbitstream;
 __attribute((section(".shared_memory_section"))) static uint8_t* Crbitstream;
 __attribute((section(".shared_memory_section"))) volatile rgb_pixel_t* circular_buffer_ptr;
+__attribute((section(".shared_memory_section"))) volatile int32_t front;
+__attribute((section(".shared_memory_section"))) volatile int32_t rear;
+__attribute((section(".shared_memory_section"))) volatile int32_t mid;
+
 
 //__attribute((section(".shared_memory_section"))) volatile uint32_t* start_decode;
 //^ this is for when we want core 1 to start; this might not be needed
@@ -298,70 +302,33 @@ void load_video(const char* filename_in) //HM
 
 uint8_t decode_single_frame()
 {
-	/////////////////////////////////////////////////////////////////////////////////
-	//
-	//	area for roughing out how decode will look on CORE 0\
-	//
-	//	check frame type
-	//	for i frame:
-	//		if we are the first frame (1): 'ignore' anything that would be form a previous frame (ex. if there is room for a colour conversion from frame 0, skip over it)
-	//
-	//		SD read
-	//		LD Cr
-	//		LD Cb first half
-	//			after this, there is a pause for something from previous. this will always be a colour conversion followed by a L1 flush
-	//			if this is the first frame, we ignore the stuff from previous and immediately move on
-	//		L1 and L2 flush followed by IDCT for Cr
-	//		LD Cb second half
-	//		flush L1 and L2 on core 0 AND flush L1 on core 1 [THIS WIL REQUIRE SYNCHRONIZATION]
-	//		once the IDCT Cb 1 finishes, flush L1 and L2 caches on core 0 in preperation for IDCT Y
-	//		if the following is a I frame, perform the next SD read after the IDCT for Y finishes
-	//		if the following frame is a P frame, the scheduling for the next read might be a bit more complex [THIS WILL REQUIRE LOCKS AND OTHER SYNCHRONIZATION, MAYBE DELAYS?]
-	//
-	//	for p frame:
-	//		p frames will never be the first frame so we never need to worry about this
-	//
-	//		SD read
-	//		LD Cr
-	//		L1 and L2 flush; IDCT for cr
-	//		LD y
-	//		L1 and L2 flush, IDCT for y
-	//		L1 and L2 flush, IDCT for cb
-	//			after the cache flushes, we immediately run a colour conversion for the prvious frame if the previous was a P frame
-	//			**** I think i found a potential issue in the PIP schedule. If we consider a PPI, there is a colour conversion that needs to run before the I frame can begin running the SD read. this might need a bit more consideratio here
-	//
-	/////////////////////////////////////////////////////////////////////////////////
+	if(frame_index != 0) //sync at the start of every frame, except for first
+	{
+		spin_unlock(&lock);	// for sync
+		spin_lock(&lock);
+	}
+	printf("Core0:SD_READ Frame number %d\n", frame_index);
 
+	////////////////////////////////////////////SD READ////////////////////////
+	//XTime_GetTime(&start);  // Capture time before the function call
+	rgbblock = buff_next();	// this gets malloced
+	if (rgbblock == NULL) return 1; // overflowing buffer
+	if (frame_index >= num_frames) return 1; // reached end of video
 
-
-
-
-
-
+	//read frame payload
+	f_status = f_read(&file_in, (void*)&frame_size, sizeof(uint32_t), (UINT*)&num_bytes_read);
+	f_status = f_read(&file_in, (void*)&frame_type, sizeof(uint32_t), (UINT*)&num_bytes_read);
+	f_status = f_read(&file_in, (void*)&Ysize, sizeof(uint32_t), (UINT*)&num_bytes_read);
+	f_status = f_read(&file_in, (void*)&Cbsize, sizeof(uint32_t), (UINT*)&num_bytes_read);
+	f_status = f_read(&file_in, (void*)Ybitstream, frame_size - 4 * sizeof(uint32_t), (UINT*)&num_bytes_read);
+	//set the Cb and Cr bitstreams to point to the right location
+	Cbbitstream = Ybitstream + Ysize;
+	Crbitstream = Cbbitstream + Cbsize;
+    //////////////////////////////////////////////SD READ END//////////////
 
 	if(frame_type == 0) //Iframe
 	{
-		if(frame_index != 0){
-			spin_unlock(&lock)	// for sync
-			spin_lock(&lock);
-		}
-
-		////////////////////////////////////////////SD READ////////////////////////
-		//XTime_GetTime(&start);  // Capture time before the function call
-		rgbblock = buff_next();	// this gets malloced
-		if (rgbblock == NULL) return 1; // overflowing buffer
-		if (frame_index >= num_frames) return 1; // reached end of video
-
-		//read frame payload
-		f_status = f_read(&file_in, (void*)&frame_size, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&frame_type, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&Ysize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&Cbsize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)Ybitstream, frame_size - 4 * sizeof(uint32_t), (UINT*)&num_bytes_read);
-		//set the Cb and Cr bitstreams to point to the right location
-		Cbbitstream = Ybitstream + Ysize;
-		Crbitstream = Cbbitstream + Cbsize;
-	    //////////////////////////////////////////////SD READ END//////////////
+		//printf("Core0:Running decode for an I frame! Frame number %d\n", frame_index);
 
 	    //////////////////////////////////////////////LOSSLESS Cr///////////////////
 	    lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
@@ -407,30 +374,13 @@ uint8_t decode_single_frame()
 		while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
 		XAxiDma_Reset(&AxiDma);
 		while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
 	}
 	else //Pframe
 	{
-		spin_unlock(&lock)	// for sync
-		//spin_lock(&lock);	// this would be removed and moved to where we check what frame type we are
+		//printf("Core0:Running decode for a P frame! Frame number %d\n", frame_index);
 
-		////////////////////////////////////////////SD READ////////////////////////
-		//XTime_GetTime(&start);  // Capture time before the function call
-		rgbblock = buff_next();	// this gets malloced
-		if (rgbblock == NULL) return 1; // overflowing buffer
-		if (frame_index >= num_frames) return 1; // reached end of video
-
-	    //read frame payload
-		f_status = f_read(&file_in, (void*)&frame_size, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&frame_type, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&Ysize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)&Cbsize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		f_status = f_read(&file_in, (void*)Ybitstream, frame_size - 4 * sizeof(uint32_t), (UINT*)&num_bytes_read);
-	    //set the Cb and Cr bitstreams to point to the right location
-	    Cbbitstream = Ybitstream + Ysize;
-	    Crbitstream = Cbbitstream + Cbsize;
-	    ///////////////////////////////////////////////SD READ END//////////////
-
+		spin_unlock(&lock);	// for sync
+		//printf("Core0: Unlocked because p frame\n");
 	    //////////////////////////////////////////////LOSSLESS Cr///////////////////
 	    lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
 
@@ -457,6 +407,10 @@ uint8_t decode_single_frame()
 		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
 		XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
 
+	    //////////////////////////////////////////////LOSSLESS Cb///////////////////
+	    lossless_decode(hCb_size*wCb_size, Cbbitstream, CbDCAC, Cquant, frame_type);
+
+		//////////////////////////////////////////////IDCT POLLING///////////////////
 		while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
 		XAxiDma_Reset(&AxiDma);
 		while (!XAxiDma_ResetIsDone(&AxiDma)){}
@@ -473,38 +427,39 @@ uint8_t decode_single_frame()
 		XAxiDma_Reset(&AxiDma);
 		while (!XAxiDma_ResetIsDone(&AxiDma)){}
 
+		//printf("Core0: Locking because p frame\n");
 		spin_lock(&lock);
 
 	}
 
 	////////////////////////////////////////////SD READ////////////////////////
 	//XTime_GetTime(&start);  // Capture time before the function call
-	rgbblock = buff_next();	// this gets malloced
-	if (rgbblock == NULL) return 1; // overflowing buffer
-	if (frame_index >= num_frames) return 1; // reached end of video
-
-    //read frame payload
-	f_status = f_read(&file_in, (void*)&frame_size, sizeof(uint32_t), (UINT*)&num_bytes_read);
-	f_status = f_read(&file_in, (void*)&frame_type, sizeof(uint32_t), (UINT*)&num_bytes_read);
-	f_status = f_read(&file_in, (void*)&Ysize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-	f_status = f_read(&file_in, (void*)&Cbsize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-	f_status = f_read(&file_in, (void*)Ybitstream, frame_size - 4 * sizeof(uint32_t), (UINT*)&num_bytes_read);
-    //set the Cb and Cr bitstreams to point to the right location
-    Cbbitstream = Ybitstream + Ysize;
-    Crbitstream = Cbbitstream + Cbsize;
+//	rgbblock = buff_next();	// this gets malloced
+//	if (rgbblock == NULL) return 1; // overflowing buffer
+//	if (frame_index >= num_frames) return 1; // reached end of video
+//
+//    //read frame payload
+//	f_status = f_read(&file_in, (void*)&frame_size, sizeof(uint32_t), (UINT*)&num_bytes_read);
+//	f_status = f_read(&file_in, (void*)&frame_type, sizeof(uint32_t), (UINT*)&num_bytes_read);
+//	f_status = f_read(&file_in, (void*)&Ysize, sizeof(uint32_t), (UINT*)&num_bytes_read);
+//	f_status = f_read(&file_in, (void*)&Cbsize, sizeof(uint32_t), (UINT*)&num_bytes_read);
+//	f_status = f_read(&file_in, (void*)Ybitstream, frame_size - 4 * sizeof(uint32_t), (UINT*)&num_bytes_read);
+//    //set the Cb and Cr bitstreams to point to the right location
+//    Cbbitstream = Ybitstream + Ysize;
+//    Crbitstream = Cbbitstream + Cbsize;
    ///////////////////////////////////////////////SD READ END//////////////
     //printf("CORE 0 frame type: %d\n",frame_type);
 
 
     //////////////////////////////////////////////LOSSLESS Y//////////////////
-    lossless_decode(hYb_size*wYb_size, Ybitstream, YDCAC, Yquant, frame_type);
+//    lossless_decode(hYb_size*wYb_size, Ybitstream, YDCAC, Yquant, frame_type);
 
 
     //////////////////////////////////////////////LOSSLESS Cb///////////////////
-    lossless_decode(hCb_size*wCb_size, Cbbitstream, CbDCAC, Cquant, frame_type);
+//    lossless_decode(hCb_size*wCb_size, Cbbitstream, CbDCAC, Cquant, frame_type);
 
     //////////////////////////////////////////////LOSSLESS Cr///////////////////
-    lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
+//    lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -512,53 +467,53 @@ uint8_t decode_single_frame()
 
 	//IDCT Y COMPONENT///////////////////////////
 
-    Xil_L1DCacheFlush();
-    Xil_L2CacheFlush();
-
-	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
-	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
-
-	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-	XAxiDma_Reset(&AxiDma);
-	while (!XAxiDma_ResetIsDone(&AxiDma)){}
+//    Xil_L1DCacheFlush();
+//    Xil_L2CacheFlush();
+//
+//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
+//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
+//
+//	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
+//	XAxiDma_Reset(&AxiDma);
+//	while (!XAxiDma_ResetIsDone(&AxiDma)){}
 
 
 
 	//IDCT Cb COMPONENT////////////////////////////
-	Xil_L1DCacheFlush();
-	Xil_L2CacheFlush();
-
-	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CbDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
-	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Cbblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
-
-	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-	XAxiDma_Reset(&AxiDma);
-	while (!XAxiDma_ResetIsDone(&AxiDma)){}
+//	Xil_L1DCacheFlush();
+//	Xil_L2CacheFlush();
+//
+//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CbDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
+//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Cbblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
+//
+//	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
+//	XAxiDma_Reset(&AxiDma);
+//	while (!XAxiDma_ResetIsDone(&AxiDma)){}
 
 	//IDCT Cr COMPONENT////////////////////////////
-	Xil_L1DCacheFlush();
-	Xil_L2CacheFlush();
-
-	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CrDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
-	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Crblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
-
-	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-	XAxiDma_Reset(&AxiDma);
-	while (!XAxiDma_ResetIsDone(&AxiDma)){}
+//	Xil_L1DCacheFlush();
+//	Xil_L2CacheFlush();
+//
+//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CrDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
+//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Crblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
+//
+//	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
+//	XAxiDma_Reset(&AxiDma);
+//	while (!XAxiDma_ResetIsDone(&AxiDma)){}
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-	printf("Core0 Unlock\n");
-	spin_unlock(&lock);
-	printf("Core0 lock\n");
-
-	for(int b = 12000; b < 14400; b++)
-	{
-		ycbcr_to_rgb(b/wCb_size*8, b%wCb_size*8, w_size, Yblock[b], Cbblock[b], Crblock[b], rgbblock);
-	}
-
-	spin_lock(&lock);
-	printf("Core0 made it past the lock\n");
+//	printf("Core0 Unlock\n");
+//	spin_unlock(&lock);
+//	printf("Core0 lock\n");
+//
+//	for(int b = 12000; b < 14400; b++)
+//	{
+//		ycbcr_to_rgb(b/wCb_size*8, b%wCb_size*8, w_size, Yblock[b], Cbblock[b], Crblock[b], rgbblock);
+//	}
+//
+//	spin_lock(&lock);
+//	printf("Core0 made it past the lock\n");
     //ybcbr to rgb conversion
     //XTime_GetTime(&start);
 	// SOME SYNC STUFF HERE TO TELL CORE1 TO START
@@ -575,13 +530,13 @@ uint8_t decode_single_frame()
 	//printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
 
 //    XTime_GetTime(&start);
-    buff_reg();
+    //buff_reg();
 
 
-    if(vdma_out() == 0)
-    {
-    	printf("VDMA failed");
-    }
+//    if(vdma_out() == 0)
+//    {
+//    	printf("VDMA failed");
+//    }
     frame_index++;
 //    printf("%d, %d\n", frame_type, total_memory);
 

@@ -60,7 +60,7 @@
 #include <xaxidma.h>
 #include "spinlocks/spinlock1.h"
 
-#define FRAME_BUFF_SIZE 2
+#define FRAME_BUFF_SIZE 5
 
 #define TIMER_1S 325000000 //1 second
 #define ROOT "3:/"
@@ -174,16 +174,13 @@ int main()
 
     is_paused = 1;
 
-    decode_single_frame();
-
-//	^should we run this multiple times? enough to fill the buffer? something like...
-//
-//    while(!buff_full()){		<-- buff full checks to see if the circular buffer is full or not
-//    	decode_single_frame();
-//    }
-//	  exits to here once the buffer is full
-
-    //vdma_out();		<-- will need to add this back at some point
+    while(!buff_full()){		//<-- buff full checks to see if the circular buffer is full or not
+    	decode_single_frame();
+    }
+    vdma_out();
+    // first VDMA out to display the first frame
+//    vdma_out();
+//    vdma_out();
 
     timer_start(TIMER_1S/TIMER_FPS);    // start timer
     //pin_value = -1; // reset pin value
@@ -208,9 +205,10 @@ int main()
     		// check to make sure there are things in the buffer to output
     		if(!buff_empty()){
 //    			probably do a VDMA out?
+    			vdma_out();
 //    			this checks to make sure that there is stuff in the buffer to output
     		}
-            decode_single_frame();
+            //decode_single_frame();
             if (is_last_frame())
 			{
             	is_paused = 1;
@@ -262,7 +260,7 @@ int main()
         }
         //add a new if clause here for if nothing happens and there is room in the buffer
         if(!buff_full()){
-//        	decode_single_frame();
+        	decode_single_frame();
         }
     }
 

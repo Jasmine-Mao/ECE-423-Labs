@@ -115,7 +115,7 @@ static uint8_t** Ybitstream_ptr = (uint8_t**)YBITSTREAM_ADDRESS;
 static uint8_t** Cbbitstream_ptr = (uint8_t**)CBBITSTREAM_ADDRESS;
 static uint8_t** Crbitstream_ptr = (uint8_t**)CRBITSTREAM_ADDRESS;
 
-volatile rgb_pixel_t* circular_buffer_ptr = (rgb_pixel_t*) CIRCULAR_BUFFER_ADDRESS;
+//volatile rgb_pixel_t* circular_buffer_ptr = (rgb_pixel_t*) CIRCULAR_BUFFER_ADDRESS;
 
 
 //#define TEST_PTR ((volatile uint32_t*)0x14EC9380)
@@ -156,6 +156,8 @@ int main()
 
         spin_lock(lock_ptr);
         spin_unlock(lock_ptr);
+		printf("Core1: Unlocked\n");
+
 		for(int b = 0; b < (14400/2); b++)
 		{
 			ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
@@ -164,6 +166,8 @@ int main()
 		if(*frame_type_ptr == 1)
 		{
 			spin_lock(lock_ptr);
+			printf("Core1: Locked because p frame\n");
+
 		}
 
 		for(int b = (14400/2); b < 14400; b++)
@@ -172,12 +176,18 @@ int main()
 		}
 
 		//BUFF REG HERE
+		buff_reg();
 
 		if(*frame_type_ptr == 1)
 		{
 			spin_unlock(lock_ptr);
+			printf("Core1: Unlocked because p frame\n");
+			//printf("Core1:Completed decode for a P frame! Frame number %d\n", (*frame_index_ptr)-1);
 		}
+		else{
+			//printf("Core1:Completed decode for an I frame! Frame number %d\n", (*frame_index_ptr)-1);
 
+		}
 //            printf("Core1 Unlock\n");
 //            spin_lock(lock_ptr);
 //            spin_unlock(lock_ptr);

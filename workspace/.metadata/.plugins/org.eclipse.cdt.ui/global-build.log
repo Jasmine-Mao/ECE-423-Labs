@@ -1,6 +1,6 @@
 Nothing to build in platform 'Assignment3_platform'
 
-18:45:40 **** Incremental Build of configuration Debug for project cpu_1 ****
+16:14:53 **** Incremental Build of configuration Debug for project cpu_1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -28,12 +28,15 @@ C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assi
    49 | #  define TRUE          1U
       | 
 ../src/core1_main.c: In function 'main':
-../src/core1_main.c:135:9: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
-  135 |         Xil_SetTlbAttributes(0x15000000, 0xC06);
+../src/core1_main.c:136:9: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+  136 |         Xil_SetTlbAttributes(0x15000000, 0xC06);
       |         ^~~~~~~~~~~~~~~~~~~~
-../src/core1_main.c:163:13: warning: implicit declaration of function 'ycbcr_to_rgb' [-Wimplicit-function-declaration]
-  163 |             ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
-      |             ^~~~~~~~~~~~
+../src/core1_main.c:163:25: warning: implicit declaration of function 'ycbcr_to_rgb' [-Wimplicit-function-declaration]
+  163 |                         ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
+      |                         ^~~~~~~~~~~~
+../src/core1_main.c:179:17: warning: implicit declaration of function 'buff_reg' [-Wimplicit-function-declaration]
+  179 |                 buff_reg();
+      |                 ^~~~~~~~
 At top level:
 ../src/core1_main.c:116:18: warning: 'Crbitstream_ptr' defined but not used [-Wunused-variable]
   116 | static uint8_t** Crbitstream_ptr = (uint8_t**)CRBITSTREAM_ADDRESS;
@@ -68,9 +71,6 @@ At top level:
 ../src/core1_main.c:98:27: warning: 'trailer_ptr' defined but not used [-Wunused-variable]
    98 | static iframe_trailer_t** trailer_ptr = (iframe_trailer_t**)TRAILER_ADDRESS;
       |                           ^~~~~~~~~~~
-../src/core1_main.c:96:18: warning: 'frame_type_ptr' defined but not used [-Wunused-variable]
-   96 | static uint32_t* frame_type_ptr = (uint32_t*)FRAME_TYPE_ADDRESS;
-      |                  ^~~~~~~~~~~~~~
 ../src/core1_main.c:95:18: warning: 'frame_size_ptr' defined but not used [-Wunused-variable]
    95 | static uint32_t* frame_size_ptr = (uint32_t*)FRAME_SIZE_ADDRESS;
       |                  ^~~~~~~~~~~~~~
@@ -102,6 +102,6 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size cpu_1.elf  |tee "cpu_1.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  54111	   3164	130006280	130063555	7c09cc3	cpu_1.elf
+  54543	   3180	130006264	130063987	7c09e73	cpu_1.elf
 'Finished building: cpu_1.elf.size'
 ' '

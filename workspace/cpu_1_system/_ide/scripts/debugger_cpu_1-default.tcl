@@ -22,6 +22,8 @@ ps7_init
 ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 rst -processor
+targets -set -nocase -filter {name =~ "*A9*#1"}
+rst -processor
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow C:/Users/hmcculla/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf
 targets -set -nocase -filter {name =~ "*A9*#1"}

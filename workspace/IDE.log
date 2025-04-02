@@ -16814,3 +16814,4 @@ con
 ----------------End of Script----------------
 
 18:46:05 INFO  : Launch script is exported to file 'C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\cpu_1_system\_ide\scripts\debugger_cpu_1-default.tcl'
+19:48:07 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\hmcculla\ECE423\ECE-423-Labs\workspace\temp_xsdb_launch_script.tcl
