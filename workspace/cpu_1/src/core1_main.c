@@ -166,7 +166,7 @@ int main()
 		if(*frame_type_ptr == 1)
 		{
 			spin_lock(lock_ptr);
-			printf("Core1: Locked because p frame\n");
+			//printf("Core1: Locked because p frame\n");
 
 		}
 
@@ -181,7 +181,7 @@ int main()
 		if(*frame_type_ptr == 1)
 		{
 			spin_unlock(lock_ptr);
-			printf("Core1: Unlocked because p frame\n");
+			//printf("Core1: Unlocked because p frame\n");
 			//printf("Core1:Completed decode for a P frame! Frame number %d\n", (*frame_index_ptr)-1);
 		}
 		else{

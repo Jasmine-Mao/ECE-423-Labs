@@ -24,7 +24,7 @@ typedef struct {
 } performance_m;
 
 
-#define TIMER_FPS 30
+#define TIMER_FPS 2
 
 void decode_entire_video(const char* filename_in);
 void load_video(const char* filename_in);

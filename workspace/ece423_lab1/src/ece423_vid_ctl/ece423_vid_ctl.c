@@ -87,7 +87,7 @@ rgb_pixel_t* buff_disp(){
 }
 
 uint32_t buff_full(){
-	if(((front + 1) % frame_buff_limit) == rear){	// if the buffer is full
+	if(((front + 1) % frame_buff_limit) == (rear % frame_buff_limit)){	// if the buffer is full
 		return TRUE;
 	}
 	else return FALSE;

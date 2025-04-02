@@ -172,7 +172,7 @@ int main()
 
     load_video(file_name[file_counter]);
 
-    is_paused = 1;
+    is_paused = 0;
 
     while(!buff_full()){		//<-- buff full checks to see if the circular buffer is full or not
     	decode_single_frame();
