@@ -59,6 +59,8 @@
 #include "ece423_vid_ctl/ece423_vid_ctl.h"
 #include <xaxidma.h>
 #include "spinlocks/spinlock1.h"
+#include "xil_cache.h"
+#include "xil_cache_l.h"
 
 #define FRAME_BUFF_SIZE 5
 
@@ -144,9 +146,11 @@ int main()
 	printf("CORE0 LOCK IS HERE %x\n",&lock);
 	Xil_SetTlbAttributes(0x15000000, DEVICE_MEMORY); //DEVICE_MEMORY	//MODIFY THIS ONCE WE KNOW!!!
 	spin_lock(&lock);	// starting lock, core 1 cannot lock now
+
 	// this is just for finding the spinlocks faster in shared memory
 	printf("CORE0 current value of the lock:%x\n",lock);
-
+	Xil_L1DCacheFlush();	// added to flush out any previous data that was in the caches
+	Xil_L2CacheFlush();
 
 	// initialization
 	InstancePtr = &AxiDma;

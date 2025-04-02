@@ -136,3 +136,7 @@ bsp reload
 platform generate -domains 
 platform active {Assignment3_platform}
 platform generate -domains 
+platform generate -domains standalone_domain,standalone_ps7_cortexa9_1,zynq_fsbl 
+platform clean
+platform clean
+platform generate

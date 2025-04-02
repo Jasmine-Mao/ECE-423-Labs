@@ -51,6 +51,8 @@
 #include "spinlocks/spinlock1.h"
 #include "common/mjpeg423_types.h"
 #include "circular_buffer/buff.h"
+#include "xil_cache.h"
+#include "xil_cache_l.h"
 
 #define DEVICE_MEMORY 0xC06
 
@@ -135,6 +137,7 @@ int main()
     //while (1);
 	Xil_SetTlbAttributes(0x15000000, 0xC06);
 //    uint32_t value = *shared_var;
+	Xil_L1DCacheFlush();	// added to flush any previous data that might have been in the things
 
 
 
