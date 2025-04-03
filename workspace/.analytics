@@ -1319,3 +1319,6 @@ timestamp=[2025-04-03 16:26:35], mode=BUILD, duration=0:00:00.469, duration_ms=4
 timestamp=[2025-04-03 16:26:58], mode=BUILD, duration=0:00:01.203, duration_ms=1203, data={name=ece423_lab1, configuration=Debug, clean_build=false}
 timestamp=[2025-04-03 16:27:58], mode=BUILD, duration=0:00:00.469, duration_ms=469, data={name=cpu_1, configuration=Debug, clean_build=false}
 timestamp=[2025-04-03 16:28:05], mode=BUILD, duration=0:00:01.203, duration_ms=1203, data={name=ece423_lab1, configuration=Debug, clean_build=false}
+timestamp=[2025-04-03 17:01:22], mode=WORKBENCH_START, duration=0:00:08.758, duration_ms=8758, data={}
+timestamp=[2025-04-03 17:01:23], mode=WORKBENCH_UI_INIT, duration=0:00:01.146, duration_ms=1146, data={editors_count=17, platform_editors_count=8, projects_count=8, platform_projects_count=3, active_platform_editor=false, projects=Assignment3_platform,RemoteSystemsTempFiles,assignment2_hunter_test,cpu_1,cpu_1_system,ece423_lab1,ece423_lab1_system,lab_prefab_wrapper}
+timestamp=[2025-04-03 17:01:27], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.093, duration_ms=93, data={}
