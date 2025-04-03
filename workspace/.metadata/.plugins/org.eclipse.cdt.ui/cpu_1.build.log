@@ -1,4 +1,4 @@
-00:38:44 **** Incremental Build of configuration Debug for project cpu_1 ****
+12:08:25 **** Incremental Build of configuration Debug for project cpu_1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -29,11 +29,11 @@ C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assign
 ../src/core1_main.c:141:9: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
   141 |         Xil_SetTlbAttributes(0x15000000, 0xC06);
       |         ^~~~~~~~~~~~~~~~~~~~
-../src/core1_main.c:170:25: warning: implicit declaration of function 'ycbcr_to_rgb' [-Wimplicit-function-declaration]
-  170 |                         ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
+../src/core1_main.c:171:25: warning: implicit declaration of function 'ycbcr_to_rgb' [-Wimplicit-function-declaration]
+  171 |                         ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
       |                         ^~~~~~~~~~~~
-../src/core1_main.c:179:17: warning: implicit declaration of function 'buff_reg' [-Wimplicit-function-declaration]
-  179 |                 buff_reg();
+../src/core1_main.c:180:17: warning: implicit declaration of function 'buff_reg' [-Wimplicit-function-declaration]
+  180 |                 buff_reg();
       |                 ^~~~~~~~
 At top level:
 ../src/core1_main.c:129:16: warning: 'frame_index_core1' defined but not used [-Wunused-variable]
@@ -110,5 +110,5 @@ arm-none-eabi-size cpu_1.elf  |tee "cpu_1.elf.size"
 'Finished building: cpu_1.elf.size'
 ' '
 
-00:38:45 Build Finished (took 1s.531ms)
+12:08:26 Build Finished (took 1s.562ms)
 

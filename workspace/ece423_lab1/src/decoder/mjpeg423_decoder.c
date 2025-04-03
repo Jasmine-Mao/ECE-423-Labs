@@ -483,6 +483,8 @@ void release_video()
 	free(Ybitstream);
 	frame_index = 0;
 
+	Xil_L1DCacheFlush();
+	Xil_L2CacheFlush();
 
 //	underflow_count = 0;
 //	memset(&sdReadTime, 0, sizeof(performance_t));

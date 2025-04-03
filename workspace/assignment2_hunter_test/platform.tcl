@@ -80,3 +80,4 @@ platform clean
 platform clean
 platform clean
 platform clean
+platform clean

@@ -16,5 +16,6 @@ void vdma_close();
 
 uint32_t buff_full();
 uint32_t buff_empty();
+uint32_t buff_clear();
 
 #endif

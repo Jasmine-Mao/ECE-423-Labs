@@ -22,8 +22,6 @@ targets -set -nocase -filter {name =~"APU*"}
 source C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/ece423_lab1/_ide/psinit/ps7_init.tcl
 ps7_init
 ps7_post_config
-targets -set -nocase -filter {name =~ "*A9*#0"}
-dow C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/ece423_lab1/Debug/ece423_lab1.elf
 targets -set -nocase -filter {name =~ "*A9*#1"}
 dow C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/cpu_1/Debug/cpu_1.elf
 configparams force-mem-access 0

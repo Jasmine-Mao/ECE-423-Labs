@@ -62,7 +62,7 @@
 #include "xil_cache.h"
 #include "xil_cache_l.h"
 
-#define FRAME_BUFF_SIZE 5
+#define FRAME_BUFF_SIZE 10
 
 #define TIMER_1S 325000000 //1 second
 #define ROOT "3:/"
@@ -177,8 +177,9 @@ int main()
     //file_counter++;
     load_video(file_name[file_counter]);
 
-    is_paused = 0;
+    is_paused = 1;
 
+    buff_clear();
     while(!buff_full()){		//<-- buff full checks to see if the circular buffer is full or not
     	decode_single_frame();
     }
@@ -229,7 +230,12 @@ int main()
         		release_video();
         		file_counter = (file_counter + 1) % MAX_FILE_NUM;
         	    load_video(file_name[file_counter]);
-        	    decode_single_frame();
+        	    // clear out the previous frames that were buffered
+        	    buff_clear();
+        	    while(!buff_full()){		//<-- buff full checks to see if the circular buffer is full or not
+        	    	decode_single_frame();
+        	    }
+        	    vdma_out();
         	}
         	else if (pin_value == 1)
         	{ // toggle the pause button

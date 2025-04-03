@@ -159,6 +159,7 @@ int main()
 
     while(1)
     {
+//    	Xil_L1DCacheFlush();	// added to flush any previous data that might have been in the things
 
         spin_lock(lock_ptr);
         spin_unlock(lock_ptr);

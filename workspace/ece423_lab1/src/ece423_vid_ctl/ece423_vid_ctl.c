@@ -99,6 +99,13 @@ uint32_t buff_empty(){
 	}
 	else return FALSE;
 }
+uint32_t buff_clear(){
+	// for clearing out the buffer of previous frames
+	while(buff_disp() != NULL){
+		;
+	}
+	return TRUE;
+}
 
 
 void vdma_close(){
