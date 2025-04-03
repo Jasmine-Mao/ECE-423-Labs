@@ -141,79 +141,7 @@ void decode_entire_video(const char* filename_in)
 
     //read and decode frames
     for(int frame_index = 0; frame_index < num_frames; frame_index++){
-        DEBUG_PRINT_ARG("\nFrame #%d\n",frame_index)
-
-		rgbblock = buff_next();
-
-        //read frame payload
-		f_status = f_read(&file_in, (void*)&frame_size, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
-        DEBUG_PRINT_ARG("Frame_size %lu\n",frame_size)
-
-		f_status = f_read(&file_in, (void*)&frame_type, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
-        DEBUG_PRINT_ARG("Frame_type %lu\n",frame_type)
-
-		f_status = f_read(&file_in, (void*)&Ysize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
-
-		f_status = f_read(&file_in, (void*)&Cbsize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-		if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
-
-		f_status = f_read(&file_in, (void*)Ybitstream, frame_size - 4 * sizeof(uint32_t), (UINT*)&num_bytes_read);
-		if(f_status != FR_OK) error_and_exit_error_code("cannot read input file", (uint32_t)f_status);
-
-        //set the Cb and Cr bitstreams to point to the right position
-        Cbbitstream = Ybitstream + Ysize;
-        Crbitstream = Cbbitstream + Cbsize;
-
-        //lossless decoding
-        lossless_decode(hYb_size*wYb_size, Ybitstream, YDCAC, Yquant, frame_type);
-        lossless_decode(hCb_size*wCb_size, Cbbitstream, CbDCAC, Cquant, frame_type);
-        lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
-
-    	//Y COMPONENT///////////////////////////
-    	Xil_L1DCacheFlush();
-    	Xil_L2CacheFlush();
-
-    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
-    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
-
-    	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-    	XAxiDma_Reset(&AxiDma);
-    	while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-    	//Cb COMPONENT////////////////////////////
-    	Xil_L1DCacheFlush();
-    	Xil_L2CacheFlush();
-
-    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CbDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
-    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Cbblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
-
-    	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-    	XAxiDma_Reset(&AxiDma);
-    	while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-    	//Cr COMPONENT////////////////////////////
-    	Xil_L1DCacheFlush();
-    	Xil_L2CacheFlush();
-
-    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CrDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
-    	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Crblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
-
-    	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-    	XAxiDma_Reset(&AxiDma);
-    	while (!XAxiDma_ResetIsDone(&AxiDma)){}
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        //ybcbr to rgb conversion
-        for(int b = 0; b < hCb_size*wCb_size; b++)
-        {
-            ycbcr_to_rgb(b/wCb_size*8, b%wCb_size*8, w_size, Yblock[b], Cbblock[b], Crblock[b], rgbblock);
-        }
-
-        buff_reg();//set buffer to ready
-
+        decode_single_frame();
         vdma_out();
     } //end frame iteration
 
@@ -305,9 +233,9 @@ uint8_t decode_single_frame()
 {
 	if(frame_index != 0) //sync at the start of every frame, except for first
 	{
-		printf("Core0: unlock\n");
+//		printf("Core0: unlock\n");
 		spin_unlock(&lock);	// for sync
-		printf("Core0: lock\n");
+//		printf("Core0: lock\n");
 		spin_lock(&lock);
 		//synq_flag = 0;
 	}
@@ -455,11 +383,6 @@ uint8_t decode_single_frame()
 
 
     frame_index++;
-
-
-    //some sort of synq here
-
-
     return 0;
 }
 
@@ -486,29 +409,6 @@ void release_video()
 	Xil_L1DCacheFlush();
 	Xil_L2CacheFlush();
 
-//	underflow_count = 0;
-//	memset(&sdReadTime, 0, sizeof(performance_t));
-//	memset(&yTime, 0, sizeof(performance_t));
-//	memset(&crTime, 0, sizeof(performance_t));
-//	memset(&cbTime, 0, sizeof(performance_t));
-//
-//	memset(sdReadTime.min_us, DBL_MAX, 2*sizeof(double));
-//	memset(yTime.min_us, DBL_MAX, 2*sizeof(double));
-//	memset(crTime.min_us, DBL_MAX, 2*sizeof(double));
-//	memset(cbTime.min_us, DBL_MAX, 2*sizeof(double));
-//
-//	idctTime_sum = 0;
-//	ycbrToRgbTime_sum = 0;
-//	buffRegTime_sum = 0;
-//
-//	memset(&frameSize, 0, sizeof(performance_m));
-//	memset(frameSize.min, DBL_MAX, 2*sizeof(double));
-//	yMemSum = 0;
-//	cbMemSum = 0;
-//	crMemSum = 0;
-//    idctMemSum = 0;
-//    rgbBlockMemSum = 0;;
-
 	printf("Freed memory for file\n");
 }
 
@@ -534,8 +434,7 @@ uint8_t forward_button() //returns 1 if valid i_frame found, 0 if not
 		    f_status = f_lseek(&file_in, trailer[count + 1].frame_position);
 		    if(f_status != FR_OK) error_and_exit("cannot seek into file");
 		    frame_index = trailer[count + 1].frame_index;
-		    while(decode_single_frame() == 0){		//<-- buff full checks to see if the circular buffer is full or not
-		    }
+		    while(decode_single_frame() == 0);
 		    return 1;
 		}
 	}
@@ -562,8 +461,7 @@ uint8_t backward_button()
 		    f_status = f_lseek(&file_in, trailer[count-1].frame_position);
 		    if(f_status != FR_OK) error_and_exit_error_code("cannot seek into file", (uint32_t)f_status);
 		    frame_index = trailer[count-1].frame_index;
-		    while(decode_single_frame() == 0){		//<-- buff full checks to see if the circular buffer is full or not
-		    }
+		    while(decode_single_frame() == 0);
 		    return 1;
 		}
 	}

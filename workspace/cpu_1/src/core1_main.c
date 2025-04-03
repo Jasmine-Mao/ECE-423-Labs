@@ -180,23 +180,7 @@ int main()
 		buff_reg();
 
 		//printf("Core1 entering synq\n");
-		*synq_flag_ptr +=1; //indicates to the other core that
-
-
-		//while(*synq_flag_ptr < 2)
-		//{
-			//printf("Core1 in synq\n");
-		//}
-		//printf("Core1 past synq\n");
-
-
-//            printf("Core1 Unlock\n");
-//            spin_lock(lock_ptr);
-//            spin_unlock(lock_ptr);
-
-    	//printf("Core1 lock\n");
-
-
+		*synq_flag_ptr +=1;
 
     }
 	return 0;

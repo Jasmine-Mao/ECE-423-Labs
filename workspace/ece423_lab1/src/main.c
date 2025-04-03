@@ -186,6 +186,7 @@ int main()
     }
     printf("Counted %d\n", count);
     vdma_out();
+    vdma_out();
     // first VDMA out to display the first frame
 //    vdma_out();
 //    vdma_out();
@@ -197,12 +198,13 @@ int main()
 
     if(0)
     {
-//		XTime_GetTime(&start);
+    	XTime start, end;
+		XTime_GetTime(&start);
 		decode_entire_video(file_name[1]);
 		//^we're going to need to adjust the decode entire video at some point as well
-//		XTime_GetTime(&end);
-//		double time_ellapsed = (double)(end - start)/((double)325000000);
-//		printf("Entire video time:%f  fps:%f\n",time_ellapsed,calculate_fps(time_ellapsed));
+		XTime_GetTime(&end);
+		double time_ellapsed = (double)(end - start)/((double)325000000);
+		printf("Entire video time:%f  fps:%f\n",time_ellapsed,calculate_fps(time_ellapsed));
     }
 
     // infinite loop
@@ -238,6 +240,7 @@ int main()
         	    	decode_single_frame();
         	    }
         	    vdma_out();
+        	    vdma_out();
         	}
         	else if (pin_value == 1)
         	{ // toggle the pause button
@@ -255,8 +258,6 @@ int main()
         		}
         		else
         		{
-        			//play the frame skipped to
-        			 //decode_single_frame();
         			vdma_out();
         		}
         	}
