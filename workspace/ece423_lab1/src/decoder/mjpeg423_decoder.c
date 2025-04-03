@@ -59,6 +59,7 @@ __attribute((section(".shared_memory_section"))) volatile rgb_pixel_t* circular_
 __attribute((section(".shared_memory_section"))) volatile int32_t front;
 __attribute((section(".shared_memory_section"))) volatile int32_t rear;
 __attribute((section(".shared_memory_section"))) volatile int32_t mid;
+__attribute((section(".shared_memory_section"))) volatile int32_t synq_flag = 0;
 
 
 //__attribute((section(".shared_memory_section"))) volatile uint32_t* start_decode;
@@ -304,8 +305,11 @@ uint8_t decode_single_frame()
 {
 	if(frame_index != 0) //sync at the start of every frame, except for first
 	{
+		printf("Core0: unlock\n");
 		spin_unlock(&lock);	// for sync
+		printf("Core0: lock\n");
 		spin_lock(&lock);
+		//synq_flag = 0;
 	}
 	printf("Core0:SD_READ Frame number %d\n", frame_index);
 
@@ -325,6 +329,8 @@ uint8_t decode_single_frame()
 	Cbbitstream = Ybitstream + Ysize;
 	Crbitstream = Cbbitstream + Cbsize;
     //////////////////////////////////////////////SD READ END//////////////
+
+
 
 	if(frame_type == 0) //Iframe
 	{
@@ -379,7 +385,9 @@ uint8_t decode_single_frame()
 	{
 		//printf("Core0:Running decode for a P frame! Frame number %d\n", frame_index);
 
-		spin_unlock(&lock);	// for sync
+		//spin_unlock(&lock);	// for sync
+
+
 		//printf("Core0: Unlocked because p frame\n");
 	    //////////////////////////////////////////////LOSSLESS Cr///////////////////
 	    lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
@@ -428,117 +436,29 @@ uint8_t decode_single_frame()
 		while (!XAxiDma_ResetIsDone(&AxiDma)){}
 
 		//printf("Core0: Locking because p frame\n");
-		spin_lock(&lock);
+		//spin_lock(&lock);
 
 	}
 
-	////////////////////////////////////////////SD READ////////////////////////
-	//XTime_GetTime(&start);  // Capture time before the function call
-//	rgbblock = buff_next();	// this gets malloced
-//	if (rgbblock == NULL) return 1; // overflowing buffer
-//	if (frame_index >= num_frames) return 1; // reached end of video
-//
-//    //read frame payload
-//	f_status = f_read(&file_in, (void*)&frame_size, sizeof(uint32_t), (UINT*)&num_bytes_read);
-//	f_status = f_read(&file_in, (void*)&frame_type, sizeof(uint32_t), (UINT*)&num_bytes_read);
-//	f_status = f_read(&file_in, (void*)&Ysize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-//	f_status = f_read(&file_in, (void*)&Cbsize, sizeof(uint32_t), (UINT*)&num_bytes_read);
-//	f_status = f_read(&file_in, (void*)Ybitstream, frame_size - 4 * sizeof(uint32_t), (UINT*)&num_bytes_read);
-//    //set the Cb and Cr bitstreams to point to the right location
-//    Cbbitstream = Ybitstream + Ysize;
-//    Crbitstream = Cbbitstream + Cbsize;
-   ///////////////////////////////////////////////SD READ END//////////////
-    //printf("CORE 0 frame type: %d\n",frame_type);
+	if(frame_index != 0)
+	{
+		printf("Core0 entering synq\n");
+	    //synq_flag++;
+	    //spin_lock(&lock);
+		while(synq_flag < 1)
+		{
+			//printf("Core0 in synq\n");
+		}
+		synq_flag = 0;
+		printf("Core0 past synq\n");
+	}
 
 
-    //////////////////////////////////////////////LOSSLESS Y//////////////////
-//    lossless_decode(hYb_size*wYb_size, Ybitstream, YDCAC, Yquant, frame_type);
-
-
-    //////////////////////////////////////////////LOSSLESS Cb///////////////////
-//    lossless_decode(hCb_size*wCb_size, Cbbitstream, CbDCAC, Cquant, frame_type);
-
-    //////////////////////////////////////////////LOSSLESS Cr///////////////////
-//    lossless_decode(hCb_size*wCb_size, Crbitstream, CrDCAC, Cquant, frame_type);
-
-
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-	//IDCT Y COMPONENT///////////////////////////
-
-//    Xil_L1DCacheFlush();
-//    Xil_L2CacheFlush();
-//
-//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)YDCAC, 128 * hYb_size * wYb_size, XAXIDMA_DMA_TO_DEVICE);
-//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Yblock, 64 * hYb_size * wYb_size, XAXIDMA_DEVICE_TO_DMA);
-//
-//	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-//	XAxiDma_Reset(&AxiDma);
-//	while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-
-
-	//IDCT Cb COMPONENT////////////////////////////
-//	Xil_L1DCacheFlush();
-//	Xil_L2CacheFlush();
-//
-//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CbDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
-//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Cbblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
-//
-//	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-//	XAxiDma_Reset(&AxiDma);
-//	while (!XAxiDma_ResetIsDone(&AxiDma)){}
-
-	//IDCT Cr COMPONENT////////////////////////////
-//	Xil_L1DCacheFlush();
-//	Xil_L2CacheFlush();
-//
-//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)CrDCAC, 128 * hCb_size * wCb_size, XAXIDMA_DMA_TO_DEVICE);
-//	XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)Crblock, 64 * hCb_size * wCb_size, XAXIDMA_DEVICE_TO_DMA);
-//
-//	while (!(XAxiDma_ReadReg(InstancePtr->RxBdRing[0].ChanBase, XAXIDMA_SR_OFFSET) & XAXIDMA_ERR_INTERNAL_MASK)) {}
-//	XAxiDma_Reset(&AxiDma);
-//	while (!XAxiDma_ResetIsDone(&AxiDma)){}
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-//	printf("Core0 Unlock\n");
-//	spin_unlock(&lock);
-//	printf("Core0 lock\n");
-//
-//	for(int b = 12000; b < 14400; b++)
-//	{
-//		ycbcr_to_rgb(b/wCb_size*8, b%wCb_size*8, w_size, Yblock[b], Cbblock[b], Crblock[b], rgbblock);
-//	}
-//
-//	spin_lock(&lock);
-//	printf("Core0 made it past the lock\n");
-    //ybcbr to rgb conversion
-    //XTime_GetTime(&start);
-	// SOME SYNC STUFF HERE TO TELL CORE1 TO START
-	// UNLOCK
-//    for(int b = 0; b < hCb_size*wCb_size; b++)
-//    {
-//        ycbcr_to_rgb(b/wCb_size*8, b%wCb_size*8, w_size, Yblock[b], Cbblock[b], Crblock[b], rgbblock);
-//    }
-    // SOME SYNC STUFF HERE TO TELL CORE1 TO SUSPEND
-    // LOCK
-
-
-    //XTime_GetTime(&end);
-	//printf("%d , %d, %llu\n",frame_index,frame_type, end - start + timer_delay);
-
-//    XTime_GetTime(&start);
-    //buff_reg();
-
-
-//    if(vdma_out() == 0)
-//    {
-//    	printf("VDMA failed");
-//    }
     frame_index++;
-//    printf("%d, %d\n", frame_type, total_memory);
+
+
+    //some sort of synq here
+
 
     return 0;
 }

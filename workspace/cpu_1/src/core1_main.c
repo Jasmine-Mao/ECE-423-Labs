@@ -85,6 +85,7 @@ UINTPTR* volatile lock_ptr = (UINTPTR*)LOCK_ADDRESS;
 #define CBBITSTREAM_ADDRESS		0x1510005C
 #define CRBITSTREAM_ADDRESS		0x15100060
 #define CIRCULAR_BUFFER_ADDRESS 0x15100064
+#define SYNQ_FLAG_ADDRESS 		0x15100074
 
 
 static uint32_t* num_frames_ptr = (uint32_t*)NUM_FRAMES_ADDESS;
@@ -118,12 +119,14 @@ static uint8_t** Cbbitstream_ptr = (uint8_t**)CBBITSTREAM_ADDRESS;
 static uint8_t** Crbitstream_ptr = (uint8_t**)CRBITSTREAM_ADDRESS;
 
 //volatile rgb_pixel_t* circular_buffer_ptr = (rgb_pixel_t*) CIRCULAR_BUFFER_ADDRESS;
+volatile uint32_t* synq_flag_ptr = (uint32_t*)SYNQ_FLAG_ADDRESS;
 
 
 //#define TEST_PTR ((volatile uint32_t*)0x14EC9380)
 
 //#define SHARED_MEMORY_ADDR 0x15000000
 //volatile uint32_t *shared_var = (uint32_t *)SHARED_MEMORY_ADDR;
+static int32_t frame_index_core1 = 0;
 
 int main()
 {
@@ -166,13 +169,6 @@ int main()
 			ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
 		}
 
-		if(*frame_type_ptr == 1)
-		{
-			spin_lock(lock_ptr);
-			//printf("Core1: Locked because p frame\n");
-
-		}
-
 		for(int b = (14400/2); b < 14400; b++)
 		{
 			ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
@@ -181,21 +177,24 @@ int main()
 		//BUFF REG HERE
 		buff_reg();
 
-		if(*frame_type_ptr == 1)
-		{
-			spin_unlock(lock_ptr);
-			//printf("Core1: Unlocked because p frame\n");
-			//printf("Core1:Completed decode for a P frame! Frame number %d\n", (*frame_index_ptr)-1);
-		}
-		else{
-			//printf("Core1:Completed decode for an I frame! Frame number %d\n", (*frame_index_ptr)-1);
+		//printf("Core1 entering synq\n");
+		*synq_flag_ptr +=1; //indicates to the other core that
 
-		}
+
+		//while(*synq_flag_ptr < 2)
+		//{
+			//printf("Core1 in synq\n");
+		//}
+		//printf("Core1 past synq\n");
+
+
 //            printf("Core1 Unlock\n");
 //            spin_lock(lock_ptr);
 //            spin_unlock(lock_ptr);
 
     	//printf("Core1 lock\n");
+
+
 
     }
 	return 0;
