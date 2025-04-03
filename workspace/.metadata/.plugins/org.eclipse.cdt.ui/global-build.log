@@ -2,7 +2,7 @@ Nothing to build in platform 'Assignment3_platform'
 
 Nothing to build in platform 'lab_prefab_wrapper'
 
-12:18:29 **** Incremental Build of configuration Debug for project ece423_lab1 ****
+13:59:32 **** Incremental Build of configuration Debug for project ece423_lab1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -82,8 +82,8 @@ In file included from ../src/main.c:58:
 ../src/decoder/mjpeg423_decoder.h:30:29: note: expected 'const char *' but argument is of type 'char **'
    30 | void load_video(const char* filename_in);
       |                 ~~~~~~~~~~~~^~~~~~~~~~~
-../src/main.c:199:46: warning: passing argument 1 of 'decode_entire_video' from incompatible pointer type [-Wincompatible-pointer-types]
-  199 |                 decode_entire_video(file_name[1]);
+../src/main.c:201:46: warning: passing argument 1 of 'decode_entire_video' from incompatible pointer type [-Wincompatible-pointer-types]
+  201 |                 decode_entire_video(file_name[1]);
       |                                     ~~~~~~~~~^~~
       |                                              |
       |                                              char **
@@ -91,8 +91,8 @@ In file included from ../src/main.c:58:
 ../src/decoder/mjpeg423_decoder.h:29:38: note: expected 'const char *' but argument is of type 'char **'
    29 | void decode_entire_video(const char* filename_in);
       |                          ~~~~~~~~~~~~^~~~~~~~~~~
-../src/main.c:232:41: warning: passing argument 1 of 'load_video' from incompatible pointer type [-Wincompatible-pointer-types]
-  232 |                     load_video(file_name[file_counter]);
+../src/main.c:234:41: warning: passing argument 1 of 'load_video' from incompatible pointer type [-Wincompatible-pointer-types]
+  234 |                     load_video(file_name[file_counter]);
       |                                ~~~~~~~~~^~~~~~~~~~~~~~
       |                                         |
       |                                         char **
@@ -110,6 +110,6 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size ece423_lab1.elf  |tee "ece423_lab1.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 132596	2101136	215012224	217245956	cf2e904	ece423_lab1.elf
+ 132740	2101136	215012224	217246100	cf2e994	ece423_lab1.elf
 'Finished building: ece423_lab1.elf.size'
 ' '

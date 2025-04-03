@@ -31,6 +31,7 @@ uint32_t vdma_init(uint32_t width, uint32_t height, uint32_t frame_buff_size){
 	w_size = width;
 	frame_buff_limit = frame_buff_size;
 	frame_buff = malloc(frame_buff_limit * sizeof(frame_buff));
+	memset(*frame_buff, 0, frame_buff_limit * sizeof(frame_buff));
 	circular_buffer_ptr = (rgb_pixel_t*)&frame_buff;
     write_reg(XPAR_AXI_VDMA_0_BASEADDR, 0x00, 0x04);	// read reset
     while(read_reg(XPAR_AXI_VDMA_0_BASEADDR, 0x00) & 0x4){}
@@ -43,6 +44,8 @@ uint32_t vdma_init(uint32_t width, uint32_t height, uint32_t frame_buff_size){
 
 uint32_t vdma_out(){
 	rgb_pixel_t* frame_out = buff_disp();
+
+
 	if (frame_out != NULL){
 		write_reg(XPAR_AXI_VDMA_0_BASEADDR, 0x00, 0x83);
 
@@ -104,6 +107,7 @@ uint32_t buff_clear(){
 	while(buff_disp() != NULL){
 		;
 	}
+	memset(*frame_buff, 0, frame_buff_limit * sizeof(frame_buff));
 	return TRUE;
 }
 
