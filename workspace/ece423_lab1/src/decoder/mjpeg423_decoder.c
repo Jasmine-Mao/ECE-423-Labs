@@ -523,6 +523,7 @@ uint8_t forward_button() //returns 1 if valid i_frame found, 0 if not
 		printf("Current frame %d is too close to the end, pausing video\n",frame_index);
 		return 0;
 	}
+	buff_clear();
 
 	for (int count = num_iframes - 1; count >=0; count--)
 	{
@@ -533,6 +534,8 @@ uint8_t forward_button() //returns 1 if valid i_frame found, 0 if not
 		    f_status = f_lseek(&file_in, trailer[count + 1].frame_position);
 		    if(f_status != FR_OK) error_and_exit("cannot seek into file");
 		    frame_index = trailer[count + 1].frame_index;
+		    while(decode_single_frame() == 0){		//<-- buff full checks to see if the circular buffer is full or not
+		    }
 		    return 1;
 		}
 	}
@@ -548,6 +551,7 @@ uint8_t backward_button()
 		printf("Current frame %d is too close to beginning, setting to frame 0\n",frame_index);
 		return 0;
 	}
+	buff_clear();
 
 	for (int count = 0; count < num_iframes; count++)
 	{
@@ -558,6 +562,8 @@ uint8_t backward_button()
 		    f_status = f_lseek(&file_in, trailer[count-1].frame_position);
 		    if(f_status != FR_OK) error_and_exit_error_code("cannot seek into file", (uint32_t)f_status);
 		    frame_index = trailer[count-1].frame_index;
+		    while(decode_single_frame() == 0){		//<-- buff full checks to see if the circular buffer is full or not
+		    }
 		    return 1;
 		}
 	}

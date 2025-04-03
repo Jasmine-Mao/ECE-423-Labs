@@ -211,7 +211,7 @@ int main()
     	if (!is_paused && timer_triggered)
     	{ // decodes a single frame to the VDMA
     		// check to make sure there are things in the buffer to output
-    		if(!buff_empty()){
+    		if(!buff_empty() && (lock == 0)){
 //    			probably do a VDMA out?
     			vdma_out();
 //    			this checks to make sure that there is stuff in the buffer to output
@@ -256,8 +256,8 @@ int main()
         		else
         		{
         			//play the frame skipped to
-        			decode_single_frame();
-        			//vdma_out();
+        			 //decode_single_frame();
+        			vdma_out();
         		}
         	}
         	else if (pin_value == 3)
@@ -266,8 +266,8 @@ int main()
         		{
         			reset_video(); //seek back to first frame
         		}
-        		decode_single_frame();
-        		//vdma_out();
+        		//decode_single_frame();
+        		vdma_out();
         	}
         	pin_value = -1;
         }
