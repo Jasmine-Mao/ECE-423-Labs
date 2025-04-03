@@ -1,9 +1,54 @@
 Nothing to build in platform 'Assignment3_platform'
 
-00:08:02 **** Incremental Build of configuration Debug for project cpu_1 ****
+Nothing to build in platform 'lab_prefab_wrapper'
+
+00:39:10 **** Incremental Build of configuration Debug for project ece423_lab1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/ece423_vid_ctl/ece423_vid_ctl.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece423_vid_ctl/ece423_vid_ctl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/ece423_vid_ctl/ece423_vid_ctl.d" -MT"src/ece423_vid_ctl/ece423_vid_ctl.o" -o "src/ece423_vid_ctl/ece423_vid_ctl.o" "../src/ece423_vid_ctl/ece423_vid_ctl.c"
+In file included from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
+../src/ece423_vid_ctl/../common/mjpeg423_types.h:17: warning: "FALSE" redefined
+   17 | #define FALSE (0)
+      | 
+In file included from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
+                 from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
+                 from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
+                 from ../src/ece423_vid_ctl/../common/mjpeg423_types.h:14,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
+C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
+   53 | #  define FALSE         0U
+      | 
+In file included from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
+../src/ece423_vid_ctl/../common/mjpeg423_types.h:18: warning: "TRUE" redefined
+   18 | #define TRUE !FALSE
+      | 
+In file included from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
+                 from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
+                 from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
+                 from ../src/ece423_vid_ctl/../common/mjpeg423_types.h:14,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
+C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
+   49 | #  define TRUE          1U
+      | 
+'Finished building: ../src/ece423_vid_ctl/ece423_vid_ctl.c'
+' '
+'Building target: ece423_lab1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bsplib/lib -o "ece423_lab1.elf"  ./src/spinlocks/spinlock1.o  ./src/ece423_vid_ctl/ece423_vid_ctl.o  ./src/decoder/idct.o ./src/decoder/lossless_decode.o ./src/decoder/mjpeg423_decoder.o ./src/decoder/ycbcr_to_rgb.o  ./src/common/tables.o ./src/common/util.o  ./src/main.o ./src/platform.o ./src/timer_gpio.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ece423_lab1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size ece423_lab1.elf  |tee "ece423_lab1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 132532	2101136	215012224	217245892	cf2e8c4	ece423_lab1.elf
+'Finished building: ece423_lab1.elf.size'
+' '

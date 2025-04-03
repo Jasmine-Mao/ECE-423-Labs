@@ -1,89 +1,41 @@
-00:07:59 **** Incremental Build of configuration Debug for project ece423_lab1 ****
+00:39:10 **** Incremental Build of configuration Debug for project ece423_lab1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/decoder/mjpeg423_decoder.c'
+'Building file: ../src/ece423_vid_ctl/ece423_vid_ctl.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/decoder/mjpeg423_decoder.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/decoder/mjpeg423_decoder.d" -MT"src/decoder/mjpeg423_decoder.o" -o "src/decoder/mjpeg423_decoder.o" "../src/decoder/mjpeg423_decoder.c"
-In file included from ../src/decoder/mjpeg423_decoder.c:13:
-../src/decoder/../common/mjpeg423_types.h:17: warning: "FALSE" redefined
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece423_vid_ctl/ece423_vid_ctl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/ece423_vid_ctl/ece423_vid_ctl.d" -MT"src/ece423_vid_ctl/ece423_vid_ctl.o" -o "src/ece423_vid_ctl/ece423_vid_ctl.o" "../src/ece423_vid_ctl/ece423_vid_ctl.c"
+In file included from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
+../src/ece423_vid_ctl/../common/mjpeg423_types.h:17: warning: "FALSE" redefined
    17 | #define FALSE (0)
       | 
 In file included from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
                  from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
                  from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/decoder/../common/mjpeg423_types.h:14,
-                 from ../src/decoder/mjpeg423_decoder.c:13:
+                 from ../src/ece423_vid_ctl/../common/mjpeg423_types.h:14,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
 C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:53: note: this is the location of the previous definition
    53 | #  define FALSE         0U
       | 
-In file included from ../src/decoder/mjpeg423_decoder.c:13:
-../src/decoder/../common/mjpeg423_types.h:18: warning: "TRUE" redefined
+In file included from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
+../src/ece423_vid_ctl/../common/mjpeg423_types.h:18: warning: "TRUE" redefined
    18 | #define TRUE !FALSE
       | 
 In file included from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xstatus.h:32,
                  from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma_bdring.h:60,
                  from C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xaxidma.h:467,
-                 from ../src/decoder/../common/mjpeg423_types.h:14,
-                 from ../src/decoder/mjpeg423_decoder.c:13:
+                 from ../src/ece423_vid_ctl/../common/mjpeg423_types.h:14,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.h:4,
+                 from ../src/ece423_vid_ctl/ece423_vid_ctl.c:1:
 C:/Users/j54mao/ECE423/ECE-423-Labs/workspace/Assignment3_platform/export/Assignment3_platform/sw/Assignment3_platform/standalone_domain/bspinclude/include/xil_types.h:49: note: this is the location of the previous definition
    49 | #  define TRUE          1U
       | 
-../src/decoder/mjpeg423_decoder.c: In function 'decode_single_frame':
-../src/decoder/mjpeg423_decoder.c:309:17: warning: implicit declaration of function 'spin_unlock' [-Wimplicit-function-declaration]
-  309 |                 spin_unlock(&lock);     // for sync
-      |                 ^~~~~~~~~~~
-../src/decoder/mjpeg423_decoder.c:311:17: warning: implicit declaration of function 'spin_lock'; did you mean 'print_block'? [-Wimplicit-function-declaration]
-  311 |                 spin_lock(&lock);
-      |                 ^~~~~~~~~
-      |                 print_block
-../src/decoder/mjpeg423_decoder.c:314:45: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  314 |         printf("Core0:SD_READ Frame number %d\n", frame_index);
-      |                                            ~^     ~~~~~~~~~~~
-      |                                             |     |
-      |                                             int   uint32_t {aka long unsigned int}
-      |                                            %ld
-../src/decoder/mjpeg423_decoder.c: In function 'forward_button':
-../src/decoder/mjpeg423_decoder.c:517:40: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  517 |                 printf("Current frame %d is too close to the end, pausing video\n",frame_index);
-      |                                       ~^                                           ~~~~~~~~~~~
-      |                                        |                                           |
-      |                                        int                                         uint32_t {aka long unsigned int}
-      |                                       %ld
-../src/decoder/mjpeg423_decoder.c:526:48: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  526 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count + 1].frame_index);
-      |                                               ~^                   ~~~~~~~~~~~
-      |                                                |                   |
-      |                                                int                 uint32_t {aka long unsigned int}
-      |                                               %ld
-../src/decoder/mjpeg423_decoder.c:526:63: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  526 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count + 1].frame_index);
-      |                                                              ~^                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                               |                                  |
-      |                                                               int                                uint32_t {aka long unsigned int}
-      |                                                              %ld
-../src/decoder/mjpeg423_decoder.c: In function 'backward_button':
-../src/decoder/mjpeg423_decoder.c:542:40: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  542 |                 printf("Current frame %d is too close to beginning, setting to frame 0\n",frame_index);
-      |                                       ~^                                                  ~~~~~~~~~~~
-      |                                        |                                                  |
-      |                                        int                                                uint32_t {aka long unsigned int}
-      |                                       %ld
-../src/decoder/mjpeg423_decoder.c:551:48: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  551 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count-1].frame_index);
-      |                                               ~^                   ~~~~~~~~~~~
-      |                                                |                   |
-      |                                                int                 uint32_t {aka long unsigned int}
-      |                                               %ld
-../src/decoder/mjpeg423_decoder.c:551:63: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  551 |                         printf("Current frame %d, seeking to %d\n",frame_index,trailer[count-1].frame_index);
-      |                                                              ~^                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                               |                                |
-      |                                                               int                              uint32_t {aka long unsigned int}
-      |                                                              %ld
-'Finished building: ../src/decoder/mjpeg423_decoder.c'
+'Finished building: ../src/ece423_vid_ctl/ece423_vid_ctl.c'
 ' '
 'Building target: ece423_lab1.elf'
 'Invoking: ARM v7 gcc linker'
@@ -93,9 +45,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size ece423_lab1.elf  |tee "ece423_lab1.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 132652	2101136	215012224	217246012	cf2e93c	ece423_lab1.elf
+ 132532	2101136	215012224	217245892	cf2e8c4	ece423_lab1.elf
 'Finished building: ece423_lab1.elf.size'
 ' '
 
-00:08:00 Build Finished (took 1s.734ms)
+00:39:12 Build Finished (took 1s.671ms)
 

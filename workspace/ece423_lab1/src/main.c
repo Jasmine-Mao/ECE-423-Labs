@@ -174,6 +174,7 @@ int main()
 
     scan_files();
 
+    //file_counter++;
     load_video(file_name[file_counter]);
 
     is_paused = 0;

@@ -162,7 +162,8 @@ int main()
 
         spin_lock(lock_ptr);
         spin_unlock(lock_ptr);
-		printf("Core1: Unlocked\n");
+		//printf("Core1: Unlocked\n");
+
 
 		for(int b = 0; b < (14400/2); b++)
 		{

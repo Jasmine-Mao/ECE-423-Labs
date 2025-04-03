@@ -1,0 +1,201 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "spinlocks/spinlock1.h"
+#include "common/mjpeg423_types.h"
+#include "circular_buffer/buff.h"
+#include "xil_cache.h"
+#include "xil_cache_l.h"
+
+#define DEVICE_MEMORY 0xC06
+
+#define LOCK_ADDRESS 0x15000004
+UINTPTR* volatile lock_ptr = (UINTPTR*)LOCK_ADDRESS;
+
+#define NUM_FRAMES_ADDESS 		0x15100000
+#define W_SIZE_ADDRESS 			0x15100004
+#define H_SIZE_ADDRESS 			0x15100008
+#define NUM_IFRAMES_ADDRESS 	0x1510000C
+#define PAYLOAD_SIZE_ADDRESS 	0x15100010
+#define YSIZE_ADDRESS 			0x15100014
+#define CBSIZE_ADDRESS			0x15100018
+#define FRAME_SIZE_ADDRESS		0x1510001C
+#define FRAME_TYPE_ADDRESS		0x15100020
+#define TRAILER_ADDRESS			0x15100024
+#define FRAME_INDEX_ADDRESS		0x15100028
+#define HCB_SIZE_ADDRESS		0x1510002C
+#define WCB_SIZE_ADDRESS		0x15100030
+#define HYB_SIZE_ADDRESS		0x15100034
+#define WYB_SIZE_ADDRESS		0x15100038
+#define RGBBLOCK_ADDRESS		0x1510003C
+#define YBLOCK_ADDRESS			0x15100040
+#define CBBLOCK_ADDRESS			0x15100044
+#define CRBLOCK_ADDRESS			0x15100048
+#define YDCAC_ADDRESS			0x1510004C
+#define CBDCAC_ADDRESS			0x15100050
+#define CRDCAC_ADDRESS			0x15100054
+#define YBITSTREAM_ADDRESS		0x15100058
+#define CBBITSTREAM_ADDRESS		0x1510005C
+#define CRBITSTREAM_ADDRESS		0x15100060
+#define CIRCULAR_BUFFER_ADDRESS 0x15100064
+#define SYNQ_FLAG_ADDRESS 		0x15100074
+
+
+static uint32_t* num_frames_ptr = (uint32_t*)NUM_FRAMES_ADDESS;
+static uint32_t* w_size_ptr = (uint32_t*)W_SIZE_ADDRESS;
+static uint32_t* h_size_ptr = (uint32_t*)H_SIZE_ADDRESS;
+static uint32_t* num_iframes_ptr = (uint32_t*)NUM_IFRAMES_ADDRESS;
+static uint32_t* payload_size_ptr = (uint32_t*)PAYLOAD_SIZE_ADDRESS;
+static uint32_t* Ysize_ptr = (uint32_t*)YSIZE_ADDRESS;
+static uint32_t* Cbsize_ptr = (uint32_t*)CBSIZE_ADDRESS;
+static uint32_t* frame_size_ptr = (uint32_t*)FRAME_SIZE_ADDRESS;
+static uint32_t* frame_type_ptr = (uint32_t*)FRAME_TYPE_ADDRESS;
+
+static iframe_trailer_t** trailer_ptr = (iframe_trailer_t**)TRAILER_ADDRESS;
+
+static uint32_t* frame_index_ptr = (uint32_t*)FRAME_INDEX_ADDRESS;
+
+static int* hCb_size_ptr = (int*)HCB_SIZE_ADDRESS;
+static int* wCb_size_ptr = (int*)WCB_SIZE_ADDRESS;
+static int* hYb_size_ptr = (int*)HYB_SIZE_ADDRESS;
+static int* wYb_size_ptr = (int*)WYB_SIZE_ADDRESS;
+
+static rgb_pixel_t** rgbblock_ptr = (rgb_pixel_t**)RGBBLOCK_ADDRESS;
+static color_block_t** Yblock_ptr = (color_block_t**)YBLOCK_ADDRESS;
+static color_block_t** Cbblock_ptr = (color_block_t**)CBBLOCK_ADDRESS;
+static color_block_t** Crblock_ptr = (color_block_t**)CRBLOCK_ADDRESS;
+static dct_block_t** YDCAC_ptr = (dct_block_t**)YDCAC_ADDRESS;
+static dct_block_t** CbDCAC_ptr = (dct_block_t**)CBDCAC_ADDRESS;
+static dct_block_t** CrDCAC_ptr = (dct_block_t**)CRDCAC_ADDRESS;
+static uint8_t** Ybitstream_ptr = (uint8_t**)YBITSTREAM_ADDRESS;
+static uint8_t** Cbbitstream_ptr = (uint8_t**)CBBITSTREAM_ADDRESS;
+static uint8_t** Crbitstream_ptr = (uint8_t**)CRBITSTREAM_ADDRESS;
+
+//volatile rgb_pixel_t* circular_buffer_ptr = (rgb_pixel_t*) CIRCULAR_BUFFER_ADDRESS;
+volatile uint32_t* synq_flag_ptr = (uint32_t*)SYNQ_FLAG_ADDRESS;
+
+
+//#define TEST_PTR ((volatile uint32_t*)0x14EC9380)
+
+//#define SHARED_MEMORY_ADDR 0x15000000
+//volatile uint32_t *shared_var = (uint32_t *)SHARED_MEMORY_ADDR;
+static int32_t frame_index_core1 = 0;
+
+int main()
+{
+
+//    printf("Core1 trying to spin_lock");
+
+    //spin_lock(lock_ptr);
+
+
+    printf("CORE1 is starting\n");
+    //while (1);
+	Xil_SetTlbAttributes(0x15000000, 0xC06);
+//    uint32_t value = *shared_var;
+	Xil_L1DCacheFlush();	// added to flush any previous data that might have been in the things
+
+
+
+    init_platform();
+//    Xil_SetTlbAttributes(0x14DD5140, 0x1C);
+//    *TEST_PTR = 0xabcd1234;
+
+    //spin_unlock(lock_ptr);
+
+//	circular_buff_t* buffer = init(90*160*4, 5);	//creates a circular buffer of capacity 5 (for now)
+
+    // need some way to indicate that we are starting a decode single frame
+
+//    spin_lock(lock_ptr);
+//    spin_unlock(lock_ptr); //14400
+
+    while(1)
+    {
+
+        spin_lock(lock_ptr);
+        spin_unlock(lock_ptr);
+		//printf("Core1: Unlocked\n");
+
+		for(int b = 0; b < (14400/2); b++)
+		{
+			ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
+		}
+
+		for(int b = (14400/2); b < 14400; b++)
+		{
+			ycbcr_to_rgb(b/(*wCb_size_ptr)*8, b%(*wCb_size_ptr)*8, (*w_size_ptr), (*Yblock_ptr)[b], (*Cbblock_ptr)[b], (*Crblock_ptr)[b], (*rgbblock_ptr));
+		}
+
+		//BUFF REG HERE
+		buff_reg();
+
+		//printf("Core1 entering synq\n");
+		*synq_flag_ptr +=1; //indicates to the other core that
+
+
+		//while(*synq_flag_ptr < 2)
+		//{
+			//printf("Core1 in synq\n");
+		//}
+		//printf("Core1 past synq\n");
+
+
+//            printf("Core1 Unlock\n");
+//            spin_lock(lock_ptr);
+//            spin_unlock(lock_ptr);
+
+    	//printf("Core1 lock\n");
+
+
+
+    }
+	return 0;
+}

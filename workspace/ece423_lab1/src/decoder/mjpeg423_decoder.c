@@ -311,7 +311,7 @@ uint8_t decode_single_frame()
 		spin_lock(&lock);
 		//synq_flag = 0;
 	}
-	printf("Core0:SD_READ Frame number %d\n", frame_index);
+	//printf("Core0:SD_READ Frame number %d\n", frame_index);
 
 	////////////////////////////////////////////SD READ////////////////////////
 	//XTime_GetTime(&start);  // Capture time before the function call
@@ -442,7 +442,7 @@ uint8_t decode_single_frame()
 
 	if(frame_index != 0)
 	{
-		printf("Core0 entering synq\n");
+		//printf("Core0 entering synq\n");
 	    //synq_flag++;
 	    //spin_lock(&lock);
 		while(synq_flag < 1)
@@ -512,6 +512,10 @@ void release_video()
 
 uint8_t forward_button() //returns 1 if valid i_frame found, 0 if not
 {
+	//Pseudocode
+	//remove all the frames with buff_disp until empty
+	//Find new frame index
+	//Refill the buffer???
 	if(frame_index + SEEK_FRAMES > num_frames)
 	{
 		printf("Current frame %d is too close to the end, pausing video\n",frame_index);
